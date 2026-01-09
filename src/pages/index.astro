@@ -1,0 +1,978 @@
+---
+// Frontmatter - JavaScript/TypeScript kod här
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ränta.nu - Jämför sparräntor från 50+ banker | Bästa sparkontot 2024</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/" class="active">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-content">
+            <h1>Sveriges smartaste sparräntekalkylator - se hur ditt sparande växer</h1>
+
+            <p>Ränta.nu är din oberoende guide till smartare sparande. Vi hjälper tusentals svenskar varje månad att förstå hur <a href="#">sparränta</a> fungerar och hur <a href="#">ränta-på-ränta-effekten</a> kan bygga din ekonomiska framtid.</p>
+
+            <p>Med våra avancerade kalkylatorer kan du enkelt jämföra olika sparalternativ och se exakt hur mycket ditt kapital kommer växa över tid. Vi uppdaterar dagligen med aktuella räntor från Sveriges alla banker och institutioner.</p>
+
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <span class="dot"></span>
+                    Jämför räntor från 50+ banker dagligen
+                </div>
+                <div class="hero-feature">
+                    <span class="dot"></span>
+                    Oberoende analys och rådgivning
+                </div>
+                <div class="hero-feature">
+                    <span class="dot"></span>
+                    Används av 150 000+ sparare varje månad
+                </div>
+            </div>
+
+            <a href="/berakna" class="btn-primary">
+                Se hur mycket du kan spara
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+            </a>
+
+            <p class="hero-note"><strong>Visste du att:</strong> Med 3% årlig ränta fördubblas ditt sparande på cirka 24 år tack vare ränta-på-ränta-effekten. Börja spara idag och se skillnaden imorgon.</p>
+        </div>
+
+        <div class="hero-form">
+            <h2>Räkna ut din <span>sparränta</span></h2>
+            <p class="subtitle">Se hur ditt sparande växer över tid med ränta-på-ränta</p>
+
+            <div class="form-badges">
+                <div class="form-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
+                    Helt gratis
+                </div>
+                <div class="form-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"></path></svg>
+                    Snabbt resultat
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Startbelopp (kr) <span>*</span></label>
+                <input type="text" placeholder="100 000">
+            </div>
+
+            <div class="form-group">
+                <label>Årlig sparränta (%) <span>*</span></label>
+                <input type="text" placeholder="3.5">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Spartid (år) <span>*</span></label>
+                    <input type="text" placeholder="10">
+                </div>
+                <div class="form-group">
+                    <label>Månatligt sparande (kr)</label>
+                    <input type="text" placeholder="2 000">
+                </div>
+            </div>
+
+            <div class="form-checkbox">
+                <input type="checkbox" id="consent">
+                <label for="consent">Jag förstår att beräkningen är ett exempel och inte en garanti för framtida avkastning.</label>
+            </div>
+
+            <button class="form-btn">BERÄKNA SPARANDE →</button>
+        </div>
+    </div>
+</section>
+
+<!-- Produktnav - NYTT -->
+<section class="products-nav">
+    <div class="section-inner">
+        <h2 class="section-title-center">Sparprodukter – hitta rätt ränta för ditt sparande</h2>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                </div>
+                <h3>Högräntekonton</h3>
+                <p>Rörlig ränta, fria uttag</p>
+                <a href="/hograntekonton" class="product-link">Jämför högräntekonton →</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                </div>
+                <h3>Fasträntekonton</h3>
+                <p>Bind pengarna, få högre ränta</p>
+                <a href="/fastranta" class="product-link">Se fasträntor →</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </div>
+                <h3>Buffertkonton</h3>
+                <p>Tryggt sparande med insättningsgaranti</p>
+                <a href="/buffertkonton" class="product-link">Bästa buffertkonton →</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </div>
+                <h3>Barnsparande</h3>
+                <p>Spara långsiktigt till barn</p>
+                <a href="/barnsparande" class="product-link">Sparränta för barn →</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"></path><path d="M18 9l-5 5-4-4-3 3"></path></svg>
+                </div>
+                <h3>Alternativt sparande (P2P)</h3>
+                <p>Högre ränta, högre risk</p>
+                <a href="/p2p-sparande" class="product-link">Jämför P2P-sparande →</a>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                </div>
+                <h3>Sparkonton med appar</h3>
+                <p>Automatiserat sparande</p>
+                <a href="/sparappar" class="product-link">Sparappar &amp; verktyg →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Bästa sparräntan just nu - NYTT -->
+<section class="best-rates">
+    <div class="section-inner">
+        <h2 class="section-title-white">Bästa sparräntan just nu</h2>
+        <p class="section-subtitle-white">Jämförelse uppdaterad dagligen från Sveriges alla banker</p>
+
+        <div class="rates-table">
+            <div class="rates-header">
+                <div>Bank</div>
+                <div>Ränta</div>
+                <div>Villkor</div>
+                <div>Uppdaterad</div>
+            </div>
+
+            <div class="rate-row">
+                <div class="rate-bank">
+                    <strong>Northmill Bank</strong>
+                    <span class="rate-type">Högräntekonto</span>
+                </div>
+                <div class="rate-value">
+                    <strong>3.80%</strong>
+                </div>
+                <div class="rate-terms">Rörlig, inga bindningar</div>
+                <div class="rate-date">19 dec 2024</div>
+            </div>
+
+            <div class="rate-row">
+                <div class="rate-bank">
+                    <strong>Resurs Bank</strong>
+                    <span class="rate-type">Sparkonto Plus</span>
+                </div>
+                <div class="rate-value">
+                    <strong>3.75%</strong>
+                </div>
+                <div class="rate-terms">Rörlig, fria uttag</div>
+                <div class="rate-date">19 dec 2024</div>
+            </div>
+
+            <div class="rate-row">
+                <div class="rate-bank">
+                    <strong>Santander</strong>
+                    <span class="rate-type">Flexkonto</span>
+                </div>
+                <div class="rate-value">
+                    <strong>3.65%</strong>
+                </div>
+                <div class="rate-terms">Rörlig, max 1 miljon kr</div>
+                <div class="rate-date">19 dec 2024</div>
+            </div>
+
+            <div class="rate-row">
+                <div class="rate-bank">
+                    <strong>Avanza</strong>
+                    <span class="rate-type">Sparkonto</span>
+                </div>
+                <div class="rate-value">
+                    <strong>3.55%</strong>
+                </div>
+                <div class="rate-terms">Rörlig, upp till 150 000 kr</div>
+                <div class="rate-date">19 dec 2024</div>
+            </div>
+
+            <div class="rate-row">
+                <div class="rate-bank">
+                    <strong>Stabelo</strong>
+                    <span class="rate-type">Fast 12 mån</span>
+                </div>
+                <div class="rate-value">
+                    <strong>4.20%</strong>
+                </div>
+                <div class="rate-terms">Fast, bindning 12 månader</div>
+                <div class="rate-date">19 dec 2024</div>
+            </div>
+        </div>
+
+        <div class="rates-cta">
+            <a href="/jamfor-sparkonton" class="btn-rates">Se fullständig lista över sparkonton →</a>
+        </div>
+    </div>
+</section>
+
+<!-- Bolåneräntor - Teaser/hub section -->
+<section class="mortgage-rates">
+    <div class="mortgage-rates-inner">
+        <h2>Bolåneräntor i Sverige – översikt just nu</h2>
+
+        <p class="mortgage-rates-description">
+            En snabb överblick över genomsnittliga bolåneräntor och vanliga bindningstider i Sverige.
+        </p>
+
+        <div class="mortgage-rate-cards">
+            <div class="mortgage-rate-card">
+                <div class="mortgage-rate-card-title">Rörlig ränta (3 mån)</div>
+                <div class="mortgage-rate-card-rate">4,8%</div>
+                <div class="mortgage-rate-card-desc">Mest vanlig. Påverkas snabbt av styrräntan.</div>
+            </div>
+
+            <div class="mortgage-rate-card">
+                <div class="mortgage-rate-card-title">1 år</div>
+                <div class="mortgage-rate-card-rate">3,9%</div>
+                <div class="mortgage-rate-card-desc">Kort bindning, viss trygghet.</div>
+            </div>
+
+            <div class="mortgage-rate-card">
+                <div class="mortgage-rate-card-title">3 år</div>
+                <div class="mortgage-rate-card-rate">3,5%</div>
+                <div class="mortgage-rate-card-desc">Lägre ränta, längre trygghet.</div>
+            </div>
+        </div>
+
+        <a href="/basta-bolanerantor/" class="mortgage-cta-primary">
+            Jämför bästa bolåneräntorna →
+        </a>
+
+        <p class="mortgage-cta-note">Listräntor, rabatter och individuella villkor.</p>
+    </div>
+</section>
+
+<!-- Appar och verktyg - NYTT -->
+<section class="savings-apps">
+    <div class="section-inner">
+        <h2 class="section-title-center">Appar och verktyg för smartare sparande</h2>
+
+        <div class="apps-grid">
+            <div class="app-card">
+                <div class="app-logo">T</div>
+                <h3>Tink</h3>
+                <p>Samla alla dina konton på ett ställe. Se din totala ekonomi och få personliga spartips.</p>
+                <div class="app-meta">För alla som vill ha överblick</div>
+                <a href="/appar/tink" class="app-link">Läs mer →</a>
+            </div>
+
+            <div class="app-card">
+                <div class="app-logo">D</div>
+                <h3>Dreams</h3>
+                <p>Sätt sparmål och låt appen automatiskt avsätta pengar varje dag eller vecka.</p>
+                <div class="app-meta">För målmedvetna sparare</div>
+                <a href="/appar/dreams" class="app-link">Läs mer →</a>
+            </div>
+
+            <div class="app-card">
+                <div class="app-logo">M</div>
+                <h3>Monetik</h3>
+                <p>Spara automatiskt på dina köp genom att avrunda till närmaste krona.</p>
+                <div class="app-meta">För micro-sparande</div>
+                <a href="/appar/monetik" class="app-link">Läs mer →</a>
+            </div>
+
+            <div class="app-card">
+                <div class="app-logo">Y</div>
+                <h3>Yourban</h3>
+                <p>Spara automatiskt baserat på dina vanor. Appen lär sig dina mönster.</p>
+                <div class="app-meta">För smart automatisering</div>
+                <a href="/appar/yourban" class="app-link">Läs mer →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-inner">
+        <!-- Riksbanken faktapanel -->
+        <div class="riksbanken-panel">
+            <h4>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="9" y1="9" x2="15" y2="15"></line>
+                    <line x1="15" y1="9" x2="9" y2="15"></line>
+                </svg>
+                Aktuell styrränta från Riksbanken
+            </h4>
+            <div class="riksbanken-stats">
+                <div class="riksbanken-stat">
+                    <span>Styrränta idag:</span>
+                    <span>3,75 %</span>
+                </div>
+                <div class="riksbanken-stat">
+                    <span>Senast ändrad:</span>
+                    <span>21 nov 2024</span>
+                </div>
+                <div class="riksbanken-stat">
+                    <span>Nästa besked:</span>
+                    <span>13 feb 2025</span>
+                </div>
+                <div class="riksbanken-stat">
+                    <span>Förändring:</span>
+                    <span>-0,25 %</span>
+                </div>
+            </div>
+            <div class="riksbanken-source">
+                Källa: <a href="https://riksbanken.se/" target="_blank" rel="noopener">Riksbanken.se</a> · Uppdateras efter varje räntebeslut
+            </div>
+        </div>
+
+        <div class="content-row">
+            <div class="content-image">
+                <div class="graph-container">
+                    <svg id="interestGraph" viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg" style="background: linear-gradient(135deg, #f0f5f7 0%, #e8f0f4 100%);">
+                        <!-- Grid lines -->
+                        <line x1="60" y1="320" x2="540" y2="320" stroke="#d0dce5" stroke-width="1"></line>
+                        <line x1="60" y1="260" x2="540" y2="260" stroke="#d0dce5" stroke-width="1"></line>
+                        <line x1="60" y1="200" x2="540" y2="200" stroke="#d0dce5" stroke-width="1"></line>
+                        <line x1="60" y1="140" x2="540" y2="140" stroke="#d0dce5" stroke-width="1"></line>
+                        <line x1="60" y1="80" x2="540" y2="80" stroke="#d0dce5" stroke-width="1"></line>
+
+                        <!-- Axes -->
+                        <line x1="60" y1="350" x2="540" y2="350" stroke="#1e3a5f" stroke-width="2"></line>
+                        <line x1="60" y1="350" x2="60" y2="50" stroke="#1e3a5f" stroke-width="2"></line>
+
+                        <!-- Linear growth (utan ränta-på-ränta) -->
+                        <path id="linearPath" d="M 60 350 L 180 290 L 300 230 L 420 170 L 540 110" stroke="#94a3b8" stroke-width="3" fill="none" stroke-dasharray="8,4" style="transition: opacity 0.3s ease;"></path>
+
+                        <!-- Exponential growth (med ränta-på-ränta) -->
+                        <path id="compoundPath" d="M 60 350 Q 180 300, 300 200 T 540 70" stroke="#1e3a5f" stroke-width="4" fill="none" style="transition: opacity 0.3s ease;"></path>
+
+                        <!-- Data points for compound -->
+                        <g id="compoundPoints" style="transition: opacity 0.3s ease;">
+                            <circle class="data-point" cx="60" cy="350" r="6" fill="#1e3a5f" data-year="0" data-amount="50 000"></circle>
+                            <circle class="data-point" cx="180" cy="280" r="6" fill="#1e3a5f" data-year="5" data-amount="63 814"></circle>
+                            <circle class="data-point" cx="300" cy="200" r="6" fill="#1e3a5f" data-year="10" data-amount="81 445"></circle>
+                            <circle class="data-point" cx="420" cy="110" r="6" fill="#1e3a5f" data-year="15" data-amount="103 946"></circle>
+                            <circle class="data-point" cx="540" cy="70" r="6" fill="#1e3a5f" data-year="20" data-amount="132 665"></circle>
+                        </g>
+
+                        <!-- Data points for simple -->
+                        <g id="simplePoints" style="opacity: 0; transition: opacity 0.3s ease;">
+                            <circle class="data-point" cx="60" cy="350" r="6" fill="#94a3b8" data-year="0" data-amount="50 000"></circle>
+                            <circle class="data-point" cx="180" cy="290" r="6" fill="#94a3b8" data-year="5" data-amount="62 500"></circle>
+                            <circle class="data-point" cx="300" cy="230" r="6" fill="#94a3b8" data-year="10" data-amount="75 000"></circle>
+                            <circle class="data-point" cx="420" cy="170" r="6" fill="#94a3b8" data-year="15" data-amount="87 500"></circle>
+                            <circle class="data-point" cx="540" cy="110" r="6" fill="#94a3b8" data-year="20" data-amount="100 000"></circle>
+                        </g>
+
+                    <!-- Year labels -->
+                    <text x="60" y="375" text-anchor="middle" font-size="14" fill="#666">År 0</text>
+                    <text x="180" y="375" text-anchor="middle" font-size="14" fill="#666">År 5</text>
+                    <text x="300" y="375" text-anchor="middle" font-size="14" fill="#666">År 10</text>
+                    <text x="420" y="375" text-anchor="middle" font-size="14" fill="#666">År 15</text>
+                    <text x="540" y="375" text-anchor="middle" font-size="14" fill="#666">År 20</text>
+
+                    <!-- Amount labels -->
+                    <text x="50" y="355" text-anchor="end" font-size="12" fill="#666">0 kr</text>
+                    <text x="50" y="325" text-anchor="end" font-size="12" fill="#666">50k</text>
+                    <text x="50" y="265" text-anchor="end" font-size="12" fill="#666">100k</text>
+                    <text x="50" y="205" text-anchor="end" font-size="12" fill="#666">150k</text>
+                    <text x="50" y="145" text-anchor="end" font-size="12" fill="#666">200k</text>
+                    <text x="50" y="85" text-anchor="end" font-size="12" fill="#666">250k</text>
+
+                    <!-- Dynamic result text -->
+                    <text id="resultText" x="300" y="35" text-anchor="middle" font-size="16" fill="#1e3a5f" font-weight="600">
+                        Efter 20 år: 132 665 kr
+                    </text>
+
+                    <!-- Title -->
+                    <text x="300" y="410" text-anchor="middle" font-size="14" fill="#888" font-style="italic">
+                        Exempel: 50 000 kr startkapital med 5% årlig ränta
+                    </text>
+                </svg>
+                <div id="graphTooltip" class="graph-tooltip"></div>
+                <div class="graph-toggle">
+                    <button class="active" data-mode="compound">Med ränta-på-ränta</button>
+                    <button data-mode="simple">Utan ränta-på-ränta</button>
+                    <button data-mode="both">Jämför båda</button>
+                </div>
+                </div>
+            </div>
+            <div class="content-text">
+                <h2>Så fungerar ränta-på-ränta – den mest kraftfulla sparmetoden</h2>
+                <p>Ränta-på-ränta, eller sammansatt ränta, är när du får ränta inte bara på ditt ursprungliga sparande utan även på den ränta du tidigare tjänat. Det är matematikens magi som gör att ditt sparande accelererar ju längre tid det får växa.</p>
+                <p>Genom att regelbundet sätta av pengar och låta dem växa med ränta-på-ränta kan du bygga en betydande förmögenhet över tid. Våra kalkylatorer visar exakt hur stor skillnad det gör att börja spara tidigt.</p>
+                <a href="/rantetyper" class="btn-secondary">Beräkna ränta-på-ränta</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section gray">
+    <div class="section-inner">
+        <div class="content-row reverse">
+            <div class="content-image">
+                <img src="./ränta.nu new_files/v2-15yn1q-zpx6d.jpg" alt="Sparbössa och mynt">
+            </div>
+            <div class="content-text">
+                <h2>Varför Ränta.nu är Sveriges mest betrodda sparkalkylator</h2>
+                <p>Sedan 2018 har Ränta.nu hjälpt hundratusentals svenskar att fatta smartare sparbeslut. Vi samarbetar med ekonomiska experter och uppdaterar dagligen med de senaste räntorna från alla svenska banker.</p>
+                <p>Vår mission är att göra sparande transparent och tillgängligt för alla. Vi tar aldrig betalt för våra tjänster och vi är helt oberoende – våra rekommendationer bygger enbart på data och fakta, aldrig provisioner.</p>
+                <a href="/om-oss" class="btn-secondary">Läs mer om Ränta.nu</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Därför väljer tusentals svenskar Ränta.nu</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M2 12h20"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                </div>
+                <h3>Avancerade kalkylatorer</h3>
+                <p>Våra kalkylatorer visar exakt hur ditt sparande växer med ränta-på-ränta över tid.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 3v18h18"></path><path d="M18 9l-5 5-4-4-3 3"></path></svg>
+                </div>
+                <h3>Jämför 50+ banker</h3>
+                <p>Vi uppdaterar dagligen med sparräntor från alla svenska banker så du hittar bäst avkastning.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M16 13H8M16 17H8"></path></svg>
+                </div>
+                <h3>Expertguider</h3>
+                <p>Våra ekonomiska experter delar strategier för optimalt sparande och investeringar.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M7 8h10M7 12h6"></path></svg>
+                </div>
+                <h3>100% Oberoende</h3>
+                <p>Vi tar aldrig provision från banker – våra råd bygger enbart på data och analys.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                </div>
+                <h3>Dagliga uppdateringar</h3>
+                <p>Få alltid aktuell information om räntor, styrränta och ekonomiska prognoser.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                </div>
+                <h3>Skattesmarta tips</h3>
+                <p>Maximera din avkastning med ISK, kapitalförsäkring och andra skattefördelar.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Info cards section -->
+<section class="info-cards">
+    <div class="section-inner">
+        <div class="info-cards-grid">
+            <div class="info-card">
+                <div class="info-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                </div>
+                <div>
+                    <h3>Vår metodik – så arbetar vi</h3>
+                    <p>Ränta.nu samlar in data från över 50 svenska banker dagligen. Vi använder avancerade algoritmer för att analysera räntor, villkor och avgifter. Vårt team av ekonomiska experter granskar all information innan publicering för att säkerställa högsta kvalitet och relevans.</p>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M7 8h10M7 12h6"></path></svg>
+                </div>
+                <div>
+                    <h3>Transparens och oberoende</h3>
+                    <p>Vi är stolta över att vara helt oberoende av banker och finansiella institutioner. Ränta.nu finansieras genom annonser och innehållspartnerskap, men vi tar aldrig betalt för höga placeringar eller positiva recensioner. Ditt förtroende är vår viktigaste tillgång.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <div class="highlight-box-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path></svg>
+            </div>
+            <div>
+                <h3>Certifierad ekonomisk rådgivning</h3>
+                <p>Vårt team består av certifierade finansiella rådgivare och ekonomer med gedigen erfarenhet från Sveriges ledande banker. Vi kombinerar akademisk expertis med praktisk kunskap för att ge dig de bästa verktygen för smart sparande och investeringar.</p>
+                <a href="/om-vara-experter" class="btn-secondary">Möt våra experter</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="steps-section">
+    <div class="section-inner">
+        <h2 class="steps-title">Så använder du Ränta.nu för smartare sparande</h2>
+
+        <div class="steps-list">
+            <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Välj sparkalkylator</h4>
+                    <p>Välj mellan sparkonto, ISK, kapitalförsäkring eller fondkonto beroende på dina sparmål.</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Ange dina siffror</h4>
+                    <p>Fyll i startbelopp, månatligt sparande, spartid och förväntad avkastning.</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Se din framtid</h4>
+                    <p>Få detaljerad prognos med ränta-på-ränta-effekt, totalbelopp och årlig tillväxt.</p>
+                </div>
+            </div>
+
+            <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>Jämför banker</h4>
+                    <p>Se vilka banker som ger bäst avkastning för just ditt sparande och dina villkor.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="rate-watch">
+    <div class="rate-watch-card">
+        <h2>Få notis när <span>räntan ändras</span></h2>
+
+        <p class="rate-watch-description">
+            Bevaka sparräntor och Riksbankens styrränta.<br>
+            Vi mejlar endast när något faktiskt förändras.
+        </p>
+
+        <form class="rate-watch-form">
+            <input type="email" class="rate-watch-input" placeholder="din@email.se" required="">
+            <button type="submit" class="rate-watch-button">
+                Bevaka räntor
+            </button>
+        </form>
+
+        <p class="rate-watch-trust">
+            Ingen spam. Inga erbjudanden. Endast ränteändringar.
+        </p>
+    </div>
+</section>
+
+<!-- Services cards -->
+<section class="services-section">
+    <div class="section-inner">
+        <h2 class="services-title">Våra mest populära sparkalkylatorer</h2>
+        <div class="services-grid">
+            <div class="service-card blue">
+                <h3>ISK-kalkylator</h3>
+                <p>Beräkna hur mycket du kan tjäna med Investeringssparkonto. Jämför med vanligt sparkonto och se skillnaden.</p>
+                <a href="/bolanerakna">Läs mer →</a>
+            </div>
+            <div class="service-card teal">
+                <h3>Pensionssparande</h3>
+                <p>Planera din pension med vår avancerade kalkylator. Se hur månatligt sparande växer till pensionen.</p>
+                <a href="/sparranta">Läs mer →</a>
+            </div>
+            <div class="service-card dark">
+                <h3>Månadssparande</h3>
+                <p>Räkna ut hur månatligt sparande med fond- och aktiesparande kan växa med historisk avkastning.</p>
+                <a href="/effektiv-ranta">Läs mer →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="articles-section">
+    <div class="section-inner">
+        <h2 class="articles-title">Läs mer om ränta</h2>
+        <div class="articles-grid">
+            <a href="/artiklar/vad-ar-ranta" class="article-card">
+                <div class="article-image img1"></div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-category">Guide</span>
+                        <span class="article-author">Matyas Dios</span>
+                        <span class="meta-separator">•</span>
+                        <span class="article-date">15 dec 2024</span>
+                        <span class="meta-separator">•</span>
+                        <span class="article-reading-time">5 min läsning</span>
+                    </div>
+                    <h4>Vad är ränta? - Komplett guide</h4>
+                    <p>Lär dig allt om vad ränta är, hur den fungerar och vilka olika typer av ränta som finns.</p>
+                </div>
+            </a>
+            <a href="/artiklar/ranta-pa-ranta" class="article-card">
+                <div class="article-image img2"></div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-category">Tips</span>
+                        <span class="article-author">Matyas Dios</span>
+                        <span class="meta-separator">•</span>
+                        <span class="article-date">12 dec 2024</span>
+                        <span class="meta-separator">•</span>
+                        <span class="article-reading-time">7 min läsning</span>
+                    </div>
+                    <h4>Ränta på ränta - så fungerar sammansatt ränta</h4>
+                    <p>Förstå hur ränta på ränta-effekten kan göra dig rik på sikt genom smart sparande.</p>
+                </div>
+            </a>
+            <a href="/artiklar/basta-sparranta" class="article-card">
+                <div class="article-image img3"></div>
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-category">Jämförelse</span>
+                        <span class="article-author">Matyas Dios</span>
+                        <span class="meta-separator">•</span>
+                        <span class="article-date">10 dec 2024</span>
+                        <span class="meta-separator">•</span>
+                        <span class="article-reading-time">4 min läsning</span>
+                    </div>
+                    <h4>Bästa sparräntan 2025 - jämför banker</h4>
+                    <p>Vi har jämfört alla banker och visar dig vilka som erbjuder bäst sparränta just nu.</p>
+                </div>
+            </a>
+        </div>
+        <div class="articles-more">
+            <a href="/artiklar">Visa alla artiklar →</a>
+        </div>
+    </div>
+</section>
+
+<section class="faq-section">
+    <div class="section-inner">
+        <div class="faq-layout">
+            <div class="faq-main">
+                <h2 class="faq-title">Vanliga frågor och svar</h2>
+
+                <div class="faq-item active">
+                    <div class="faq-question">Vad innebär ränta?</div>
+                    <div class="faq-answer">Ränta är kostnaden för att låna pengar, vilket låntagaren betalar till långivaren. Det är också den avkastning som erhålls för insatta pengar på ett sparkonto. Räntan uttrycks vanligtvis som en procentandel av låne- eller sparbeloppet per år.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Vad är räntan idag?</div>
+                    <div class="faq-answer">Den aktuella styrräntan i Sverige är 3.75%. Detta påverkar räntan på olika typer av lån och sparande. Bolåneräntor ligger för närvarande runt 4-5% beroende på bindningstid.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">När tror man räntan går ner igen?</div>
+                    <div class="faq-answer">Ekonomiska experter förutspår att räntan fortsatt kommer vara låg under 2025, med styrräntan på cirka 1,75%, beroende på inflation och konjunktur. Riksbanken fattar beslut baserat på ekonomiska prognoser.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Vad kommer räntan vara 2025?</div>
+                    <div class="faq-answer">Prognoser antyder att räntan kan stabilisera sig runt 2-3% år 2025, förutsatt att inflationen hålls under kontroll och ekonomin återhämtar sig som förväntat.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Hur räknar man ut ränta per månad?</div>
+                    <div class="faq-answer">För att räkna ut ränta per månad, delar du den årliga räntan med 12 och multiplicerar med lånebeloppet. Till exempel, om årsräntan är 6% och lånebeloppet är 100,000 kr, blir månadsräntan 500 kr.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Vad är skillnaden mellan nominell och effektiv ränta?</div>
+                    <div class="faq-answer">Nominell ränta är den grundläggande räntesatsen utan avgifter. Effektiv ränta inkluderar alla kostnader och avgifter som är kopplade till lånet, vilket ger en mer rättvisande bild av den faktiska kostnaden.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Hur fungerar ränteavdrag?</div>
+                    <div class="faq-answer">Ränteavdrag innebär att du kan dra av 30% av dina räntekostnader på lån i din deklaration. Om du betalar 10,000 kr i ränta per år får du alltså ett avdrag på 3,000 kr.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Vad är bästa sparräntan just nu?</div>
+                    <div class="faq-answer">De bästa sparräntorna ligger för närvarande runt 3-4% för sparkonton utan bindningstid. Med bindningstid kan du ofta få högre ränta, upp till 5-6%.</div>
+                </div>
+            </div>
+
+            <div class="faq-sidebar">
+                <div class="sidebar-box">
+                    <h3>Om Ränta.nu</h3>
+                    <p>Ränta.nu AB (org.nr 559342-7891) grundades 2018 och är idag Sveriges ledande oberoende plattform för sparande och räntejämförelser med över 150 000 användare per månad.</p>
+
+                    <div class="company-grid">
+                        <div class="company-item">
+                            <label>E-post</label>
+                            <span><a href="mailto:info@ranta.nu">info@ranta.nu</a></span>
+                        </div>
+                        <div class="company-item">
+                            <label>Organisationsnummer</label>
+                            <span>559342-7891</span>
+                        </div>
+                        <div class="company-item">
+                            <label>Adress</label>
+                            <span>Stureplan 4, 114 35 Stockholm</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-stats">
+                        <h4>Aktuella räntor</h4>
+                        <div class="sidebar-stat">
+                            <span>Styrränta</span>
+                            <span>3.75%</span>
+                        </div>
+                        <div class="sidebar-stat">
+                            <span>Bolåneränta snitt</span>
+                            <span>4.5%</span>
+                        </div>
+                        <div class="sidebar-stat">
+                            <span>Bästa sparräntan</span>
+                            <span>3.8%</span>
+                        </div>
+                        <div class="sidebar-stat">
+                            <span>Senast uppdaterad</span>
+                            <span>18 dec 2024</span>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-links">
+                        <h4>Viktiga länkar</h4>
+                        <a href="https://riksbanken.se/">Riksbanken</a>
+                        <a href="https://konsumentverket.se/">Konsumentverket</a>
+                        <a href="https://skatteverket.se/">Skatteverket</a>
+                        <a href="https://fi.se/">Finansinspektionen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section">
+</section>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                        <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                        <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                        <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                    </svg>
+                </div>
+                <span class="logo-text">Ränta.nu</span>
+            </div>
+            <p>Sedan 2018 har Ränta.nu varit Sveriges mest betrodda källa för oberoende sparrådgivning. Med över 150 000 användare per månad hjälper vi svenskar att fatta smartare beslut om sitt sparande.</p>
+            <div class="footer-contact">
+                E-post: <a href="mailto:info@ranta.nu">info@ranta.nu</a><br>
+                Org.nr: 559342-7891
+            </div>
+        </div>
+
+        <div>
+            <h4>Räkna ränta</h4>
+            <ul>
+                <li><a href="/bolanerakna">Bolåneränta</a></li>
+                <li><a href="/sparranta">Sparränta</a></li>
+                <li><a href="/effektiv-ranta">Effektiv ränta</a></li>
+                <li><a href="/ranta-pa-ranta">Ränta på ränta</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Lär dig mer</h4>
+            <ul>
+                <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                <li><a href="/rantetyper">Olika räntetyper</a></li>
+                <li><a href="/ranteavdrag">Ränteavdrag</a></li>
+                <li><a href="/artiklar">Alla artiklar</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Om Ränta.nu</h4>
+            <ul>
+                <li><a href="/om-oss">Om oss</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+                <li><a href="/integritet">Integritet</a></li>
+                <li><a href="/villkor">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2025 Ränta.nu. Alla rättigheter förbehållna.</span>
+        <span>Informationen på sidan ersätter inte professionell rådgivning.</span>
+    </div>
+</footer>
+
+<script>
+// Interactive Interest Graph
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleButtons = document.querySelectorAll('.graph-toggle button');
+    const linearPath = document.getElementById('linearPath');
+    const compoundPath = document.getElementById('compoundPath');
+    const compoundPoints = document.getElementById('compoundPoints');
+    const simplePoints = document.getElementById('simplePoints');
+    const resultText = document.getElementById('resultText');
+    const tooltip = document.getElementById('graphTooltip');
+    const dataPoints = document.querySelectorAll('.data-point');
+
+    const results = {
+        compound: 'Efter 20 år: 132 665 kr',
+        simple: 'Efter 20 år: 100 000 kr',
+        both: 'Skillnad: 32 665 kr mer med ränta-på-ränta'
+    };
+
+    // Toggle button functionality
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            toggleButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            const mode = this.getAttribute('data-mode');
+
+            if (mode === 'compound') {
+                linearPath.style.opacity = '0.2';
+                compoundPath.style.opacity = '1';
+                compoundPoints.style.opacity = '1';
+                simplePoints.style.opacity = '0';
+                resultText.textContent = results.compound;
+                resultText.style.fill = '#1e3a5f';
+            } else if (mode === 'simple') {
+                linearPath.style.opacity = '1';
+                compoundPath.style.opacity = '0.2';
+                compoundPoints.style.opacity = '0';
+                simplePoints.style.opacity = '1';
+                resultText.textContent = results.simple;
+                resultText.style.fill = '#94a3b8';
+            } else if (mode === 'both') {
+                linearPath.style.opacity = '1';
+                compoundPath.style.opacity = '1';
+                compoundPoints.style.opacity = '1';
+                simplePoints.style.opacity = '1';
+                resultText.textContent = results.both;
+                resultText.style.fill = '#1e3a5f';
+            }
+        });
+    });
+
+    // Tooltip functionality for data points
+    dataPoints.forEach(point => {
+        point.addEventListener('mouseenter', function(e) {
+            const year = this.getAttribute('data-year');
+            const amount = this.getAttribute('data-amount');
+            tooltip.textContent = `År ${year} → ${amount} kr`;
+            tooltip.style.opacity = '1';
+        });
+
+        point.addEventListener('mousemove', function(e) {
+            const graphContainer = document.querySelector('.graph-container');
+            const rect = graphContainer.getBoundingClientRect();
+            tooltip.style.left = (e.clientX - rect.left + 10) + 'px';
+            tooltip.style.top = (e.clientY - rect.top - 10) + 'px';
+        });
+
+        point.addEventListener('mouseleave', function() {
+            tooltip.style.opacity = '0';
+        });
+    });
+});
+
+// FAQ Accordion
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+
+        question.addEventListener('click', () => {
+            // Toggle active class on clicked item
+            item.classList.toggle('active');
+
+            // Optional: Close other items when opening one (uncomment if you want this behavior)
+            // faqItems.forEach(otherItem => {
+            //     if (otherItem !== item) {
+            //         otherItem.classList.remove('active');
+            //     }
+            // });
+        });
+    });
+
+    // Optional: Open first FAQ item by default
+    if (faqItems.length > 0) {
+        faqItems[0].classList.add('active');
+    }
+});
+</script>
+
+
+
+
+
+</body>
+</html>
