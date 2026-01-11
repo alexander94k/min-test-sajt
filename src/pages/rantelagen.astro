@@ -1,0 +1,215 @@
+---
+// Frontmatter
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "Räntelagen - Regler för dröjsmålsränta och betalning | Ränta.nu";
+const pageDescription = "Allt om räntelagen: vad den reglerar, hur dröjsmålsränta beräknas och vilka regler som gäller för betalningar mellan företag och konsumenter.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/berakna" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Räntelagen</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Förstå lagen om ränta vid betalning och dröjsmål
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Vad är räntelagen?</h2>
+            <p>Räntelagen, formellt "Lag (1975:635) om ränta vid försenad betalning", är den svenska lag som reglerar när och hur mycket ränta som ska betalas vid försenad betalning. Lagen gäller för nästan alla typer av betalningar mellan företag och privatpersoner, mellan företag sinsemellan, och mellan privatpersoner.</p>
+
+            <p>Syftet med räntelagen är att skapa tydliga regler för dröjsmålsränta och att ge incitament för att betala i rätt tid. Genom att borgenärer har rätt till ränta vid försenad betalning kompenseras de för den kostnad och olägenhet som förseningen innebär.</p>
+
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
+                <p style="margin: 0;"><strong>Viktigt att veta:</strong> Räntelagen är dispositiv, vilket innebär att parterna kan avtala om andra regler. Många företag har dock standardvillkor som följer räntelagens bestämmelser.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Huvudregler i räntelagen</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3>Förfallotid</h3>
+                <p>Ränta börjar löpa från förfallodagen. Om inget annat avtalats är förfallotiden 30 dagar efter fakturadatum för fordran mellan näringsidkare.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3>Dröjsmålsränta</h3>
+                <p>Räntan ska enligt lagen vara referensräntan (Riksbankens) plus 8 procentenheter. För konsumentfordringar gäller referensräntan plus 8%.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                    </svg>
+                </div>
+                <h3>Påminnelseavgift</h3>
+                <p>Borgenären har rätt till ersättning för påminnelsekostnader. För 2026 är grundavgiften 60 kronor enligt lagen om ersättning för inkassokostnader.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                </div>
+                <h3>Diskonto</h3>
+                <p>Räntelagen reglerar även diskonto - ränta som ska dras av när betalning sker innan förfallodagen. Detta är mindre vanligt men kan vara aktuellt vid kontantrabatter.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Beräkning av dröjsmålsränta</h2>
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                <h3 style="margin-bottom: 16px;">Formel för dröjsmålsränta:</h3>
+                <p style="font-size: 18px; font-weight: 600; color: #1e3a5f; margin-bottom: 24px;">
+                    Dröjsmålsränta = Referensränta + 8 procentenheter
+                </p>
+
+                <h4 style="margin-bottom: 12px;">Exempel:</h4>
+                <p style="margin-bottom: 16px;">Om Riksbankens referensränta är 3,0% blir dröjsmålsräntan:</p>
+                <p style="font-size: 18px; font-weight: 600; color: #1e3a5f; margin-bottom: 24px;">
+                    3,0% + 8% = 11,0% per år
+                </p>
+
+                <p style="margin-bottom: 16px;">På en faktura på 10 000 kr som betalas 60 dagar för sent blir dröjsmålsräntan:</p>
+                <p style="font-size: 18px; font-weight: 600; color: #1e3a5f;">
+                    10 000 kr × 0,11 × (60/365) ≈ 181 kr
+                </p>
+            </div>
+
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5; margin-top: 24px;">
+                <h3 style="margin-bottom: 16px;">Referensränta och ändringsdatum:</h3>
+                <p>Riksbanken fastställer referensräntan två gånger per år, den 1 januari och den 1 juli. Referensräntan baseras på Riksbankens reporänta den 15 december respektive 15 juni, avrundad till närmaste halva procentenhet.</p>
+                <p style="margin-top: 16px;">Dröjsmålsräntan justeras automatiskt när referensräntan ändras, vilket innebär att räntesatsen på en försenad betalning kan variera över tid.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Olika regler för olika situationer</h2>
+            <p>Räntelagen innehåller olika bestämmelser beroende på vilka parter som är inblandade och typen av transaktion:</p>
+
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5; margin-top: 32px;">
+                <ul style="line-height: 2; color: #555;">
+                    <li><strong>Handel mellan företag:</strong> Förfallotid 30 dagar om inget annat avtalats. Dröjsmålsränta enligt referensräntan + 8%.</li>
+                    <li><strong>Konsumentköp:</strong> Särskilda regler i konsumentköplagen. Ofta längre betalningstider och konsumentskydd.</li>
+                    <li><strong>Offentlig upphandling:</strong> Enligt lag ska kommuner och statliga myndigheter betala inom 30 dagar.</li>
+                    <li><strong>Kontantköp:</strong> Betalning ska ske omedelbart om inget annat avtalats. Ränta löper från köptillfället vid dröjsmål.</li>
+                    <li><strong>Hyror:</strong> Särskilda regler i hyreslagen. Dröjsmålsränta gäller även här men kan få andra konsekvenser som uppsägning.</li>
+                </ul>
+            </div>
+
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
+                <p style="margin: 0;"><strong>För företagare:</strong> Se till att dina fakturor innehåller tydlig information om förfallotid och att dröjsmålsränta tas ut enligt räntelagen. Detta påminner kunder om vikten av att betala i tid.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section gray">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Rätt till ersättning vid försenad betalning</h2>
+            <p>Utöver dröjsmålsräntan har borgenären rätt till ersättning för påminnelse- och inkassokostnader enligt inkassolagen. För 2026 är de maximala beloppen:</p>
+
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5; margin-top: 32px;">
+                <ul style="line-height: 2; color: #555;">
+                    <li><strong>Påminnelseavgift:</strong> 60 kr</li>
+                    <li><strong>Inkassoåtgärd:</strong> 180 kr (steg 1) + 220 kr (steg 2)</li>
+                    <li><strong>Bevakning i konkurs:</strong> 550 kr</li>
+                    <li><strong>Ansökan om betalningsföreläggande:</strong> 300 kr</li>
+                </ul>
+                <p style="margin-top: 24px; color: #666; font-style: italic;">Dessa belopp justeras årligen och gäller för konsumentfordringar. För näringsidkare kan högre kostnader tas ut om de är skäliga.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 16px; color: white;">Lär dig mer om räntor</h2>
+        <p style="text-align: center; color: rgba(255,255,255,0.9); margin-bottom: 32px; font-size: 18px;">
+            Utforska andra räntebegrepp och hur de fungerar
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="/drojsmalsranta" style="padding: 14px 28px; background: white; color: #1e3a5f; border-radius: 8px; font-weight: 600; text-decoration: none;">Dröjsmålsränta</a>
+            <a href="/referensranta" style="padding: 14px 28px; background: rgba(255,255,255,0.2); color: white; border: 2px solid white; border-radius: 8px; font-weight: 600; text-decoration: none;">Referensränta</a>
+        </div>
+    </div>
+</section>
+
+<Footer />
+
+</body>
+</html>

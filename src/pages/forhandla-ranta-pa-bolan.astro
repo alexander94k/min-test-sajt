@@ -1,0 +1,278 @@
+---
+// Frontmatter
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "Förhandla ränta på bolån - Tips för bättre bolånevillkor | Ränta.nu";
+const pageDescription = "Lär dig hur du förhandlar om bättre ränta på ditt bolån. Praktiska tips, strategier och argument för att få lägre bolåneränta från din bank.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/berakna" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Förhandla ränta på bolån</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Få bättre villkor och spara tusentals kronor genom att förhandla med din bank
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Varför ska du förhandla om din bolåneränta?</h2>
+            <p>Många bolånetagare accepterar den ränta banken först erbjuder utan att förhandla. Det är ett misstag som kan kosta dig tiotusentals kronor över lånets löptid. Banker har stor marginal att sänka räntorna, särskilt för attraktiva kunder med god ekonomi och låg belåningsgrad.</p>
+
+            <p>Även en minskning på 0,1-0,2 procentenheter gör stor skillnad. På ett bolån på 3 miljoner kronor innebär 0,1% lägre ränta en besparing på cirka 3 000 kr per år - eller 90 000 kr över 30 år. Det är definitivt värt att ta samtalet med banken.</p>
+
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
+                <p style="margin: 0;"><strong>Viktigt att veta:</strong> Förhandling om bolåneränta är helt normalt och förväntat. Banker är vana vid att kunder förhandlar och har ofta mandat att sänka räntorna för att behålla eller vinna kunder.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Bästa tidpunkterna att förhandla</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <h3>Vid nytt bolån</h3>
+                <p>När du tar ditt första bolån är bankerna ofta generösa med villkoren för att vinna dig som kund. Förhandla redan här för att få ett bra utgångsläge.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                        <polyline points="17 6 23 6 23 12"></polyline>
+                    </svg>
+                </div>
+                <h3>Efter amortering</h3>
+                <p>När du har amorterat och din belåningsgrad sjunkit under 75% eller 50% är det perfekt läge att förhandla om bättre ränta. Lägre belåningsgrad = lägre risk för banken.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3>Vid räntebindning</h3>
+                <p>När din bundna ränta löper ut är det ett naturligt tillfälle att både jämföra marknadsläget och förhandla om nya villkor med din bank.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Årligen</h3>
+                <p>Gör det till rutin att förhandla om räntan minst en gång per år. Marknadsläget ändras och din situation förbättras över tid.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Så förhandlar du effektivt - steg för steg</h2>
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                <h3 style="margin-bottom: 24px; color: #1e3a5f;">1. Förbered dig väl</h3>
+                <ul style="line-height: 2; color: #555; margin-bottom: 32px;">
+                    <li>Jämför räntor hos andra banker - använd jämförelsetjänster online</li>
+                    <li>Ta in konkreta erbjudanden från minst två andra banker</li>
+                    <li>Räkna ut din belåningsgrad (lån / bostadens värde)</li>
+                    <li>Ha koll på din ekonomi: inkomst, tillgångar, andra lån</li>
+                    <li>Kolla din UC-poäng och se till att den är god</li>
+                </ul>
+
+                <h3 style="margin-bottom: 24px; color: #1e3a5f;">2. Kontakta din bank</h3>
+                <ul style="line-height: 2; color: #555; margin-bottom: 32px;">
+                    <li>Ring eller boka möte med din rådgivare</li>
+                    <li>Var tydlig med att du vill förhandla om räntan</li>
+                    <li>Var artig men bestämd - det här är affärer</li>
+                    <li>Ta gärna upp förhandlingen vid ett fysiskt möte för bättre resultat</li>
+                </ul>
+
+                <h3 style="margin-bottom: 24px; color: #1e3a5f;">3. Presentera dina argument</h3>
+                <ul style="line-height: 2; color: #555; margin-bottom: 32px;">
+                    <li>Visa konkreta erbjudanden från andra banker</li>
+                    <li>Påpeka din goda betalningshistorik hos banken</li>
+                    <li>Nämn om din belåningsgrad har förbättrats</li>
+                    <li>Lyft fram om du har fler produkter hos banken (sparkonton, försäkringar)</li>
+                    <li>Berätta om din stabila ekonomi och goda inkomst</li>
+                </ul>
+
+                <h3 style="margin-bottom: 24px; color: #1e3a5f;">4. Var beredd att byta bank</h3>
+                <ul style="line-height: 2; color: #555;">
+                    <li>Visa att du verkligen är beredd att flytta lånet om villkoren inte förbättras</li>
+                    <li>Fråga om banken kan matcha eller överträffa konkurrerande erbjudanden</li>
+                    <li>Ge banken en rimlig deadline att återkomma med nytt erbjudande</li>
+                    <li>Om banken inte går med på bättre villkor - flytta lånet</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Starka argument för lägre ränta</h2>
+            <p>Vissa argument väger tyngre än andra när du förhandlar med banken. Här är de mest effektiva:</p>
+
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5; margin-top: 32px;">
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: #1e3a5f; margin-bottom: 8px;">✓ Konkurrenskraftiga erbjudanden</h4>
+                    <p style="color: #666;">Det starkaste argumentet är konkreta erbjudanden från andra banker. Helst skriftliga och med alla villkor tydligt angivna.</p>
+                </div>
+
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: #1e3a5f; margin-bottom: 8px;">✓ Låg belåningsgrad</h4>
+                    <p style="color: #666;">Under 75% (men särskilt under 50%) gör dig till en lågriskkund som förtjänar bättre ränta. Detta är ett objektivt och starkt argument.</p>
+                </div>
+
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: #1e3a5f; margin-bottom: 8px;">✓ Stor lånesumma</h4>
+                    <p style="color: #666;">Ju större bolån, desto mer tjänar banken på dig. Ett bolån på över 2-3 miljoner ger dig större förhandlingsstyrka.</p>
+                </div>
+
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: #1e3a5f; margin-bottom: 8px;">✓ God ekonomi</h4>
+                    <p style="color: #666;">Hög och stabil inkomst, inga betalningsanmärkningar och god UC-poäng visar att du är en trygg kund.</p>
+                </div>
+
+                <div style="margin-bottom: 24px;">
+                    <h4 style="color: #1e3a5f; margin-bottom: 8px;">✓ Flera produkter</h4>
+                    <p style="color: #666;">Om du har sparkonton, försäkringar eller andra produkter hos banken ökar ditt värde som kund.</p>
+                </div>
+
+                <div>
+                    <h4 style="color: #1e3a5f; margin-bottom: 8px;">✓ Lång kundrelation</h4>
+                    <p style="color: #666;">Att ha varit kund i många år och alltid betalat i tid visar lojalitet och tillförlitlighet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section gray">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Vanliga misstag att undvika</h2>
+
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                <ul style="line-height: 2.2; color: #555;">
+                    <li><strong>Att inte förhandla alls</strong> - Det största misstaget är att acceptera första erbjudandet utan att ens försöka förhandla.</li>
+                    <li><strong>Att bluffe utan täckning</strong> - Påstå inte att du har bättre erbjudanden från andra banker om du inte har det. Banken kan be om att få se dem.</li>
+                    <li><strong>Att vara för passiv</strong> - Vänta inte på att banken ska höra av sig. Ta själv initiativet och förhandla aktivt.</li>
+                    <li><strong>Att ge upp för snabbt</strong> - Om rådgivaren säger nej första gången, fråga om de kan kolla igen eller prata med sin chef.</li>
+                    <li><strong>Att bara fokusera på listräntan</strong> - Förhandla om den faktiska räntan du betalar, inte bankens officiella listränta.</li>
+                    <li><strong>Att inte jämföra regelbundet</strong> - Marknaden förändras. Förhandla om räntan minst en gång per år.</li>
+                </ul>
+            </div>
+
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
+                <p style="margin: 0;"><strong>Tips:</strong> Om din bank inte vill sänka räntan trots goda argument, tveka inte att byta bank. Bytet är enklare än du tror och den nya banken hjälper ofta till med hela processen. Det kan spara dig tiotusentals kronor årligen.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Hur mycket kan du sänka räntan?</h2>
+            <p>Möjligheten att få lägre ränta beror på flera faktorer, men här är några riktlinjer baserat på din situation:</p>
+
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5; margin-top: 32px;">
+                <div style="margin-bottom: 24px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+                    <h4 style="margin-bottom: 12px;">Belåningsgrad under 50%</h4>
+                    <p style="margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Möjlig räntesänkning: 0,3-0,7%</p>
+                    <p style="margin: 0; color: #666;">Du är en lågriskkund. Banks kan gå långt för att behålla dig.</p>
+                </div>
+
+                <div style="margin-bottom: 24px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+                    <h4 style="margin-bottom: 12px;">Belåningsgrad 50-75%</h4>
+                    <p style="margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Möjlig räntesänkning: 0,2-0,5%</p>
+                    <p style="margin: 0; color: #666;">God förhandlingsposition, särskilt med konkurrenskraftiga erbjudanden.</p>
+                </div>
+
+                <div style="padding: 20px; background: #f8f9fa; border-radius: 8px;">
+                    <h4 style="margin-bottom: 12px;">Belåningsgrad över 75%</h4>
+                    <p style="margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Möjlig räntesänkning: 0,1-0,3%</p>
+                    <p style="margin: 0; color: #666;">Mindre utrymme, men fortfarande värt att förhandla. Betona din goda ekonomi och betalningsförmåga.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 16px; color: white;">Beräkna din besparing</h2>
+        <p style="text-align: center; color: rgba(255,255,255,0.9); margin-bottom: 32px; font-size: 18px;">
+            Se hur mycket du kan spara med lägre bolåneränta
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="/berakna/bolaneranta" style="padding: 14px 28px; background: white; color: #1e3a5f; border-radius: 8px; font-weight: 600; text-decoration: none;">Bolåneräntekalkylator</a>
+            <a href="/basta-rantan" style="padding: 14px 28px; background: rgba(255,255,255,0.2); color: white; border: 2px solid white; border-radius: 8px; font-weight: 600; text-decoration: none;">Jämför bolåneräntor</a>
+        </div>
+    </div>
+</section>
+
+<Footer />
+
+</body>
+</html>

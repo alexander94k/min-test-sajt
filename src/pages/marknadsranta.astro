@@ -1,0 +1,175 @@
+---
+// Frontmatter
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "Marknadsränta - Vad är marknadsränta? | Ränta.nu";
+const pageDescription = "Lär dig om marknadsräntan, hur den bildas på den öppna marknaden och hur den påverkar dina lån, sparande och investeringar.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/berakna" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Marknadsränta</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Förstå hur marknadsräntan bildas och påverkar din ekonomi
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Vad är marknadsränta?</h2>
+            <p>Marknadsräntan är den ränta som bildas genom utbud och efterfrågan på den fria marknaden. Till skillnad från Riksbankens styrränta som sätts av en central myndighet, bestäms marknadsräntan av marknadskrafterna där banker, företag och andra aktörer lånar ut och lånar in pengar.</p>
+
+            <p>Marknadsräntan varierar beroende på löptid, kreditrisk och aktuellt marknadsläge. Den påverkar allt från bolåneräntor till sparräntor och utgör grunden för prissättningen av många finansiella produkter.</p>
+
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
+                <p style="margin: 0;"><strong>Viktigt att veta:</strong> Marknadsräntan följer generellt Riksbankens styrränta men kan skilja sig åt beroende på marknadsförväntningar, inflation och ekonomisk utveckling.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Vad påverkar marknadsräntan?</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3>Riksbankens styrränta</h3>
+                <p>Centralbankens styrränta är den viktigaste faktorn. När Riksbanken höjer eller sänker styrräntan följer marknadsräntan vanligtvis efter.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3>Utbud och efterfrågan</h3>
+                <p>Om många vill låna pengar samtidigt som få vill låna ut stiger räntan. Omvänt sjunker räntan när det finns mycket kapital att låna ut.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                    </svg>
+                </div>
+                <h3>Inflation</h3>
+                <p>Höga inflationsförväntningar leder till högre marknadsräntor eftersom långivare vill kompenseras för att pengarnas värde sjunker.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                </div>
+                <h3>Internationella räntor</h3>
+                <p>Räntorna i andra länder, särskilt euroområdet och USA, påverkar svenska marknadsräntor genom kapitalflöden och valutakurser.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section gray">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Olika typer av marknadsräntor</h2>
+            <p>Det finns flera olika marknadsräntor som används i olika sammanhang:</p>
+
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5; margin-top: 32px;">
+                <ul style="line-height: 2; color: #555;">
+                    <li><strong>STIBOR</strong> - Stockholm Interbank Offered Rate, den ränta svenska banker lånar ut till varandra på. Används ofta som bas för bolåneräntor.</li>
+                    <li><strong>Statsobligationsränta</strong> - Räntan på svenska statsobligationer, som speglar långsiktiga marknadsförväntningar.</li>
+                    <li><strong>Bostadsobligationsränta</strong> - Räntan på bostadsobligationer som ges ut av bostadsinstitut. Ligger nära bolåneräntor.</li>
+                    <li><strong>Företagsobligationsränta</strong> - Räntan på företagsobligationer, som varierar beroende på företagets kreditvärdighet.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Hur påverkar marknadsräntan dig?</h2>
+            <p>Marknadsräntan har direkt påverkan på din privatekonomi på flera sätt. För låntagare betyder högre marknadsräntor dyrare bolån och privatlån, medan lägre räntor gör det billigare att låna.</p>
+
+            <p>För sparare är det tvärtom - högre marknadsräntor ger bättre sparräntor på sparkonton och investeringar i räntebärande värdepapper. När du väljer mellan olika sparformer eller lånetyper är det viktigt att förstå hur marknadsräntan påverkar villkoren.</p>
+
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
+                <p style="margin: 0;"><strong>Tips:</strong> Håll koll på marknadsräntans utveckling genom att följa Riksbankens räntebeslut och STIBOR-räntan. Detta hjälper dig att tajma större lånebeslut och sparval.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 16px; color: white;">Lär dig mer om räntor</h2>
+        <p style="text-align: center; color: rgba(255,255,255,0.9); margin-bottom: 32px; font-size: 18px;">
+            Fördjupa dig i olika räntebegrepp och hur de fungerar
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="/stibor-ranta" style="padding: 14px 28px; background: white; color: #1e3a5f; border-radius: 8px; font-weight: 600; text-decoration: none;">STIBOR ränta</a>
+            <a href="/riksbankens-ranta" style="padding: 14px 28px; background: rgba(255,255,255,0.2); color: white; border: 2px solid white; border-radius: 8px; font-weight: 600; text-decoration: none;">Riksbankens ränta</a>
+        </div>
+    </div>
+</section>
+
+<Footer />
+
+</body>
+</html>

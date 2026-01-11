@@ -1,0 +1,179 @@
+---
+// Frontmatter
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "Riksgäldens ränta - Statslåneräntan | Ränta.nu";
+const pageDescription = "Lär dig om Riksgäldens ränta och statslåneräntan. Förstå hur Riksgälden finansierar staten och vad deras räntor betyder för svensk ekonomi.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/berakna" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Riksgäldens ränta</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Så fungerar statslåneräntan och Riksgäldens finansiering av staten
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Vad är Riksgälden?</h2>
+            <p>Riksgälden, eller Riksgäldskontoret, är den svenska myndighet som ansvarar för att hantera statens lån och skuldportfölj. Myndigheten finansierar statens underskott genom att ge ut statsobligationer och statsskuldväxlar, vilka sedan köps av banker, försäkringsbolag, pensionsfonder och andra investerare.</p>
+
+            <p>Räntan som Riksgälden betalar på sina lån, ofta kallad statslåneräntan, är en viktig referensränta i svensk ekonomi. Den speglar marknadsaktörernas förtroende för den svenska statens ekonomi och används som riktmärke för många andra räntor.</p>
+
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
+                <p style="margin: 0;"><strong>Viktigt att veta:</strong> Riksgälden är en av världens äldsta statliga kreditinstitut, grundat 1789. Svenska statspapper anses som mycket säkra investeringar tack vare Sveriges starka ekonomi och AAA-kreditbetyg.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Riksgäldens uppgifter</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                </div>
+                <h3>Statsskuldens förvaltning</h3>
+                <p>Riksgälden förvaltar statsskulden på omkring 1 200 miljarder kronor och ser till att staten alltid har tillgång till nödvändig finansiering.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                    </svg>
+                </div>
+                <h3>Emission av statspapper</h3>
+                <p>Ger ut statsobligationer och statsskuldväxlar med olika löptider för att finansiera statens verksamhet till lägsta möjliga kostnad.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                </div>
+                <h3>Krishantering</h3>
+                <p>Ansvarar för statens garantier till finanssektorn och hanterar banker i kris för att upprätthålla stabiliteten i det svenska finansiella systemet.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3>Centralkontoföring</h3>
+                <p>Driver och förvaltar det svenska systemet för elektronisk hantering av finansiella instrument genom Euroclear Sweden.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section gray">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Statslåneräntan och dess betydelse</h2>
+            <p>Statslåneräntan är den ränta som staten betalar när den lånar pengar. Den varierar beroende på löptid - kortare lån har vanligtvis lägre ränta än längre lån. Den 10-åriga statsobligationsräntan används ofta som referens för långsiktig riskfri ränta i Sverige.</p>
+
+            <p>Statslåneräntan påverkar många andra räntor i ekonomin. Bolåneräntor, företagslåneräntor och kommuners lånekostnader baseras ofta på statslåneräntan plus ett påslag som speglar den extra risken.</p>
+
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5; margin-top: 32px;">
+                <h3 style="margin-bottom: 16px;">Faktorer som påverkar statslåneräntan:</h3>
+                <ul style="line-height: 2; color: #555;">
+                    <li><strong>Riksbankens styrränta</strong> - Påverkar kortare löptider direkt</li>
+                    <li><strong>Inflationsförväntningar</strong> - Högre inflation leder till högre räntor</li>
+                    <li><strong>Ekonomisk tillväxt</strong> - Stark tillväxt kan leda till högre räntor</li>
+                    <li><strong>Internationella räntor</strong> - Svenska räntor påverkas av räntorna i omvärlden</li>
+                    <li><strong>Statens kreditvärdighet</strong> - Sveriges AAA-betyg ger låga räntor</li>
+                    <li><strong>Utbud och efterfrågan</strong> - Investerarnas intresse för svenska statspapper</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Investera i statspapper</h2>
+            <p>Privatpersoner kan investera i svenska statsobligationer och statsskuldväxlar, antingen direkt genom Riksgälden eller via banker och värdepappersföretag. Statspapper anses som mycket säkra investeringar eftersom risken för att den svenska staten inte skulle kunna betala tillbaka är extremt liten.</p>
+
+            <p>Avkastningen på statspapper är dock normalt lägre än på mer riskfyllda investeringar som aktier eller företagsobligationer. De passar därför bäst för konservativa sparare eller som en stabil del i en diversifierad portfölj.</p>
+
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
+                <p style="margin: 0;"><strong>För investerare:</strong> Statsobligationer kan köpas och säljas på andrahandsmarknaden. Priset varierar beroende på hur räntorna har utvecklats sedan obligationen gavs ut, vilket innebär att du kan göra både vinst och förlust vid försäljning innan förfallodagen.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 16px; color: white;">Lär dig mer om statliga räntor</h2>
+        <p style="text-align: center; color: rgba(255,255,255,0.9); margin-bottom: 32px; font-size: 18px;">
+            Fördjupa dig i hur staten och centralbanken påverkar räntorna
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="/statsobligationer-ranta" style="padding: 14px 28px; background: white; color: #1e3a5f; border-radius: 8px; font-weight: 600; text-decoration: none;">Statsobligationer</a>
+            <a href="/riksbankens-ranta" style="padding: 14px 28px; background: rgba(255,255,255,0.2); color: white; border: 2px solid white; border-radius: 8px; font-weight: 600; text-decoration: none;">Riksbankens ränta</a>
+        </div>
+    </div>
+</section>
+
+<Footer />
+
+</body>
+</html>

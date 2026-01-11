@@ -1,0 +1,192 @@
+---
+// Frontmatter
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "STIBOR ränta - Stockholm Interbank Offered Rate | Ränta.nu";
+const pageDescription = "Allt om STIBOR-räntan: vad den är, hur den fungerar och varför den är viktig för ditt bolån och svenska räntemarknaden.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/berakna" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">STIBOR ränta</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Förstå Stockholm Interbank Offered Rate och dess påverkan på bolåneräntor
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Vad är STIBOR?</h2>
+            <p>STIBOR står för Stockholm Interbank Offered Rate och är den ränta till vilken svenska banker är beredda att låna ut pengar till varandra på den svenska interbankmarknaden. STIBOR är en av de viktigaste referensräntorna i Sverige och används som bas för prissättning av många finansiella produkter, särskilt bolån med rörlig ränta.</p>
+
+            <p>STIBOR publiceras dagligen av Nasdaq Stockholm för olika löptider - vanligtvis 1, 3 och 6 månader. Räntan beräknas som ett genomsnitt av de räntesatser som ett antal banker anger att de är villiga att låna ut till varandra på den osäkrade interbankmarknaden.</p>
+
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
+                <p style="margin: 0;"><strong>Viktigt att veta:</strong> STIBOR 3-månader är den mest använda referensräntan för bolån i Sverige. När din bank erbjuder "STIBOR + 1,5%" innebär det att din bolåneränta är STIBOR-räntan plus bankens påslag på 1,5 procentenheter.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Så fungerar STIBOR</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3>Daglig fastställelse</h3>
+                <p>STIBOR fastställs varje bankdag klockan 11:00 baserat på ränteangivelser från ett antal svenska banker. Räntan publiceras för olika löptider.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                </div>
+                <h3>Interbankutlåning</h3>
+                <p>Speglar kostnaden för banker att låna av varandra. Högre STIBOR innebär att det är dyrare för banker att finansiera sin utlåning.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <h3>Bolånereferens</h3>
+                <p>De flesta rörliga bolåneräntor baseras på STIBOR 3-månader plus ett påslag. När STIBOR ändras påverkas därför miljontals bolånetagare.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                </div>
+                <h3>Marknadssignal</h3>
+                <p>STIBOR-räntan är en viktig indikator på marknadsförväntningar om framtida räntor och ekonomisk utveckling i Sverige.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Vad påverkar STIBOR?</h2>
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                <ul style="line-height: 2; color: #555;">
+                    <li><strong>Riksbankens styrränta</strong> - Den viktigaste faktorn. STIBOR följer vanligtvis styrräntan men ligger något högre.</li>
+                    <li><strong>Likviditet i banksystemet</strong> - Om banker har svårt att få tag på pengar stiger STIBOR.</li>
+                    <li><strong>Kreditrisk mellan banker</strong> - Vid oro för bankernas ekonomi kan STIBOR stiga även om styrräntan är oförändrad.</li>
+                    <li><strong>Marknadsförväntningar</strong> - Om marknaden förväntar sig räntehöjningar stiger längre STIBOR-räntor.</li>
+                    <li><strong>Internationella räntor</strong> - Räntor i euroområdet och USA påverkar indirekt svenska marknadsräntor.</li>
+                    <li><strong>Ekonomisk utveckling</strong> - Stark ekonomi med hög inflation leder vanligtvis till högre STIBOR.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">STIBOR och ditt bolån</h2>
+            <p>Om du har eller planerar att ta ett bolån med rörlig ränta är det viktigt att förstå hur STIBOR fungerar. Din bolåneränta består av STIBOR plus bankens påslag (marginal). Medan STIBOR varierar dagligen och följer marknadsräntorna, är påslaget fast under avtalstiden.</p>
+
+            <p>När Riksbanken höjer styrräntan stiger normalt STIBOR inom några dagar, vilket gör att din bolånekostnad ökar vid nästa räntejustering (vanligtvis var tredje månad). Omvänt får du lägre ränta när Riksbanken sänker styrräntan.</p>
+
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5; margin-top: 32px;">
+                <h3 style="margin-bottom: 16px;">Exempel på bolåneränta:</h3>
+                <p style="margin-bottom: 16px;">Om STIBOR 3-månader är 3,5% och din banks påslag är 1,2%, blir din totala bolåneränta:</p>
+                <p style="font-size: 20px; font-weight: 600; color: #1e3a5f; margin-bottom: 16px;">3,5% + 1,2% = 4,7%</p>
+                <p style="margin: 0; color: #666;">Vid nästa räntejustering om tre månader kommer din ränta att justeras baserat på det nya STIBOR-värdet, medan påslaget förblir 1,2%.</p>
+            </div>
+
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
+                <p style="margin: 0;"><strong>Tips:</strong> Jämför inte bara STIBOR-påslag mellan banker - kolla också vad de faktiskt tar ut i andra avgifter och om du kan förhandla om påslaget. Ett lägre påslag sparar pengar oavsett hur STIBOR utvecklas.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section gray">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">STIBOR vs andra referensräntor</h2>
+            <p>STIBOR är den svenska motsvarigheten till LIBOR (London) och EURIBOR (euroområdet). På senare år har det internationellt pågått en övergång från interbankräntor som LIBOR till alternativa referensräntor baserade på faktiska transaktioner istället för bankers angivelser.</p>
+
+            <p>I Sverige har Riksbanken introducerat SWESTR (Swedish Krona Short-Term Rate) som ett alternativ till STIBOR. SWESTR baseras på faktiska transaktioner på den svenska penningmarknaden och bedöms som mer robust. På sikt kan fler bolån komma att knytas till SWESTR istället för STIBOR.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 16px; color: white;">Beräkna din bolånekostnad</h2>
+        <p style="text-align: center; color: rgba(255,255,255,0.9); margin-bottom: 32px; font-size: 18px;">
+            Använd vår kalkylator för att se hur STIBOR-räntan påverkar ditt bolån
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="/berakna/bolaneranta" style="padding: 14px 28px; background: white; color: #1e3a5f; border-radius: 8px; font-weight: 600; text-decoration: none;">Bolåneräntekalkylator</a>
+            <a href="/rorlig-ranta" style="padding: 14px 28px; background: rgba(255,255,255,0.2); color: white; border: 2px solid white; border-radius: 8px; font-weight: 600; text-decoration: none;">Rörlig ränta</a>
+        </div>
+    </div>
+</section>
+
+<Footer />
+
+</body>
+</html>
