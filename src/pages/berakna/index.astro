@@ -1,0 +1,194 @@
+---
+// Frontmatter
+import '../../styles/global.css';
+import Footer from '../../components/Footer.astro';
+
+const pageTitle = "Kalkylatorer - Beräkna räntor och lån | Ränta.nu";
+const pageDescription = "Använd våra kalkylatorer för att beräkna bolåneränta, ränta-på-ränta, ränteavdrag, effektiv ränta och mer. Gratis och enkla verktyg för din ekonomi.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/berakna" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Räknekalkylatorer</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Använd våra gratis kalkylatorer för att beräkna räntor, lån och sparande
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Calculators Grid -->
+<section class="content-section">
+    <div class="section-inner">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px; max-width: 1200px; margin: 0 auto;">
+
+            <!-- Bolåneräntekalkylator -->
+            <a href="/berakna/bolaneranta" style="text-decoration: none; color: inherit;">
+                <div style="background: white; padding: 32px; border-radius: 16px; border: 2px solid #e5e5e5; transition: all 0.3s; height: 100%;" onmouseover="this.style.borderColor='#1e3a5f'; this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='#e5e5e5'; this.style.transform='translateY(0)'">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 22px; margin-bottom: 12px; color: #1e3a5f;">Bolåneräntekalkylator</h3>
+                    <p style="color: #666; line-height: 1.6;">Beräkna månadskostnad och total räntekostnad för ditt bolån vid olika räntesatser.</p>
+                </div>
+            </a>
+
+            <!-- Ränta-på-ränta -->
+            <a href="/berakna/ranta-pa-ranta" style="text-decoration: none; color: inherit;">
+                <div style="background: white; padding: 32px; border-radius: 16px; border: 2px solid #e5e5e5; transition: all 0.3s; height: 100%;" onmouseover="this.style.borderColor='#1e3a5f'; this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='#e5e5e5'; this.style.transform='translateY(0)'">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                            <polyline points="17 6 23 6 23 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 22px; margin-bottom: 12px; color: #1e3a5f;">Ränta-på-ränta kalkylator</h3>
+                    <p style="color: #666; line-height: 1.6;">Se hur ditt sparande växer över tid med sammansatt ränta och regelbundna insättningar.</p>
+                </div>
+            </a>
+
+            <!-- Ränteavdrag -->
+            <a href="/berakna/ranteavdrag" style="text-decoration: none; color: inherit;">
+                <div style="background: white; padding: 32px; border-radius: 16px; border: 2px solid #e5e5e5; transition: all 0.3s; height: 100%;" onmouseover="this.style.borderColor='#1e3a5f'; this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='#e5e5e5'; this.style.transform='translateY(0)'">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="9" y1="15" x2="15" y2="15"></line>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 22px; margin-bottom: 12px; color: #1e3a5f;">Ränteavdragskalkylator</h3>
+                    <p style="color: #666; line-height: 1.6;">Räkna ut hur mycket du får tillbaka i skatt genom ränteavdrag på ditt bolån.</p>
+                </div>
+            </a>
+
+            <!-- Effektiv ränta -->
+            <a href="/berakna/effektiv-ranta" style="text-decoration: none; color: inherit;">
+                <div style="background: white; padding: 32px; border-radius: 16px; border: 2px solid #e5e5e5; transition: all 0.3s; height: 100%;" onmouseover="this.style.borderColor='#1e3a5f'; this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='#e5e5e5'; this.style.transform='translateY(0)'">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 22px; margin-bottom: 12px; color: #1e3a5f;">Effektiv ränta kalkylator</h3>
+                    <p style="color: #666; line-height: 1.6;">Beräkna den verkliga kostnaden för ditt lån inklusive alla avgifter och kostnader.</p>
+                </div>
+            </a>
+
+            <!-- Skatt på ränta -->
+            <a href="/berakna/skatt-pa-ranta" style="text-decoration: none; color: inherit;">
+                <div style="background: white; padding: 32px; border-radius: 16px; border: 2px solid #e5e5e5; transition: all 0.3s; height: 100%;" onmouseover="this.style.borderColor='#1e3a5f'; this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='#e5e5e5'; this.style.transform='translateY(0)'">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 22px; margin-bottom: 12px; color: #1e3a5f;">Skatt på ränta kalkylator</h3>
+                    <p style="color: #666; line-height: 1.6;">Räkna ut hur mycket skatt du betalar på dina ränteinkomster från sparande.</p>
+                </div>
+            </a>
+
+            <!-- Leva på ränta -->
+            <a href="/berakna/leva-pa-ranta" style="text-decoration: none; color: inherit;">
+                <div style="background: white; padding: 32px; border-radius: 16px; border: 2px solid #e5e5e5; transition: all 0.3s; height: 100%;" onmouseover="this.style.borderColor='#1e3a5f'; this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='#e5e5e5'; this.style.transform='translateY(0)'">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 22px; margin-bottom: 12px; color: #1e3a5f;">Leva på ränta kalkylator</h3>
+                    <p style="color: #666; line-height: 1.6;">Beräkna hur mycket kapital du behöver för att kunna leva på avkastningen.</p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- Info Section -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Varför använda våra kalkylatorer?</h2>
+            <p>Våra kalkylatorer hjälper dig att fatta bättre ekonomiska beslut genom att visualisera hur räntor påverkar din ekonomi. Oavsett om du funderar på att ta ett bolån, vill optimera ditt sparande eller planera för framtiden, ger våra verktyg dig de siffror du behöver.</p>
+
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
+                <p style="margin: 0;"><strong>Gratis och enkelt:</strong> Alla våra kalkylatorer är helt gratis att använda och kräver ingen registrering. Resultaten är vägledande och ersätter inte professionell rådgivning.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section style="padding: 80px 0; background: #fff;">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); border-radius: 20px; padding: 60px 40px; box-shadow: 0 10px 40px rgba(30, 58, 95, 0.15);">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <h2 class="section-title-white" style="margin-bottom: 24px;">Behöver du hjälp?</h2>
+                <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                    Läs våra guider för att lära dig mer om räntor och hur de påverkar din ekonomi
+                </p>
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="/artiklar" class="btn-primary" style="background: white; color: #1e3a5f;">
+                        Läs artiklar
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                    </a>
+                    <a href="/basta-rantan" class="btn-secondary" style="border-color: white; color: white;">
+                        Jämför räntor
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<Footer />
+
+</body>
+</html>

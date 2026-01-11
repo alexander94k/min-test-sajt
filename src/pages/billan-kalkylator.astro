@@ -1,0 +1,269 @@
+---
+// Frontmatter
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "Billånekalkylator - Beräkna månadskostnad för billån | Ränta.nu";
+const pageDescription = "Räkna ut vad ett billån kostar per månad. Jämför räntor och amorteringstider för att hitta det bästa billånet för din bil.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/berakna" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Billånekalkylator</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Beräkna månadskostnad och total kostnad för ditt billån
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5; margin-bottom: 48px;">
+                <h2 style="text-align: center; margin-bottom: 32px;">Beräkna ditt billån</h2>
+
+                <div style="display: grid; gap: 24px; max-width: 600px; margin: 0 auto;">
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Bilens pris (kr)</label>
+                        <input type="number" id="bilpris" value="250000" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Kontantinsats (kr)</label>
+                        <input type="number" id="kontantinsats" value="50000" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Ränta (%)</label>
+                        <input type="number" id="ranta" value="6.5" step="0.1" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Lånetid (år)</label>
+                        <input type="number" id="lanetid" value="5" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Uppläggningsavgift (kr)</label>
+                        <input type="number" id="upplagning" value="395" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Aviavgift per månad (kr)</label>
+                        <input type="number" id="aviavgift" value="50" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <button onclick="berakna()" style="padding: 16px; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: 600; cursor: pointer;">
+                        Beräkna
+                    </button>
+                </div>
+
+                <div id="resultat" style="margin-top: 32px; padding: 24px; background: #e8f4f8; border-radius: 12px; display: none;">
+                    <h3 style="margin-bottom: 16px; color: #1e3a5f;">Resultat:</h3>
+                    <div style="display: grid; gap: 12px;">
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Lånebelopp:</span>
+                            <span id="lanebelopp" style="color: #1e3a5f; font-weight: 700;"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Månadskostnad:</span>
+                            <span id="manadskostnad" style="color: #2e7d32; font-weight: 700; font-size: 24px;"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Total räntekostnad:</span>
+                            <span id="totalRanta" style="color: #1e3a5f; font-weight: 700;"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Totala avgifter:</span>
+                            <span id="totalaAvgifter" style="color: #1e3a5f; font-weight: 700;"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Total kostnad för lånet:</span>
+                            <span id="totalKostnad" style="color: #d32f2f; font-weight: 700; font-size: 20px;"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Effektiv ränta:</span>
+                            <span id="effektivRanta" style="color: #1e3a5f; font-weight: 700;"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section gray">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Så fungerar billån</h2>
+            <p>Ett billån är ett lån specifikt för att köpa bil. Räntorna på billån är vanligtvis högre än för bolån men lägre än för blancolån. Många banker kräver en kontantinsats på 10-20% av bilens värde för att bevilja lånet.</p>
+
+            <p>Vanlig lånetid för billån är 3-7 år. Kortare lånetid ger högre månadskostnad men lägre total räntekostnad. Längre lånetid ger lägre månadskostnad men högre total räntekostnad. Tänk också på att bilen tappar i värde snabbare än du amorterar, vilket kan innebära att du är "under vattnet" i början av lånetiden.</p>
+
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
+                <p style="margin: 0;"><strong>Tips:</strong> Jämför flera banker innan du väljer billån. Räntorna kan skilja flera procentenheter mellan olika långivare. Tänk också på att du kan förhandla om räntan, särskilt om du har god kreditvärdighet.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Faktorer som påverkar billåneräntan</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3>Bilens ålder</h3>
+                <p>Nyare bilar får ofta lägre ränta. Bilar äldre än 10 år kan ha högre ränta eller kräva större kontantinsats.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                </div>
+                <h3>Kreditvärdighet</h3>
+                <p>God ekonomi och betalningshistorik ger lägre ränta. UC-score och inkomst påverkar vilka villkor du erbjuds.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3>Lånetid</h3>
+                <p>Kortare lånetid kan ge lägre ränta eftersom risken för långivaren minskar. Vanligt är 3-7 år.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                </div>
+                <h3>Kontantinsats</h3>
+                <p>Större kontantinsats (20-30%) ger ofta bättre ränta eftersom långivarens risk minskar.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 80px 0; background: #fff;">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); border-radius: 20px; padding: 60px 40px; box-shadow: 0 10px 40px rgba(30, 58, 95, 0.15);">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <h2 class="section-title-white" style="margin-bottom: 24px;">Fler kalkylatorer</h2>
+                <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                    Utforska våra andra verktyg för att optimera din ekonomi
+                </p>
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="/berakna/effektiv-ranta" class="btn-primary" style="background: white; color: #1e3a5f;">
+                        Effektiv ränta
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                    </a>
+                    <a href="/berakna" class="btn-secondary" style="border-color: white; color: white;">
+                        Alla kalkylatorer
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<Footer />
+
+<script>
+function berakna() {
+    const bilpris = parseFloat(document.getElementById('bilpris').value);
+    const kontantinsats = parseFloat(document.getElementById('kontantinsats').value);
+    const ranta = parseFloat(document.getElementById('ranta').value) / 100;
+    const lanetid = parseFloat(document.getElementById('lanetid').value);
+    const upplagning = parseFloat(document.getElementById('upplagning').value);
+    const aviavgift = parseFloat(document.getElementById('aviavgift').value);
+
+    // Beräkna lånebelopp
+    const lanebelopp = bilpris - kontantinsats;
+
+    // Beräkna månatlig ränta
+    const manatligRanta = ranta / 12;
+    const antalManader = lanetid * 12;
+
+    // Beräkna månadskostnad (annuitet)
+    const manadskostnad = (lanebelopp * manatligRanta * Math.pow(1 + manatligRanta, antalManader)) /
+                          (Math.pow(1 + manatligRanta, antalManader) - 1) + aviavgift;
+
+    // Beräkna total kostnad
+    const totalAterbetalt = (manadskostnad - aviavgift) * antalManader;
+    const totalRanta = totalAterbetalt - lanebelopp;
+    const totalaAvgifter = upplagning + (aviavgift * antalManader);
+    const totalKostnad = totalRanta + totalaAvgifter;
+
+    // Beräkna effektiv ränta (förenklad)
+    const arligAvgiftskostnad = (upplagning / lanetid) + (aviavgift * 12);
+    const effektivRanta = ((lanebelopp * ranta + arligAvgiftskostnad) / lanebelopp) * 100;
+
+    // Visa resultat
+    document.getElementById('lanebelopp').textContent = Math.round(lanebelopp).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('manadskostnad').textContent = Math.round(manadskostnad).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('totalRanta').textContent = Math.round(totalRanta).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('totalaAvgifter').textContent = Math.round(totalaAvgifter).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('totalKostnad').textContent = Math.round(totalKostnad).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('effektivRanta').textContent = effektivRanta.toFixed(2) + '%';
+    document.getElementById('resultat').style.display = 'block';
+}
+
+// Beräkna automatiskt vid sidladdning
+window.addEventListener('load', berakna);
+</script>
+
+</body>
+</html>

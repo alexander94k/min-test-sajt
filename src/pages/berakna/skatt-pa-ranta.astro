@@ -1,0 +1,225 @@
+---
+// Frontmatter
+import '../../styles/global.css';
+import Footer from '../../components/Footer.astro';
+
+const pageTitle = "Skatt på ränta kalkylator - Beräkna skatt på ränteinkomster | Ränta.nu";
+const pageDescription = "Räkna ut hur mycket skatt du betalar på dina ränteinkomster från sparkonton och investeringar. Beräkna nettoinkomst efter skatt.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/berakna" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Skatt på ränta kalkylator</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Beräkna hur mycket skatt du betalar på dina ränteinkomster
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5; margin-bottom: 48px;">
+                <h2 style="text-align: center; margin-bottom: 32px;">Beräkna skatt på ränteinkomster</h2>
+
+                <div style="display: grid; gap: 24px; max-width: 600px; margin: 0 auto;">
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Årlig ränteinkomst (kr)</label>
+                        <input type="number" id="ranteinkomst" value="10000" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Skattesats på kapitalinkomster (%)</label>
+                        <input type="number" id="skattesats" value="30" step="0.1" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                        <p style="font-size: 14px; color: #666; margin-top: 4px;">Standard: 30% i Sverige</p>
+                    </div>
+
+                    <button onclick="berakna()" style="padding: 16px; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: 600; cursor: pointer;">
+                        Beräkna
+                    </button>
+                </div>
+
+                <div id="resultat" style="margin-top: 32px; padding: 24px; background: #e8f4f8; border-radius: 12px; display: none;">
+                    <h3 style="margin-bottom: 16px; color: #1e3a5f;">Resultat:</h3>
+                    <div style="display: grid; gap: 12px;">
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Ränteinkomst före skatt:</span>
+                            <span id="inkomstForeSk" style="color: #1e3a5f; font-weight: 700;"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Skatt på ränta (30%):</span>
+                            <span id="skatt" style="color: #d32f2f; font-weight: 700; font-size: 20px;"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Ränteinkomst efter skatt:</span>
+                            <span id="inkomstEfterSkatt" style="color: #2e7d32; font-weight: 700; font-size: 20px;"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Månatlig nettoinkomst:</span>
+                            <span id="manatligNetto" style="color: #1e3a5f; font-weight: 700;"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section gray">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Hur beskattas ränteinkomster?</h2>
+            <p>I Sverige beskattas ränteinkomster som kapitalinkomst med en skattesats på 30%. Det betyder att du betalar 30 kr i skatt för varje 100 kr du tjänar på räntor från sparkonton, obligationer och andra räntebärande placeringar.</p>
+
+            <p>Skatten dras automatiskt av banken för de flesta sparkonton (källskatt), men du måste själv deklarera ränteinkomster i din inkomstdeklaration. Ränteinkomster påverkar inte din kommunalskatt eller statlig inkomstskatt - de beskattas separat som kapitalinkomst.</p>
+
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
+                <p style="margin: 0;"><strong>Viktigt att veta:</strong> Räntekostnader (som ränta på bolån) ger ränteavdrag med 30% i skattereduktion. Det betyder att du kan dra av 30 kr i skatt för varje 100 kr du betalar i räntekostnader.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Olika typer av ränteinkomster</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                </div>
+                <h3>Sparkonton</h3>
+                <p>Ränta på sparkonton och bankkonton beskattas med 30%. Banken drar ofta källskatt direkt.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                    </svg>
+                </div>
+                <h3>Obligationer</h3>
+                <p>Ränta från statsobligationer, företagsobligationer och andra räntebärande värdepapper beskattas med 30%.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                </div>
+                <h3>ISK och kapitalförsäkring</h3>
+                <p>Schablonbeskattas istället för faktisk avkastning. Skatten baseras på kapitalets värde, inte på ränteinkomsten.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3>Utländska konton</h3>
+                <p>Ränta från utländska konton måste deklareras i Sverige och beskattas med 30%. Dubbelbeskattning kan undvikas.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 80px 0; background: #fff;">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); border-radius: 20px; padding: 60px 40px; box-shadow: 0 10px 40px rgba(30, 58, 95, 0.15);">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <h2 class="section-title-white" style="margin-bottom: 24px;">Fler kalkylatorer</h2>
+                <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                    Utforska våra andra verktyg för att optimera din ekonomi
+                </p>
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="/berakna/ranteavdrag" class="btn-primary" style="background: white; color: #1e3a5f;">
+                        Ränteavdrag
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                    </a>
+                    <a href="/berakna" class="btn-secondary" style="border-color: white; color: white;">
+                        Alla kalkylatorer
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<Footer />
+
+<script>
+function berakna() {
+    const ranteinkomst = parseFloat(document.getElementById('ranteinkomst').value);
+    const skattesats = parseFloat(document.getElementById('skattesats').value) / 100;
+
+    // Beräkna skatt
+    const skatt = ranteinkomst * skattesats;
+
+    // Beräkna nettoinkomst
+    const nettoinkomst = ranteinkomst - skatt;
+
+    // Beräkna månatlig nettoinkomst
+    const manatligNetto = nettoinkomst / 12;
+
+    // Visa resultat
+    document.getElementById('inkomstForeSk').textContent = Math.round(ranteinkomst).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('skatt').textContent = Math.round(skatt).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('inkomstEfterSkatt').textContent = Math.round(nettoinkomst).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('manatligNetto').textContent = Math.round(manatligNetto).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('resultat').style.display = 'block';
+}
+
+// Beräkna automatiskt vid sidladdning
+window.addEventListener('load', berakna);
+</script>
+
+</body>
+</html>

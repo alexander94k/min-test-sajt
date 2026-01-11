@@ -1,0 +1,244 @@
+---
+// Frontmatter
+import '../../styles/global.css';
+import Footer from '../../components/Footer.astro';
+
+const pageTitle = "Leva på ränta kalkylator - Beräkna kapital för ekonomisk frihet | Ränta.nu";
+const pageDescription = "Räkna ut hur mycket kapital du behöver för att kunna leva på avkastningen. Planera för ekonomisk frihet och tidig pension.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/berakna" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Leva på ränta kalkylator</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Beräkna hur mycket kapital du behöver för att leva på avkastningen
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5; margin-bottom: 48px;">
+                <h2 style="text-align: center; margin-bottom: 32px;">Beräkna kapital för ekonomisk frihet</h2>
+
+                <div style="display: grid; gap: 24px; max-width: 600px; margin: 0 auto;">
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Önskad månadsinkomst (kr)</label>
+                        <input type="number" id="manadsinkomst" value="30000" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Förväntad årlig avkastning (%)</label>
+                        <input type="number" id="avkastning" value="5" step="0.1" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                        <p style="font-size: 14px; color: #666; margin-top: 4px;">Börsen historiskt: 7-9%, Sparkonto: 3-4%</p>
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Skattesats på avkastning (%)</label>
+                        <input type="number" id="skattesats" value="30" step="0.1" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                        <p style="font-size: 14px; color: #666; margin-top: 4px;">Standard: 30% på kapitalinkomster i Sverige</p>
+                    </div>
+
+                    <button onclick="berakna()" style="padding: 16px; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: 600; cursor: pointer;">
+                        Beräkna
+                    </button>
+                </div>
+
+                <div id="resultat" style="margin-top: 32px; padding: 24px; background: #e8f4f8; border-radius: 12px; display: none;">
+                    <h3 style="margin-bottom: 16px; color: #1e3a5f;">Resultat:</h3>
+                    <div style="display: grid; gap: 12px;">
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Önskad månadsinkomst:</span>
+                            <span id="manadsinkomstResult" style="color: #1e3a5f; font-weight: 700;"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Önskad årsinkomst:</span>
+                            <span id="arsinkomst" style="color: #1e3a5f; font-weight: 700;"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Nödvändigt kapital:</span>
+                            <span id="kapital" style="color: #2e7d32; font-weight: 700; font-size: 24px;"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Årlig avkastning före skatt:</span>
+                            <span id="avkastningForeSk" style="color: #1e3a5f; font-weight: 700;"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Årlig avkastning efter skatt:</span>
+                            <span id="avkastningEfterSkatt" style="color: #1e3a5f; font-weight: 700;"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section gray">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Vad innebär det att leva på ränta?</h2>
+            <p>Att leva på ränta, eller ekonomisk frihet, innebär att du har tillräckligt med kapital för att avkastningen täcker dina levnadskostnader utan att du behöver arbeta. Målet är att kunna leva på den passiva inkomsten från dina investeringar.</p>
+
+            <p>Den klassiska 4%-regeln säger att du kan ta ut 4% av ditt kapital per år utan att kapitalet tar slut. Det innebär att du behöver 25 gånger dina årliga utgifter i kapital (100 ÷ 4 = 25). För att få 30 000 kr per månad (360 000 kr per år) behöver du alltså cirka 9 miljoner kr i kapital.</p>
+
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
+                <p style="margin: 0;"><strong>Viktigt att tänka på:</strong> Kom ihåg att räkna in inflation, skatter och att din livssituation kan förändras. Det är också klokt att ha en buffert utöver minimibeloppet för oförutsedda utgifter.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Olika strategier för att leva på kapital</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                        <polyline points="17 6 23 6 23 12"></polyline>
+                    </svg>
+                </div>
+                <h3>Aktier och fonder</h3>
+                <p>Historisk avkastning på 7-9% per år. Ger både utdelningar och värdeökning. Högre risk men bättre långsiktig potential.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <h3>Hyresfastigheter</h3>
+                <p>Ger månatlig hyresinkomst och potentiell värdeökning. Kräver mer aktivt arbete men kan ge stabil kassaflöde.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                    </svg>
+                </div>
+                <h3>Obligationer</h3>
+                <p>Lägre risk än aktier med förutsägbar avkastning på 2-5%. Bra för stabilitet och garanterad inkomst.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="16"></line>
+                        <line x1="8" y1="12" x2="16" y2="12"></line>
+                    </svg>
+                </div>
+                <h3>Blandad portfölj</h3>
+                <p>Kombinera olika tillgångsslag för att balansera risk och avkastning. Vanligt med 60% aktier och 40% obligationer.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 80px 0; background: #fff;">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); border-radius: 20px; padding: 60px 40px; box-shadow: 0 10px 40px rgba(30, 58, 95, 0.15);">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <h2 class="section-title-white" style="margin-bottom: 24px;">Planera ditt sparande</h2>
+                <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                    Använd våra kalkylatorer för att beräkna hur du når ditt sparmål
+                </p>
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="/berakna/ranta-pa-ranta" class="btn-primary" style="background: white; color: #1e3a5f;">
+                        Ränta-på-ränta
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                    </a>
+                    <a href="/berakna" class="btn-secondary" style="border-color: white; color: white;">
+                        Alla kalkylatorer
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<Footer />
+
+<script>
+function berakna() {
+    const manadsinkomst = parseFloat(document.getElementById('manadsinkomst').value);
+    const avkastning = parseFloat(document.getElementById('avkastning').value) / 100;
+    const skattesats = parseFloat(document.getElementById('skattesats').value) / 100;
+
+    // Beräkna årsinkomst
+    const arsinkomst = manadsinkomst * 12;
+
+    // Beräkna netto avkastning efter skatt
+    const nettoAvkastning = avkastning * (1 - skattesats);
+
+    // Beräkna nödvändigt kapital
+    // Formel: Kapital = Årsinkomst / Netto avkastning
+    const kapital = arsinkomst / nettoAvkastning;
+
+    // Beräkna avkastning före och efter skatt
+    const avkastningForeSk = kapital * avkastning;
+    const avkastningEfterSkatt = avkastningForeSk * (1 - skattesats);
+
+    // Visa resultat
+    document.getElementById('manadsinkomstResult').textContent = Math.round(manadsinkomst).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('arsinkomst').textContent = Math.round(arsinkomst).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('kapital').textContent = Math.round(kapital).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('avkastningForeSk').textContent = Math.round(avkastningForeSk).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('avkastningEfterSkatt').textContent = Math.round(avkastningEfterSkatt).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('resultat').style.display = 'block';
+}
+
+// Beräkna automatiskt vid sidladdning
+window.addEventListener('load', berakna);
+</script>
+
+</body>
+</html>

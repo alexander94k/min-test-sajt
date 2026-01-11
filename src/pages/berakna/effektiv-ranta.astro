@@ -1,0 +1,251 @@
+---
+// Frontmatter
+import '../../styles/global.css';
+import Footer from '../../components/Footer.astro';
+
+const pageTitle = "Effektiv ränta kalkylator - Beräkna verklig lånekostnad | Ränta.nu";
+const pageDescription = "Räkna ut den effektiva räntan på ditt lån inklusive alla avgifter och kostnader. Se den verkliga kostnaden för ditt bolån eller blancolån.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/berakna" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Effektiv ränta kalkylator</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Beräkna den verkliga kostnaden för ditt lån inklusive alla avgifter
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5; margin-bottom: 48px;">
+                <h2 style="text-align: center; margin-bottom: 32px;">Beräkna effektiv ränta</h2>
+
+                <div style="display: grid; gap: 24px; max-width: 600px; margin: 0 auto;">
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Lånebelopp (kr)</label>
+                        <input type="number" id="lanebelopp" value="2000000" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Nominell ränta (%)</label>
+                        <input type="number" id="nominellRanta" value="4.5" step="0.1" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Uppläggningsavgift (kr)</label>
+                        <input type="number" id="upplagning" value="0" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Aviavgift per månad (kr)</label>
+                        <input type="number" id="aviavgift" value="50" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Lånetid (år)</label>
+                        <input type="number" id="lanetid" value="30" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <button onclick="berakna()" style="padding: 16px; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: 600; cursor: pointer;">
+                        Beräkna
+                    </button>
+                </div>
+
+                <div id="resultat" style="margin-top: 32px; padding: 24px; background: #e8f4f8; border-radius: 12px; display: none;">
+                    <h3 style="margin-bottom: 16px; color: #1e3a5f;">Resultat:</h3>
+                    <div style="display: grid; gap: 12px;">
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Nominell ränta:</span>
+                            <span id="nominellRantaResult" style="color: #1e3a5f; font-weight: 700;"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Effektiv ränta:</span>
+                            <span id="effektivRanta" style="color: #d32f2f; font-weight: 700; font-size: 20px;"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Total kostnad för avgifter:</span>
+                            <span id="totalAvgifter" style="color: #1e3a5f; font-weight: 700;"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Total lånekostnad:</span>
+                            <span id="totalKostnad" style="color: #1e3a5f; font-weight: 700;"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section gray">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Vad är effektiv ränta?</h2>
+            <p>Effektiv ränta är ett mått som visar den verkliga kostnaden för ett lån när alla avgifter och kostnader räknas in. Till skillnad från den nominella räntan (listräntan) inkluderar den effektiva räntan uppläggningsavgifter, aviavgifter och andra administrativa kostnader.</p>
+
+            <p>Den effektiva räntan gör det lättare att jämföra olika lån eftersom den ger en rättvisande bild av den totala kostnaden. Enligt lag måste alla långivare uppge effektiv ränta när de marknadsför lån.</p>
+
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
+                <p style="margin: 0;"><strong>Viktigt att veta:</strong> Ett lån med lägre nominell ränta kan ha högre effektiv ränta än ett lån med högre nominell ränta om avgifterna är större. Jämför alltid den effektiva räntan när du väljer lån.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Vad ingår i effektiv ränta?</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3>Nominell ränta</h3>
+                <p>Grundräntan på lånet, den ränta som banken anger som listränta eller nominell ränta.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                    </svg>
+                </div>
+                <h3>Uppläggningsavgift</h3>
+                <p>Engångsavgift som tas ut när lånet beviljas. Kan variera från 0 kr till flera tusen kronor.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                </div>
+                <h3>Aviavgift</h3>
+                <p>Månatlig avgift för administration och utskick av avier. Vanligtvis 30-75 kr per månad.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3>Andra avgifter</h3>
+                <p>Kreditupplysningsavgifter, pantbrevskostnader för bolån och eventuella andra administrativa avgifter.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section style="padding: 80px 0; background: #fff;">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); border-radius: 20px; padding: 60px 40px; box-shadow: 0 10px 40px rgba(30, 58, 95, 0.15);">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <h2 class="section-title-white" style="margin-bottom: 24px;">Fler kalkylatorer</h2>
+                <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                    Utforska våra andra verktyg för att optimera din ekonomi
+                </p>
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="/berakna/bolaneranta" class="btn-primary" style="background: white; color: #1e3a5f;">
+                        Bolåneränta
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                    </a>
+                    <a href="/berakna" class="btn-secondary" style="border-color: white; color: white;">
+                        Alla kalkylatorer
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<Footer />
+
+<script>
+function berakna() {
+    const lanebelopp = parseFloat(document.getElementById('lanebelopp').value);
+    const nominellRanta = parseFloat(document.getElementById('nominellRanta').value) / 100;
+    const upplagning = parseFloat(document.getElementById('upplagning').value);
+    const aviavgift = parseFloat(document.getElementById('aviavgift').value);
+    const lanetid = parseFloat(document.getElementById('lanetid').value);
+
+    // Beräkna total aviavgift
+    const totalAviavgift = aviavgift * 12 * lanetid;
+
+    // Total avgifter
+    const totalAvgifter = upplagning + totalAviavgift;
+
+    // Beräkna effektiv ränta (förenklad)
+    // Den verkliga beräkningen är mer komplex, men detta ger en god uppskattning
+    const arligRantekostnad = lanebelopp * nominellRanta;
+    const arligAvgiftskostnad = (upplagning / lanetid) + (aviavgift * 12);
+    const effektivRanta = ((arligRantekostnad + arligAvgiftskostnad) / lanebelopp) * 100;
+
+    // Total kostnad (förenklad - antar linjär amortering)
+    const totalRantekostnad = (lanebelopp * nominellRanta * lanetid) / 2;
+    const totalKostnad = totalRantekostnad + totalAvgifter;
+
+    // Visa resultat
+    document.getElementById('nominellRantaResult').textContent = nominellRanta.toFixed(2) + '%';
+    document.getElementById('effektivRanta').textContent = effektivRanta.toFixed(2) + '%';
+    document.getElementById('totalAvgifter').textContent = Math.round(totalAvgifter).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('totalKostnad').textContent = Math.round(totalKostnad).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('resultat').style.display = 'block';
+}
+
+// Beräkna automatiskt vid sidladdning
+window.addEventListener('load', berakna);
+</script>
+
+</body>
+</html>
