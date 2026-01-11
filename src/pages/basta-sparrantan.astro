@@ -1,0 +1,582 @@
+---
+// Frontmatter
+const pageTitle = "Bästa sparräntan 2025 - Hitta bästa räntan och sparkonto | Ränta.nu";
+const pageDescription = "Hitta bästa sparräntan i Sverige 2025. Jämför räntor från alla banker, både fasta och rörliga. Uppdateras dagligen med aktuella räntor och villkor.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Bästa sparräntan 2025</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Hitta den bästa sparräntan i Sverige. Vi jämför räntor från alla banker dagligen så att du alltid får högsta möjliga avkastning på ditt sparande.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Best Rates Table -->
+<section class="best-rates">
+    <div class="section-inner">
+        <h2 class="section-title-white" style="margin-bottom: 16px;">Bästa sparräntorna just nu</h2>
+        <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 48px; text-align: center;">
+            Uppdaterat 11 januari 2025
+        </p>
+
+        <div style="background: white; border-radius: 16px; overflow: hidden; max-width: 1000px; margin: 0 auto;">
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="background: #f8f9fa; border-bottom: 2px solid #e5e5e5;">
+                            <th style="padding: 16px; text-align: left; font-weight: 600; color: #1e3a5f;">Bank</th>
+                            <th style="padding: 16px; text-align: left; font-weight: 600; color: #1e3a5f;">Kontotyp</th>
+                            <th style="padding: 16px; text-align: center; font-weight: 600; color: #1e3a5f;">Ränta</th>
+                            <th style="padding: 16px; text-align: left; font-weight: 600; color: #1e3a5f;">Bindningstid</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #f0f0f0; background: #f0f5f7;">
+                            <td style="padding: 20px; font-weight: 600; color: #1e3a5f;">Bluestep</td>
+                            <td style="padding: 20px; color: #555;">Fast ränta</td>
+                            <td style="padding: 20px; text-align: center;">
+                                <span style="font-size: 28px; font-weight: 700; color: #1e3a5f;">4,41%</span>
+                            </td>
+                            <td style="padding: 20px; color: #555;">2 år</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f0f0f0;">
+                            <td style="padding: 20px; font-weight: 600; color: #1e3a5f;">Multitude Bank</td>
+                            <td style="padding: 20px; color: #555;">Fast ränta</td>
+                            <td style="padding: 20px; text-align: center;">
+                                <span style="font-size: 28px; font-weight: 700; color: #1e3a5f;">4,40%</span>
+                            </td>
+                            <td style="padding: 20px; color: #555;">1 år</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f0f0f0;">
+                            <td style="padding: 20px; font-weight: 600; color: #1e3a5f;">Lea Bank</td>
+                            <td style="padding: 20px; color: #555;">Rörlig ränta</td>
+                            <td style="padding: 20px; text-align: center;">
+                                <span style="font-size: 28px; font-weight: 700; color: #1e3a5f;">4,30%</span>
+                            </td>
+                            <td style="padding: 20px; color: #555;">Ingen bindning</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f0f0f0;">
+                            <td style="padding: 20px; font-weight: 600; color: #1e3a5f;">Nordnet</td>
+                            <td style="padding: 20px; color: #555;">Högräntekonto</td>
+                            <td style="padding: 20px; text-align: center;">
+                                <span style="font-size: 28px; font-weight: 700; color: #1e3a5f;">3,80%</span>
+                            </td>
+                            <td style="padding: 20px; color: #555;">Ingen bindning</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 20px; font-weight: 600; color: #1e3a5f;">Resurs Bank</td>
+                            <td style="padding: 20px; color: #555;">Sparkonto Plus</td>
+                            <td style="padding: 20px; text-align: center;">
+                                <span style="font-size: 28px; font-weight: 700; color: #1e3a5f;">3,75%</span>
+                            </td>
+                            <td style="padding: 20px; color: #555;">Ingen bindning</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What is savings rate -->
+<section class="content-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Vad är sparränta?</h2>
+
+        <div class="content-row">
+            <div class="content-text">
+                <h3>Definition av sparränta</h3>
+                <p>Sparränta är den ränta du får på pengar som du sätter in på ett sparkonto hos en bank. Det är bankens sätt att tacka dig för att de får låna dina pengar. Sparräntan kallas även för inlåningsränta.</p>
+                <p>Den bästa sparräntan hittar du vanligtvis bland nätbaserade banker som har lägre kostnader än traditionella bankkontor och därför kan erbjuda högre räntor till sina kunder.</p>
+            </div>
+
+            <div class="content-text">
+                <h3>Hur hittar du bästa sparräntan?</h3>
+                <p>För att hitta den bästa sparräntan bör du jämföra flera banker och kontotyper. Faktorer som påverkar vilken ränta du får inkluderar:</p>
+                <ul style="line-height: 2; color: #555;">
+                    <li>Om du väljer fast eller rörlig ränta</li>
+                    <li>Hur länge du kan binda pengarna</li>
+                    <li>Vilket belopp du sparar</li>
+                    <li>Vilken bank du väljer</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Fixed vs Variable -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Fast eller rörlig sparränta?</h2>
+
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 32px;">
+                <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+                        <div style="width: 60px; height: 60px; background: #1e3a5f; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: 24px; margin: 0; color: #1e3a5f;">Fast ränta</h3>
+                    </div>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 24px;">Med fast ränta binder du dina pengar under en bestämd period, vanligtvis 6-24 månader. Under denna tid får du en garanterad ränta som inte förändras oavsett vad som händer på marknaden.</p>
+
+                    <div style="margin-bottom: 16px;">
+                        <strong style="color: #28a745; display: block; margin-bottom: 8px;">✓ Fördelar:</strong>
+                        <ul style="color: #555; line-height: 2; margin: 0;">
+                            <li>Högre ränta än rörlig</li>
+                            <li>Förutsägbar avkastning</li>
+                            <li>Skydd mot räntesänkningar</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong style="color: #dc3545; display: block; margin-bottom: 8px;">✗ Nackdelar:</strong>
+                        <ul style="color: #555; line-height: 2; margin: 0;">
+                            <li>Pengarna är bundna</li>
+                            <li>Ingen flexibilitet vid uttag</li>
+                            <li>Missar potentiella räntehöjningar</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                    <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+                        <div style="width: 60px; height: 60px; background: #1e3a5f; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: 24px; margin: 0; color: #1e3a5f;">Rörlig ränta</h3>
+                    </div>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 24px;">Med rörlig ränta kan du ta ut dina pengar när som helst utan bindning. Räntan följer marknaden och Riksbankens styrränta, vilket betyder att den kan både öka och minska över tid.</p>
+
+                    <div style="margin-bottom: 16px;">
+                        <strong style="color: #28a745; display: block; margin-bottom: 8px;">✓ Fördelar:</strong>
+                        <ul style="color: #555; line-height: 2; margin: 0;">
+                            <li>Full flexibilitet</li>
+                            <li>Fria uttag när som helst</li>
+                            <li>Kan dra nytta av räntehöjningar</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <strong style="color: #dc3545; display: block; margin-bottom: 8px;">✗ Nackdelar:</strong>
+                        <ul style="color: #555; line-height: 2; margin: 0;">
+                            <li>Lägre ränta än fast</li>
+                            <li>Risk för räntesänkningar</li>
+                            <li>Mindre förutsägbar avkastning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Binding time -->
+<section class="content-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Bindningstid och ränteskillnader</h2>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+            <p style="text-align: center; font-size: 18px; color: #555; margin-bottom: 48px;">
+                Genom att binda dina pengar i 6-12 månader får du betydligt bättre ränta än om pengarna är obundna. Längre bindningstid ger vanligtvis ännu högre ränta.
+            </p>
+
+            <div style="background: #f0f5f7; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                <h3 style="font-size: 24px; margin-bottom: 32px; color: #1e3a5f; text-align: center;">Räkneexempel på skillnaden</h3>
+
+                <div style="display: grid; gap: 24px;">
+                    <div style="background: white; padding: 24px; border-radius: 12px; border-left: 4px solid #1e3a5f;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <strong style="color: #1e3a5f;">Ingen bindning (rörlig):</strong>
+                            <span style="font-size: 24px; font-weight: 700; color: #1e3a5f;">3,50%</span>
+                        </div>
+                        <p style="color: #666; margin: 0;">På 100 000 kr: 3 500 kr/år</p>
+                    </div>
+
+                    <div style="background: white; padding: 24px; border-radius: 12px; border-left: 4px solid #1e3a5f;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <strong style="color: #1e3a5f;">6 månaders bindning:</strong>
+                            <span style="font-size: 24px; font-weight: 700; color: #1e3a5f;">4,00%</span>
+                        </div>
+                        <p style="color: #666; margin: 0;">På 100 000 kr: 4 000 kr/år</p>
+                    </div>
+
+                    <div style="background: white; padding: 24px; border-radius: 12px; border-left: 4px solid #28a745;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <strong style="color: #1e3a5f;">12 månaders bindning:</strong>
+                            <span style="font-size: 24px; font-weight: 700; color: #28a745;">4,40%</span>
+                        </div>
+                        <p style="color: #666; margin: 0;">På 100 000 kr: 4 400 kr/år</p>
+                    </div>
+
+                    <div style="background: white; padding: 24px; border-radius: 12px; border-left: 4px solid #28a745;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <strong style="color: #1e3a5f;">24 månaders bindning:</strong>
+                            <span style="font-size: 24px; font-weight: 700; color: #28a745;">4,41%</span>
+                        </div>
+                        <p style="color: #666; margin: 0;">På 100 000 kr: 4 410 kr/år</p>
+                    </div>
+                </div>
+
+                <div style="background: #e8f4f8; padding: 24px; border-radius: 8px; margin-top: 32px;">
+                    <p style="color: #1e3a5f; font-weight: 600; margin: 0; text-align: center;">
+                        Skillnad: Upp till 900 kr mer per år på 100 000 kr genom att binda pengarna!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Deposit guarantee -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Insättningsgaranti och säkerhet</h2>
+
+        <div class="content-row">
+            <div class="content-text">
+                <h3>Vad är insättningsgarantin?</h3>
+                <p>Alla svenska banker omfattas av en statlig insättningsgaranti som skyddar dina pengar upp till 1 050 000 kronor per person och bank. Detta gäller även om banken skulle gå i konkurs.</p>
+                <p>Det är viktigt att verifiera att den bank du väljer har insättningsgaranti. De flesta seriösa banker i Sverige har detta, men det finns undantag bland utländska aktörer.</p>
+            </div>
+
+            <div class="content-text">
+                <h3>Högre ränta utan garanti?</h3>
+                <p>Vissa institut erbjuder högre räntor men saknar insättningsgaranti. Detta innebär en konkursrisk där du kan förlora dina pengar om institutet går i konkurs.</p>
+                <p>Exempel på aktörer utan statlig garanti inkluderar vissa crowdlending-plattformar som SaveLend, Brocc och Froda. De kan erbjuda räntor upp till 6%, men med betydligt högre risk.</p>
+            </div>
+        </div>
+
+        <div style="max-width: 800px; margin: 48px auto 0;">
+            <div style="background: #fff3cd; border: 2px solid #ffc107; border-radius: 12px; padding: 32px;">
+                <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">⚠️ Viktigt att tänka på</h3>
+                <p style="color: #555; line-height: 1.8; margin: 0;">
+                    Om du har mer än 1 050 000 kr att spara bör du sprida pengarna på flera banker för att få full insättningsgaranti på hela beloppet. <strong>Det är viktigt att läsa det finstilta</strong> och förstå exakt vilka risker du tar med olika sparalternativ.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Popular banks -->
+<section class="content-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Populära banker för sparande</h2>
+
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 20px; margin-bottom: 16px; color: #1e3a5f;">Avanza</h3>
+                    <p style="color: #555; margin-bottom: 12px;">En av Sveriges största nätbanker med konkurrenskraftiga räntor och ingen årsavgift.</p>
+                    <p style="color: #666; font-size: 14px; margin: 0;">Rörlig ränta, fria uttag</p>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 20px; margin-bottom: 16px; color: #1e3a5f;">SBAB</h3>
+                    <p style="color: #555; margin-bottom: 12px;">Direktbank med både rörliga och fasta räntekonton. Känd för bra villkor.</p>
+                    <p style="color: #666; font-size: 14px; margin: 0;">Flera alternativ, flexibla villkor</p>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 20px; margin-bottom: 16px; color: #1e3a5f;">Länsförsäkringar</h3>
+                    <p style="color: #555; margin-bottom: 12px;">Traditionell bank med bra sparräntor för medlemmar och konkurrenskraftiga villkor.</p>
+                    <p style="color: #666; font-size: 14px; margin: 0;">Kräver medlemskap</p>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 20px; margin-bottom: 16px; color: #1e3a5f;">Skandia</h3>
+                    <p style="color: #555; margin-bottom: 12px;">Erbjuder sparkonton med attraktiva räntor och kapitalförsäkring för långsiktigt sparande.</p>
+                    <p style="color: #666; font-size: 14px; margin: 0;">Bra för pensionssparande</p>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 20px; margin-bottom: 16px; color: #1e3a5f;">Handelsbanken</h3>
+                    <p style="color: #555; margin-bottom: 12px;">Storbank med brett utbud av sparkonton och personlig service.</p>
+                    <p style="color: #666; font-size: 14px; margin: 0;">Traditionell bankservice</p>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 20px; margin-bottom: 16px; color: #1e3a5f;">Nordnet</h3>
+                    <p style="color: #555; margin-bottom: 12px;">Nätbank och sparplattform med högräntekonto och enkelt gränssnitt.</p>
+                    <p style="color: #666; font-size: 14px; margin: 0;">Högräntekonto utan bindning</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Compound interest -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Ränta-på-ränta effekten</h2>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+            <p style="text-align: center; font-size: 18px; color: #555; margin-bottom: 48px;">
+                När du får ränta på ditt sparkonto läggs räntan till ditt kapital, vilket betyder att du nästa gång får ränta på både ursprungsbeloppet och den tidigare räntan. Detta kallas för snöbollseffekten eller ränta-på-ränta.
+            </p>
+
+            <div style="background: white; padding: 48px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                <h3 style="font-size: 24px; margin-bottom: 32px; color: #1e3a5f; text-align: center;">Exempel: 500 000 kr med 4% fast ränta</h3>
+
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="background: #f8f9fa; border-bottom: 2px solid #e5e5e5;">
+                                <th style="padding: 12px; text-align: left; font-weight: 600; color: #1e3a5f;">År</th>
+                                <th style="padding: 12px; text-align: right; font-weight: 600; color: #1e3a5f;">Startkapital</th>
+                                <th style="padding: 12px; text-align: right; font-weight: 600; color: #1e3a5f;">Ränta</th>
+                                <th style="padding: 12px; text-align: right; font-weight: 600; color: #1e3a5f;">Slutkapital</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #f0f0f0;">
+                                <td style="padding: 12px;">1</td>
+                                <td style="padding: 12px; text-align: right;">500 000 kr</td>
+                                <td style="padding: 12px; text-align: right; color: #28a745;">+20 000 kr</td>
+                                <td style="padding: 12px; text-align: right; font-weight: 600;">520 000 kr</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f0f0f0;">
+                                <td style="padding: 12px;">2</td>
+                                <td style="padding: 12px; text-align: right;">520 000 kr</td>
+                                <td style="padding: 12px; text-align: right; color: #28a745;">+20 800 kr</td>
+                                <td style="padding: 12px; text-align: right; font-weight: 600;">540 800 kr</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f0f0f0;">
+                                <td style="padding: 12px;">3</td>
+                                <td style="padding: 12px; text-align: right;">540 800 kr</td>
+                                <td style="padding: 12px; text-align: right; color: #28a745;">+21 632 kr</td>
+                                <td style="padding: 12px; text-align: right; font-weight: 600;">562 432 kr</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f0f0f0;">
+                                <td style="padding: 12px;">5</td>
+                                <td style="padding: 12px; text-align: right;">583 222 kr</td>
+                                <td style="padding: 12px; text-align: right; color: #28a745;">+23 329 kr</td>
+                                <td style="padding: 12px; text-align: right; font-weight: 600;">608 326 kr</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px;">10</td>
+                                <td style="padding: 12px; text-align: right;">711 701 kr</td>
+                                <td style="padding: 12px; text-align: right; color: #28a745;">+28 468 kr</td>
+                                <td style="padding: 12px; text-align: right; font-weight: 600;">740 122 kr</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="background: #e8f4f8; padding: 24px; border-radius: 8px; margin-top: 32px; text-align: center;">
+                    <p style="color: #1e3a5f; font-size: 18px; font-weight: 600; margin: 0;">
+                        Efter 10 år har 500 000 kr växt till 740 122 kr - en vinst på 240 122 kr tack vare ränta-på-ränta!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Vanliga frågor om sparränta</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                </div>
+                <h3>Vilken bank har bäst sparränta?</h3>
+                <p>För närvarande erbjuder Bluestep och Multitude Bank de högsta räntorna med 4,40-4,41% för fast bindning. För rörlig ränta ligger Lea Bank bäst till med 4,30%.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M2 12h20"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Vad är bäst - fast eller rörlig ränta?</h3>
+                <p>Fast ränta ger högre avkastning och säkerhet, men pengarna är bundna. Rörlig ränta ger flexibilitet men lägre ränta. Välj baserat på när du kan behöva pengarna.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Hur fungerar ränta-på-ränta?</h3>
+                <p>Räntan läggs till ditt kapital och nästa gång får du ränta på både ursprungsbeloppet och tidigare ränta. Detta skapar en snöbollseffekt som ökar din avkastning över tid.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 1v6m0 6v6M7 8l5 5 5-5"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Är mina pengar säkra?</h3>
+                <p>Ja, om banken har insättningsgaranti skyddas dina pengar upp till 1 050 000 kr per bank. Kontrollera alltid att din bank omfattas av garantin.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                        <path d="M7 8h10M7 12h6"></path>
+                    </svg>
+                </div>
+                <h3>Hur beskattas sparräntan?</h3>
+                <p>Sparränta beskattas med 30% kapitalskatt. Skatten dras automatiskt, så du får räntan efter skatt utbetald till ditt konto.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        <path d="M12 6v6l4 2"></path>
+                    </svg>
+                </div>
+                <h3>Hur ofta får jag ränta?</h3>
+                <p>Det varierar mellan banker. Vanligast är månatlig eller kvartalsvis utbetalning. Räntan beräknas dock dagligen på ditt saldo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="best-rates">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h2 class="section-title-white" style="margin-bottom: 24px;">Börja spara idag</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                Använd våra kalkylatorer för att räkna ut hur mycket dina pengar kan växa med bästa sparräntan.
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="/berakna" class="btn-primary" style="background: white; color: #1e3a5f;">
+                    Räkna på din sparränta
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+                <a href="/rantekonto" class="btn-secondary" style="border-color: white; color: white;">
+                    Läs om räntekonton
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                        <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                        <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                        <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                    </svg>
+                </div>
+                <span class="logo-text">Ränta.nu</span>
+            </div>
+            <p>Sedan 2018 har Ränta.nu varit Sveriges mest betrodda källa för oberoende sparrådgivning. Med över 150 000 användare per månad hjälper vi svenskar att fatta smartare beslut om sitt sparande.</p>
+            <div class="footer-contact">
+                E-post: <a href="mailto:info@ranta.nu">info@ranta.nu</a><br>
+                Org.nr: 559342-7891
+            </div>
+        </div>
+
+        <div>
+            <h4>Räkna ränta</h4>
+            <ul>
+                <li><a href="/bolanerakna">Bolåneränta</a></li>
+                <li><a href="/sparranta">Sparränta</a></li>
+                <li><a href="/effektiv-ranta">Effektiv ränta</a></li>
+                <li><a href="/ranta-pa-ranta">Ränta på ränta</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Lär dig mer</h4>
+            <ul>
+                <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                <li><a href="/rantetyper">Olika räntetyper</a></li>
+                <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                <li><a href="/artiklar">Alla artiklar</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Om Ränta.nu</h4>
+            <ul>
+                <li><a href="/om-oss">Om oss</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+                <li><a href="/integritetspolicy">Integritet</a></li>
+                <li><a href="/cookiepolicy">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2025 Ränta.nu. Alla rättigheter förbehållna.</span>
+        <span>Informationen på sidan ersätter inte professionell rådgivning.</span>
+    </div>
+</footer>
+
+</body>
+</html>

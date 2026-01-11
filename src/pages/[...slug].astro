@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const sidor = await getCollection('sidor');
+  return sidor.map(sida => ({
+    params: { slug: sida.slug },
+    props: { sida }
+  }));
+}
+
+const { sida } = Astro.props;
+const { Content } = await sida.render();
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{sida.data.title}</title>
+  {sida.data.description && <meta name="description" content={sida.data.description} />}
+</head>
+<body>
+  <article>
+    <header>
+      <h1>{sida.data.title}</h1>
+    </header>
+    <Content />
+  </article>
+</body>
+</html>

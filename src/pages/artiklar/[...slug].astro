@@ -1,0 +1,300 @@
+---
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const artiklar = await getCollection('artiklar');
+  return artiklar.map(artikel => ({
+    params: { slug: artikel.slug },
+    props: { artikel }
+  }));
+}
+
+const { artikel } = Astro.props;
+const { Content } = await artikel.render();
+
+// Hämta relaterade artiklar (exkludera nuvarande)
+const allArtiklar = await getCollection('artiklar');
+const relateradeArtiklar = allArtiklar
+  .filter(a => a.slug !== artikel.slug)
+  .slice(0, 2);
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{artikel.data.title} | Ränta.nu</title>
+  {artikel.data.description && <meta name="description" content={artikel.data.description} />}
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/global.css">
+  <style>
+    .article-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .article-content h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #0c1935;
+      margin: 48px 0 24px;
+      line-height: 1.3;
+    }
+    .article-content h3 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #0c1935;
+      margin: 36px 0 16px;
+    }
+    .article-content p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 24px;
+    }
+    .article-content ul, .article-content ol {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+      margin-bottom: 24px;
+      padding-left: 24px;
+    }
+    .article-content li {
+      margin-bottom: 12px;
+    }
+    .article-content strong {
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+    .article-content a {
+      color: #1e3a5f;
+      text-decoration: underline;
+    }
+    .article-content a:hover {
+      color: #2d5a8f;
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+          <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+          <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+          <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+          <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+        </svg>
+      </div>
+      <span class="logo-text">Ränta.nu</span>
+    </a>
+
+    <nav class="header-nav">
+      <a href="/">Hem</a>
+      <a href="/basta-rantan">Bästa räntan</a>
+      <a href="/berakna">Beräkna ränta</a>
+      <a href="/artiklar" class="active">Artiklar</a>
+      <a href="/kontakt">Kontakt</a>
+    </nav>
+
+    <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
+  </div>
+</header>
+
+<!-- Breadcrumb -->
+<div style="background: #f8f9fa; padding: 16px 0; border-bottom: 1px solid #e5e5e5;">
+  <div style="max-width: 1400px; margin: 0 auto; padding: 0 40px;">
+    <div style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #666;">
+      <a href="/" style="color: #666; text-decoration: none;">Hem</a>
+      <span>/</span>
+      <a href="/artiklar" style="color: #666; text-decoration: none;">Artiklar</a>
+      <span>/</span>
+      <span style="color: #1e3a5f; font-weight: 500;">Artikel</span>
+    </div>
+  </div>
+</div>
+
+<!-- Hero with Featured Image -->
+{artikel.data.featuredImage && (
+  <div style="width: 100%; height: 400px; overflow: hidden; background: #f0f5f7;">
+    <img
+      src={artikel.data.featuredImage}
+      alt={artikel.data.title}
+      style="width: 100%; height: 100%; object-fit: cover;"
+    />
+  </div>
+)}
+
+<!-- Article Header -->
+<div style="max-width: 800px; margin: 48px auto; padding: 0 24px;">
+  <div style="display: inline-block; background: #1e3a5f; color: white; padding: 6px 14px; border-radius: 6px; font-size: 13px; font-weight: 600; margin-bottom: 24px;">
+    Ekonomi
+  </div>
+
+  <h1 style="font-size: 48px; font-weight: 700; color: #0c1935; line-height: 1.2; margin-bottom: 24px;">
+    {artikel.data.title}
+  </h1>
+
+  <div style="display: flex; align-items: center; gap: 24px; padding-bottom: 32px; border-bottom: 2px solid #e5e5e5; margin-bottom: 48px;">
+    {artikel.data.publishDate && (
+      <div style="display: flex; align-items: center; gap: 8px; color: #666; font-size: 15px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        <time datetime={artikel.data.publishDate.toISOString()}>
+          {new Date(artikel.data.publishDate).toLocaleDateString('sv-SE', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          })}
+        </time>
+      </div>
+    )}
+    <div style="display: flex; align-items: center; gap: 8px; color: #666; font-size: 15px;">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <polyline points="12 6 12 12 16 14"></polyline>
+      </svg>
+      <span>5 min läsning</span>
+    </div>
+  </div>
+</div>
+
+<!-- Article Content -->
+<article class="article-content">
+  <Content />
+</article>
+
+<!-- Related Articles -->
+{relateradeArtiklar.length > 0 && (
+  <section style="background: #f8f9fa; padding: 80px 0; margin-top: 80px;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 40px;">
+      <h2 style="font-size: 36px; font-weight: 700; color: #0c1935; margin-bottom: 40px; text-align: center;">
+        Relaterade artiklar
+      </h2>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 32px;">
+        {relateradeArtiklar.map((related) => (
+          <article style="background: white; border-radius: 16px; overflow: hidden; border: 1px solid #e5e5e5; transition: all 0.3s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.05);"
+                   onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'"
+                   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'">
+            <a href={`/artiklar/${related.slug}`} style="text-decoration: none; color: inherit; display: block;">
+              {related.data.featuredImage && (
+                <div style="position: relative; width: 100%; height: 220px; overflow: hidden; background: #f0f5f7;">
+                  <img
+                    src={related.data.featuredImage}
+                    alt={related.data.title}
+                    style="width: 100%; height: 100%; object-fit: cover;"
+                  />
+                  <div style="position: absolute; top: 16px; left: 16px; background: #1e3a5f; color: white; padding: 6px 14px; border-radius: 6px; font-size: 13px; font-weight: 600;">
+                    Ekonomi
+                  </div>
+                </div>
+              )}
+
+              <div style="padding: 24px;">
+                <h3 style="font-size: 22px; font-weight: 600; color: #0c1935; margin-bottom: 12px; line-height: 1.3;">
+                  {related.data.title}
+                </h3>
+
+                {related.data.description && (
+                  <p style="font-size: 15px; color: #555; line-height: 1.6; margin-bottom: 16px;">
+                    {related.data.description.substring(0, 120)}...
+                  </p>
+                )}
+
+                <div style="display: flex; align-items: center; gap: 16px; font-size: 14px; color: #888;">
+                  <span style="display: flex; align-items: center; gap: 6px;">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    {new Date(related.data.publishDate).toLocaleDateString('sv-SE', { year: 'numeric', month: 'short', day: 'numeric' })}
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+        ))}
+      </div>
+
+      <div style="text-align: center; margin-top: 48px;">
+        <a href="/artiklar" class="btn-primary">
+          Se alla artiklar
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+)}
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+            <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+            <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+            <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+          </svg>
+        </div>
+        <span class="logo-text">Ränta.nu</span>
+      </div>
+      <p>Sedan 2018 har Ränta.nu varit Sveriges mest betrodda källa för oberoende sparrådgivning. Med över 150 000 användare per månad hjälper vi svenskar att fatta smartare beslut om sitt sparande.</p>
+      <div class="footer-contact">
+        E-post: <a href="mailto:info@ranta.nu">info@ranta.nu</a><br>
+        Org.nr: 559342-7891
+      </div>
+    </div>
+
+    <div>
+      <h4>Räkna ränta</h4>
+      <ul>
+        <li><a href="/bolanerakna">Bolåneränta</a></li>
+        <li><a href="/sparranta">Sparränta</a></li>
+        <li><a href="/effektiv-ranta">Effektiv ränta</a></li>
+        <li><a href="/ranta-pa-ranta">Ränta på ränta</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Lär dig mer</h4>
+      <ul>
+        <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+        <li><a href="/rantetyper">Olika räntetyper</a></li>
+        <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+        <li><a href="/artiklar">Alla artiklar</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Om Ränta.nu</h4>
+      <ul>
+        <li><a href="/om-oss">Om oss</a></li>
+        <li><a href="/kontakt">Kontakt</a></li>
+        <li><a href="/integritetspolicy">Integritet</a></li>
+        <li><a href="/cookiepolicy">Användarvillkor</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2025 Ränta.nu. Alla rättigheter förbehållna.</span>
+    <span>Informationen på sidan ersätter inte professionell rådgivning.</span>
+  </div>
+</footer>
+
+</body>
+</html>

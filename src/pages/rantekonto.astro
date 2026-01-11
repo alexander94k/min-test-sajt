@@ -1,0 +1,430 @@
+---
+// Frontmatter
+const pageTitle = "Räntekonto - Jämför de bästa räntekontona 2025 | Ränta.nu";
+const pageDescription = "Hitta det bästa räntekontot för ditt sparande. Jämför räntor, villkor och funktioner från Sveriges alla banker. Uppdateras dagligen.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Räntekonto - Jämför de bästa räntorna</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Ett räntekonto är ett sparkonto där dina pengar växer med ränta. Jämför räntor och villkor från alla svenska banker.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Best Rates Table -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 32px;">Bästa räntekontona just nu</h2>
+        <p style="text-align: center; font-size: 18px; color: #555; margin-bottom: 48px;">
+            Uppdaterat 10 januari 2025
+        </p>
+
+        <div style="background: white; border-radius: 16px; overflow: hidden; border: 1px solid #e5e5e5;">
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="background: #f8f9fa; border-bottom: 2px solid #e5e5e5;">
+                            <th style="padding: 16px; text-align: left; font-weight: 600; color: #1e3a5f;">Bank</th>
+                            <th style="padding: 16px; text-align: left; font-weight: 600; color: #1e3a5f;">Kontotyp</th>
+                            <th style="padding: 16px; text-align: center; font-weight: 600; color: #1e3a5f;">Ränta</th>
+                            <th style="padding: 16px; text-align: left; font-weight: 600; color: #1e3a5f;">Villkor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #f0f0f0;">
+                            <td style="padding: 20px; font-weight: 600; color: #1e3a5f;">Nordnet</td>
+                            <td style="padding: 20px; color: #555;">Högräntekonto</td>
+                            <td style="padding: 20px; text-align: center;">
+                                <span style="font-size: 24px; font-weight: 700; color: #1e3a5f;">3,80%</span>
+                            </td>
+                            <td style="padding: 20px; color: #555;">Rörlig, inga bindningar</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f0f0f0;">
+                            <td style="padding: 20px; font-weight: 600; color: #1e3a5f;">Resurs Bank</td>
+                            <td style="padding: 20px; color: #555;">Sparkonto Plus</td>
+                            <td style="padding: 20px; text-align: center;">
+                                <span style="font-size: 24px; font-weight: 700; color: #1e3a5f;">3,75%</span>
+                            </td>
+                            <td style="padding: 20px; color: #555;">Rörlig, fria uttag</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f0f0f0;">
+                            <td style="padding: 20px; font-weight: 600; color: #1e3a5f;">Santander</td>
+                            <td style="padding: 20px; color: #555;">Flexkonto</td>
+                            <td style="padding: 20px; text-align: center;">
+                                <span style="font-size: 24px; font-weight: 700; color: #1e3a5f;">3,65%</span>
+                            </td>
+                            <td style="padding: 20px; color: #555;">Rörlig, max 1 miljon kr</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 20px; font-weight: 600; color: #1e3a5f;">Avanza</td>
+                            <td style="padding: 20px; color: #555;">Sparkonto</td>
+                            <td style="padding: 20px; text-align: center;">
+                                <span style="font-size: 24px; font-weight: 700; color: #1e3a5f;">3,50%</span>
+                            </td>
+                            <td style="padding: 20px; color: #555;">Rörlig, ingen avgift</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Vad är ett räntekonto?</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3>Växer med ränta</h3>
+                <p>Dina pengar växer automatiskt med ränta utan att du behöver göra något. Räntan beräknas dagligen och läggs till kontot.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                </div>
+                <h3>Trygg förvaring</h3>
+                <p>Pengarna är skyddade av statlig insättningsgaranti upp till 1 050 000 kr per person och bank.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                </div>
+                <h3>Flexibel tillgång</h3>
+                <p>De flesta räntekonton har fria uttag och insättningar när du vill. Perfekt för buffertkapital.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <h3>Ingen risk</h3>
+                <p>Till skillnad från aktier och fonder har räntekonton ingen risk för värdeförlust. Du förlorar aldrig pengar.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Types of accounts -->
+<section class="content-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Olika typer av räntekonton</h2>
+
+        <div class="content-row">
+            <div class="content-text">
+                <h3>Högräntekonto</h3>
+                <p>Ett högräntekonto är den vanligaste typen av räntekonto. De har rörlig ränta som följer Riksbankens styrränta, vilket betyder att räntan kan ändras över tid.</p>
+                <p>Fördelar med högräntekonton är att du kan ta ut pengar när du vill utan några avgifter eller bindningstider. Perfekt för buffertkapital som du kan behöva vid akuta situationer.</p>
+                <p>Räntan är oftast mellan 3-4% årligen, men kan variera beroende på Riksbankens räntebeslut och bankens konkurrensläge.</p>
+            </div>
+
+            <div class="content-text">
+                <h3>Fasträntekonto</h3>
+                <p>På ett fasträntekonto binder du dina pengar under en bestämd period, vanligtvis 1-5 år. I utbyte får du en fast ränta som är högre än på vanliga högräntekonton.</p>
+                <p>Nackdelen är att du inte kan ta ut pengarna under bindningstiden utan att förlora räntan eller betala en avgift. Detta passar bäst för pengar du säkert inte behöver under en längre tid.</p>
+                <p>Fasträntor kan vara särskilt fördelaktiga när Riksbanken förväntas sänka styrräntan, då du låser in den högre räntan.</p>
+            </div>
+        </div>
+
+        <div class="content-row" style="margin-top: 32px;">
+            <div class="content-text">
+                <h3>Buffertkonto</h3>
+                <p>Ett buffertkonto är utformat för att vara din ekonomiska buffert för oväntade utgifter. De har ofta lägre ränta än högräntekonton, men erbjuder extremt snabb tillgång till pengarna.</p>
+                <p>Många banker har också specialfunktioner som automatiska överföringar från lönekonto eller möjlighet att sätta upp sparregler baserade på dina köp.</p>
+                <p>Experter rekommenderar att ha 3-6 månadslöner på ett buffertkonto för ekonomisk trygghet.</p>
+            </div>
+
+            <div class="content-text">
+                <h3>Månadsspar</h3>
+                <p>Månadsspar är räntekonton där du förbinder dig att sätta in ett visst belopp varje månad. I gengäld får du ofta högre ränta än på vanliga sparkonton.</p>
+                <p>Detta är ett bra sätt att bygga upp ett systematiskt sparande över tid, och den högre räntan belönar din disciplin.</p>
+                <p>Om du missar en månad kan du vanligtvis fortsätta nästa månad, men vissa banker kan sänka räntan om du inte följer avtalet.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How to choose -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Så väljer du rätt räntekonto</h2>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="display: grid; gap: 24px;">
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">1. Jämför räntan</h3>
+                    <p style="color: #555; line-height: 1.8;">Det första du bör titta på är räntan. Även små skillnader i räntesats kan betyda tusentals kronor över tid. Ett räntekonto med 3,8% ger 3800 kr per år på 100 000 kr, medan 3,5% ger 3500 kr - en skillnad på 300 kr årligen.</p>
+                </div>
+
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">2. Kontrollera villkoren</h3>
+                    <p style="color: #555; line-height: 1.8;">Läs igenom villkoren noga. Vissa konton har maxgränser för hur mycket du kan sätta in, andra har avgifter för uttag eller kräver att du gör regelbundna insättningar. Se till att kontot passar din situation.</p>
+                </div>
+
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">3. Tänk på tillgänglighet</h3>
+                    <p style="color: #555; line-height: 1.8;">Om du behöver snabb tillgång till pengarna, välj ett konto med fria uttag. Behöver du däremot inte pengarna på flera år kan ett fasträntekonto med högre ränta vara bättre.</p>
+                </div>
+
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">4. Kolla insättningsgarantin</h3>
+                    <p style="color: #555; line-height: 1.8;">Alla svenska banker har statlig insättningsgaranti som skyddar upp till 1 050 000 kr per person och bank. Har du mer än så bör du sprida pengarna på flera banker för maximal säkerhet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="content-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Fördelar med räntekonton</h2>
+
+        <div class="content-row">
+            <div class="content-text">
+                <h3>Garanterad avkastning</h3>
+                <p>Till skillnad från aktier och fonder vet du exakt vad du får i avkastning. Det finns ingen risk att förlora pengar på grund av kursfall eller marknadsturbulens.</p>
+                <p>Med dagens räntor på 3-4% får du en stabil och säker avkastning utan att behöva oroa dig för börsens upp- och nedgångar.</p>
+            </div>
+
+            <div class="content-text">
+                <h3>Enkel skattehantering</h3>
+                <p>Skatt på ränteintäkter dras automatiskt, vanligtvis med 30%. Du behöver inte själv hantera någon skattedeklaration för räntan - banken sköter allt.</p>
+                <p>Detta gör räntekonton till ett mycket enkelt och bekvämt sätt att spara jämfört med andra investeringsformer.</p>
+            </div>
+        </div>
+
+        <div class="content-row" style="margin-top: 32px;">
+            <div class="content-text">
+                <h3>Passar alla sparare</h3>
+                <p>Oavsett om du är nybörjare eller erfaren investerare är räntekonton ett smart grundsparande. De fungerar som bas i din ekonomiska trygghet.</p>
+                <p>Även de som investerar i aktier och fonder bör ha en del av sitt kapital på räntekonton för diversifiering och buffert.</p>
+            </div>
+
+            <div class="content-text">
+                <h3>Ränta-på-ränta effekt</h3>
+                <p>Eftersom räntan läggs till ditt konto växer dina pengar exponentiellt över tid tack vare ränta-på-ränta-effekten.</p>
+                <p>På ett konto med 3,8% årlig ränta har 100 000 kr växt till över 145 000 kr efter 10 år - helt utan att du gjort något.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Vanliga frågor om räntekonton</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                </div>
+                <h3>Är räntekonton säkra?</h3>
+                <p>Ja, svenska räntekonton är mycket säkra. De är skyddade av statlig insättningsgaranti upp till 1 050 000 kr per person och bank.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M2 12h20"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Hur beskattas räntan?</h3>
+                <p>Ränteinkomster beskattas med 30% och dras automatiskt av banken. Du behöver inte själv deklarera räntan.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Kan räntan förändras?</h3>
+                <p>På högräntekonton är räntan rörlig och kan ändras när Riksbanken ändrar styrräntan. På fasträntekonton är räntan låst under bindningstiden.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 1v6m0 6v6M7 8l5 5 5-5"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Hur ofta får jag ränta?</h3>
+                <p>Räntan beräknas dagligen men utbetalas vanligtvis en gång per månad eller kvartal, beroende på bank.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                        <path d="M7 8h10M7 12h6"></path>
+                    </svg>
+                </div>
+                <h3>Kan jag ha flera räntekonton?</h3>
+                <p>Ja, du kan ha räntekonton hos flera banker. Detta rekommenderas om du har mer än 1 050 000 kr att spara.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        <path d="M12 6v6l4 2"></path>
+                    </svg>
+                </div>
+                <h3>Finns det avgifter?</h3>
+                <p>De flesta räntekonton är avgiftsfria. Vissa banker kan ha avgifter för extra tjänster eller om du bryter bindningstiden.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="best-rates">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h2 class="section-title-white" style="margin-bottom: 24px;">Beräkna din ränta</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                Använd vår räntekalkylator för att se hur mycket dina pengar kan växa på ett räntekonto.
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="/berakna" class="btn-primary" style="background: white; color: #1e3a5f;">
+                    Räkna ut ränta
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+                <a href="/basta-sparrantan" class="btn-secondary" style="border-color: white; color: white;">
+                    Bästa sparräntan
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                        <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                        <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                        <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                    </svg>
+                </div>
+                <span class="logo-text">Ränta.nu</span>
+            </div>
+            <p>Sedan 2018 har Ränta.nu varit Sveriges mest betrodda källa för oberoende sparrådgivning. Med över 150 000 användare per månad hjälper vi svenskar att fatta smartare beslut om sitt sparande.</p>
+            <div class="footer-contact">
+                E-post: <a href="mailto:info@ranta.nu">info@ranta.nu</a><br>
+                Org.nr: 559342-7891
+            </div>
+        </div>
+
+        <div>
+            <h4>Räkna ränta</h4>
+            <ul>
+                <li><a href="/bolanerakna">Bolåneränta</a></li>
+                <li><a href="/sparranta">Sparränta</a></li>
+                <li><a href="/effektiv-ranta">Effektiv ränta</a></li>
+                <li><a href="/ranta-pa-ranta">Ränta på ränta</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Lär dig mer</h4>
+            <ul>
+                <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                <li><a href="/rantetyper">Olika räntetyper</a></li>
+                <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                <li><a href="/artiklar">Alla artiklar</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Om Ränta.nu</h4>
+            <ul>
+                <li><a href="/om-oss">Om oss</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+                <li><a href="/integritetspolicy">Integritet</a></li>
+                <li><a href="/cookiepolicy">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2025 Ränta.nu. Alla rättigheter förbehållna.</span>
+        <span>Informationen på sidan ersätter inte professionell rådgivning.</span>
+    </div>
+</footer>
+
+</body>
+</html>

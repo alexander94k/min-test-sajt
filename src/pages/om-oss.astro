@@ -1,0 +1,286 @@
+---
+// Frontmatter - JavaScript/TypeScript kod här
+const pageTitle = "Om Ränta.nu - Din oberoende guide till smartare sparande";
+const pageDescription = "Ränta.nu drivs av Dios Investment AB och erbjuder oberoende information om räntor, sparande och ekonomi. Vår mission är att hjälpa dig öka din finansiella kunskap.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Om Ränta.nu</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Din oberoende guide till smartare sparande och bättre finansiella beslut
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Mission Section -->
+<section class="content-section">
+    <div class="section-inner">
+        <div class="content-row">
+            <div class="content-text">
+                <h2>Vår mission</h2>
+                <p>Ränta.nu är en oberoende informationssida som fokuserar på finansiell utbildning. Vår målsättning är att hjälpa dig öka din finansiella kunskap genom lättillgänglig och opartisk information om räntor, sparande och ekonomi.</p>
+                <p>Vi tror på att varje svensk förtjänar tillgång till högkvalitativ finansiell information utan dolda agendor eller säljbudskap. Därför är vi helt oberoende från banker, långivare och andra finansiella institutioner.</p>
+            </div>
+            <div class="content-text">
+                <h2>Vad vi erbjuder</h2>
+                <p>Vår artikelsamling omfattar allt från grundläggande sparränteberäkningar till avancerade finansiella koncept som realränta, reporänta och effektiv ränta.</p>
+                <p>Med våra avancerade kalkylatorer kan du enkelt jämföra olika sparalternativ och se exakt hur mycket ditt kapital kommer växa över tid. Vi uppdaterar dagligen med aktuella räntor från Sveriges alla banker och institutioner.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values Section -->
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Våra värderingar</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M2 12h20"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>100% Oberoende</h3>
+                <p>Vi har inga kopplingar till banker eller finansiella institutioner. Vår information är helt opartisk och baserad enbart på fakta.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                    </svg>
+                </div>
+                <h3>Utbildningsfokus</h3>
+                <p>Vårt främsta mål är att utbilda och informera. Vi vill att du ska kunna fatta välgrundade finansiella beslut på egen hand.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Tillgänglighet</h3>
+                <p>Finansiell information ska vara lättillgänglig för alla. Vi förenklar komplexa koncept utan att tumma på kvaliteten.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 6v6l4 2"></path>
+                    </svg>
+                </div>
+                <h3>Aktuell information</h3>
+                <p>Vi uppdaterar kontinuerligt med de senaste räntorna och utvecklingen på den finansiella marknaden.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 3v18h18"></path>
+                        <path d="M18 9l-5 5-4-4-3 3"></path>
+                    </svg>
+                </div>
+                <h3>Dagliga uppdateringar</h3>
+                <p>Få alltid aktuell information om räntor från 50+ banker, styrränta och ekonomiska prognoser.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <path d="M14 2v6h6M16 13H8M16 17H8"></path>
+                    </svg>
+                </div>
+                <h3>Expertguider</h3>
+                <p>Våra ekonomiska experter delar strategier för optimalt sparande och investeringar.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="best-rates">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 900px; margin: 0 auto;">
+            <h2 class="section-title-white" style="margin-bottom: 16px;">Använd av tusentals svenskar varje dag</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 48px;">
+                Sedan 2018 har vi hjälpt hundratusentals svenskar att fatta smartare sparbeslut
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-top: 40px;">
+                <div style="text-align: center;">
+                    <div style="font-size: 56px; font-weight: 700; color: white; margin-bottom: 12px;">50+</div>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 18px;">Banker i vår jämförelse</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 56px; font-weight: 700; color: white; margin-bottom: 12px;">150K+</div>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 18px;">Användare per månad</p>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 56px; font-weight: 700; color: white; margin-bottom: 12px;">100%</div>
+                    <p style="color: rgba(255,255,255,0.9); font-size: 18px;">Oberoende information</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Company Info Section -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <div class="content-row">
+            <div class="content-text">
+                <h2>Företaget bakom Ränta.nu</h2>
+                <p>Ränta.nu drivs av <strong>Dios Investment AB</strong>, ett bolag som specialiserar sig på att skapa jämförelseplattformar för finansiella tjänster online. Vårt mål är att bli en ledande aktör inom finansiell information och utbildning i Sverige.</p>
+                <p>Dios Investment driver flera sajter inom finanssektorn, alla med fokus på att ge konsumenter bättre insikt och förståelse för finansiella produkter och tjänster.</p>
+                <a href="/kontakt" class="btn-secondary">Kontakta oss</a>
+            </div>
+            <div class="content-text">
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 20px; color: #0c1935;">Kontaktuppgifter</h3>
+                    <div style="line-height: 2;">
+                        <p style="margin-bottom: 12px;"><strong>Dios Investment AB</strong></p>
+                        <p style="margin-bottom: 8px; color: #555;">Organisationsnummer: 559150-4260</p>
+                        <p style="margin-bottom: 8px; color: #555;">Bäckåkersvägen 4</p>
+                        <p style="margin-bottom: 8px; color: #555;">432 48 Varberg</p>
+                        <p style="margin-bottom: 8px; color: #555;">Telefon: 010-665 18 18</p>
+                        <p style="margin-bottom: 0; color: #555;">E-post: <a href="/kontakt" style="color: #1e3a5f; text-decoration: underline;">Kontaktformulär</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="content-section">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto; padding: 60px 0;">
+            <h2 style="margin-bottom: 24px;">Redo att börja spara smartare?</h2>
+            <p style="font-size: 18px; color: #555; margin-bottom: 32px;">
+                Använd våra kalkylatorer för att beräkna din framtida avkastning och jämför räntor från Sveriges alla banker.
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="/berakna" class="btn-primary">
+                    Börja beräkna
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+                <a href="/basta-rantan" class="btn-secondary">
+                    Jämför räntor
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                        <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                        <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                        <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                    </svg>
+                </div>
+                <span class="logo-text">Ränta.nu</span>
+            </div>
+            <p>Sedan 2018 har Ränta.nu varit Sveriges mest betrodda källa för oberoende sparrådgivning. Med över 150 000 användare per månad hjälper vi svenskar att fatta smartare beslut om sitt sparande.</p>
+            <div class="footer-contact">
+                E-post: <a href="mailto:info@ranta.nu">info@ranta.nu</a><br>
+                Org.nr: 559342-7891
+            </div>
+        </div>
+
+        <div>
+            <h4>Räkna ränta</h4>
+            <ul>
+                <li><a href="/bolanerakna">Bolåneränta</a></li>
+                <li><a href="/sparranta">Sparränta</a></li>
+                <li><a href="/effektiv-ranta">Effektiv ränta</a></li>
+                <li><a href="/ranta-pa-ranta">Ränta på ränta</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Lär dig mer</h4>
+            <ul>
+                <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                <li><a href="/rantetyper">Olika räntetyper</a></li>
+                <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                <li><a href="/artiklar">Alla artiklar</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Om Ränta.nu</h4>
+            <ul>
+                <li><a href="/om-oss">Om oss</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+                <li><a href="/integritetspolicy">Integritet</a></li>
+                <li><a href="/cookiepolicy">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2025 Ränta.nu. Alla rättigheter förbehållna.</span>
+        <span>Informationen på sidan ersätter inte professionell rådgivning.</span>
+    </div>
+</footer>
+
+</body>
+</html>

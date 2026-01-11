@@ -1,0 +1,434 @@
+---
+// Frontmatter
+const pageTitle = "Reporänta - Det tidigare namnet på styrräntan | Ränta.nu";
+const pageDescription = "Reporänta var namnet på Sveriges styrränta fram till 2022. Lär dig om reporäntan, dess historia och hur den påverkade den svenska ekonomin.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Reporänta - Det tidigare namnet på styrräntan</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Reporänta var namnet på Sveriges styrränta fram till 2022. Namnet kommer från engelskans "repurchasing agreement".
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Current Rate Section -->
+<section class="best-rates">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h2 class="section-title-white" style="margin-bottom: 16px;">Nuvarande styrränta (tidigare reporänta)</h2>
+            <div style="font-size: 64px; font-weight: 700; color: white; margin-bottom: 16px;">3,75%</div>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px;">
+                Samma ränta, nytt namn sedan 2022
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Reporäntans funktioner</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3>Styrde inflationen</h3>
+                <p>Reporäntan användes för att hålla inflationen nära Riksbankens mål på 2 procent per år.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                </div>
+                <h3>Påverkade bankräntor</h3>
+                <p>Alla bankräntor - för både bolån och sparande - påverkades direkt av reporäntans nivå.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                </div>
+                <h3>Reglerade ekonomin</h3>
+                <p>Genom att ändra reporäntan kunde Riksbanken påverka ekonomisk aktivitet och penningmängd.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <h3>Påverkade bostadsmarknaden</h3>
+                <p>Lägre reporänta sänkte bolåneräntor och ökade efterfrågan på bostäder. Höjningar dämpade marknaden.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What is Section -->
+<section class="content-section">
+    <div class="section-inner">
+        <div class="content-row">
+            <div class="content-text">
+                <h2>Vad var reporänta?</h2>
+                <p>Reporänta var det officiella namnet på Sveriges styrränta från 1990-talet fram till 2022. Namnet kommer från engelskans "repurchasing agreement" och syftade på de återköpsavtal som Riksbanken använde för att styra penningmängden i ekonomin.</p>
+                <p>I praktiken fungerade reporäntan exakt som dagens styrränta - den var den ränta till vilken banker kunde låna eller placera pengar hos Riksbanken. Namnet ändrades 2022 för att göra det tydligare vad räntan faktiskt används till.</p>
+                <p>Reporäntan var Riksbankens viktigaste verktyg för att påverka inflationen och hålla den nära målet på 2 procent. Genom att höja eller sänka reporäntan kunde Riksbanken påverka alla andra räntor i samhället.</p>
+            </div>
+
+            <div class="content-text">
+                <div style="background: #f0f5f7; padding: 40px; border-radius: 16px; border: 2px solid #e5e5e5;">
+                    <h3 style="font-size: 24px; margin-bottom: 24px; color: #0c1935;">Reporänta vs Styrränta</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 12px 0; border-bottom: 1px solid #e0e0e0;">
+                            <strong style="color: #1e3a5f;">Samma funktion:</strong> Identisk användning
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid #e0e0e0;">
+                            <strong style="color: #1e3a5f;">Namnbyte:</strong> 2022
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid #e0e0e0;">
+                            <strong style="color: #1e3a5f;">Anledning:</strong> Tydligare namn
+                        </li>
+                        <li style="padding: 12px 0;">
+                            <strong style="color: #1e3a5f;">Effekt:</strong> Ingen förändring i praktiken
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- History Section -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Reporäntans historia</h2>
+            <p style="text-align: center; font-size: 18px; color: #555; margin-bottom: 48px;">
+                Reporäntan har genomgått dramatiska förändringar under årens lopp, från negativa räntor till historiskt höga nivåer.
+            </p>
+
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                <div style="display: grid; gap: 32px;">
+                    <div style="padding-bottom: 24px; border-bottom: 2px solid #f0f0f0;">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px;">
+                            <div>
+                                <span style="font-weight: 700; color: #1e3a5f; font-size: 20px;">2022</span>
+                                <p style="color: #555; margin-top: 4px;">Namnbyte till styrränta</p>
+                            </div>
+                            <span style="font-size: 24px; font-weight: 700; color: #1e3a5f;">3,75%</span>
+                        </div>
+                        <p style="color: #888; font-size: 15px;">Efter 30 år med namnet reporänta bytte Riksbanken till det mer beskrivande namnet styrränta.</p>
+                    </div>
+
+                    <div style="padding-bottom: 24px; border-bottom: 2px solid #f0f0f0;">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px;">
+                            <div>
+                                <span style="font-weight: 700; color: #555; font-size: 20px;">2023</span>
+                                <p style="color: #555; margin-top: 4px;">Genomsnittlig nivå</p>
+                            </div>
+                            <span style="font-size: 24px; font-weight: 700; color: #555;">3,14%</span>
+                        </div>
+                        <p style="color: #888; font-size: 15px;">Räntehöjningar för att motverka stigande inflation efter pandemin.</p>
+                    </div>
+
+                    <div style="padding-bottom: 24px; border-bottom: 2px solid #f0f0f0;">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px;">
+                            <div>
+                                <span style="font-weight: 700; color: #555; font-size: 20px;">2016-2018</span>
+                                <p style="color: #555; margin-top: 4px;">Negativ reporänta</p>
+                            </div>
+                            <span style="font-size: 24px; font-weight: 700; color: #555;">-0,50%</span>
+                        </div>
+                        <p style="color: #888; font-size: 15px;">Historiskt låg ränta för att stimulera ekonomin och nå inflationsmålet.</p>
+                    </div>
+
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 12px;">
+                            <div>
+                                <span style="font-weight: 700; color: #555; font-size: 20px;">2014</span>
+                                <p style="color: #555; margin-top: 4px;">Låg inflation</p>
+                            </div>
+                            <span style="font-size: 24px; font-weight: 700; color: #555;">0,23%</span>
+                        </div>
+                        <p style="color: #888; font-size: 15px;">Början på en period med mycket låga räntor i Sverige.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How it worked -->
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 48px;">Hur fungerade reporäntan?</h2>
+
+            <div style="display: grid; gap: 32px;">
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Återköpsavtal (Repo)</h3>
+                    <p style="color: #555; line-height: 1.8;">Namnet reporänta kommer från "repurchasing agreement" - återköpsavtal. Detta var den mekanism som Riksbanken använde för att låna ut pengar till bankerna. Bankerna sålde värdepapper till Riksbanken med ett avtal om att köpa tillbaka dem senare, och reporäntan var den ränta de betalade.</p>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Påverkan på andra räntor</h3>
+                    <p style="color: #555; line-height: 1.8;">Reporäntan satte standarden för alla andra räntor i ekonomin. När Riksbanken höjde reporäntan blev det dyrare för bankerna att låna, vilket de kompenserade genom att höja sina egna utlåningsräntor till konsumenter och företag. Omvänt ledde sänkningar till lägre räntor i hela systemet.</p>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Inflationsstyrning</h3>
+                    <p style="color: #555; line-height: 1.8;">Riksbankens huvudsakliga användning av reporäntan var att styra inflationen mot målet på 2 procent. När inflationen var för hög höjdes reporäntan för att dämpa ekonomisk aktivitet. När inflationen var för låg sänktes räntan för att stimulera konsumtion och investeringar.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Impact Section -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Så påverkade reporäntan samhället</h2>
+
+        <div class="content-row">
+            <div class="content-text">
+                <h3>Bolånemarknaden</h3>
+                <p>Reporäntan hade en direkt och omedelbar påverkan på bolånemarknaden. De flesta bolån har rörlig ränta som följer utvecklingen av Riksbankens styrränta (tidigare reporänta).</p>
+                <p>Under perioden med negativ reporänta 2016-2018 kunde många svenskar få bolån till extremt låga räntor, vilket bidrog till kraftiga prisökningar på bostadsmarknaden.</p>
+            </div>
+
+            <div class="content-text">
+                <h3>Sparande och konsumtion</h3>
+                <p>När reporäntan var låg blev sparräntor på bankkonton mycket dåliga, vilket gjorde att många sökte sig till andra sparformer som fonder och aktier. Samtidigt stimulerades konsumtion när det var billigt att låna.</p>
+                <p>Höga reporäntor gav däremot bättre avkastning på traditionellt sparande och gjorde det mindre attraktivt att ta lån för konsumtion.</p>
+            </div>
+        </div>
+
+        <div class="content-row" style="margin-top: 32px;">
+            <div class="content-text">
+                <h3>Företagens investeringar</h3>
+                <p>Reporäntan påverkade företagens vilja och möjlighet att investera. Låg reporänta gjorde det billigare att låna för investeringar i maskiner, lokaler och personal, vilket stimulerade tillväxt.</p>
+                <p>Höjningar av reporäntan kunde däremot leda till att företag sköt upp investeringar och expansionsplaner på grund av högre lånekostnader.</p>
+            </div>
+
+            <div class="content-text">
+                <h3>Kronans värde</h3>
+                <p>Reporäntan påverkade också den svenska kronans värde gentemot andra valutor. Högre reporänta gjorde svenska tillgångar mer attraktiva för utländska investerare, vilket stärkte kronan.</p>
+                <p>Under perioden med negativ reporänta försvagades kronan, vilket gjorde svensk export mer konkurrenskraftig men importerade varor dyrare.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Vanliga frågor om reporänta</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                </div>
+                <h3>Varför bytte man namn från reporänta?</h3>
+                <p>Namnet styrränta är mer beskrivande och gör det tydligare att detta är Riksbankens verktyg för att styra ekonomin.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M2 12h20"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Fungerar styrräntan annorlunda än reporäntan?</h3>
+                <p>Nej, det är exakt samma sak. Endast namnet har ändrats, funktionen och mekanismen är identisk.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Vad betyder "repo" i reporänta?</h3>
+                <p>Repo kommer från engelskans "repurchasing agreement" (återköpsavtal), den mekanism Riksbanken använde för att låna ut pengar.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 1v6m0 6v6M7 8l5 5 5-5"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>När var reporäntan som lägst?</h3>
+                <p>Reporäntan var som lägst mellan 2016 och 2018 när den låg på -0,50%, en historiskt låg nivå.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                        <path d="M7 8h10M7 12h6"></path>
+                    </svg>
+                </div>
+                <h3>Hur ofta ändrades reporäntan?</h3>
+                <p>Riksbanken hade sex beslutstillfällen per år, men reporäntan behövde inte ändras vid varje möte.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        <path d="M12 6v6l4 2"></path>
+                    </svg>
+                </div>
+                <h3>Påverkade reporäntan hela ekonomin?</h3>
+                <p>Ja, reporäntan hade effekter på allt från bolåneräntor och sparräntor till företagsinvesteringar och kronans värde.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="best-rates">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h2 class="section-title-white" style="margin-bottom: 24px;">Beräkna din ränta</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                Använd våra kalkylatorer för att se hur ränteförändringar påverkar din ekonomi idag.
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="/berakna" class="btn-primary" style="background: white; color: #1e3a5f;">
+                    Räkna ut ränta
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+                <a href="/styrranta" class="btn-secondary" style="border-color: white; color: white;">
+                    Läs om styrränta
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                        <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                        <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                        <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                    </svg>
+                </div>
+                <span class="logo-text">Ränta.nu</span>
+            </div>
+            <p>Sedan 2018 har Ränta.nu varit Sveriges mest betrodda källa för oberoende sparrådgivning. Med över 150 000 användare per månad hjälper vi svenskar att fatta smartare beslut om sitt sparande.</p>
+            <div class="footer-contact">
+                E-post: <a href="mailto:info@ranta.nu">info@ranta.nu</a><br>
+                Org.nr: 559342-7891
+            </div>
+        </div>
+
+        <div>
+            <h4>Räkna ränta</h4>
+            <ul>
+                <li><a href="/bolanerakna">Bolåneränta</a></li>
+                <li><a href="/sparranta">Sparränta</a></li>
+                <li><a href="/effektiv-ranta">Effektiv ränta</a></li>
+                <li><a href="/ranta-pa-ranta">Ränta på ränta</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Lär dig mer</h4>
+            <ul>
+                <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                <li><a href="/rantetyper">Olika räntetyper</a></li>
+                <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                <li><a href="/artiklar">Alla artiklar</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Om Ränta.nu</h4>
+            <ul>
+                <li><a href="/om-oss">Om oss</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+                <li><a href="/integritetspolicy">Integritet</a></li>
+                <li><a href="/cookiepolicy">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2025 Ränta.nu. Alla rättigheter förbehållna.</span>
+        <span>Informationen på sidan ersätter inte professionell rådgivning.</span>
+    </div>
+</footer>
+
+</body>
+</html>

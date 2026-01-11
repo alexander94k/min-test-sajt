@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.16.8"
+    "astro": "^5.16.8",
+    "xml2js": "^0.6.2"
   }
 }

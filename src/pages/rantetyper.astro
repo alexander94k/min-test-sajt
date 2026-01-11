@@ -1,0 +1,423 @@
+---
+// Frontmatter
+const pageTitle = "Olika räntetyper - Komplett guide till alla räntor | Ränta.nu";
+const pageDescription = "Lär dig om alla olika typer av räntor som finns - från sparränta och bolåneränta till styrränta och realränta. Förklaringar på vanlig svenska.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Olika räntetyper</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                En komplett guide till alla typer av räntor du kan stöta på - enkelt förklarat så att du förstår skillnaderna.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Main categories -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Huvudkategorier av räntor</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; max-width: 1000px; margin: 0 auto;">
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 2px solid #e5e5e5;">
+                <div style="font-size: 48px; margin-bottom: 16px; text-align: center;">💰</div>
+                <h3 style="font-size: 24px; margin-bottom: 16px; color: #1e3a5f; text-align: center;">Sparräntor</h3>
+                <p style="color: #555; line-height: 1.8; text-align: center; margin-bottom: 24px;">Räntor du får när du sparar pengar</p>
+                <ul style="color: #555; line-height: 2; list-style-position: inside; padding: 0;">
+                    <li>Sparkontoränta</li>
+                    <li>Kapitalförsäkringsränta</li>
+                    <li>Obligationsränta</li>
+                </ul>
+            </div>
+
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 2px solid #e5e5e5;">
+                <div style="font-size: 48px; margin-bottom: 16px; text-align: center;">🏠</div>
+                <h3 style="font-size: 24px; margin-bottom: 16px; color: #1e3a5f; text-align: center;">Låneräntor</h3>
+                <p style="color: #555; line-height: 1.8; text-align: center; margin-bottom: 24px;">Räntor du betalar när du lånar</p>
+                <ul style="color: #555; line-height: 2; list-style-position: inside; padding: 0;">
+                    <li>Bolåneränta</li>
+                    <li>Blancoränta</li>
+                    <li>Kreditkortsränta</li>
+                </ul>
+            </div>
+
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 2px solid #e5e5e5;">
+                <div style="font-size: 48px; margin-bottom: 16px; text-align: center;">📊</div>
+                <h3 style="font-size: 24px; margin-bottom: 16px; color: #1e3a5f; text-align: center;">Systemräntor</h3>
+                <p style="color: #555; line-height: 1.8; text-align: center; margin-bottom: 24px;">Räntor som styr ekonomin</p>
+                <ul style="color: #555; line-height: 2; list-style-position: inside; padding: 0;">
+                    <li>Styrränta</li>
+                    <li>Statslåneränta</li>
+                    <li>STIBOR</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Savings rates -->
+<section class="content-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Sparräntor - När du får betalt</h2>
+
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="display: grid; gap: 32px;">
+                <div style="background: #f0f5f7; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 24px; margin-bottom: 16px; color: #1e3a5f;">Sparkontoränta</h3>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 16px;">Den ränta du får på pengar som ligger på sparkonto. För närvarande ligger sparräntan runt 3-4% hos de bästa bankerna.</p>
+                    <div style="background: white; padding: 24px; border-radius: 8px; margin-top: 16px;">
+                        <strong style="color: #1e3a5f;">Exempel:</strong> 100 000 kr på sparkonto med 3,5% ränta ger 3 500 kr per år (innan skatt)
+                    </div>
+                    <a href="/rantekonto" style="display: inline-block; margin-top: 16px; color: #1e3a5f; font-weight: 600;">Läs mer om räntekonton →</a>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 24px; margin-bottom: 16px; color: #1e3a5f;">Inlåningsränta</h3>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 16px;">Ett annat ord för den ränta banker betalar på insatta pengar. Används ofta för att beskriva ränta på större belopp eller företagskonton.</p>
+                    <div style="background: white; padding: 24px; border-radius: 8px; margin-top: 16px;">
+                        <strong style="color: #1e3a5f;">Viktigt:</strong> Inlåningsränta är samma sak som sparränta, bara ett mer tekniskt ord
+                    </div>
+                    <a href="/inlaningsranta" style="display: inline-block; margin-top: 16px; color: #1e3a5f; font-weight: 600;">Läs mer om inlåningsränta →</a>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 24px; margin-bottom: 16px; color: #1e3a5f;">Obligationsränta</h3>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 16px;">När du köper obligationer lånar du ut pengar till staten eller företag. Obligationsräntan är den avkastning du får för detta.</p>
+                    <div style="background: white; padding: 24px; border-radius: 8px; margin-top: 16px;">
+                        <strong style="color: #1e3a5f;">Skillnad mot sparkonto:</strong> Högre potentiell avkastning men också viss risk
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Loan rates -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Låneräntor - När du betalar</h2>
+
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="display: grid; gap: 32px;">
+                <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 24px; margin-bottom: 16px; color: #1e3a5f;">Bolåneränta</h3>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 16px;">Räntan på ditt bostadslån. Ofta den lägsta låneräntan eftersom bostaden fungerar som säkerhet. För närvarande runt 4-5% beroende på bindningstid.</p>
+                    <div style="background: #fff3cd; padding: 24px; border-radius: 8px; margin-top: 16px;">
+                        <strong style="color: #1e3a5f;">Exempel:</strong> 2 miljoner kr bolån med 4,5% ränta kostar 90 000 kr per år i ränta
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 24px; margin-bottom: 16px; color: #1e3a5f;">Blancoränta (Privatlåneränta)</h3>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 16px;">Ränta på lån utan säkerhet, som privatlån. Högre ränta än bolån eftersom banken tar större risk. Vanligtvis 5-15% beroende på din kreditvärdighet.</p>
+                    <div style="background: #fff3cd; padding: 24px; border-radius: 8px; margin-top: 16px;">
+                        <strong style="color: #1e3a5f;">Viktigt:</strong> Jämför alltid effektiv ränta, inte bara nominell ränta
+                    </div>
+                    <a href="/ranta-pa-blancolan" style="display: inline-block; margin-top: 16px; color: #1e3a5f; font-weight: 600;">Läs mer om blancoränta →</a>
+                </div>
+
+                <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 24px; margin-bottom: 16px; color: #1e3a5f;">Kreditkortsränta</h3>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 16px;">Den ränta du betalar om du inte betalar hela kreditkortssaldot i tid. Ofta 15-25% - den högsta låneräntan för konsumenter.</p>
+                    <div style="background: #fff3cd; padding: 24px; border-radius: 8px; margin-top: 16px;">
+                        <strong style="color: #dc3545;">Varning:</strong> Betala alltid hela saldot före förfallodagen för att undvika denna höga ränta
+                    </div>
+                    <a href="/artiklar/ranta-kreditkort" style="display: inline-block; margin-top: 16px; color: #1e3a5f; font-weight: 600;">Läs mer om kreditkortsränta →</a>
+                </div>
+
+                <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 24px; margin-bottom: 16px; color: #1e3a5f;">CSN-ränta (Studielånsränta)</h3>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 16px;">Räntan på studielån från CSN. Mycket låg eftersom staten subventionerar den. För närvarande 1,23% - lägsta låneräntan du kan få.</p>
+                    <div style="background: #e8f4f8; padding: 24px; border-radius: 8px; margin-top: 16px;">
+                        <strong style="color: #1e3a5f;">Fördel:</strong> Ingen ränta under studietiden, och räntan är avdragsgill
+                    </div>
+                    <a href="/csn-ranta" style="display: inline-block; margin-top: 16px; color: #1e3a5f; font-weight: 600;">Läs mer om CSN-ränta →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- System rates -->
+<section class="content-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Systemräntor - Som styr ekonomin</h2>
+
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="display: grid; gap: 32px;">
+                <div style="background: #f0f5f7; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 24px; margin-bottom: 16px; color: #1e3a5f;">Styrränta (tidigare Reporänta)</h3>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 16px;">Riksbankens viktigaste verktyg för att styra ekonomin. När styrräntan ändras påverkas alla andra räntor i samhället. För närvarande 3,75%.</p>
+                    <div style="background: white; padding: 24px; border-radius: 8px; margin-top: 16px;">
+                        <strong style="color: #1e3a5f;">Påverkan:</strong> Höjd styrränta → högre sparräntor och låneräntor. Sänkt styrränta → lägre räntor överallt
+                    </div>
+                    <a href="/styrranta" style="display: inline-block; margin-top: 16px; color: #1e3a5f; font-weight: 600;">Läs mer om styrräntan →</a>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 24px; margin-bottom: 16px; color: #1e3a5f;">Statslåneränta</h3>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 16px;">Räntan på lån som svenska staten tar. Används som referens för många andra räntor, bland annat CSN-räntan.</p>
+                    <div style="background: white; padding: 24px; border-radius: 8px; margin-top: 16px;">
+                        <strong style="color: #1e3a5f;">Viktigt att veta:</strong> Anses som "riskfri ränta" eftersom staten alltid kan betala sina skulder
+                    </div>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 24px; margin-bottom: 16px; color: #1e3a5f;">STIBOR</h3>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 16px;">Stockholm Interbank Offered Rate - räntan banker lånar till varandra för. Används ofta som bas för rörliga bolåneräntor.</p>
+                    <div style="background: white; padding: 24px; border-radius: 8px; margin-top: 16px;">
+                        <strong style="color: #1e3a5f;">Hur det påverkar dig:</strong> Många bolån har ränta som är "STIBOR + påslag", t.ex. STIBOR 3 mån + 0,75%
+                    </div>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 24px; margin-bottom: 16px; color: #1e3a5f;">Marknadsränta</h3>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 16px;">Den ränta som uppstår när utbud och efterfrågan möts på den fria marknaden. Påverkas av inflation, ekonomisk tillväxt och Riksbankens beslut.</p>
+                    <div style="background: white; padding: 24px; border-radius: 8px; margin-top: 16px;">
+                        <strong style="color: #1e3a5f;">I praktiken:</strong> Avgör vad banker kan ta betalt för lån och vad de måste betala i sparränta
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technical terms -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Tekniska räntetermer</h2>
+
+        <div style="max-width: 1100px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 32px;">
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Nominell ränta vs Effektiv ränta</h3>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 12px;"><strong>Nominell ränta:</strong> Grundräntan utan avgifter</p>
+                    <p style="color: #555; line-height: 1.8;"><strong>Effektiv ränta:</strong> Inkluderar alla avgifter - den verkliga kostnaden</p>
+                    <div style="background: #e8f4f8; padding: 16px; border-radius: 8px; margin-top: 16px;">
+                        <strong>Exempel:</strong> 5% nominell + 500 kr avgift kan bli 8% effektiv ränta
+                    </div>
+                </div>
+
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Fast ränta vs Rörlig ränta</h3>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 12px;"><strong>Fast ränta:</strong> Låst under bestämd period, oförändrad månadskostnad</p>
+                    <p style="color: #555; line-height: 1.8;"><strong>Rörlig ränta:</strong> Kan ändras med marknaden, flexibel men osäker</p>
+                    <a href="/bunden-fast-ranta" style="display: inline-block; margin-top: 16px; color: #1e3a5f; font-weight: 600;">Läs mer om fast ränta →</a>
+                </div>
+
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Realränta</h3>
+                    <p style="color: #555; line-height: 1.8;">Ränta minus inflation = den verkliga avkastningen. Om du har 3% ränta men inflationen är 2% är realräntan bara 1%.</p>
+                    <div style="background: #e8f4f8; padding: 16px; border-radius: 8px; margin-top: 16px;">
+                        <strong>Viktigt:</strong> Negativ realränta betyder att dina pengar förlorar köpkraft trots ränta
+                    </div>
+                    <a href="/realranta" style="display: inline-block; margin-top: 16px; color: #1e3a5f; font-weight: 600;">Läs mer om realränta →</a>
+                </div>
+
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Dröjsmålsränta</h3>
+                    <p style="color: #555; line-height: 1.8;">Extra ränta som läggs på om du betalar räkningar eller lån för sent. För närvarande 10,25% per år enligt räntelagen.</p>
+                    <div style="background: #fff3cd; padding: 16px; border-radius: 8px; margin-top: 16px;">
+                        <strong>Varning:</strong> Kan bli mycket dyrt - betala alltid i tid
+                    </div>
+                    <a href="/drojsmalsranta" style="display: inline-block; margin-top: 16px; color: #1e3a5f; font-weight: 600;">Läs mer om dröjsmålsränta →</a>
+                </div>
+
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Diskonteringsränta</h3>
+                    <p style="color: #555; line-height: 1.8;">Används för att räkna ut vad framtida pengar är värda idag. Viktig inom ekonomi och investeringar.</p>
+                    <div style="background: #e8f4f8; padding: 16px; border-radius: 8px; margin-top: 16px;">
+                        <strong>Exempel:</strong> 100 kr om ett år är värt cirka 97 kr idag med 3% diskonteringsränta
+                    </div>
+                    <a href="/diskonteringsranta" style="display: inline-block; margin-top: 16px; color: #1e3a5f; font-weight: 600;">Läs mer om diskonteringsränta →</a>
+                </div>
+
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Referensränta</h3>
+                    <p style="color: #555; line-height: 1.8;">En ränta som används som utgångspunkt för andra räntor. Till exempel kan bolåneränta vara "referensränta + 1%".</p>
+                    <div style="background: #e8f4f8; padding: 16px; border-radius: 8px; margin-top: 16px;">
+                        <strong>Vanliga:</strong> STIBOR, statslåneränta och Riksbankens styrränta
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick comparison -->
+<section class="content-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Snabb jämförelse av räntenivåer</h2>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="background: white; border-radius: 16px; overflow: hidden; border: 1px solid #e5e5e5;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="background: #f8f9fa; border-bottom: 2px solid #e5e5e5;">
+                            <th style="padding: 20px; text-align: left; font-weight: 600; color: #1e3a5f;">Ränttyp</th>
+                            <th style="padding: 20px; text-align: center; font-weight: 600; color: #1e3a5f;">Ungefärlig nivå</th>
+                            <th style="padding: 20px; text-align: left; font-weight: 600; color: #1e3a5f;">Bra eller dåligt för dig?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #f0f0f0;">
+                            <td style="padding: 20px; font-weight: 600;">Sparränta</td>
+                            <td style="padding: 20px; text-align: center; font-size: 20px; color: #28a745;">3-4%</td>
+                            <td style="padding: 20px; color: #555;">Högre = bättre 👍</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f0f0f0;">
+                            <td style="padding: 20px; font-weight: 600;">Bolåneränta</td>
+                            <td style="padding: 20px; text-align: center; font-size: 20px; color: #ff6b00;">4-5%</td>
+                            <td style="padding: 20px; color: #555;">Lägre = bättre 👍</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f0f0f0;">
+                            <td style="padding: 20px; font-weight: 600;">Blancoränta</td>
+                            <td style="padding: 20px; text-align: center; font-size: 20px; color: #ff6b00;">5-15%</td>
+                            <td style="padding: 20px; color: #555;">Lägre = bättre 👍</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f0f0f0;">
+                            <td style="padding: 20px; font-weight: 600;">CSN-ränta</td>
+                            <td style="padding: 20px; text-align: center; font-size: 20px; color: #28a745;">1,23%</td>
+                            <td style="padding: 20px; color: #555;">Lägst möjliga - bäst lån 👍</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f0f0f0;">
+                            <td style="padding: 20px; font-weight: 600;">Kreditkortsränta</td>
+                            <td style="padding: 20px; text-align: center; font-size: 20px; color: #dc3545;">15-25%</td>
+                            <td style="padding: 20px; color: #555;">Undvik genom att betala i tid! ⚠️</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 20px; font-weight: 600;">Styrränta</td>
+                            <td style="padding: 20px; text-align: center; font-size: 20px; color: #1e3a5f;">3,75%</td>
+                            <td style="padding: 20px; color: #555;">Påverkar alla andra räntor 📊</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="best-rates">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h2 class="section-title-white" style="margin-bottom: 24px;">Jämför räntor och spara pengar</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                Nu när du förstår olika räntetyper är det dags att jämföra och hitta de bästa erbjudandena.
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="/basta-rantan" class="btn-primary" style="background: white; color: #1e3a5f;">
+                    Jämför bästa räntan
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+                <a href="/berakna" class="btn-secondary" style="border-color: white; color: white;">
+                    Beräkna ränta
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                        <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                        <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                        <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                    </svg>
+                </div>
+                <span class="logo-text">Ränta.nu</span>
+            </div>
+            <p>Sedan 2018 har Ränta.nu varit Sveriges mest betrodda källa för oberoende sparrådgivning. Med över 150 000 användare per månad hjälper vi svenskar att fatta smartare beslut om sitt sparande.</p>
+            <div class="footer-contact">
+                E-post: <a href="mailto:info@ranta.nu">info@ranta.nu</a><br>
+                Org.nr: 559342-7891
+            </div>
+        </div>
+
+        <div>
+            <h4>Räkna ränta</h4>
+            <ul>
+                <li><a href="/bolanerakna">Bolåneränta</a></li>
+                <li><a href="/sparranta">Sparränta</a></li>
+                <li><a href="/effektiv-ranta">Effektiv ränta</a></li>
+                <li><a href="/ranta-pa-ranta">Ränta på ränta</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Lär dig mer</h4>
+            <ul>
+                <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                <li><a href="/rantetyper">Olika räntetyper</a></li>
+                <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                <li><a href="/artiklar">Alla artiklar</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Om Ränta.nu</h4>
+            <ul>
+                <li><a href="/om-oss">Om oss</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+                <li><a href="/integritetspolicy">Integritet</a></li>
+                <li><a href="/cookiepolicy">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2025 Ränta.nu. Alla rättigheter förbehållna.</span>
+        <span>Informationen på sidan ersätter inte professionell rådgivning.</span>
+    </div>
+</footer>
+
+</body>
+</html>

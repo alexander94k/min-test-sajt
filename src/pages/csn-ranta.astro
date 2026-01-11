@@ -1,0 +1,499 @@
+---
+// Frontmatter
+const pageTitle = "CSN ränta - Aktuell ränta på studielån 2025 | Ränta.nu";
+const pageDescription = "Läs om den aktuella räntan på CSN-lån, hur den beräknas och vad du betalar i ränta på ditt studielån. Uppdateras regelbundet.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">CSN ränta 2025</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Aktuell information om räntan på ditt CSN-lån, hur den beräknas och vad du kan förvänta dig betala.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Current Rate Section -->
+<section class="best-rates">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h2 class="section-title-white" style="margin-bottom: 16px;">Aktuell CSN-ränta</h2>
+            <div style="font-size: 64px; font-weight: 700; color: white; margin-bottom: 16px;">1,23%</div>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                Ränta från 1 januari 2025
+            </p>
+
+            <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 24px; text-align: left;">
+                <h3 style="color: white; font-size: 20px; margin-bottom: 16px;">Vad betyder det här?</h3>
+                <ul style="color: rgba(255,255,255,0.9); line-height: 2; margin: 0; list-style-position: inside;">
+                    <li>Räntan beräknas dagligen på utestående skuld</li>
+                    <li>Du betalar endast ränta när återbetalningen börjar</li>
+                    <li>Räntan är avdragsgill i din deklaration</li>
+                    <li>Ingen ränta under studietiden</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How it works -->
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Så fungerar CSN-räntan</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3>Statligt subventionerad</h3>
+                <p>CSN-räntan är mycket lägre än vanliga banklån eftersom staten subventionerar en del av kostnaden för att uppmuntra studier.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                </div>
+                <h3>Baseras på statslåneräntan</h3>
+                <p>Räntan följer statslåneräntan, vilket gör den mycket stabil och förutsägbar jämfört med andra lån.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        <path d="M12 6v6l4 2"></path>
+                    </svg>
+                </div>
+                <h3>Ändras varje halvår</h3>
+                <p>CSN ändrar räntan två gånger per år - den 1 januari och 1 juli - baserat på utvecklingen av statslåneräntan.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                </div>
+                <h3>Ingen ränta under studier</h3>
+                <p>Du börjar betala ränta först när du börjat återbetala lånet, vilket vanligtvis sker 6 månader efter avslutade studier.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Historical rates -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Historisk utveckling av CSN-räntan</h2>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="background: #f8f9fa; border-bottom: 2px solid #e5e5e5;">
+                                <th style="padding: 16px; text-align: left; font-weight: 600; color: #1e3a5f;">Period</th>
+                                <th style="padding: 16px; text-align: center; font-weight: 600; color: #1e3a5f;">Ränta</th>
+                                <th style="padding: 16px; text-align: left; font-weight: 600; color: #1e3a5f;">Förändring</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #f0f0f0; background: #f0f5f7;">
+                                <td style="padding: 16px; font-weight: 600;">Januari 2025</td>
+                                <td style="padding: 16px; text-align: center; font-size: 20px; font-weight: 700; color: #1e3a5f;">1,23%</td>
+                                <td style="padding: 16px; color: #28a745;">↓ Sänkning</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f0f0f0;">
+                                <td style="padding: 16px;">Juli 2024</td>
+                                <td style="padding: 16px; text-align: center; font-size: 20px; font-weight: 700;">1,31%</td>
+                                <td style="padding: 16px; color: #dc3545;">↑ Höjning</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f0f0f0;">
+                                <td style="padding: 16px;">Januari 2024</td>
+                                <td style="padding: 16px; text-align: center; font-size: 20px; font-weight: 700;">0,88%</td>
+                                <td style="padding: 16px; color: #dc3545;">↑ Höjning</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f0f0f0;">
+                                <td style="padding: 16px;">Juli 2023</td>
+                                <td style="padding: 16px; text-align: center; font-size: 20px; font-weight: 700;">0,65%</td>
+                                <td style="padding: 16px; color: #dc3545;">↑ Höjning</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f0f0f0;">
+                                <td style="padding: 16px;">Januari 2023</td>
+                                <td style="padding: 16px; text-align: center; font-size: 20px; font-weight: 700;">0,26%</td>
+                                <td style="padding: 16px; color: #dc3545;">↑ Höjning</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 16px;">Juli 2022</td>
+                                <td style="padding: 16px; text-align: center; font-size: 20px; font-weight: 700;">0,05%</td>
+                                <td style="padding: 16px; color: #666;">Historiskt låg nivå</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top: 32px; padding: 24px; background: #e8f4f8; border-radius: 8px;">
+                    <p style="color: #555; line-height: 1.8; margin: 0;">
+                        <strong>Notera:</strong> CSN-räntan har ökat de senaste åren i takt med att Riksbanken höjt styrräntan för att bekämpa inflation. Trots höjningarna är CSN-räntan fortfarande mycket lägre än vanliga banklån.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cost example -->
+<section class="content-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Vad kostar räntan på ditt CSN-lån?</h2>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="background: #f0f5f7; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5; margin-bottom: 32px;">
+                <h3 style="font-size: 24px; margin-bottom: 24px; color: #1e3a5f; text-align: center;">Årlig räntekostnad vid 1,23% ränta</h3>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px;">
+                    <div style="background: white; padding: 24px; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 16px; color: #666; margin-bottom: 8px;">100 000 kr skuld</div>
+                        <div style="font-size: 32px; font-weight: 700; color: #1e3a5f;">1 230 kr/år</div>
+                        <div style="font-size: 14px; color: #888; margin-top: 4px;">≈ 103 kr/mån</div>
+                    </div>
+
+                    <div style="background: white; padding: 24px; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 16px; color: #666; margin-bottom: 8px;">200 000 kr skuld</div>
+                        <div style="font-size: 32px; font-weight: 700; color: #1e3a5f;">2 460 kr/år</div>
+                        <div style="font-size: 14px; color: #888; margin-top: 4px;">≈ 205 kr/mån</div>
+                    </div>
+
+                    <div style="background: white; padding: 24px; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 16px; color: #666; margin-bottom: 8px;">300 000 kr skuld</div>
+                        <div style="font-size: 32px; font-weight: 700; color: #1e3a5f;">3 690 kr/år</div>
+                        <div style="font-size: 14px; color: #888; margin-top: 4px;">≈ 308 kr/mån</div>
+                    </div>
+
+                    <div style="background: white; padding: 24px; border-radius: 12px; text-align: center;">
+                        <div style="font-size: 16px; color: #666; margin-bottom: 8px;">400 000 kr skuld</div>
+                        <div style="font-size: 32px; font-weight: 700; color: #1e3a5f;">4 920 kr/år</div>
+                        <div style="font-size: 14px; color: #888; margin-top: 4px;">≈ 410 kr/mån</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; border: 1px solid #b8dce8;">
+                <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Jämförelse med andra låntyper</h3>
+                <p style="color: #555; line-height: 1.8; margin-bottom: 16px;">På en skuld på 200 000 kr betalar du årligen:</p>
+                <ul style="color: #555; line-height: 2;">
+                    <li><strong>CSN-lån (1,23%):</strong> 2 460 kr</li>
+                    <li><strong>Bolån (4,5%):</strong> 9 000 kr</li>
+                    <li><strong>Blancolån (8%):</strong> 16 000 kr</li>
+                    <li><strong>Kreditkort (15%):</strong> 30 000 kr</li>
+                </ul>
+                <p style="color: #555; line-height: 1.8; margin-top: 16px; font-weight: 600;">CSN-lånet är betydligt billigare än alla andra lånformer!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tax deduction -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Ränteavdrag på CSN-lån</h2>
+
+        <div class="content-row">
+            <div class="content-text">
+                <h3>Du får avdrag för räntan</h3>
+                <p>Räntan på ditt CSN-lån är avdragsgill, vilket betyder att du får tillbaka 30% av räntan du betalar genom skattereduktion.</p>
+                <p>På en årlig räntekostnad på 2 460 kr får du alltså tillbaka cirka 738 kr, vilket gör att den verkliga kostnaden blir cirka 1 722 kr per år.</p>
+                <p>CSN rapporterar automatiskt din räntekostnad till Skatteverket, så du behöver inte göra något själv. Avdraget syns i din deklaration.</p>
+            </div>
+
+            <div class="content-text">
+                <h3>Räkneexempel med ränteavdrag</h3>
+                <div style="background: white; padding: 24px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <div style="margin-bottom: 16px;">
+                        <div style="color: #666; margin-bottom: 4px;">Skuld:</div>
+                        <div style="font-size: 24px; font-weight: 700; color: #1e3a5f;">200 000 kr</div>
+                    </div>
+                    <div style="margin-bottom: 16px;">
+                        <div style="color: #666; margin-bottom: 4px;">Räntekostnad (1,23%):</div>
+                        <div style="font-size: 24px; font-weight: 700; color: #1e3a5f;">2 460 kr</div>
+                    </div>
+                    <div style="margin-bottom: 16px;">
+                        <div style="color: #666; margin-bottom: 4px;">Ränteavdrag (30%):</div>
+                        <div style="font-size: 24px; font-weight: 700; color: #28a745;">-738 kr</div>
+                    </div>
+                    <div style="padding-top: 16px; border-top: 2px solid #e5e5e5;">
+                        <div style="color: #666; margin-bottom: 4px;">Faktisk kostnad:</div>
+                        <div style="font-size: 28px; font-weight: 700; color: #1e3a5f;">1 722 kr/år</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Repayment -->
+<section class="content-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Återbetalning och ränta</h2>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="display: grid; gap: 24px;">
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">När börjar du betala ränta?</h3>
+                    <p style="color: #555; line-height: 1.8;">Du börjar betala ränta när återbetalningen av ditt CSN-lån startar, vilket vanligtvis sker 6 månader efter att du avslutat dina studier. Under studietiden och de första 6 månaderna efter avslutade studier betalar du ingen ränta alls.</p>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Hur betalas räntan?</h3>
+                    <p style="color: #555; line-height: 1.8;">Räntan ingår i din månatliga återbetalning till CSN. Varje månad betalar du både amortering och ränta. I början går en större del till ränta, men när skulden minskar blir räntan lägre och mer går till amortering.</p>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Kan du betala av snabbare?</h3>
+                    <p style="color: #555; line-height: 1.8;">Ja, du kan när som helst göra extra amorteringar på ditt CSN-lån utan några avgifter. Extra amorteringar minskar din skuld och därmed din räntekostnad. Du kan göra extrainbetalningar via CSN:s webbplats eller app.</p>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Vad händer om du inte kan betala?</h3>
+                    <p style="color: #555; line-height: 1.8;">Om du får ekonomiska problem kan du ansöka om anstånd med återbetalningen hos CSN. Under anståndstiden fortsätter räntan att löpa, men du behöver inte betala. Kontakta CSN så snart du märker att du får problem att betala.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tips -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Tips för att minska din räntekostnad</h2>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <div style="font-size: 32px; margin-bottom: 16px;">💰</div>
+                    <h3 style="font-size: 20px; margin-bottom: 12px; color: #1e3a5f;">Betala av snabbare</h3>
+                    <p style="color: #555; line-height: 1.8;">Gör extra amorteringar när du kan. Mindre skuld = mindre ränta. Även små extrabetalningar gör stor skillnad över tid.</p>
+                </div>
+
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <div style="font-size: 32px; margin-bottom: 16px;">📊</div>
+                    <h3 style="font-size: 20px; margin-bottom: 12px; color: #1e3a5f;">Följ ränteutvecklingen</h3>
+                    <p style="color: #555; line-height: 1.8;">Räntan ändras 1 januari och 1 juli varje år. Håll koll på utvecklingen för att planera din ekonomi.</p>
+                </div>
+
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <div style="font-size: 32px; margin-bottom: 16px;">🎯</div>
+                    <h3 style="font-size: 20px; margin-bottom: 12px; color: #1e3a5f;">Prioritera rätt lån</h3>
+                    <p style="color: #555; line-height: 1.8;">Betala av dyra lån först (kreditkort, blancolån). CSN-lånet har så låg ränta att det ofta är smartast att betala sist.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Vanliga frågor om CSN-räntan</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                </div>
+                <h3>Varför är CSN-räntan så låg?</h3>
+                <p>Staten subventionerar räntan för att uppmuntra studier. Det gör CSN-lånet till det billigaste lånet du kan få.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M2 12h20"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Kan räntan bli negativ?</h3>
+                <p>Nej, CSN-räntan har ett golv på 0%. Den kan inte bli negativ, även om statslåneräntan skulle sjunka under noll.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Beräknas ränta under studietiden?</h3>
+                <p>Nej, du betalar ingen ränta under studietiden eller de första 6 månaderna efter avslutade studier.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 1v6m0 6v6M7 8l5 5 5-5"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Hur ofta ändras räntan?</h3>
+                <p>CSN-räntan ändras två gånger per år - den 1 januari och den 1 juli - baserat på statslåneräntan.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                        <path d="M7 8h10M7 12h6"></path>
+                    </svg>
+                </div>
+                <h3>Får jag ränteavdrag automatiskt?</h3>
+                <p>Ja, CSN rapporterar din räntekostnad direkt till Skatteverket. Avdraget syns automatiskt i din deklaration.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        <path d="M12 6v6l4 2"></path>
+                    </svg>
+                </div>
+                <h3>Löper ränta vid anstånd?</h3>
+                <p>Ja, ränta fortsätter att löpa även om du har anstånd med återbetalningen, men du behöver inte betala under anståndstiden.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="best-rates">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h2 class="section-title-white" style="margin-bottom: 24px;">Läs mer om räntor</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                Utforska våra artiklar och kalkylatorer för att lära dig mer om hur räntor fungerar.
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="/berakna" class="btn-primary" style="background: white; color: #1e3a5f;">
+                    Räkna på ränta
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+                <a href="/artiklar" class="btn-secondary" style="border-color: white; color: white;">
+                    Läs fler artiklar
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                        <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                        <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                        <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                    </svg>
+                </div>
+                <span class="logo-text">Ränta.nu</span>
+            </div>
+            <p>Sedan 2018 har Ränta.nu varit Sveriges mest betrodda källa för oberoende sparrådgivning. Med över 150 000 användare per månad hjälper vi svenskar att fatta smartare beslut om sitt sparande.</p>
+            <div class="footer-contact">
+                E-post: <a href="mailto:info@ranta.nu">info@ranta.nu</a><br>
+                Org.nr: 559342-7891
+            </div>
+        </div>
+
+        <div>
+            <h4>Räkna ränta</h4>
+            <ul>
+                <li><a href="/bolanerakna">Bolåneränta</a></li>
+                <li><a href="/sparranta">Sparränta</a></li>
+                <li><a href="/effektiv-ranta">Effektiv ränta</a></li>
+                <li><a href="/ranta-pa-ranta">Ränta på ränta</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Lär dig mer</h4>
+            <ul>
+                <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                <li><a href="/rantetyper">Olika räntetyper</a></li>
+                <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                <li><a href="/artiklar">Alla artiklar</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Om Ränta.nu</h4>
+            <ul>
+                <li><a href="/om-oss">Om oss</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+                <li><a href="/integritetspolicy">Integritet</a></li>
+                <li><a href="/cookiepolicy">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2025 Ränta.nu. Alla rättigheter förbehållna.</span>
+        <span>Informationen på sidan ersätter inte professionell rådgivning.</span>
+    </div>
+</footer>
+
+</body>
+</html>

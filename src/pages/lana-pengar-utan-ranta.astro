@@ -1,0 +1,429 @@
+---
+// Frontmatter
+const pageTitle = "Låna pengar utan ränta - Så fungerar det | Ränta.nu";
+const pageDescription = "Är det möjligt att låna pengar utan ränta? Lär dig om räntefria perioder, privatlån utan ränta och vad du bör tänka på innan du lånar.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Låna pengar utan ränta</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Räntefria lån låter för bra för att vara sant - men det finns faktiskt alternativ. Lär dig hur de fungerar och vad du bör tänka på.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Alert Section -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div style="background: #fff3cd; border: 2px solid #ffc107; border-radius: 12px; padding: 32px;">
+                <div style="display: flex; align-items: start; gap: 16px;">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                    <div>
+                        <h3 style="font-size: 22px; margin-bottom: 12px; color: #1e3a5f;">Varning för "räntefria" lån</h3>
+                        <p style="color: #555; line-height: 1.8; margin-bottom: 12px;">Många så kallade räntefria lån har dolda avgifter och kostnader som gör dem dyrare än vanliga lån. Läs alltid den effektiva räntan och alla villkor innan du lånar.</p>
+                        <p style="color: #555; line-height: 1.8; font-weight: 600;">Den effektiva räntan inkluderar alla kostnader och visar lånets verkliga kostnad.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Typer av räntefria lån</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                </div>
+                <h3>Kreditkort med räntefri period</h3>
+                <p>De flesta kreditkort har 30-56 räntefria dagar. Om du betalar hela saldot före förfallodagen betalar du ingen ränta alls.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <h3>Privatlån från vänner/familj</h3>
+                <p>Att låna av någon du känner kan vara helt räntefritt, men kräver tydliga överenskommelser för att undvika konflikter.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3>Köp nu, betala sen (BNPL)</h3>
+                <p>Tjänster som Klarna och Afterpay erbjuder ofta räntefria 30-dagarsperioder eller delbetalningar i 3 månader utan ränta.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <h3>Studielån från CSN</h3>
+                <p>CSN-lån har extremt låg ränta (men inte noll) jämfört med vanliga lån, och du behöver inte betala ränta under studietiden.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How it works -->
+<section class="content-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Så fungerar räntefria perioder</h2>
+
+        <div class="content-row">
+            <div class="content-text">
+                <h3>Kreditkortets räntefria dagar</h3>
+                <p>När du handlar med kreditkort får du vanligtvis 30-56 räntefria dagar från köpdatum till betalningens förfallodag. Detta betyder att du kan låna pengar gratis under denna period.</p>
+                <p>Nyckeln är att betala hela saldot före förfallodagen. Betalar du bara en del börjar ränta att löpa på återstående belopp, ofta med mycket höga räntor på 15-25%.</p>
+                <p>Många använder denna funktion för att få bättre cashflow - du kan handla i början av månaden men betala i slutet, utan någon kostnad.</p>
+            </div>
+
+            <div class="content-text">
+                <h3>Köp nu, betala sen-tjänster</h3>
+                <p>Tjänster som Klarna, Afterpay och PayPal erbjuder ofta helt räntefria betalningsplaner för mindre köp. Du kan dela upp betalningen i 3-4 månader utan någon extra kostnad.</p>
+                <p>Viktigt att veta är att om du missar en betalning tillkommer ofta höga förseningsavgifter och ränta. Dessutom påverkas din kreditvärdighet negativt.</p>
+                <p>Dessa tjänster är bra för budgetering av större köp, men använd dem bara om du vet att du kan betala i tid.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Private loans -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Låna av vänner och familj</h2>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5; margin-bottom: 32px;">
+                <h3 style="font-size: 24px; margin-bottom: 24px; color: #1e3a5f;">Fördelar och nackdelar</h3>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 24px;">
+                    <div>
+                        <h4 style="color: #28a745; margin-bottom: 16px;">✓ Fördelar</h4>
+                        <ul style="list-style: none; padding: 0; color: #555; line-height: 2;">
+                            <li>• Ingen ränta eller låga avgifter</li>
+                            <li>• Flexibla återbetalningsvillkor</li>
+                            <li>• Ingen kreditprövning</li>
+                            <li>• Snabb handläggning</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="color: #dc3545; margin-bottom: 16px;">✗ Nackdelar</h4>
+                        <ul style="list-style: none; padding: 0; color: #555; line-height: 2;">
+                            <li>• Risk för relationsproblem</li>
+                            <li>• Ingen juridisk säkerhet</li>
+                            <li>• Socialt tryck att betala</li>
+                            <li>• Kan skapa beroende</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: grid; gap: 24px;">
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">1. Skriv ett skriftligt avtal</h3>
+                    <p style="color: #555; line-height: 1.8;">Även om det är familj eller vänner bör du alltid skriva ett låneavtal. Inkludera lånebelopp, återbetalningsplan, eventuell ränta, och vad som händer om du inte kan betala. Detta skyddar båda parter och förhindrar missförstånd.</p>
+                </div>
+
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">2. Var realistisk om återbetalning</h3>
+                    <p style="color: #555; line-height: 1.8;">Lova aldrig att betala tillbaka snabbare än du realistiskt kan. Det är bättre att sätta en längre återbetalningsplan och sedan betala tidigare än att misslyckas med ett för ambitiöst schema.</p>
+                </div>
+
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">3. Håll kommunikationen öppen</h3>
+                    <p style="color: #555; line-height: 1.8;">Om du får problem att betala, kommunicera detta omedelbart. Det värsta du kan göra är att undvika personen eller sluta svara. De flesta förstår om du är ärlig och proaktiv.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Hidden costs -->
+<section class="content-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Dolda kostnader i "räntefria" lån</h2>
+
+        <div class="content-row">
+            <div class="content-text">
+                <h3>Uppläggningsavgifter</h3>
+                <p>Många lån som marknadsförs som räntefria har istället höga uppläggningsavgifter. En uppläggningsavgift på 500-1000 kr kan göra att den effektiva räntan blir 10-20% eller mer, särskilt på små lån.</p>
+                <p>Exempel: Ett "räntefritt" lån på 5000 kr med 500 kr uppläggningsavgift har egentligen 10% effektiv ränta om du betalar tillbaka på ett år.</p>
+            </div>
+
+            <div class="content-text">
+                <h3>Aviavgifter</h3>
+                <p>Varje månad du betalar tillbaka lånet kan det tillkomma en aviavgift på 30-50 kr. På ett års lån kan detta bli 360-600 kr extra, vilket ökar den totala kostnaden rejält.</p>
+                <p>Dessa avgifter nämns ofta inte i marknadsföringen, men finns alltid med i den effektiva räntan som långivaren är skyldig att visa.</p>
+            </div>
+        </div>
+
+        <div class="content-row" style="margin-top: 32px;">
+            <div class="content-text">
+                <h3>Förseningsavgifter</h3>
+                <p>Om du missar en betalning med bara en dag kan du få betala 400-600 kr i förseningsavgift. Detta gör att ett "räntefritt" lån plötsligt blir mycket dyrt.</p>
+                <p>Vissa långivare är extra snabba med att ta ut förseningsavgifter, så se till att alltid ha autogiro eller sätt påminnelser.</p>
+            </div>
+
+            <div class="content-text">
+                <h3>Krav på andra produkter</h3>
+                <p>Vissa erbjudanden om räntefria lån kräver att du också köper andra produkter eller tjänster, som försäkringar eller medlemskap. Dessa kostnader kan göra lånet dyrt trots "räntefri" status.</p>
+                <p>Läs alltid hela erbjudandet och räkna på totalkostnaden, inte bara räntan.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tips -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Tips för att låna räntefritt</h2>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="display: grid; gap: 24px;">
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Använd kreditkort smart</h3>
+                    <p style="color: #555; line-height: 1.8;">Det mest tillförlitliga sättet att låna räntefritt är att använda kreditkortets räntefria period. Handla i början av månaden och betala hela saldot före förfallodagen. På så sätt får du upp till 56 dagars räntefritt lån utan några avgifter alls.</p>
+                </div>
+
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Kolla alltid effektiv ränta</h3>
+                    <p style="color: #555; line-height: 1.8;">Den effektiva räntan är det enda sättet att jämföra lån rättvist. Den inkluderar alla avgifter och kostnader. Ett lån med 0% ränta men höga avgifter kan ha 15% effektiv ränta, medan ett lån med 3% ränta utan avgifter kan vara billigare.</p>
+                </div>
+
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Betala alltid i tid</h3>
+                    <p style="color: #555; line-height: 1.8;">Det som gör räntefria lån fördelaktiga är att du följer reglerna. En enda missad betalning kan kosta hundratals kronor i avgifter och förstöra hela poängen med det räntefria lånet. Sätt upp autogiro eller påminnelser.</p>
+                </div>
+
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Undvik små snabblån</h3>
+                    <p style="color: #555; line-height: 1.8;">Små snabblån som marknadsförs som "första lånet gratis" har ofta extremt höga kostnader vid förnyelse eller om du behöver låna mer. Det är bättre att låna av familj eller använda kreditkort än att fastna i dyra snabblån.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Vanliga frågor om räntefria lån</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                </div>
+                <h3>Finns det verkligen helt räntefria lån?</h3>
+                <p>Ja, kreditkorts räntefria perioder och vissa köp-nu-betala-sen-tjänster är helt räntefria om du betalar i tid. Privatlån kan också vara räntefria.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M2 12h20"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Vad händer om jag missar en betalning?</h3>
+                <p>Du får vanligtvis betala höga förseningsavgifter på 400-600 kr, och ränta börjar ofta löpa på hela beloppet. Din kreditvärdighet påverkas också negativt.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Är "första lånet gratis" verkligen gratis?</h3>
+                <p>Ofta ja, men det är ett sätt att få dig som kund. Nästa lån har vanligtvis mycket höga räntor och avgifter. Var försiktig med att förlita dig på sådana erbjudanden.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 1v6m0 6v6M7 8l5 5 5-5"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Ska jag skriva avtal vid privatlån?</h3>
+                <p>Ja, alltid. Ett skriftligt avtal skyddar både dig och långivaren, och förhindrar missförstånd och relationsproblem senare.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                        <path d="M7 8h10M7 12h6"></path>
+                    </svg>
+                </div>
+                <h3>Hur fungerar Klarna räntefritt?</h3>
+                <p>Klarna och liknande tjänster ger ofta 30 dagar eller 3 månaders delbetalning utan ränta. Betalar du i tid är det helt gratis, men förseningar kostar mycket.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        <path d="M12 6v6l4 2"></path>
+                    </svg>
+                </div>
+                <h3>Vad är bättre - räntefritt eller låg ränta?</h3>
+                <p>Det beror på avgifterna. Ett lån med 0% ränta men höga avgifter kan vara dyrare än ett lån med 5% ränta utan avgifter. Jämför alltid effektiv ränta.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="best-rates">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h2 class="section-title-white" style="margin-bottom: 24px;">Beräkna lånekostnader</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                Använd vår kalkylator för att jämföra verkliga kostnader för olika lån, inklusive "räntefria" alternativ.
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="/berakna/effektiv-ranta" class="btn-primary" style="background: white; color: #1e3a5f;">
+                    Beräkna effektiv ränta
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+                <a href="/artiklar" class="btn-secondary" style="border-color: white; color: white;">
+                    Läs fler artiklar
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                        <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                        <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                        <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                    </svg>
+                </div>
+                <span class="logo-text">Ränta.nu</span>
+            </div>
+            <p>Sedan 2018 har Ränta.nu varit Sveriges mest betrodda källa för oberoende sparrådgivning. Med över 150 000 användare per månad hjälper vi svenskar att fatta smartare beslut om sitt sparande.</p>
+            <div class="footer-contact">
+                E-post: <a href="mailto:info@ranta.nu">info@ranta.nu</a><br>
+                Org.nr: 559342-7891
+            </div>
+        </div>
+
+        <div>
+            <h4>Räkna ränta</h4>
+            <ul>
+                <li><a href="/bolanerakna">Bolåneränta</a></li>
+                <li><a href="/sparranta">Sparränta</a></li>
+                <li><a href="/effektiv-ranta">Effektiv ränta</a></li>
+                <li><a href="/ranta-pa-ranta">Ränta på ränta</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Lär dig mer</h4>
+            <ul>
+                <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                <li><a href="/rantetyper">Olika räntetyper</a></li>
+                <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                <li><a href="/artiklar">Alla artiklar</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Om Ränta.nu</h4>
+            <ul>
+                <li><a href="/om-oss">Om oss</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+                <li><a href="/integritetspolicy">Integritet</a></li>
+                <li><a href="/cookiepolicy">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2025 Ränta.nu. Alla rättigheter förbehållna.</span>
+        <span>Informationen på sidan ersätter inte professionell rådgivning.</span>
+    </div>
+</footer>
+
+</body>
+</html>

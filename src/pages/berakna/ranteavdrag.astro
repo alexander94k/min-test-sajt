@@ -1,0 +1,560 @@
+---
+// Frontmatter
+const pageTitle = "Räkna ut ränteavdrag - Kalkylator för beräkning | Ränta.nu";
+const pageDescription = "Använd vår ränteavdragskalkylator för att räkna ut hur mycket du får tillbaka på dina räntekostnader. Enkel beräkning av ränteavdrag 2025.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css">
+    <style>
+        .calculator-container {
+            background: white;
+            padding: 48px;
+            border-radius: 16px;
+            border: 1px solid #e5e5e5;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .field-container {
+            margin-bottom: 24px;
+        }
+        .field-container label {
+            display: block;
+            margin-bottom: 8px;
+            color: #1e3a5f;
+            font-weight: 600;
+        }
+        .field-container input {
+            width: calc(100% - 50px);
+            padding: 12px 16px;
+            border: 2px solid #e5e5e5;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+        }
+        .field-container input:focus {
+            outline: none;
+            border-color: #1e3a5f;
+        }
+        .field-suffix {
+            display: inline-block;
+            margin-left: 8px;
+            color: #666;
+            font-weight: 500;
+        }
+        .loan-row {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            position: relative;
+        }
+        .remove-loan {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 4px 12px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .remove-loan:hover {
+            background: #c82333;
+        }
+        .add-loan-btn {
+            display: inline-block;
+            color: #1e3a5f;
+            font-weight: 600;
+            text-decoration: none;
+            margin-bottom: 24px;
+            cursor: pointer;
+            padding: 8px 16px;
+            border: 2px dashed #1e3a5f;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .add-loan-btn:hover {
+            background: #f0f5f7;
+        }
+        .calculate-btn {
+            width: 100%;
+            padding: 16px;
+            background: #1e3a5f;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .calculate-btn:hover {
+            background: #152d47;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(30, 58, 95, 0.3);
+        }
+        .result-container {
+            margin-top: 32px;
+            padding: 32px;
+            background: #e8f4f8;
+            border-radius: 12px;
+            border: 2px solid #b8dce8;
+            display: none;
+        }
+        .result-container.show {
+            display: block;
+        }
+        .result-value {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1e3a5f;
+            margin: 16px 0;
+        }
+        .result-breakdown {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 2px solid #b8dce8;
+        }
+        .breakdown-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Räkna ut ränteavdrag</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Använd vår kalkylator för att beräkna hur mycket du får tillbaka i ränteavdrag på dina lån. Enkelt och snabbt.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Calculator Section -->
+<section class="content-section">
+    <div class="section-inner">
+        <div class="calculator-container">
+            <h2 style="margin-bottom: 32px; text-align: center; color: #1e3a5f;">Ränteavdragskalkylator</h2>
+
+            <form id="calculatorForm">
+                <div id="loansContainer">
+                    <div class="loan-row" data-loan-index="0">
+                        <div class="field-container">
+                            <label>Lån</label>
+                            <input type="number" class="loan-amount" placeholder="0" step="1000">
+                            <span class="field-suffix">kr</span>
+                        </div>
+                        <div class="field-container">
+                            <label>Ränta</label>
+                            <input type="number" class="loan-rate" placeholder="0" step="0.1">
+                            <span class="field-suffix">%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="add-loan-btn" id="addLoanBtn">+ Lägg till fler lån</a>
+
+                <div class="field-container">
+                    <label>Räntekostnader (om du vet totalen)</label>
+                    <input type="number" id="totalInterestCost" placeholder="0" step="100">
+                    <span class="field-suffix">kr</span>
+                </div>
+
+                <div class="field-container">
+                    <label>Inkomst av kapital</label>
+                    <input type="number" id="capitalIncome" placeholder="0" step="100">
+                    <span class="field-suffix">kr</span>
+                </div>
+
+                <button type="submit" class="calculate-btn">Beräkna ränteavdrag</button>
+            </form>
+
+            <div class="result-container" id="resultContainer">
+                <h3 style="color: #1e3a5f; margin-bottom: 16px; text-align: center;">Ditt ränteavdrag</h3>
+                <div style="text-align: center;">
+                    <div class="result-value" id="resultValue">0 kr</div>
+                    <p style="color: #666;">Detta är det belopp du får tillbaka</p>
+                </div>
+                <div class="result-breakdown" id="resultBreakdown"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Information Section -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Vad är ränteavdrag?</h2>
+
+        <div class="content-row">
+            <div class="content-text">
+                <p>Ränteavdrag, även kallat räntereduktion, är en skatteförmån som gör det möjligt för dig att dra av ränteutgifter på lån från din skatt. Detta innebär att du får tillbaka en del av de räntekostnader du har betalat under året.</p>
+                <p>Avdraget är 30% av ränteutgifterna upp till 100 000 kronor, och 21% på belopp över detta. Detta gäller för alla typer av lån där ränta betalas.</p>
+            </div>
+
+            <div class="content-text">
+                <h3>Hur räknar jag ut ränteavdraget?</h3>
+                <p>För att räkna ut ränteavdraget behöver du veta dina totala räntekostnader för året. Beräkningen görs enligt följande:</p>
+                <ul style="line-height: 2; color: #555;">
+                    <li><strong>0-100 000 kr:</strong> 30% av beloppet</li>
+                    <li><strong>Över 100 000 kr:</strong> 21% av det överskjutande beloppet</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Examples Section -->
+<section class="content-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Exempel på ränteavdrag</h2>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="display: grid; gap: 24px;">
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Exempel 1: Räntekostnad 85 000 kr</h3>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 16px;">Vid en räntekostnad på 85 000 kronor beräknas ränteavdraget enligt följande:</p>
+                    <div style="background: white; padding: 20px; border-radius: 8px;">
+                        <p style="margin-bottom: 8px;"><strong>Beräkning:</strong> 85 000 kr × 0,30 = 25 500 kr</p>
+                        <p style="font-size: 24px; font-weight: 700; color: #28a745; margin: 0;">Ränteavdrag: 25 500 kr</p>
+                    </div>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Exempel 2: Räntekostnad 150 000 kr</h3>
+                    <p style="color: #555; line-height: 1.8; margin-bottom: 16px;">Vid en räntekostnad på 150 000 kronor beräknas ränteavdraget i två steg:</p>
+                    <div style="background: white; padding: 20px; border-radius: 8px;">
+                        <p style="margin-bottom: 8px;"><strong>Första 100 000 kr:</strong> 100 000 × 0,30 = 30 000 kr</p>
+                        <p style="margin-bottom: 16px;"><strong>Resterande 50 000 kr:</strong> 50 000 × 0,21 = 10 500 kr</p>
+                        <p style="font-size: 24px; font-weight: 700; color: #28a745; margin: 0;">Totalt ränteavdrag: 40 500 kr</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Important Info Section -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Viktigt att veta om ränteavdrag</h2>
+
+        <div class="content-row">
+            <div class="content-text">
+                <h3>När används ränteavdrag?</h3>
+                <p>Ränteavdrag används när du deklarerar och gäller för alla typer av lån där du betalar ränta, inklusive bolån, privatlån och billån.</p>
+                <p>Observera att det krävs minst 1 000 kronor i årliga räntekostnader för att få ränteavdrag. CSN-studielån kan inte dras av.</p>
+            </div>
+
+            <div class="content-text">
+                <h3>Ränteavdrag vid gemensamt lån</h3>
+                <p>Om ni är två personer som har ett gemensamt lån kan ni dela på ränteavdraget som ni vill, så länge den totala summan inte överstiger det belopp som ni tillsammans har rätt till.</p>
+                <p>Banker rapporterar vanligtvis räntekostnader automatiskt till Skatteverket, så informationen fylls i automatiskt i din deklaration.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Vanliga frågor om ränteavdrag</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                </div>
+                <h3>Hur mycket får man i ränteavdrag?</h3>
+                <p>Du får 30% av den betalade räntan på lån för privatpersoner upp till 100 000 kr, och 21% på belopp över detta.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M2 12h20"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Får man tillbaka 30% av räntan?</h3>
+                <p>Ja, du får tillbaka 30% av de räntekostnader du har betalat via skattereduktionen, upp till ett räntekostnadsbelopp på 100 000 kr.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Hur fungerar ränteavdrag?</h3>
+                <p>Ränteavdrag innebär att du får dra av en del av dina räntekostnader från din skatt. Avdraget minskar din slutliga skatt.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 1v6m0 6v6M7 8l5 5 5-5"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Får man ränteavdrag på alla lån?</h3>
+                <p>Ja, i Sverige kan du få ränteavdrag på alla lån där ränta betalas, som bostadslån, privatlån och andra kreditformer. Undantag är CSN-lån.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="best-rates">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h2 class="section-title-white" style="margin-bottom: 24px;">Läs mer om ränteavdrag</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                Få djupare kunskap om hur ränteavdrag fungerar och hur du kan optimera din ekonomi.
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="/ranteavdrag" class="btn-primary" style="background: white; color: #1e3a5f;">
+                    Guide om ränteavdrag
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+                <a href="/berakna" class="btn-secondary" style="border-color: white; color: white;">
+                    Fler kalkylatorer
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                        <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                        <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                        <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                    </svg>
+                </div>
+                <span class="logo-text">Ränta.nu</span>
+            </div>
+            <p>Sedan 2018 har Ränta.nu varit Sveriges mest betrodda källa för oberoende sparrådgivning. Med över 150 000 användare per månad hjälper vi svenskar att fatta smartare beslut om sitt sparande.</p>
+            <div class="footer-contact">
+                E-post: <a href="mailto:info@ranta.nu">info@ranta.nu</a><br>
+                Org.nr: 559342-7891
+            </div>
+        </div>
+
+        <div>
+            <h4>Räkna ränta</h4>
+            <ul>
+                <li><a href="/bolanerakna">Bolåneränta</a></li>
+                <li><a href="/sparranta">Sparränta</a></li>
+                <li><a href="/effektiv-ranta">Effektiv ränta</a></li>
+                <li><a href="/ranta-pa-ranta">Ränta på ränta</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Lär dig mer</h4>
+            <ul>
+                <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                <li><a href="/rantetyper">Olika räntetyper</a></li>
+                <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                <li><a href="/artiklar">Alla artiklar</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Om Ränta.nu</h4>
+            <ul>
+                <li><a href="/om-oss">Om oss</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+                <li><a href="/integritetspolicy">Integritet</a></li>
+                <li><a href="/cookiepolicy">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2025 Ränta.nu. Alla rättigheter förbehållna.</span>
+        <span>Informationen på sidan ersätter inte professionell rådgivning.</span>
+    </div>
+</footer>
+
+<script>
+    let loanCounter = 1;
+
+    // Add loan functionality
+    document.getElementById('addLoanBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        const loansContainer = document.getElementById('loansContainer');
+        const newLoanRow = document.createElement('div');
+        newLoanRow.className = 'loan-row';
+        newLoanRow.setAttribute('data-loan-index', loanCounter);
+        newLoanRow.innerHTML = `
+            <button type="button" class="remove-loan" onclick="removeLoan(${loanCounter})">Ta bort</button>
+            <div class="field-container">
+                <label>Lån</label>
+                <input type="number" class="loan-amount" placeholder="0" step="1000">
+                <span class="field-suffix">kr</span>
+            </div>
+            <div class="field-container">
+                <label>Ränta</label>
+                <input type="number" class="loan-rate" placeholder="0" step="0.1">
+                <span class="field-suffix">%</span>
+            </div>
+        `;
+        loansContainer.appendChild(newLoanRow);
+        loanCounter++;
+    });
+
+    // Remove loan functionality
+    window.removeLoan = function(index) {
+        const loanRow = document.querySelector(`[data-loan-index="${index}"]`);
+        if (loanRow) {
+            loanRow.remove();
+        }
+    };
+
+    // Calculate functionality
+    document.getElementById('calculatorForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        let totalInterestCost = parseFloat(document.getElementById('totalInterestCost').value) || 0;
+
+        // If no total interest cost provided, calculate from loans
+        if (totalInterestCost === 0) {
+            const loanRows = document.querySelectorAll('.loan-row');
+            loanRows.forEach(row => {
+                const amount = parseFloat(row.querySelector('.loan-amount').value) || 0;
+                const rate = parseFloat(row.querySelector('.loan-rate').value) || 0;
+                totalInterestCost += (amount * rate / 100);
+            });
+        }
+
+        const capitalIncome = parseFloat(document.getElementById('capitalIncome').value) || 0;
+
+        // Calculate net interest cost (interest cost - capital income)
+        const netInterestCost = Math.max(0, totalInterestCost - capitalIncome);
+
+        // Calculate tax deduction
+        let deduction = 0;
+        let breakdown = '';
+
+        if (netInterestCost <= 100000) {
+            deduction = netInterestCost * 0.30;
+            breakdown = `
+                <div class="breakdown-row">
+                    <span>Räntekostnader:</span>
+                    <strong>${totalInterestCost.toLocaleString('sv-SE')} kr</strong>
+                </div>
+                ${capitalIncome > 0 ? `
+                <div class="breakdown-row">
+                    <span>Inkomst av kapital:</span>
+                    <strong>-${capitalIncome.toLocaleString('sv-SE')} kr</strong>
+                </div>
+                <div class="breakdown-row">
+                    <span>Netto räntekostnad:</span>
+                    <strong>${netInterestCost.toLocaleString('sv-SE')} kr</strong>
+                </div>
+                ` : ''}
+                <div class="breakdown-row">
+                    <span>Avdrag (30%):</span>
+                    <strong>${deduction.toLocaleString('sv-SE', {minimumFractionDigits: 0, maximumFractionDigits: 0})} kr</strong>
+                </div>
+            `;
+        } else {
+            const first100k = 100000 * 0.30;
+            const remainder = (netInterestCost - 100000) * 0.21;
+            deduction = first100k + remainder;
+            breakdown = `
+                <div class="breakdown-row">
+                    <span>Räntekostnader:</span>
+                    <strong>${totalInterestCost.toLocaleString('sv-SE')} kr</strong>
+                </div>
+                ${capitalIncome > 0 ? `
+                <div class="breakdown-row">
+                    <span>Inkomst av kapital:</span>
+                    <strong>-${capitalIncome.toLocaleString('sv-SE')} kr</strong>
+                </div>
+                <div class="breakdown-row">
+                    <span>Netto räntekostnad:</span>
+                    <strong>${netInterestCost.toLocaleString('sv-SE')} kr</strong>
+                </div>
+                ` : ''}
+                <div class="breakdown-row">
+                    <span>Avdrag första 100 000 kr (30%):</span>
+                    <strong>${first100k.toLocaleString('sv-SE')} kr</strong>
+                </div>
+                <div class="breakdown-row">
+                    <span>Avdrag resterande ${(netInterestCost - 100000).toLocaleString('sv-SE')} kr (21%):</span>
+                    <strong>${remainder.toLocaleString('sv-SE', {minimumFractionDigits: 0, maximumFractionDigits: 0})} kr</strong>
+                </div>
+            `;
+        }
+
+        // Display result
+        document.getElementById('resultValue').textContent =
+            deduction.toLocaleString('sv-SE', {minimumFractionDigits: 0, maximumFractionDigits: 0}) + ' kr';
+        document.getElementById('resultBreakdown').innerHTML = breakdown;
+        document.getElementById('resultContainer').classList.add('show');
+
+        // Scroll to result
+        document.getElementById('resultContainer').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+</script>
+
+</body>
+</html>

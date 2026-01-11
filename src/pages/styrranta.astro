@@ -1,0 +1,417 @@
+---
+// Frontmatter
+const pageTitle = "Styrränta - Riksbankens viktigaste verktyg | Ränta.nu";
+const pageDescription = "Styrränta är den ränta som Riksbanken sätter för att påverka andra räntor i landet. Lär dig hur styrräntan fungerar och hur den påverkar din ekonomi.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Styrränta - Riksbankens viktigaste verktyg</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Styrräntan är den ränta som Riksbanken sätter för att påverka andra räntor i landet och styra den svenska ekonomin.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Current Rate Section -->
+<section class="best-rates">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h2 class="section-title-white" style="margin-bottom: 16px;">Aktuell styrränta</h2>
+            <div style="font-size: 64px; font-weight: 700; color: white; margin-bottom: 16px;">3,50%</div>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px;">
+                Senast uppdaterad: 6 november 2024
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Så påverkar styrräntan dig</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <h3>Påverkar bolån</h3>
+                <p>När styrräntan ändras påverkas bolåneräntorna direkt. Högre styrränta innebär oftast dyrare bolån.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        <path d="M9 12h6m-3-3v6"></path>
+                    </svg>
+                </div>
+                <h3>Påverkar sparräntor</h3>
+                <p>Sparräntor på sparkonton och sparkonton följer ofta styrräntans utveckling. Högre styrränta ger bättre sparränta.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3>Påverkar ekonomin</h3>
+                <p>Styrräntan används för att styra inflationen och hålla den kring målet på 2 procent per år.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                        <path d="M7 8h10M7 12h10M7 16h6"></path>
+                    </svg>
+                </div>
+                <h3>Bestäms av Riksbanken</h3>
+                <p>Riksbanken beslutar om styrräntan vid sex penningpolitiska möten per år baserat på ekonomiska analyser.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What is Section -->
+<section class="content-section">
+    <div class="section-inner">
+        <div class="content-row">
+            <div class="content-text">
+                <h2>Vad är styrränta?</h2>
+                <p>Styrräntan är den ränta som Riksbanken använder som sitt viktigaste verktyg för att påverka den svenska ekonomin. Genom att ändra styrräntan kan Riksbanken påverka andra räntor i samhället, såsom bolåneräntor och sparräntor.</p>
+                <p>Namnet styrränta infördes 2022, och ersatte det tidigare namnet reporänta. Funktionen är dock exakt densamma - det är den ränta till vilken banker kan låna eller placera pengar hos Riksbanken.</p>
+                <p>Riksbanken använder styrräntan främst för att styra inflationen och hålla den nära målet på 2 procent per år. Detta är viktigt för att upprätthålla en stabil ekonomi där pengars värde inte urholkas för snabbt.</p>
+            </div>
+
+            <div class="content-text">
+                <div style="background: #f0f5f7; padding: 40px; border-radius: 16px; border: 2px solid #e5e5e5;">
+                    <h3 style="font-size: 24px; margin-bottom: 24px; color: #0c1935;">Viktiga fakta</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 12px 0; border-bottom: 1px solid #e0e0e0;">
+                            <strong style="color: #1e3a5f;">Beslutas av:</strong> Riksbanken
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid #e0e0e0;">
+                            <strong style="color: #1e3a5f;">Beslutsfrekvens:</strong> Sex gånger per år
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid #e0e0e0;">
+                            <strong style="color: #1e3a5f;">Huvudsyfte:</strong> Kontrollera inflation
+                        </li>
+                        <li style="padding: 12px 0;">
+                            <strong style="color: #1e3a5f;">Inflationsmål:</strong> 2% per år
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How it works -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 48px;">Hur fungerar styrräntan?</h2>
+
+            <div style="display: grid; gap: 32px;">
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">1. Riksbanken höjer styrräntan</h3>
+                    <p style="color: #555; line-height: 1.8;">När styrräntan höjs blir det dyrare för bankerna att låna pengar från Riksbanken. Bankerna höjer därför sina egna räntor till konsumenter och företag. Detta gör att det blir dyrare att låna och mer lönsamt att spara.</p>
+                </div>
+
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">2. Konsumtion och investeringar minskar</h3>
+                    <p style="color: #555; line-height: 1.8;">Högre räntor gör att människor och företag konsumerar och investerar mindre. Det blir dyrare att ta lån för att köpa bostad, bil eller driva företag. Samtidigt blir det mer attraktivt att spara pengar.</p>
+                </div>
+
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">3. Inflationen dämpas</h3>
+                    <p style="color: #555; line-height: 1.8;">När konsumtion och investeringar minskar sjunker efterfrågan på varor och tjänster. Detta bromsar prisökningarna och inflationen sjunker. På så sätt kan Riksbanken hålla inflationen nära målet på 2 procent.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- History Section -->
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Aktuell styrränta och historik</h2>
+            <p style="text-align: center; font-size: 18px; color: #555; margin-bottom: 48px;">
+                Styrräntan har varierat kraftigt genom åren beroende på ekonomiskt läge. Här är några viktiga milstolpar:
+            </p>
+
+            <div style="background: #f0f5f7; padding: 40px; border-radius: 16px;">
+                <div style="display: grid; gap: 24px;">
+                    <div style="padding-bottom: 24px; border-bottom: 2px solid #e0e0e0;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-weight: 600; color: #1e3a5f;">2024 (Nov)</span>
+                            <span style="font-size: 24px; font-weight: 700; color: #1e3a5f;">3,50%</span>
+                        </div>
+                    </div>
+                    <div style="padding-bottom: 24px; border-bottom: 2px solid #e0e0e0;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-weight: 600; color: #555;">2023 (genomsnitt)</span>
+                            <span style="font-size: 24px; font-weight: 700; color: #555;">3,14%</span>
+                        </div>
+                    </div>
+                    <div style="padding-bottom: 24px; border-bottom: 2px solid #e0e0e0;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-weight: 600; color: #555;">2016-2018</span>
+                            <span style="font-size: 24px; font-weight: 700; color: #555;">-0,50%</span>
+                        </div>
+                        <p style="color: #888; font-size: 14px; margin-top: 8px;">Negativ ränta för att stimulera ekonomin</p>
+                    </div>
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span style="font-weight: 600; color: #555;">2014</span>
+                            <span style="font-size: 24px; font-weight: 700; color: #555;">0,23%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Impact Section -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Hur påverkar styrräntan dig?</h2>
+
+        <div class="content-row">
+            <div class="content-text">
+                <h3>För dig med bolån</h3>
+                <p>Om du har ett bolån med rörlig ränta påverkas du direkt när styrräntan ändras. Bankerna anpassar vanligtvis sina bolåneräntor inom några veckor efter ett styrräntebeslut.</p>
+                <p>En höjning med 0,25 procentenheter kan innebära flera tusen kronor mer i ränta per år på ett genomsnittligt bolån. Omvänt kan en sänkning ge betydande besparingar.</p>
+            </div>
+
+            <div class="content-text">
+                <h3>För dig som sparar</h3>
+                <p>Högre styrränta är generellt positivt för sparare. Bankerna höjer sina sparräntor vilket ger bättre avkastning på sparkonton och liknande produkter.</p>
+                <p>Vid låg styrränta blir däremot sparräntan ofta mycket låg, vilket kan göra att värdet på ditt sparande urholkas av inflationen om sparräntan är lägre än inflationstakten.</p>
+            </div>
+        </div>
+
+        <div class="content-row" style="margin-top: 32px;">
+            <div class="content-text">
+                <h3>För samhällsekonomin</h3>
+                <p>Styrräntan påverkar hela samhällsekonomin. När räntan är låg stimuleras investeringar och konsumtion, vilket kan öka tillväxten men också riskera att pressa upp inflationen.</p>
+                <p>När räntan är hög dämpas ekonomisk aktivitet, vilket kan bromsa inflationen men också riskera att leda till högre arbetslöshet och lägre tillväxt.</p>
+            </div>
+
+            <div class="content-text">
+                <h3>För företag</h3>
+                <p>Företag påverkas av styrräntan genom lånekostnader för investeringar och drift. Högre ränta gör det dyrare att expandera och investera i ny utrustning eller personal.</p>
+                <p>Samtidigt påverkas företag indirekt genom att kunders köpkraft ändras när deras boendekostrader och sparincitament förändras.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Vanliga frågor om styrränta</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                </div>
+                <h3>Vad är skillnaden mellan styrränta och reporänta?</h3>
+                <p>Det finns ingen skillnad - namnet ändrades från reporänta till styrränta 2022. Det är samma ränta med ett mer beskrivande namn.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M2 12h20"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Hur ofta ändras styrräntan?</h3>
+                <p>Riksbanken har sex penningpolitiska möten per år där styrräntan kan ändras. Men den behöver inte ändras vid varje möte.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Varför är inflationsmålet 2%?</h3>
+                <p>Två procent anses vara en lagom nivå som ger utrymme för ekonomisk tillväxt samtidigt som pengars värde behålls relativt stabilt över tid.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 1v6m0 6v6M7 8l5 5 5-5"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Kan styrräntan bli negativ?</h3>
+                <p>Ja, mellan 2016 och 2018 var styrräntan negativ (-0,50%) för att stimulera ekonomin efter finanskrisen.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                        <path d="M7 8h10M7 12h6"></path>
+                    </svg>
+                </div>
+                <h3>Hur snabbt påverkar styrräntan bolåneräntor?</h3>
+                <p>De flesta banker anpassar sina bolåneräntor inom 2-4 veckor efter ett styrräntebeslut från Riksbanken.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        <path d="M12 6v6l4 2"></path>
+                    </svg>
+                </div>
+                <h3>Vad händer när styrräntan höjs?</h3>
+                <p>Bolån och andra lån blir dyrare, sparräntor blir bättre, och konsumtion i samhället tenderar att minska vilket dämpar inflationen.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="best-rates">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h2 class="section-title-white" style="margin-bottom: 24px;">Beräkna din ränta</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                Använd våra kalkylatorer för att se hur ränteförändringar påverkar din ekonomi.
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="/berakna" class="btn-primary" style="background: white; color: #1e3a5f;">
+                    Räkna ut ränta
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+                <a href="/basta-rantan" class="btn-secondary" style="border-color: white; color: white;">
+                    Jämför räntor
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                        <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                        <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                        <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                    </svg>
+                </div>
+                <span class="logo-text">Ränta.nu</span>
+            </div>
+            <p>Sedan 2018 har Ränta.nu varit Sveriges mest betrodda källa för oberoende sparrådgivning. Med över 150 000 användare per månad hjälper vi svenskar att fatta smartare beslut om sitt sparande.</p>
+            <div class="footer-contact">
+                E-post: <a href="mailto:info@ranta.nu">info@ranta.nu</a><br>
+                Org.nr: 559342-7891
+            </div>
+        </div>
+
+        <div>
+            <h4>Räkna ränta</h4>
+            <ul>
+                <li><a href="/bolanerakna">Bolåneränta</a></li>
+                <li><a href="/sparranta">Sparränta</a></li>
+                <li><a href="/effektiv-ranta">Effektiv ränta</a></li>
+                <li><a href="/ranta-pa-ranta">Ränta på ränta</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Lär dig mer</h4>
+            <ul>
+                <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                <li><a href="/rantetyper">Olika räntetyper</a></li>
+                <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                <li><a href="/artiklar">Alla artiklar</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Om Ränta.nu</h4>
+            <ul>
+                <li><a href="/om-oss">Om oss</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+                <li><a href="/integritetspolicy">Integritet</a></li>
+                <li><a href="/cookiepolicy">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2025 Ränta.nu. Alla rättigheter förbehållna.</span>
+        <span>Informationen på sidan ersätter inte professionell rådgivning.</span>
+    </div>
+</footer>
+
+</body>
+</html>

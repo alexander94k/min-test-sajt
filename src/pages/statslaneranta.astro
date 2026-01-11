@@ -1,0 +1,771 @@
+---
+// Statslåneränta - Information om statslåneräntan och dess användning
+---
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statslåneränta - Guide till statslåneräntan och dess tillämpning</title>
+    <meta name="description" content="Allt om statslåneräntan: hur den fungerar, när den används i skattesammanhang, och hur den påverkar din ekonomi och företagsbeskattning.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #1e3a5f;
+            background: linear-gradient(135deg, #f0f5f7 0%, #ffffff 100%);
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            text-decoration: none;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .content-section {
+            background: white;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: #1e3a5f;
+            margin-bottom: 1.5rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            border-left: 5px solid #28a745;
+            padding-left: 1rem;
+        }
+
+        .content-section h3 {
+            font-size: 1.5rem;
+            color: #2c5282;
+            margin: 2rem 0 1rem 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .content-section p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .rate-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .rate-table thead {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+        }
+
+        .rate-table th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .rate-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .rate-table tbody tr:hover {
+            background-color: #f0f5f7;
+        }
+
+        .current-rate {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 2rem 0;
+            box-shadow: 0 4px 12px rgba(40,167,69,0.2);
+        }
+
+        .current-rate h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .current-rate .rate {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 0.5rem 0;
+        }
+
+        .current-rate .date {
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 5px solid #1e3a5f;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .info-box strong {
+            color: #1e3a5f;
+            font-weight: 600;
+        }
+
+        .usage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .usage-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-top: 4px solid #1e3a5f;
+            transition: transform 0.3s;
+        }
+
+        .usage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+
+        .usage-card h4 {
+            color: #1e3a5f;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .usage-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .usage-card li {
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+        }
+
+        .usage-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .faq-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-top: 2rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+        }
+
+        .faq-item h4 {
+            color: #1e3a5f;
+            margin-bottom: 0.8rem;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .faq-item p {
+            margin-bottom: 0;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border-left: 5px solid #ffc107;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box strong {
+            color: #1e3a5f;
+            font-weight: 600;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-section h2 {
+            color: white;
+            border: none;
+            padding: 0;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(40,167,69,0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #1e3a5f;
+        }
+
+        .btn-secondary:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255,255,255,0.3);
+        }
+
+        footer {
+            background: #1e3a5f;
+            color: white;
+            padding: 3rem 2rem 1.5rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .content-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .rate-table {
+                font-size: 0.9rem;
+            }
+
+            .current-rate .rate {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Ränta.nu</a>
+            <ul class="nav-links">
+                <li><a href="/">Hem</a></li>
+                <li><a href="/om-oss">Om oss</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Statslåneränta</h1>
+        <p>Din guide till statslåneräntan och dess betydelse för skatter, företag och privatekonomi</p>
+    </section>
+
+    <div class="container">
+        <div class="current-rate">
+            <h3>Aktuell statslåneränta</h3>
+            <div class="rate">2,37%</div>
+            <div class="date">24 oktober 2025 | Årsgenomsnitt: 2,31%</div>
+        </div>
+
+        <div class="content-section">
+            <h2>Vad är statslåneränta?</h2>
+            <p>Statslåneräntan är en referensränta som används i skattelagstiftningen och utgår från den ränta som staten betalar när den lånar pengar genom att ge ut statsobligationer. Den fastställs av Riksgälden varje vecka, närmare bestämt på torsdagar, och gäller från fredag till och med efterföljande torsdag.</p>
+
+            <p>Riksgälden beräknar också ett årsgenomsnitt av statslåneräntan, vilket Skatteverket sedan använder för att fastställa den årliga schablonmässiga statslåneräntan. Denna årsränta används i olika skattesammanhang och är ett viktigt verktyg i svensk skattelagstiftning.</p>
+
+            <div class="info-box">
+                <strong>Viktigt att veta:</strong> Statslåneräntan uppdateras varje vecka av Riksgälden baserat på genomsnittet av marknadsräntorna för statsobligationer med en återstående löptid på minst fem år. Detta gör den till ett tillförlitligt mått på statens långsiktiga lånekostnader.
+            </div>
+
+            <p>Statslåneräntan kallas ibland för den riskfria räntan, eftersom den representerar den ränta som en investering utan kreditrisk skulle ge. Staten anses ha mycket låg risk att inte kunna betala tillbaka sina lån, vilket gör statslåneräntan till en bas för att värdera andra investeringar och finansiella instrument.</p>
+
+            <h3>Hur beräknas statslåneräntan?</h3>
+            <p>Riksgälden baserar beräkningen på genomsnittliga marknadsräntor för statsobligationer med minst fem års återstående löptid. Detta ger en stabil och långsiktig ränta som inte påverkas alltför mycket av kortsiktiga svängningar på finansmarknaden.</p>
+
+            <p>Skatteverket använder sedan det årliga genomsnittet av statslåneräntan för olika skatteberäkningar. Detta årsgenomsnitt beräknas som ett enkelt medelvärde av alla veckovisa räntesatser under året.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>När används statslåneräntan?</h2>
+            <p>Statslåneräntan har många viktiga användningsområden, både i skattesammanhang och i privata avtal. Den används som referensränta i flera olika situationer:</p>
+
+            <div class="usage-grid">
+                <div class="usage-card">
+                    <h4>För företag</h4>
+                    <ul>
+                        <li>Beräkning av avkastningsskatt på pensionsmedel</li>
+                        <li>Försäkring vid fortsatt sjuklön</li>
+                        <li>Avsättningar i balansräkningen</li>
+                        <li>Periodiseringsfonders schablonintäkt</li>
+                        <li>Ränteallokeringsberäkningar som påverkar beskattningen</li>
+                    </ul>
+                </div>
+                <div class="usage-card">
+                    <h4>För privatpersoner</h4>
+                    <ul>
+                        <li>Beskattning av investeringssparkonton (ISK)</li>
+                        <li>Kapitalförsäkring och pensionsförsäkring</li>
+                        <li>Avdrag för periodiseringsfonder</li>
+                        <li>Beräkning av förmån vid lån från arbetsgivare</li>
+                        <li>Bilförmån och andra naturaförmåner</li>
+                    </ul>
+                </div>
+                <div class="usage-card">
+                    <h4>I skattesammanhang</h4>
+                    <ul>
+                        <li>Kapitalbas i fåmansföretag</li>
+                        <li>Gränsbelopp för olika förmånsvärden</li>
+                        <li>Ränte- och utdelningsinkomster</li>
+                        <li>Beräkning av schablonintäkt</li>
+                        <li>Grundavdrag vid investeringssparkonto</li>
+                    </ul>
+                </div>
+                <div class="usage-card">
+                    <h4>I privata avtal</h4>
+                    <ul>
+                        <li>Dröjsmålsränta i kommersiella avtal</li>
+                        <li>Referensränta för lån mellan privatpersoner</li>
+                        <li>Hyresavtal och andra långsiktiga kontrakt</li>
+                        <li>Ersättningsberäkningar vid skadestånd</li>
+                        <li>Kompensation vid försenade betalningar</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <strong>Viktigt för ISK-ägare:</strong> Om du har ett investeringssparkonto beskattas du årligen med en schablonintäkt som beräknas med hjälp av statslåneräntan. Skatten är 30% av kapitalunderlaget multiplicerat med statslåneräntan plus 1 procentenhet. Detta gäller oavsett om du har gjort vinst eller förlust på dina investeringar.
+            </div>
+
+            <h3>Golvregeln för statslåneräntan</h3>
+            <p>Det finns en så kallad "golvregel" som säger att statslåneräntan aldrig får understiga 0% eller 0,50% vid beräkning av vissa förmånsvärden och räntebidrag. Detta innebär att även om den faktiska statslåneräntan skulle bli negativ, används ett minimivärde i skatteberäkningarna.</p>
+
+            <p>Denna regel infördes för att förhindra orimliga skattekonsekvenser vid extremt låga räntor, något som blev aktuellt under perioden med negativa räntor i Sverige.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Hur påverkar statslåneräntan ekonomin?</h2>
+            <p>Statslåneräntan har flera viktiga effekter på både samhällsekonomin och enskilda individers ekonomi:</p>
+
+            <h3>Påverkan på beskattning</h3>
+            <p>För många privatpersoner påverkar statslåneräntan direkt hur mycket skatt de betalar på sina investeringar. En högre statslåneränta innebär högre schablonintäkt på investeringssparkonton, vilket leder till högre skatt även om investeringarna inte gett någon vinst.</p>
+
+            <p>För företagare i fåmansföretag påverkar statslåneräntan gränsbeloppet för löneutag och utdelning, vilket kan ha stor betydelse för skatteoptimering.</p>
+
+            <h3>Påverkan på bilförmån och anställningsförmåner</h3>
+            <p>Statslåneräntan används för att beräkna värdet av bilförmåner och förmånsvärdet vid räntefria eller lågräntelån från arbetsgivare. När statslåneräntan stiger ökar också förmånsvärdet, vilket innebär högre beskattning av dessa förmåner.</p>
+
+            <h3>Indikator för statens lånekostnader</h3>
+            <p>Statslåneräntan fungerar som en barometer för hur mycket det kostar för staten att låna pengar. En hög statslåneränta indikerar att investerare kräver högre avkastning för att köpa svenska statsobligationer, vilket kan bero på ekonomisk osäkerhet eller högre inflation.</p>
+
+            <p>Omvänt indikerar en låg statslåneränta att investerare har stort förtroende för den svenska ekonomin och är villiga att acceptera låg avkastning i utbyte mot säkerhet.</p>
+
+            <h3>Påverkan på privat- och företagslån</h3>
+            <p>Även om statslåneräntan inte direkt styr privatpersoners eller företags låneräntor, fungerar den som en referenspunkt. Banker och andra långivare använder ofta statslåneräntan plus en riskpremie när de sätter sina utlåningsräntor.</p>
+
+            <p>När statslåneräntan stiger tenderar därför även andra räntor att stiga, vilket gör det dyrare att låna pengar för både investeringar och konsumtion.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Historisk utveckling av statslåneräntan</h2>
+            <p>Här är den senaste utvecklingen av statslåneräntan från maj 2025 till oktober 2025:</p>
+
+            <table class="rate-table">
+                <thead>
+                    <tr>
+                        <th>Datum</th>
+                        <th>Veckoränta (%)</th>
+                        <th>Årsgenomsnitt (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #e8f5e9;">
+                        <td><strong>2025-10-24</strong></td>
+                        <td><strong>2.37</strong></td>
+                        <td><strong>2.31</strong></td>
+                    </tr>
+                    <tr>
+                        <td>2025-10-17</td>
+                        <td>2.42</td>
+                        <td>2.31</td>
+                    </tr>
+                    <tr>
+                        <td>2025-10-10</td>
+                        <td>2.48</td>
+                        <td>2.31</td>
+                    </tr>
+                    <tr>
+                        <td>2025-10-03</td>
+                        <td>2.47</td>
+                        <td>2.30</td>
+                    </tr>
+                    <tr>
+                        <td>2025-09-26</td>
+                        <td>2.46</td>
+                        <td>2.30</td>
+                    </tr>
+                    <tr>
+                        <td>2025-09-19</td>
+                        <td>2.35</td>
+                        <td>2.29</td>
+                    </tr>
+                    <tr>
+                        <td>2025-09-12</td>
+                        <td>2.34</td>
+                        <td>2.29</td>
+                    </tr>
+                    <tr>
+                        <td>2025-09-05</td>
+                        <td>2.40</td>
+                        <td>2.29</td>
+                    </tr>
+                    <tr>
+                        <td>2025-08-29</td>
+                        <td>2.29</td>
+                        <td>2.29</td>
+                    </tr>
+                    <tr>
+                        <td>2025-08-22</td>
+                        <td>2.25</td>
+                        <td>2.29</td>
+                    </tr>
+                    <tr>
+                        <td>2025-08-15</td>
+                        <td>2.22</td>
+                        <td>2.29</td>
+                    </tr>
+                    <tr>
+                        <td>2025-08-08</td>
+                        <td>2.25</td>
+                        <td>2.29</td>
+                    </tr>
+                    <tr>
+                        <td>2025-08-01</td>
+                        <td>2.28</td>
+                        <td>2.29</td>
+                    </tr>
+                    <tr>
+                        <td>2025-07-25</td>
+                        <td>2.23</td>
+                        <td>2.29</td>
+                    </tr>
+                    <tr>
+                        <td>2025-07-18</td>
+                        <td>2.19</td>
+                        <td>2.29</td>
+                    </tr>
+                    <tr>
+                        <td>2025-07-11</td>
+                        <td>2.14</td>
+                        <td>2.30</td>
+                    </tr>
+                    <tr>
+                        <td>2025-07-04</td>
+                        <td>2.08</td>
+                        <td>2.30</td>
+                    </tr>
+                    <tr>
+                        <td>2025-06-27</td>
+                        <td>2.18</td>
+                        <td>2.31</td>
+                    </tr>
+                    <tr>
+                        <td>2025-06-20</td>
+                        <td>2.20</td>
+                        <td>2.32</td>
+                    </tr>
+                    <tr>
+                        <td>2025-06-13</td>
+                        <td>2.19</td>
+                        <td>2.32</td>
+                    </tr>
+                    <tr>
+                        <td>2025-06-06</td>
+                        <td>2.19</td>
+                        <td>2.33</td>
+                    </tr>
+                    <tr>
+                        <td>2025-05-30</td>
+                        <td>2.26</td>
+                        <td>2.33</td>
+                    </tr>
+                    <tr>
+                        <td>2025-05-23</td>
+                        <td>2.26</td>
+                        <td>2.34</td>
+                    </tr>
+                    <tr>
+                        <td>2025-05-16</td>
+                        <td>2.28</td>
+                        <td>2.34</td>
+                    </tr>
+                    <tr>
+                        <td>2025-05-09</td>
+                        <td>2.27</td>
+                        <td>2.34</td>
+                    </tr>
+                    <tr>
+                        <td>2025-05-02</td>
+                        <td>2.26</td>
+                        <td>2.35</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Som tabellen visar har statslåneräntan legat relativt stabilt kring 2,2-2,5% under perioden, med ett årsgenomsnitt som varierat mellan 2,29% och 2,35%. Den senaste trenden visar en viss volatilitet i veckoräntorna, men årsgenomsnittet har varit mer stabilt.</p>
+        </div>
+
+        <div class="faq-section">
+            <h2>Vanliga frågor och svar om statslåneräntan</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Hur påverkar budgetunderskott statslåneräntan?</h4>
+                    <p>När staten har budgetunderskott behöver den låna mer pengar genom att ge ut fler statsobligationer. Ett ökat utbud av statsobligationer kan leda till att räntan stiger, eftersom köpare kräver högre avkastning när utbudet ökar. Samtidigt kan ett stort budgetunderskott minska förtroendet för statens ekonomi, vilket också kan pressa upp räntan.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Vilka risker finns med låg statslåneränta?</h4>
+                    <p>Låg ränta kan leda till ökad skuldsättning bland både hushåll och företag, eftersom det blir billigare att låna pengar. Detta kan skapa finansiella bubblor och överdriven belåning. Dessutom blir det svårare för centralbanken att stimulera ekonomin vid en kris om räntan redan är mycket låg, eftersom det finns begränsat utrymme för ytterligare sänkningar.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Vilka fördelar finns med hög statslåneränta?</h4>
+                    <p>Högre ränta ger bättre avkastning för sparare och kan minska inflationen genom att dämpa konsumtion och investeringar. Det skapar också ett större handlingsutrymme för centralbanken att sänka räntan vid framtida ekonomiska kriser. Dessutom kan högre ränta minska risken för överdriven skuldsättning i samhället.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Vilken statslåneränta ska jag använda för skatteberäkningar?</h4>
+                    <p>När du beräknar schablonintäkt på periodiseringsfonder ska statslåneräntan vid utgången av november för det senaste kalenderåret användas. För investeringssparkonton används årsgenomsnittet av statslåneräntan. Kontrollera alltid med Skatteverkets aktuella information för det specifika skatteåret.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Kan statslåneräntan bli negativ?</h4>
+                    <p>Ja, statslåneräntan kan teoretiskt bli negativ, vilket innebär att investerare är villiga att betala för att få placera sina pengar i svenska statsobligationer. Detta har hänt i vissa länder under perioder av ekonomisk osäkerhet. I Sverige finns dock golvregler som säger att statslåneräntan aldrig får understiga 0% eller 0,50% vid beräkning av vissa förmånsvärden.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Hur skiljer sig statslåneräntan från Riksbankens styrränta?</h4>
+                    <p>Riksbankens styrränta är den kortsiktiga ränta som Riksbanken använder för att påverka ekonomin, medan statslåneräntan baseras på långfristiga statsobligationer (minst 5 år). Styrräntan används för penningpolitik, medan statslåneräntan främst används i skattesammanhang och som referensränta för långsiktiga placeringar.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Vill du veta mer om räntor och skatter?</h2>
+            <p>Utforska våra guider och beräkningsverktyg för att optimera din ekonomi</p>
+            <div class="cta-buttons">
+                <a href="/berakna/skatt-pa-ranta" class="btn btn-primary">Beräkna skatt på ränta</a>
+                <a href="/riksbankens-ranta" class="btn btn-secondary">Riksbankens ränta</a>
+                <a href="/statsobligationer-ranta" class="btn btn-secondary">Statsobligationer</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Om Ränta.nu</h3>
+                <ul>
+                    <li><a href="/om-oss">Om oss</a></li>
+                    <li><a href="/kontakt">Kontakt</a></li>
+                    <li><a href="/integritetspolicy">Integritetspolicy</a></li>
+                    <li><a href="/cookiepolicy">Cookiepolicy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Ränteguider</h3>
+                <ul>
+                    <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                    <li><a href="/rantetyper">Olika räntetyper</a></li>
+                    <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                    <li><a href="/basta-rantan">Bästa räntan</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kalkylatorer</h3>
+                <ul>
+                    <li><a href="/berakna/bolaneranta">Bolåneränta</a></li>
+                    <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                    <li><a href="/berakna/ranta-pa-ranta">Ränta-på-ränta</a></li>
+                    <li><a href="/berakna/effektiv-ranta">Effektiv ränta</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Populära sidor</h3>
+                <ul>
+                    <li><a href="/basta-sparrantan">Bästa sparräntan</a></li>
+                    <li><a href="/riksbankens-ranta">Riksbankens ränta</a></li>
+                    <li><a href="/stibor-ranta">STIBOR ränta</a></li>
+                    <li><a href="/csn-ranta">CSN ränta</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ränta.nu - Din guide till räntor och privatekonomi</p>
+        </div>
+    </footer>
+</body>
+</html>

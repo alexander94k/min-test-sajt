@@ -1,0 +1,353 @@
+---
+// Frontmatter
+const pageTitle = "Inlåningsränta - Vad är det och hur fungerar det?";
+const pageDescription = "Inlåningsränta är den ränta du får när du sparar pengar på ett sparkonto eller inlåningskonto hos en bank. Lär dig hur den fungerar och hur du hittar bästa räntan.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Inlåningsränta</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Inlåningsränta är den ränta du får när du sparar pengar på ett sparkonto eller inlåningskonto hos en bank.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content Section -->
+<section class="content-section">
+    <div class="section-inner">
+        <div class="content-row">
+            <div class="content-text">
+                <h2>Vad är inlåningsränta?</h2>
+                <p>Inlåningsränta är den ränta som banker betalar till sina kunder för pengar som sparas eller placeras hos dem. När du öppnar ett sparkonto, inlåningskonto eller sätter in pengar på ett bankkonto får du avkastning i form av ränta på det insatta beloppet.</p>
+                <p>Inlåningsräntan är bankers sätt att belöna dig för att du lånar ut dina pengar till dem. Banken använder sedan dessa pengar för att låna ut till andra kunder till en högre ränta, vilket är en viktig del av bankernas affärsmodell.</p>
+            </div>
+
+            <div class="content-text">
+                <h2>Olika typer av inlåningskonton</h2>
+                <p>Det finns flera olika typer av konton där du kan få inlåningsränta:</p>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li style="margin-bottom: 12px;"><strong>Sparkonton:</strong> Ger ränta på ditt sparande, ofta med full flexibilitet att ta ut pengar</li>
+                    <li style="margin-bottom: 12px;"><strong>Inlåningskonton:</strong> Högre ränta men kräver ofta bindningstid eller begränsningar i uttag</li>
+                    <li style="margin-bottom: 12px;"><strong>Transaktionskonton:</strong> Lägre eller ingen ränta, men full tillgång till pengarna</li>
+                    <li style="margin-bottom: 12px;"><strong>Depositioner:</strong> Bundet sparande under en viss period med fast ränta</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How it Works Section -->
+<section class="features-section gray">
+    <div class="section-inner">
+        <h2 class="features-title">Så fungerar inlåningsränta</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3>Ränteutbetalning</h3>
+                <p>Räntan beräknas vanligtvis dagligen baserat på ditt saldo och betalas ut månadsvis eller årligen till ditt konto. Ju högre saldo, desto mer ränta får du.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                    </svg>
+                </div>
+                <h3>Rörlig eller fast ränta</h3>
+                <p>Inlåningsräntan kan vara rörlig (ändras med marknadsläget) eller fast (låst under en viss period). Rörlig ränta är vanligast för sparkonton.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                    </svg>
+                </div>
+                <h3>Riksbankens påverkan</h3>
+                <p>Riksbankens reporänta är den viktigaste faktorn som påverkar inlåningsräntan. När reporäntan höjs ökar vanligtvis även inlåningsräntorna.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="8.5" cy="7" r="4"></circle>
+                        <polyline points="17 11 19 13 23 9"></polyline>
+                    </svg>
+                </div>
+                <h3>Insättningsgaranti</h3>
+                <p>Ditt sparande upp till 1 050 000 kr per bank skyddas av statlig insättningsgaranti, vilket gör inlåningskonton till en säker sparform.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Factors Affecting Rate Section -->
+<section class="content-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Faktorer som påverkar inlåningsräntan</h2>
+        <div class="content-row">
+            <div class="content-text">
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 16px; border: 2px solid #e5e5e5;">
+                    <h3 style="margin-bottom: 20px; color: #1e3a5f;">Marknadsbaserade faktorer</h3>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 12px;"><strong>Reporänta:</strong> Riksbankens styrränta är den viktigaste faktorn</li>
+                        <li style="margin-bottom: 12px;"><strong>Inflation:</strong> Högre inflation leder ofta till högre inlåningsräntor</li>
+                        <li style="margin-bottom: 12px;"><strong>Konkurrens:</strong> Bankernas behov av inlåning påverkar räntorna</li>
+                        <li style="margin-bottom: 12px;"><strong>Ekonomisk situation:</strong> Konjunkturläget påverkar räntenivåerna</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-text">
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 16px; border: 2px solid #e5e5e5;">
+                    <h3 style="margin-bottom: 20px; color: #1e3a5f;">Kontospecifika faktorer</h3>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 12px;"><strong>Bindningstid:</strong> Längre bindningstid ger ofta högre ränta</li>
+                        <li style="margin-bottom: 12px;"><strong>Belopp:</strong> Större belopp kan ge bättre räntesatser</li>
+                        <li style="margin-bottom: 12px;"><strong>Kontotyp:</strong> Olika konton har olika räntesatser</li>
+                        <li style="margin-bottom: 12px;"><strong>Villkor:</strong> Begränsningar i uttag kan ge högre ränta</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tips Section -->
+<section class="features-section gray">
+    <div class="section-inner">
+        <h2 class="features-title">Tips för att maximera din inlåningsränta</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M9 11l3 3L22 4"></path>
+                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                    </svg>
+                </div>
+                <h3>Jämför banker regelbundet</h3>
+                <p>Räntorna varierar kraftigt mellan banker. Jämför regelbundet och byt om du hittar bättre villkor. En procents skillnad kan innebära tusentals kronor per år.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3>Överväg bindningstid</h3>
+                <p>Om du vet att du inte behöver pengarna under en period kan bunden inlåning ge högre ränta. Balansera mellan flexibilitet och avkastning.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M2 12h20"></path>
+                    </svg>
+                </div>
+                <h3>Sprid ditt sparande</h3>
+                <p>Genom att sprida ditt sparande på flera banker kan du maximera avkastningen och dra nytta av olika erbjudanden samtidigt som du håller dig inom insättningsgarantin.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Utnyttja kampanjer</h3>
+                <p>Många banker erbjuder kampanjräntor för nya kunder. Håll utkik efter sådana erbjudanden, men läs villkoren noga och se vad som gäller efter kampanjperioden.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Vanliga frågor om inlåningsränta</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                </div>
+                <h3>Är inlåningsräntan skattefri?</h3>
+                <p>Nej, ränta på sparkonton och inlåning beskattas som kapitalinkomst med 30% skatt. Banken gör ett automatiskt skatteavdrag på ränteinkomsterna.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M2 12h20"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Vilken inlåningsränta är bra 2025?</h3>
+                <p>Med nuvarande ränteläge är 3-4% en konkurrenskraftig inlåningsränta för sparkonton. Bundna inlåningskonton kan erbjuda högre räntor. Jämför alltid flera banker.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                        <path d="M7 8h10M7 12h6"></path>
+                    </svg>
+                </div>
+                <h3>Hur ofta betalas räntan ut?</h3>
+                <p>De flesta banker beräknar räntan dagligen men betalar ut den månadsvis eller årligen. Vissa konton kan ha kvartalsvis utbetalning. Kontrollera villkoren för ditt specifika konto.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Kan inlåningsräntan bli negativ?</h3>
+                <p>Ja, i vissa fall kan banker ta ut negativ ränta (avgift) på stora inlåning, särskilt för företagskonton. För privatpersoners sparkonton är detta mycket ovanligt i Sverige.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="best-rates">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h2 class="section-title-white" style="margin-bottom: 24px;">Hitta bästa sparräntan</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                Jämför inlåningsräntor från Sveriges alla banker och hitta det sparkonto som ger dig bäst avkastning på ditt sparande.
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="/basta-rantan" class="btn-primary" style="background: white; color: #1e3a5f;">
+                    Jämför sparräntor
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+                <a href="/sparranta" class="btn-secondary" style="border-color: white; color: white;">
+                    Beräkna sparränta
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                        <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                        <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                        <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                    </svg>
+                </div>
+                <span class="logo-text">Ränta.nu</span>
+            </div>
+            <p>Sedan 2018 har Ränta.nu varit Sveriges mest betrodda källa för oberoende sparrådgivning. Med över 150 000 användare per månad hjälper vi svenskar att fatta smartare beslut om sitt sparande.</p>
+            <div class="footer-contact">
+                E-post: <a href="mailto:[email protected]">[email protected]</a><br>
+                Org.nr: 559342-7891
+            </div>
+        </div>
+
+        <div>
+            <h4>Räkna ränta</h4>
+            <ul>
+                <li><a href="/bolanerakna">Bolåneränta</a></li>
+                <li><a href="/sparranta">Sparränta</a></li>
+                <li><a href="/effektiv-ranta">Effektiv ränta</a></li>
+                <li><a href="/ranta-pa-ranta">Ränta på ränta</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Lär dig mer</h4>
+            <ul>
+                <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                <li><a href="/rantetyper">Olika räntetyper</a></li>
+                <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                <li><a href="/artiklar">Alla artiklar</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Om Ränta.nu</h4>
+            <ul>
+                <li><a href="/om-oss">Om oss</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+                <li><a href="/integritetspolicy">Integritet</a></li>
+                <li><a href="/cookiepolicy">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2025 Ränta.nu. Alla rättigheter förbehållna.</span>
+        <span>Informationen på sidan ersätter inte professionell rådgivning.</span>
+    </div>
+</footer>
+
+</body>
+</html>

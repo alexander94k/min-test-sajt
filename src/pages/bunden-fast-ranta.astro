@@ -1,0 +1,368 @@
+---
+// Frontmatter
+const pageTitle = "Bunden ränta / Fast ränta - Vad är det och hur fungerar det?";
+const pageDescription = "Bunden ränta är en fast räntesats som inte förändras under den avtalade bindningstiden. Läs om fördelar, nackdelar och när det är ett bra val för ditt bolån.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Bunden ränta / Fast ränta</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Bunden ränta är en fast räntesats som du som låntagare kommer överens om med din bank och som inte förändras under den avtalade bindningstiden.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content Section -->
+<section class="content-section">
+    <div class="section-inner">
+        <div class="content-row">
+            <div class="content-text">
+                <h2>Vad är bunden ränta?</h2>
+                <p>Bunden ränta, även kallad fast ränta, innebär att du låser din räntesats för en förutbestämd period. Bindningstider varierar mellan 3 månader till 10 år och garanterar stabilitet i räntekostnader, oavsett vad som händer på marknaden.</p>
+                <p>Detta står i kontrast till rörlig ränta som justeras löpande baserat på marknadsförändringar. Med bunden ränta får du full kontroll över dina månadskostnader under bindningstiden.</p>
+            </div>
+
+            <div class="content-text">
+                <h2>Användningsområde</h2>
+                <p>Bunden ränta förekommer främst vid bolån, där banken anser sig ha god säkerhet för pengarna. Alla bolånetagare måste välja mellan fast eller rörlig ränta, eller en kombination av dessa.</p>
+                <p>Många väljer att dela upp sitt lån med både bunden och rörlig ränta för att balansera trygghet och flexibilitet. Detta kallas för att ha en "blandrän" på bolånet.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Binding Periods Section -->
+<section class="features-section gray">
+    <div class="section-inner">
+        <h2 class="features-title">Vanliga bindningstider</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3>3 månader - 1 år</h3>
+                <p>Kortare bindningstider ger lägre ränta men mindre långsiktig trygghet. Passar dig som vill ha viss stabilitet men fortfarande flexibilitet.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3>2-5 år</h3>
+                <p>Mellanlång bindningstid som balanserar kostnad och trygghet. Populärt val för många bolånetagare som vill ha stabilitet under några år.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3>6-10 år</h3>
+                <p>Längsta bindningstider ger högst ränta men maximal trygghet. Passar dig som prioriterar förutsägbarhet och vill eliminera ränterisken helt.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pros and Cons Section -->
+<section class="content-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Fördelar och nackdelar</h2>
+        <div class="content-row">
+            <div class="content-text">
+                <div style="background: #e8f5e9; padding: 32px; border-radius: 16px; border: 2px solid #4caf50;">
+                    <h3 style="color: #2e7d32; margin-bottom: 20px;">Fördelar</h3>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 12px;"><strong>Fast månadskostnad:</strong> Du vet exakt vad du ska betala varje månad</li>
+                        <li style="margin-bottom: 12px;"><strong>Skydd mot räntehöjningar:</strong> Marknadsförändringarna påverkar dig inte</li>
+                        <li style="margin-bottom: 12px;"><strong>Enklare budgetering:</strong> Underlättar din ekonomiska planering</li>
+                        <li style="margin-bottom: 12px;"><strong>Trygghet:</strong> Ekonomisk stabilitet och förutsägbarhet</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content-text">
+                <div style="background: #ffebee; padding: 32px; border-radius: 16px; border: 2px solid #f44336;">
+                    <h3 style="color: #c62828; margin-bottom: 20px;">Nackdelar</h3>
+                    <ul style="padding-left: 20px;">
+                        <li style="margin-bottom: 12px;"><strong>Ingen nytta av räntesänkningar:</strong> Du kan inte dra nytta av fallande marknadsräntor</li>
+                        <li style="margin-bottom: 12px;"><strong>Ränteskillnadsersättning:</strong> Kan bli dyrt att bryta avtalet i förtid</li>
+                        <li style="margin-bottom: 12px;"><strong>Högre initial kostnad:</strong> Ofta högre ränta än rörlig från start</li>
+                        <li style="margin-bottom: 12px;"><strong>Mindre flexibilitet:</strong> Svårare att göra extra inbetalningar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Factors Section -->
+<section class="features-section gray">
+    <div class="section-inner">
+        <h2 class="features-title">Faktorer som påverkar bunden ränta</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3>Inflation</h3>
+                <p>Förväntad inflation påverkar bundna räntor betydligt. Högre inflation leder vanligtvis till högre räntesatser.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                    </svg>
+                </div>
+                <h3>Riksbankens styrränta</h3>
+                <p>Riksbankens reporänta är en grundläggande faktor som påverkar alla räntesatser i ekonomin, inklusive bundna bolåneräntor.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                    </svg>
+                </div>
+                <h3>Marknadsprognoser</h3>
+                <p>Bankernas förväntningar om framtida ränteutveckling påverkar vilka bundna räntor de erbjuder idag.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    </svg>
+                </div>
+                <h3>Konjunkturutveckling</h3>
+                <p>Den ekonomiska situationen i Sverige och världen påverkar ränteläget och därmed också bundna bolåneräntor.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Current Rates Section -->
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Aktuella räntesatser för bunden ränta</h2>
+            <p style="text-align: center; font-size: 18px; color: #555; margin-bottom: 40px;">
+                Bundna räntor varierar beroende på bindningstid. Längre bindningstid innebär normalt högre ränta.
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; text-align: center;">
+                    <p style="font-size: 14px; color: #888; margin-bottom: 8px;">1 år bunden</p>
+                    <p style="font-size: 36px; font-weight: 700; color: #1e3a5f;">3,73%</p>
+                </div>
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; text-align: center;">
+                    <p style="font-size: 14px; color: #888; margin-bottom: 8px;">3 år bunden</p>
+                    <p style="font-size: 36px; font-weight: 700; color: #1e3a5f;">4,21%</p>
+                </div>
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; text-align: center;">
+                    <p style="font-size: 14px; color: #888; margin-bottom: 8px;">5 år bunden</p>
+                    <p style="font-size: 36px; font-weight: 700; color: #1e3a5f;">4,68%</p>
+                </div>
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; text-align: center;">
+                    <p style="font-size: 14px; color: #888; margin-bottom: 8px;">10 år bunden</p>
+                    <p style="font-size: 36px; font-weight: 700; color: #1e3a5f;">5,74%</p>
+                </div>
+            </div>
+            <p style="text-align: center; font-size: 14px; color: #888; margin-top: 24px;">
+                Priserna varierar mellan banker. Möjlig räntesänkning senare under 2025.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="features-section gray">
+    <div class="section-inner">
+        <h2 class="features-title">Vanliga frågor om bunden ränta</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                </div>
+                <h3>Vad händer när bindningstiden tar slut?</h3>
+                <p>När bindningstiden löper ut övergår lånet automatiskt till rörlig ränta om du inte väljer en ny bindningstid. Kontakta din bank i god tid för att förhandla nya villkor.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M2 12h20"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Vad är ränteskillnadsersättning?</h3>
+                <p>Om du bryter din bundna ränta i förtid kan banken kräva ersättning för sin förlust. Detta kan bli mycket dyrt, särskilt om marknadsräntan sjunkit sedan du band lånet.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                        <path d="M7 8h10M7 12h6"></path>
+                    </svg>
+                </div>
+                <h3>Bör jag välja bunden eller rörlig ränta 2025?</h3>
+                <p>Det beror på din ekonomiska situation och risktolerans. Bunden ränta ger trygghet mot räntehöjningar, medan rörlig kan bli billigare om räntan sjunker. Många väljer en kombination.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Är bunden ränta historiskt billigare?</h3>
+                <p>Historiskt har rörlig ränta ofta varit billigare på lång sikt. Men bunden ränta har gett större trygghet och förutsägbarhet, vilket kan vara värt merkostnaden för många låntagare.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="best-rates">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h2 class="section-title-white" style="margin-bottom: 24px;">Jämför bundna räntor</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                Använd våra verktyg för att jämföra bundna räntor från Sveriges alla banker och hitta bästa erbjudandet.
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="/basta-rantan" class="btn-primary" style="background: white; color: #1e3a5f;">
+                    Jämför räntor
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+                <a href="/rorlig-ranta" class="btn-secondary" style="border-color: white; color: white;">
+                    Läs om rörlig ränta
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                        <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                        <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                        <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                    </svg>
+                </div>
+                <span class="logo-text">Ränta.nu</span>
+            </div>
+            <p>Sedan 2018 har Ränta.nu varit Sveriges mest betrodda källa för oberoende sparrådgivning. Med över 150 000 användare per månad hjälper vi svenskar att fatta smartare beslut om sitt sparande.</p>
+            <div class="footer-contact">
+                E-post: <a href="mailto:[email protected]">[email protected]</a><br>
+                Org.nr: 559342-7891
+            </div>
+        </div>
+
+        <div>
+            <h4>Räkna ränta</h4>
+            <ul>
+                <li><a href="/bolanerakna">Bolåneränta</a></li>
+                <li><a href="/sparranta">Sparränta</a></li>
+                <li><a href="/effektiv-ranta">Effektiv ränta</a></li>
+                <li><a href="/ranta-pa-ranta">Ränta på ränta</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Lär dig mer</h4>
+            <ul>
+                <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                <li><a href="/rantetyper">Olika räntetyper</a></li>
+                <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                <li><a href="/artiklar">Alla artiklar</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Om Ränta.nu</h4>
+            <ul>
+                <li><a href="/om-oss">Om oss</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+                <li><a href="/integritetspolicy">Integritet</a></li>
+                <li><a href="/cookiepolicy">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2025 Ränta.nu. Alla rättigheter förbehållna.</span>
+        <span>Informationen på sidan ersätter inte professionell rådgivning.</span>
+    </div>
+</footer>
+
+</body>
+</html>

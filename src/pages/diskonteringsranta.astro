@@ -1,0 +1,418 @@
+---
+// Frontmatter
+const pageTitle = "Diskonteringsränta - Vad är det och hur fungerar det?";
+const pageDescription = "Diskonteringsränta används för att beräkna nuvärdet av framtida kassaflöden. Lär dig hur den används i investeringsanalys, värdering och finansiell planering.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Diskonteringsränta</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Diskonteringsränta används för att beräkna nuvärdet av framtida kassaflöden och är ett centralt begrepp inom finans och investeringsanalys.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content Section -->
+<section class="content-section">
+    <div class="section-inner">
+        <div class="content-row">
+            <div class="content-text">
+                <h2>Vad är diskonteringsränta?</h2>
+                <p>Diskonteringsränta, även kallad kalkylränta, är den räntesats som används för att räkna om framtida penningflöden till dagens värde (nuvärde). Grundkonceptet bygger på att pengar idag är värda mer än samma belopp i framtiden, eftersom dagens pengar kan investeras och generera avkastning.</p>
+                <p>Genom att diskontrera framtida kassaflöden kan vi göra rättvisa jämförelser mellan investeringsalternativ och fatta bättre finansiella beslut.</p>
+            </div>
+
+            <div class="content-text">
+                <h2>Tidsvärdet av pengar</h2>
+                <p>Diskonteringsräntan reflekterar tidsvärdet av pengar - principen att en krona idag är värd mer än en krona om ett år. Detta beror på tre huvudfaktorer:</p>
+                <ul style="margin: 20px 0; padding-left: 20px;">
+                    <li style="margin-bottom: 12px;"><strong>Alternativkostnad:</strong> Pengarna kunde investerats och gett avkastning</li>
+                    <li style="margin-bottom: 12px;"><strong>Inflation:</strong> Pengarnas köpkraft minskar över tid</li>
+                    <li style="margin-bottom: 12px;"><strong>Risk:</strong> Osäkerhet om framtida betalningar kommer att inträffa</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How it Works Section -->
+<section class="features-section gray">
+    <div class="section-inner">
+        <h2 class="features-title">Så fungerar diskonteringsränta</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                        <path d="M7 8h10M7 12h10M7 16h6"></path>
+                    </svg>
+                </div>
+                <h3>Nuvärdesberäkning</h3>
+                <p>Diskonteringsräntan används för att beräkna vad framtida betalningar är värda idag. Ju högre diskonteringsränta, desto mindre värde får framtida betalningar.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                    </svg>
+                </div>
+                <h3>Investeringsbedömning</h3>
+                <p>Används för att värdera investeringar genom att jämföra nuvärdet av framtida kassaflöden med investeringskostnaden. Detta kallas nettonuvärdesmetoden (NPV).</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3>Företagsvärdering</h3>
+                <p>Diskonteringsräntan är central vid värdering av företag och tillgångar. Den används för att beräkna nuvärdet av förväntade framtida vinster och kassaflöden.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                    </svg>
+                </div>
+                <h3>Riskanpassning</h3>
+                <p>Diskonteringsräntan justeras uppåt för riskfyllda investeringar och nedåt för säkra. Detta reflekterar den högre avkastning som krävs för att kompensera för risk.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Calculation Section -->
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Beräkning av nuvärde</h2>
+            <div style="background: #f0f5f7; padding: 40px; border-radius: 16px; border: 2px solid #e5e5e5; margin-bottom: 32px;">
+                <h3 style="font-size: 24px; margin-bottom: 24px; color: #1e3a5f; text-align: center;">Grundformel</h3>
+                <div style="background: white; padding: 24px; border-radius: 12px; text-align: center; font-family: monospace; font-size: 20px; margin-bottom: 24px;">
+                    NV = FV / (1 + r)^n
+                </div>
+                <div style="text-align: center; color: #555; line-height: 1.8;">
+                    <p><strong>NV</strong> = Nuvärde</p>
+                    <p><strong>FV</strong> = Framtida värde</p>
+                    <p><strong>r</strong> = Diskonteringsränta (i decimal form)</p>
+                    <p><strong>n</strong> = Antal perioder (år)</p>
+                </div>
+            </div>
+
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 2px solid #e5e5e5;">
+                <h3 style="font-size: 20px; margin-bottom: 24px; color: #1e3a5f;">Praktiskt exempel</h3>
+                <div style="margin-bottom: 20px;">
+                    <p style="font-size: 16px; margin-bottom: 12px;"><strong>Scenario:</strong></p>
+                    <p style="color: #555;">Du förväntar dig att få 100 000 kr om 5 år. Med en diskonteringsränta på 6%, vad är detta värde idag?</p>
+                </div>
+                <div style="background: #f0f5f7; padding: 24px; border-radius: 8px;">
+                    <p style="font-size: 16px; margin-bottom: 12px;">Beräkning:</p>
+                    <p style="font-size: 16px; margin-bottom: 8px;">NV = 100 000 / (1 + 0,06)^5</p>
+                    <p style="font-size: 16px; margin-bottom: 8px;">NV = 100 000 / 1,338</p>
+                    <p style="font-size: 24px; font-weight: 700; color: #1e3a5f; margin-top: 20px;">NV ≈ 74 726 kr</p>
+                    <p style="font-size: 14px; color: #888; margin-top: 16px;">100 000 kr om 5 år är värt cirka 74 726 kr idag vid 6% diskonteringsränta.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Use Cases Section -->
+<section class="features-section gray">
+    <div class="section-inner">
+        <h2 class="features-title">Användningsområden</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <h3>Fastighetsvärdering</h3>
+                <p>Används för att värdera fastigheter genom att diskontrera förväntade framtida hyresintäkter till nuvärde. Detta hjälper till att bestämma ett rimligt köppris.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                </div>
+                <h3>Projektanalys</h3>
+                <p>Företag använder diskonteringsränta för att utvärdera lönsamheten av projekt och investeringar. Endast projekt med positivt nettonuvärde bör genomföras.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3>Pensionsplanering</h3>
+                <p>Diskonteringsränta används för att beräkna hur mycket du behöver spara idag för att nå ditt pensionsmål i framtiden, med hänsyn till förväntad avkastning.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <h3>Obligationsvärdering</h3>
+                <p>Marknadsvärdet på obligationer beräknas genom att diskontrera framtida kupongbetalningar och nominellt belopp med aktuell marknadsränta.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                </div>
+                <h3>Aktievärdering</h3>
+                <p>Diskonteringsränta används i DCF-modeller (Discounted Cash Flow) för att värdera aktier baserat på företagets framtida kassaflöden.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                    </svg>
+                </div>
+                <h3>Kostnads-nyttoanalys</h3>
+                <p>Offentlig sektor använder diskonteringsränta för att utvärdera samhällsinvesteringar och jämföra kostnader och nytta över tid.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Factors Section -->
+<section class="content-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Faktorer som påverkar diskonteringsräntan</h2>
+        <div class="content-row">
+            <div class="content-text">
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 16px; border: 2px solid #e5e5e5;">
+                    <h3 style="margin-bottom: 20px; color: #1e3a5f;">Riskfria räntan</h3>
+                    <p style="margin-bottom: 16px;">Utgångspunkten är den riskfria räntan, ofta baserad på statsobligationer. Detta representerar den minsta avkastning en investerare kräver.</p>
+                    <p style="color: #555; font-size: 15px;">I Sverige används ofta räntan på svenska statsobligationer som riskfri referens.</p>
+                </div>
+            </div>
+
+            <div class="content-text">
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 16px; border: 2px solid #e5e5e5;">
+                    <h3 style="margin-bottom: 20px; color: #1e3a5f;">Riskpremie</h3>
+                    <p style="margin-bottom: 16px;">Till den riskfria räntan läggs en riskpremie som reflekterar investeringens osäkerhet. Högre risk kräver högre diskonteringsränta.</p>
+                    <p style="color: #555; font-size: 15px;">Riskpremien varierar beroende på bransch, företag och projektspecifika faktorer.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-row" style="margin-top: 24px;">
+            <div class="content-text">
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 16px; border: 2px solid #e5e5e5;">
+                    <h3 style="margin-bottom: 20px; color: #1e3a5f;">Inflation</h3>
+                    <p style="margin-bottom: 16px;">Förväntad inflation påverkar diskonteringsräntan eftersom den minskar framtida penningars köpkraft.</p>
+                    <p style="color: #555; font-size: 15px;">Högre inflation motiverar en högre diskonteringsränta för att bevara realvärdet.</p>
+                </div>
+            </div>
+
+            <div class="content-text">
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 16px; border: 2px solid #e5e5e5;">
+                    <h3 style="margin-bottom: 20px; color: #1e3a5f;">Alternativkostnad</h3>
+                    <p style="margin-bottom: 16px;">Diskonteringsräntan bör reflektera avkastningen på alternativa investeringar med liknande risk.</p>
+                    <p style="color: #555; font-size: 15px;">Detta kallas också för kapitalkostnaden eller avkastningskravet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="features-section gray">
+    <div class="section-inner">
+        <h2 class="features-title">Vanliga frågor om diskonteringsränta</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                </div>
+                <h3>Vad är skillnaden mellan diskonteringsränta och ränta?</h3>
+                <p>Vanlig ränta är priset för att låna pengar. Diskonteringsränta är en kalkylmässig räntesats för att beräkna nuvärdet av framtida kassaflöden i investeringsanalyser.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M2 12h20"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Vilken diskonteringsränta ska jag använda?</h3>
+                <p>Det beror på investeringens risk och ditt avkastningskrav. Börja med riskfri ränta och lägg till en riskpremie baserad på investeringens osäkerhet. Vanligtvis 5-15% för olika investeringar.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                        <path d="M7 8h10M7 12h6"></path>
+                    </svg>
+                </div>
+                <h3>Vad är WACC?</h3>
+                <p>WACC (Weighted Average Cost of Capital) är ett företags genomsnittliga kapitalkostnad som ofta används som diskonteringsränta. Den viktar kostnaden för eget kapital och lånat kapital.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Hur påverkar diskonteringsräntan investeringsbeslut?</h3>
+                <p>En högre diskonteringsränta ger lägre nuvärden, vilket gör investeringar mindre attraktiva. En lägre ränta ökar nuvärdet och gör fler projekt lönsamma. Valet av ränta är därför kritiskt.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="best-rates">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h2 class="section-title-white" style="margin-bottom: 24px;">Beräkna nuvärde och framtidsvärde</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                Använd våra kalkylatorer för att räkna ut nuvärde, framtidsvärde och göra investeringsanalyser med olika diskonteringsräntor.
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="/berakna" class="btn-primary" style="background: white; color: #1e3a5f;">
+                    Till kalkylatorn
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+                <a href="/artiklar" class="btn-secondary" style="border-color: white; color: white;">
+                    Läs fler artiklar
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                        <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                        <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                        <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                    </svg>
+                </div>
+                <span class="logo-text">Ränta.nu</span>
+            </div>
+            <p>Sedan 2018 har Ränta.nu varit Sveriges mest betrodda källa för oberoende sparrådgivning. Med över 150 000 användare per månad hjälper vi svenskar att fatta smartare beslut om sitt sparande.</p>
+            <div class="footer-contact">
+                E-post: <a href="mailto:[email protected]">[email protected]</a><br>
+                Org.nr: 559342-7891
+            </div>
+        </div>
+
+        <div>
+            <h4>Räkna ränta</h4>
+            <ul>
+                <li><a href="/bolanerakna">Bolåneränta</a></li>
+                <li><a href="/sparranta">Sparränta</a></li>
+                <li><a href="/effektiv-ranta">Effektiv ränta</a></li>
+                <li><a href="/ranta-pa-ranta">Ränta på ränta</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Lär dig mer</h4>
+            <ul>
+                <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                <li><a href="/rantetyper">Olika räntetyper</a></li>
+                <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                <li><a href="/artiklar">Alla artiklar</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Om Ränta.nu</h4>
+            <ul>
+                <li><a href="/om-oss">Om oss</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+                <li><a href="/integritetspolicy">Integritet</a></li>
+                <li><a href="/cookiepolicy">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2025 Ränta.nu. Alla rättigheter förbehållna.</span>
+        <span>Informationen på sidan ersätter inte professionell rådgivning.</span>
+    </div>
+</footer>
+
+</body>
+</html>

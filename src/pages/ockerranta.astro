@@ -1,0 +1,688 @@
+---
+// Ockerränta - Information om ockerränta och konsumentskydd
+---
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ockerränta - Vad är ocker och hur skyddas du som konsument?</title>
+    <meta name="description" content="Lär dig om ockerränta, lagliga räntegränser i Sverige och hur du skyddar dig mot ocker. Information om straffet för ocker och dina rättigheter som låntagare.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #1e3a5f;
+            background: linear-gradient(135deg, #f0f5f7 0%, #ffffff 100%);
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            text-decoration: none;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .content-section {
+            background: white;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: #1e3a5f;
+            margin-bottom: 1.5rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            border-left: 5px solid #dc3545;
+            padding-left: 1rem;
+        }
+
+        .content-section h3 {
+            font-size: 1.5rem;
+            color: #2c5282;
+            margin: 2rem 0 1rem 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .content-section p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .content-section ul, .content-section ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .content-section li {
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+            border-left: 5px solid #dc3545;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .warning-box strong {
+            color: #1e3a5f;
+            font-weight: 600;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 5px solid #1e3a5f;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .info-box strong {
+            color: #1e3a5f;
+            font-weight: 600;
+        }
+
+        .protection-box {
+            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+            border-left: 5px solid #28a745;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .protection-box strong {
+            color: #1e3a5f;
+            font-weight: 600;
+        }
+
+        .rate-limit-box {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 2rem 0;
+            box-shadow: 0 4px 12px rgba(40,167,69,0.2);
+        }
+
+        .rate-limit-box h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .rate-limit-box .limit {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 1rem 0;
+        }
+
+        .rate-limit-box .description {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .warning-signs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .warning-sign-card {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-top: 4px solid #ffc107;
+            transition: transform 0.3s;
+        }
+
+        .warning-sign-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+
+        .warning-sign-card h4 {
+            color: #1e3a5f;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .warning-sign-card p {
+            margin-bottom: 0;
+            font-size: 1rem;
+        }
+
+        .penalty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .penalty-card {
+            background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            border-top: 4px solid #dc3545;
+        }
+
+        .penalty-card h4 {
+            color: #1e3a5f;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .penalty-card .penalty-detail {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #dc3545;
+            margin: 0.5rem 0;
+        }
+
+        .penalty-card p {
+            margin-bottom: 0;
+        }
+
+        .faq-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-top: 2rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+        }
+
+        .faq-item h4 {
+            color: #1e3a5f;
+            margin-bottom: 0.8rem;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .faq-item p {
+            margin-bottom: 0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-section h2 {
+            color: white;
+            border: none;
+            padding: 0;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(40,167,69,0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #1e3a5f;
+        }
+
+        .btn-secondary:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255,255,255,0.3);
+        }
+
+        footer {
+            background: #1e3a5f;
+            color: white;
+            padding: 3rem 2rem 1.5rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .content-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .rate-limit-box .limit {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Ränta.nu</a>
+            <ul class="nav-links">
+                <li><a href="/">Hem</a></li>
+                <li><a href="/om-oss">Om oss</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Ockerränta</h1>
+        <p>Vad är ocker, hur skyddas du enligt lagen och vad händer med de som tar ut ockerränta?</p>
+    </section>
+
+    <div class="container">
+        <div class="content-section">
+            <h2>Vad är ockerränta?</h2>
+            <p>Ocker är ett begrepp som beskriver ekonomiskt utnyttjande där en person eller ett företag missbrukar någon annans naivitet, beroende, dåligt omdöme eller ekonomiska nöd för egen ekonomisk vinning. Detta beteende är olagligt och straffbart i Sverige.</p>
+
+            <p>Konceptet ocker har funnits så länge som handel har bedrivits mellan människor. När det gäller ockerränta handlar det specifikt om räntor på lån som är orimligt höga och tas ut under omständigheter där låntagaren befinner sig i en utsatt position.</p>
+
+            <div class="warning-box">
+                <strong>Viktigt:</strong> Det finns ingen exakt gräns för vad som utgör ockerränta - varje fall bedöms individuellt baserat på flera faktorer inklusive räntenivå, låntagarens situation och omständigheterna kring lånet.
+            </div>
+
+            <h3>Vad kännetecknar ockerränta?</h3>
+            <p>Ockerränta kännetecknas av flera faktorer som tillsammans eller var för sig kan utgöra ocker:</p>
+
+            <ul>
+                <li><strong>Onormalt höga räntor:</strong> Räntor som kraftigt avviker från marknadsnivåerna och vad som anses rimligt för motsvarande lån</li>
+                <li><strong>Utnyttjande av utsatthet:</strong> Låntagaren befinner sig i ekonomisk nöd, har dålig kreditvärdighet eller begränsade alternativ</li>
+                <li><strong>Brist på informerat samtycke:</strong> Låntagaren förstår inte fullt ut villkoren eller konsekvenserna av lånet</li>
+                <li><strong>Oproportionerliga villkor:</strong> Lånets totala kostnad är oskäligt hög i förhållande till det lånade beloppet</li>
+                <li><strong>Exploaterande omständigheter:</strong> Långivaren aktivt utnyttjar låntagarens svaga position för egen vinning</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Lagliga räntegränser i Sverige</h2>
+            <p>Sedan september 2018 finns det tydliga regleringar i Sverige för att skydda konsumenter mot ocker och överdrivet höga lånekostnader. Dessa regler gäller för konsumentkrediter och är juridiskt bindande:</p>
+
+            <div class="rate-limit-box">
+                <h3>Maximala räntegränser</h3>
+                <div class="limit">44%</div>
+                <div class="description">Maximal ränta: Referensräntan + 40 procentenheter</div>
+                <p style="margin-top: 1rem; font-size: 0.95rem;">Referensräntan är för närvarande 4%, vilket ger ett takränta på maximalt 44% per år.</p>
+            </div>
+
+            <div class="rate-limit-box">
+                <h3>Kostnadstak</h3>
+                <div class="limit">200%</div>
+                <div class="description">Lånets totala kostnad får inte överstiga det dubbla av lånebeloppet</div>
+                <p style="margin-top: 1rem; font-size: 0.95rem;">Exempel: Ett lån på 10 000 kr får inte kosta mer än totalt 20 000 kr inklusive alla avgifter och räntor.</p>
+            </div>
+
+            <div class="info-box">
+                <strong>Så fungerar reglerna:</strong> Både räntegränsen och kostnadstaket måste följas. Det innebär att även om räntan är under gränsen på 44%, kan ett lån fortfarande bryta mot lagen om totalkostnaden överstiger det dubbla lånebeloppet på grund av höga avgifter.
+            </div>
+
+            <h3>Vad ingår i totalkostnaden?</h3>
+            <p>När kostnadstaket beräknas inkluderas alla typer av avgifter och kostnader:</p>
+
+            <ul>
+                <li>Ränta på lånet</li>
+                <li>Uppläggningsavgifter</li>
+                <li>Aviavgifter</li>
+                <li>Administrationsavgifter</li>
+                <li>Påminnelseavgifter</li>
+                <li>Eventuella andra avgifter kopplade till lånet</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Varningstecken på ocker</h2>
+            <p>Det är viktigt att känna igen varningstecken som kan indikera att du utsätts för ocker eller oskäliga lånevillkor:</p>
+
+            <div class="warning-signs-grid">
+                <div class="warning-sign-card">
+                    <h4>Extremt höga räntor</h4>
+                    <p>Räntor som är flera gånger högre än vad traditionella banker erbjuder, särskilt om de överstiger 44% per år.</p>
+                </div>
+                <div class="warning-sign-card">
+                    <h4>Otydliga villkor</h4>
+                    <p>Låneavtal som är svåra att förstå, med dolda avgifter eller villkor som inte förklaras tydligt.</p>
+                </div>
+                <div class="warning-sign-card">
+                    <h4>Pressad att skriva på</h4>
+                    <p>Långivaren pressar dig att snabbt skriva under utan tid att läsa igenom eller överväga alternativen.</p>
+                </div>
+                <div class="warning-sign-card">
+                    <h4>Inga kreditprövningar</h4>
+                    <p>Långivaren erbjuder lån utan att göra någon kreditprövning eller kontroll av din betalningsförmåga.</p>
+                </div>
+                <div class="warning-sign-card">
+                    <h4>Krav på säkerheter</h4>
+                    <p>Oskäliga krav på säkerheter som står i missförhållande till lånebeloppet, till exempel värdefulla personliga tillgångar.</p>
+                </div>
+                <div class="warning-sign-card">
+                    <h4>Hotfulla formuleringar</h4>
+                    <p>Avtal eller kommunikation som innehåller hotfulla formuleringar om vad som händer vid betalningssvårigheter.</p>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <strong>Viktigt råd:</strong> Om något känns fel eller för bra för att vara sant - lita på din magkänsla. Ta alltid tid att läsa igenom låneavtal noggrant och jämför med andra alternativ innan du skriver under.
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Straff för ocker i Sverige</h2>
+            <p>Ocker är ett brott enligt svensk lag och kan leda till allvarliga konsekvenser för den som gör sig skyldig till det:</p>
+
+            <div class="penalty-grid">
+                <div class="penalty-card">
+                    <h4>Böter</h4>
+                    <div class="penalty-detail">Dagsböter</div>
+                    <p>Böter kan utdömas beroende på brottets svårighetsgrad och den tilltalades ekonomiska situation. Antalet dagsböter varierar baserat på omständigheterna.</p>
+                </div>
+                <div class="penalty-card">
+                    <h4>Fängelse - Normalt ocker</h4>
+                    <div class="penalty-detail">Upp till 2 år</div>
+                    <p>För fall av ocker som inte bedöms som grovt kan straff på upp till två års fängelse utdömas.</p>
+                </div>
+                <div class="penalty-card">
+                    <h4>Fängelse - Grovt ocker</h4>
+                    <div class="penalty-detail">Upp till 4 år</div>
+                    <p>Vid grovt ocker, där brottet utförts systematiskt, i stor skala eller med särskild hänsynslöshet, kan straffet vara upp till fyra års fängelse.</p>
+                </div>
+            </div>
+
+            <h3>Vad räknas som grovt ocker?</h3>
+            <p>Grovt ocker bedöms utifrån flera omständigheter:</p>
+
+            <ul>
+                <li><strong>Systematiskt utnyttjande:</strong> Verksamhet som bedrivs regelbundet och organiserat för att utnyttja sårbara personer</li>
+                <li><strong>Omfattningen:</strong> Många personer har utnyttjats eller mycket stora belopp är inblandade</li>
+                <li><strong>Särskild hänsynslöshet:</strong> Extremt utnyttjande av personer i mycket utsatta situationer</li>
+                <li><strong>Kvalificerade omständigheter:</strong> Användning av hot, våld eller andra tvångsmedel</li>
+            </ul>
+
+            <div class="protection-box">
+                <strong>Konsumentskydd:</strong> Om du har utsatts för ocker kan du ha rätt att få lånet omprövat och eventuellt få tillbaka delar av det du betalat. Kontakta Konsumentverket eller en jurist för hjälp.
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Så skyddar du dig mot ocker</h2>
+            <p>Här är konkreta råd för att skydda dig mot ockerränta och oskäliga lånevillkor:</p>
+
+            <h3>1. Jämför alltid flera alternativ</h3>
+            <p>Använd jämförelsetjänster och kontakta flera banker och långivare. Detta ger dig en bild av vad som är rimliga räntor och villkor för din situation.</p>
+
+            <h3>2. Kontrollera att långivaren är seriös</h3>
+            <p>Kolla att långivaren är registrerad hos Finansinspektionen och har tillstånd att bedriva låneverksamhet i Sverige. Seriösa företag är transparenta med sina villkor.</p>
+
+            <h3>3. Läs hela låneavtalet</h3>
+            <p>Ta dig tid att läsa igenom alla villkor innan du skriver under. Fråga om allt du inte förstår. Ett seriöst företag ger dig tid och svarar tydligt på dina frågor.</p>
+
+            <h3>4. Beräkna den effektiva räntan</h3>
+            <p>Den effektiva räntan inkluderar alla avgifter och ger den verkliga kostnaden. Jämför alltid effektiv ränta, inte bara nominell ränta.</p>
+
+            <h3>5. Undvik SMS-lån och snabblån med höga kostnader</h3>
+            <p>Dessa lån har ofta extremt höga effektiva räntor. Även om de följer lagliga gränser kan de snabbt leda till skuldfällor.</p>
+
+            <h3>6. Sök hjälp vid ekonomiska problem</h3>
+            <p>Om du har ekonomiska svårigheter, kontakta din bank, kommunens budget- och skuldrådgivning eller andra hjälporganisationer innan du tar snabblån.</p>
+
+            <div class="info-box">
+                <strong>Resurser för hjälp:</strong>
+                <ul style="margin-top: 1rem; margin-bottom: 0;">
+                    <li>Konsumentverket: 0771-42 33 00</li>
+                    <li>Kronofogden: Hjälp med skuldsanering</li>
+                    <li>Kommunens budget- och skuldrådgivning (gratis)</li>
+                    <li>Konsumenternas Bank- och finansbyrå</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h2>Vanliga frågor om ockerränta</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Är ockerränta olagligt?</h4>
+                    <p>Ja, ocker är ett brott enligt svensk lag. Den som gör sig skyldig till ocker kan dömas till böter eller fängelse i upp till två år, eller upp till fyra år vid grovt ocker.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Vad är den juridiska definitionen av ocker?</h4>
+                    <p>Enligt svensk lag är ocker att utnyttja någons ekonomiska nöd, okunnighet, lättsinne eller beroende för att få ekonomisk vinning genom ett avtal som är oskäligt eller opåkallat. Det kan handla om både räntor och andra villkor.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Vad är grovt ocker?</h4>
+                    <p>Grovt ocker innebär systematiskt eller storskaligt utnyttjande som visar särskild hänsynslöshet. Detta kan inkludera organiserad verksamhet för att utnyttja sårbara personer, användning av hot eller våld, eller extremt höga räntor och avgifter.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Vad händer om jag har tagit ett lån med ockerränta?</h4>
+                    <p>Du bör omedelbart kontakta Konsumentverket eller söka juridisk rådgivning. Lånet kan vara ogiltigt eller kunna omprövas, och du kan ha rätt att få tillbaka pengar du betalat utöver vad som är rimligt.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Hur vet jag om ett lån har ockerränta?</h4>
+                    <p>Om räntan överstiger 44% eller om totalkostnaden överstiger dubbla lånebeloppet, bryter lånet mot lagen. Men även lägre räntor kan utgöra ocker om de är oskäliga i relation till omständigheterna och din situation.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Kan banker ta ut ockerränta?</h4>
+                    <p>Traditionella banker följer vanligtvis lagstiftningen och branschpraxis. Dock finns det oseriösa aktörer på marknaden som utger sig för att vara långivare men tar ut oskäliga räntor. Kontrollera alltid att långivaren är registrerad hos Finansinspektionen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Behöver du låna pengar?</h2>
+            <p>Läs om hur du hittar seriösa lån med rimliga villkor och skyddar dig mot ocker</p>
+            <div class="cta-buttons">
+                <a href="/lana-pengar-med-lag-ranta" class="btn btn-primary">Låna med låg ränta</a>
+                <a href="/rantetyper" class="btn btn-secondary">Olika räntetyper</a>
+                <a href="/berakna/effektiv-ranta" class="btn btn-secondary">Beräkna effektiv ränta</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Om Ränta.nu</h3>
+                <ul>
+                    <li><a href="/om-oss">Om oss</a></li>
+                    <li><a href="/kontakt">Kontakt</a></li>
+                    <li><a href="/integritetspolicy">Integritetspolicy</a></li>
+                    <li><a href="/cookiepolicy">Cookiepolicy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Ränteguider</h3>
+                <ul>
+                    <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                    <li><a href="/rantetyper">Olika räntetyper</a></li>
+                    <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                    <li><a href="/basta-rantan">Bästa räntan</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kalkylatorer</h3>
+                <ul>
+                    <li><a href="/berakna/bolaneranta">Bolåneränta</a></li>
+                    <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                    <li><a href="/berakna/ranta-pa-ranta">Ränta-på-ränta</a></li>
+                    <li><a href="/berakna/effektiv-ranta">Effektiv ränta</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Populära sidor</h3>
+                <ul>
+                    <li><a href="/basta-sparrantan">Bästa sparräntan</a></li>
+                    <li><a href="/riksbankens-ranta">Riksbankens ränta</a></li>
+                    <li><a href="/stibor-ranta">STIBOR ränta</a></li>
+                    <li><a href="/csn-ranta">CSN ränta</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ränta.nu - Din guide till räntor och privatekonomi</p>
+        </div>
+    </footer>
+</body>
+</html>

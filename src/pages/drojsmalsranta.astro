@@ -1,0 +1,349 @@
+---
+// Frontmatter
+const pageTitle = "Dröjsmålsränta - Vad är det och hur beräknas den?";
+const pageDescription = "Dröjsmålsränta är en kostnad som uppstår när betalningar görs efter förfallodatum. Lär dig hur den beräknas, vilka regler som gäller och hur du undviker den.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Dröjsmålsränta</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Dröjsmålsränta är en kostnad som uppstår när betalningar görs efter förfallodatum. I Sverige regleras detta genom räntelagen.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content Section -->
+<section class="content-section">
+    <div class="section-inner">
+        <div class="content-row">
+            <div class="content-text">
+                <h2>Vad är dröjsmålsränta?</h2>
+                <p>Dröjsmålsränta är en straffränta som uppstår när du betalar en faktura eller lånebetalning senare än det avtalade förfallodatumet. Den är avsedd att uppmuntra till snabb betalning och kompensera borgenären för förlorad tid och pengar.</p>
+                <p>I Sverige regleras dröjsmålsräntan genom räntelagen om ingen annan överenskommelse finns mellan parterna. Detta innebär att det finns tydliga regler för hur mycket dröjsmålsränta som får tas ut.</p>
+            </div>
+
+            <div class="content-text">
+                <h2>Standardränta enligt lagen</h2>
+                <p>Enligt räntelagen är standardräntan för dröjsmålsränta Riksbankens referensränta plus 8 procentenheter. Detta gäller för betalningar mellan företag och privatpersoner om inget annat avtalats.</p>
+                <p>För 2025 innebär detta en dröjsmålsränta på cirka 11% för de flesta skatteslag (Riksbankens referensränta + 8%). För arvsskatt är räntesatsen lägre, cirka 7,5%.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Calculation Section -->
+<section class="features-section gray">
+    <div class="section-inner">
+        <h2 class="features-title">Så beräknas dröjsmålsränta</h2>
+
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 2px solid #e5e5e5; margin-bottom: 32px;">
+                <h3 style="font-size: 24px; margin-bottom: 24px; color: #1e3a5f; text-align: center;">Beräkningsformel</h3>
+                <div style="background: #f0f5f7; padding: 24px; border-radius: 12px; text-align: center; font-family: monospace; font-size: 18px; margin-bottom: 24px;">
+                    Fakturabelopp × (Referensränta + Räntesats) ÷ 365 × Antal försenade dagar
+                </div>
+                <p style="text-align: center; color: #555;">
+                    Dröjsmålsräntan räknas från dagen efter förfallodatum fram till betalningsdagen.
+                </p>
+            </div>
+
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 2px solid #e5e5e5;">
+                <h3 style="font-size: 20px; margin-bottom: 24px; color: #1e3a5f;">Exempel på beräkning</h3>
+                <div style="margin-bottom: 16px;">
+                    <p style="font-size: 16px; margin-bottom: 8px;"><strong>Scenario:</strong></p>
+                    <ul style="padding-left: 20px; color: #555;">
+                        <li>Fakturabelopp: 10 000 kr</li>
+                        <li>Dröjsmålsränta: 11% (3% referensränta + 8%)</li>
+                        <li>Försenad betalning: 30 dagar</li>
+                    </ul>
+                </div>
+                <div style="background: #f0f5f7; padding: 20px; border-radius: 8px; margin-top: 20px;">
+                    <p style="font-size: 16px; margin-bottom: 8px;">Beräkning:</p>
+                    <p style="font-size: 16px; margin-bottom: 8px;">10 000 × 0,11 ÷ 365 × 30 = <strong>90,41 kr</strong></p>
+                    <p style="font-size: 14px; color: #888; margin-top: 12px;">Total kostnad: 10 000 kr + 90,41 kr = 10 090,41 kr</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How to Avoid Section -->
+<section class="content-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Så undviker du dröjsmålsränta</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3>Betala i tid</h3>
+                <p>Det enklaste sättet att undvika dröjsmålsränta är att alltid betala innan förfallodatum. Sätt upp automatiska betalningar eller påminnelser.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                        <path d="M7 8h10M7 12h10M7 16h6"></path>
+                    </svg>
+                </div>
+                <h3>Granska villkor</h3>
+                <p>Läs alltid igenom betalningsvillkoren noggrant. De flesta fakturor har 30 dagars betalningsvillkor, men det kan variera.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                </div>
+                <h3>Kontakta borgenären</h3>
+                <p>Om du får betalningssvårigheter, kontakta alltid borgenären i förväg. Många är villiga att erbjuda betalningsuppskov eller avbetalningsplan.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3>Budgetera rätt</h3>
+                <p>Håll koll på dina kommande betalningar och se till att du har tillräckligt med pengar på kontot innan förfallodatum.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Consequences Section -->
+<section class="features-section gray">
+    <div class="section-inner">
+        <h2 class="features-title">Konsekvenser av utebliven betalning</h2>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 2px solid #e5e5e5;">
+                <div style="display: flex; gap: 32px; align-items: start; margin-bottom: 32px;">
+                    <div style="width: 48px; height: 48px; background: #fff3e0; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <span style="font-size: 24px; font-weight: 700; color: #f57c00;">1</span>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 20px; margin-bottom: 12px; color: #1e3a5f;">Påminnelse</h3>
+                        <p style="color: #555;">Efter förfallodatum skickas en påminnelse med dröjsmålsränta och ofta en påminnelseavgift.</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 32px; align-items: start; margin-bottom: 32px;">
+                    <div style="width: 48px; height: 48px; background: #ffe0b2; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <span style="font-size: 24px; font-weight: 700; color: #f57c00;">2</span>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 20px; margin-bottom: 12px; color: #1e3a5f;">Inkassokrav</h3>
+                        <p style="color: #555;">Om du fortfarande inte betalar överlämnas ärendet till ett inkassobolag som tillkommer med egna avgifter.</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 32px; align-items: start; margin-bottom: 32px;">
+                    <div style="width: 48px; height: 48px; background: #ffccbc; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <span style="font-size: 24px; font-weight: 700; color: #e64a19;">3</span>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 20px; margin-bottom: 12px; color: #1e3a5f;">Betalningsföreläggande</h3>
+                        <p style="color: #555;">Kronofogden kan utfärda ett betalningsföreläggande som ger dig en sista chans att betala.</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 32px; align-items: start;">
+                    <div style="width: 48px; height: 48px; background: #ffab91; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <span style="font-size: 24px; font-weight: 700; color: #d84315;">4</span>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 20px; margin-bottom: 12px; color: #1e3a5f;">Betalningsanmärkning</h3>
+                        <p style="color: #555;">Vid fortsatt utebliven betalning kan du få en betalningsanmärkning som påverkar din kreditvärdighet i flera år.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Vanliga frågor om dröjsmålsränta</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                </div>
+                <h3>Kan jag bestrida dröjsmålsränta?</h3>
+                <p>Ja, dröjsmålsränta kan bestridas om den är felaktig eller oskälig. Kontakta borgenären skriftligt och förklara varför du anser att kravet är felaktigt.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M2 12h20"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Hur länge kan dröjsmålsränta krävas?</h3>
+                <p>Dröjsmålsränta kan krävas tills skulden är fullt betald, men den får inte vara oskäligt hög. Efter en viss tid kan preskription inträda beroende på typ av fordran.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                        <path d="M7 8h10M7 12h6"></path>
+                    </svg>
+                </div>
+                <h3>Vad är dröjsmålsräntan för skatter 2025?</h3>
+                <p>För 2025 är dröjsmålsräntan cirka 7,5% för arvsskatt och cirka 11% för övriga skatteslag enligt Skatteverkets beräkningar.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Måste jag betala dröjsmålsränta vid tekniska problem?</h3>
+                <p>Om försenad betalning beror på tekniska problem hos din bank eller betaltjänst kan du ofta få dröjsmålsräntan efterskänkt om du kan bevisa detta.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="best-rates">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h2 class="section-title-white" style="margin-bottom: 24px;">Beräkna dröjsmålsränta</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                Använd vår kalkylator för att räkna ut hur mycket dröjsmålsränta du kan behöva betala på försenade fakturor.
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="/berakna" class="btn-primary" style="background: white; color: #1e3a5f;">
+                    Till kalkylatorn
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+                <a href="/artiklar" class="btn-secondary" style="border-color: white; color: white;">
+                    Läs fler artiklar
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                        <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                        <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                        <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                    </svg>
+                </div>
+                <span class="logo-text">Ränta.nu</span>
+            </div>
+            <p>Sedan 2018 har Ränta.nu varit Sveriges mest betrodda källa för oberoende sparrådgivning. Med över 150 000 användare per månad hjälper vi svenskar att fatta smartare beslut om sitt sparande.</p>
+            <div class="footer-contact">
+                E-post: <a href="mailto:[email protected]">[email protected]</a><br>
+                Org.nr: 559342-7891
+            </div>
+        </div>
+
+        <div>
+            <h4>Räkna ränta</h4>
+            <ul>
+                <li><a href="/bolanerakna">Bolåneränta</a></li>
+                <li><a href="/sparranta">Sparränta</a></li>
+                <li><a href="/effektiv-ranta">Effektiv ränta</a></li>
+                <li><a href="/ranta-pa-ranta">Ränta på ränta</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Lär dig mer</h4>
+            <ul>
+                <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                <li><a href="/rantetyper">Olika räntetyper</a></li>
+                <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                <li><a href="/artiklar">Alla artiklar</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Om Ränta.nu</h4>
+            <ul>
+                <li><a href="/om-oss">Om oss</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+                <li><a href="/integritetspolicy">Integritet</a></li>
+                <li><a href="/cookiepolicy">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2025 Ränta.nu. Alla rättigheter förbehållna.</span>
+        <span>Informationen på sidan ersätter inte professionell rådgivning.</span>
+    </div>
+</footer>
+
+</body>
+</html>

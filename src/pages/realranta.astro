@@ -1,0 +1,486 @@
+---
+// Frontmatter
+const pageTitle = "Realränta - Den verkliga avkastningen på ditt sparande | Ränta.nu";
+const pageDescription = "Realränta är räntan justerad för inflation - din verkliga avkastning. Lär dig skillnaden mellan real och nominell ränta och varför det är viktigt för ditt sparande.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Realränta - Din verkliga avkastning</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Realränta är den ränta du erhåller efter justering för inflation. Det är din verkliga köpkraftsförändring.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Current Rate Section -->
+<section class="best-rates">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <h2 class="section-title-white" style="margin-bottom: 32px;">Beräkna realränta</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-bottom: 32px;">
+                <div style="background: rgba(255,255,255,0.15); padding: 24px; border-radius: 12px; backdrop-filter: blur(10px);">
+                    <p style="color: rgba(255,255,255,0.8); font-size: 14px; margin-bottom: 8px;">Nominell ränta</p>
+                    <div style="font-size: 36px; font-weight: 700; color: white;">5,0%</div>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.15); padding: 24px; border-radius: 12px; backdrop-filter: blur(10px);">
+                    <p style="color: rgba(255,255,255,0.8); font-size: 14px; margin-bottom: 8px;">Inflation</p>
+                    <div style="font-size: 36px; font-weight: 700; color: white;">2,0%</div>
+                </div>
+
+                <div style="background: white; padding: 24px; border-radius: 12px;">
+                    <p style="color: #555; font-size: 14px; margin-bottom: 8px;">Realränta</p>
+                    <div style="font-size: 36px; font-weight: 700; color: #1e3a5f;">3,0%</div>
+                </div>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.1); padding: 24px; border-radius: 12px; backdrop-filter: blur(10px);">
+                <p style="color: white; font-size: 18px; line-height: 1.8;">
+                    <strong>Formel:</strong> Realränta = Nominell ränta - Inflation
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Varför realränta är viktig</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        <path d="M12 6v6l4 2"></path>
+                    </svg>
+                </div>
+                <h3>Verklig avkastning</h3>
+                <p>Realräntan visar din faktiska köpkraftsförändring efter att inflationen tagits i beaktande.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                </div>
+                <h3>Jämför sparalternativ</h3>
+                <p>Använd realränta för att jämföra olika sparformer och se vad som verkligen ger bäst avkastning.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3>Undvik köpkraftsförlust</h3>
+                <p>Negativ realränta betyder att dina pengar tappar värde över tid, även om saldot ökar.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Planera långsiktigt</h3>
+                <p>För långsiktigt sparande är realräntan avgörande för att förstå hur ditt kapital utvecklas.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                        <path d="M7 8h10M7 12h6"></path>
+                    </svg>
+                </div>
+                <h3>Förstå lånekosnader</h3>
+                <p>Realräntan visar också den verkliga kostnaden för lån efter inflationsjustering.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    </svg>
+                </div>
+                <h3>Investera smart</h3>
+                <p>Jämför realräntan på olika investeringar för att fatta välgrundade beslut om ditt sparande.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What is Section -->
+<section class="content-section">
+    <div class="section-inner">
+        <div class="content-row">
+            <div class="content-text">
+                <h2>Vad är realränta?</h2>
+                <p>Realränta är den ränta du faktiskt erhåller efter att inflationen tagits i beaktande. Den visar den verkliga förändringen i din köpkraft, inte bara den nominella ökningen av ditt saldo.</p>
+                <p>Om du till exempel får 5% ränta på ditt sparkonto (nominell ränta) men inflationen är 2%, är din realränta bara 3%. Det betyder att din köpkraft har ökat med 3%, inte 5%.</p>
+                <p>Realräntan är särskilt viktig för långsiktigt sparande och investeringar, eftersom den visar om ditt kapital verkligen växer i verkligt värde eller om inflationen äter upp din avkastning.</p>
+            </div>
+
+            <div class="content-text">
+                <div style="background: #f0f5f7; padding: 40px; border-radius: 16px; border: 2px solid #e5e5e5;">
+                    <h3 style="font-size: 24px; margin-bottom: 24px; color: #0c1935;">Viktiga begrepp</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="padding: 12px 0; border-bottom: 1px solid #e0e0e0;">
+                            <strong style="color: #1e3a5f;">Nominell ränta:</strong> Den angivna räntan från banken
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid #e0e0e0;">
+                            <strong style="color: #1e3a5f;">Inflation:</strong> Ökningen av den allmänna prisnivån
+                        </li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid #e0e0e0;">
+                            <strong style="color: #1e3a5f;">Realränta:</strong> Nominell ränta minus inflation
+                        </li>
+                        <li style="padding: 12px 0;">
+                            <strong style="color: #1e3a5f;">Köpkraft:</strong> Vad dina pengar faktiskt kan köpa
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Examples Section -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 48px;">Praktiska exempel på realränta</h2>
+
+            <div style="display: grid; gap: 32px;">
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Exempel 1: Positiv realränta</h3>
+                    <div style="background: #f0f5f7; padding: 24px; border-radius: 8px; margin-bottom: 16px;">
+                        <p style="margin-bottom: 12px;"><strong>Du sparar 100 000 kr på ett sparkonto</strong></p>
+                        <p>Nominell ränta: 5,0%</p>
+                        <p>Inflation: 2,0%</p>
+                        <p style="color: #1e3a5f; font-weight: 600; margin-top: 12px;">Realränta: 3,0%</p>
+                    </div>
+                    <p style="color: #555; line-height: 1.8;">
+                        <strong>Resultat:</strong> Efter ett år har du 105 000 kr. Men priserna har stigit med 2%, så den verkliga ökningen i köpkraft är endast 3 000 kr. Din realränta är 3%.
+                    </p>
+                </div>
+
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #d32f2f;">Exempel 2: Negativ realränta</h3>
+                    <div style="background: #ffebee; padding: 24px; border-radius: 8px; margin-bottom: 16px;">
+                        <p style="margin-bottom: 12px;"><strong>Du sparar 100 000 kr på ett sparkonto</strong></p>
+                        <p>Nominell ränta: 1,0%</p>
+                        <p>Inflation: 3,0%</p>
+                        <p style="color: #d32f2f; font-weight: 600; margin-top: 12px;">Realränta: -2,0%</p>
+                    </div>
+                    <p style="color: #555; line-height: 1.8;">
+                        <strong>Resultat:</strong> Efter ett år har du 101 000 kr nominellt. Men eftersom priserna stigit med 3% har din köpkraft minskat. Du förlorar faktiskt 2% i köpkraft trots att saldot ökat!
+                    </p>
+                </div>
+
+                <div style="background: white; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">Exempel 3: Lån och realränta</h3>
+                    <div style="background: #f0f5f7; padding: 24px; border-radius: 8px; margin-bottom: 16px;">
+                        <p style="margin-bottom: 12px;"><strong>Du har ett bolån på 2 000 000 kr</strong></p>
+                        <p>Nominell bolåneränta: 4,0%</p>
+                        <p>Inflation: 2,5%</p>
+                        <p style="color: #1e3a5f; font-weight: 600; margin-top: 12px;">Real lånekostnad: 1,5%</p>
+                    </div>
+                    <p style="color: #555; line-height: 1.8;">
+                        <strong>Resultat:</strong> Du betalar 80 000 kr i ränta per år (4%), men eftersom inflationen är 2,5% är din verkliga kostnad endast 1,5%. Inflation gör att lån blir "billigare" i reala termer.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Comparison Section -->
+<section class="content-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Nominell ränta vs Realränta</h2>
+
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+                <div style="background: #f0f5f7; padding: 40px; border-radius: 16px; border: 2px solid #1e3a5f;">
+                    <div style="text-align: center; margin-bottom: 24px;">
+                        <div style="width: 64px; height: 64px; background: #1e3a5f; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: 24px; color: #1e3a5f;">Nominell ränta</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0; color: #555;">
+                        <li style="padding: 12px 0; border-bottom: 1px solid #d0d0d0;">Den ränta banken anger</li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid #d0d0d0;">Tar inte hänsyn till inflation</li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid #d0d0d0;">Visar nominell saldoförändring</li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid #d0d0d0;">Lätt att jämföra mellan banker</li>
+                        <li style="padding: 12px 0;">Kan vara missvisande på lång sikt</li>
+                    </ul>
+                </div>
+
+                <div style="background: #e8f4f8; padding: 40px; border-radius: 16px; border: 2px solid #2196F3;">
+                    <div style="text-align: center; margin-bottom: 24px;">
+                        <div style="width: 64px; height: 64px; background: #2196F3; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <h3 style="font-size: 24px; color: #2196F3;">Realränta</h3>
+                    </div>
+                    <ul style="list-style: none; padding: 0; color: #555;">
+                        <li style="padding: 12px 0; border-bottom: 1px solid #c0d0d0;">Nominell ränta minus inflation</li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid #c0d0d0;">Visar verklig köpkraftsförändring</li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid #c0d0d0;">Viktig för långsiktigt sparande</li>
+                        <li style="padding: 12px 0; border-bottom: 1px solid #c0d0d0;">Kan vara negativ vid hög inflation</li>
+                        <li style="padding: 12px 0;">Ger den sanna bilden av avkastning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Impact Section -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Så påverkar realräntan dina beslut</h2>
+
+        <div class="content-row">
+            <div class="content-text">
+                <h3>För sparare</h3>
+                <p>Om realräntan är negativ tappar dina pengar värde över tid, även om kontosaldot ökar. Det är därför viktigt att leta efter sparformer som ger en positiv realränta.</p>
+                <p>Under perioder med hög inflation och låg nominell ränta kan till och med traditionellt säkert sparande på bankkonto leda till köpkraftsförluster. Då kan andra sparformer som fonder eller aktier vara att föredra.</p>
+            </div>
+
+            <div class="content-text">
+                <h3>För låntagare</h3>
+                <p>Hög inflation och därmed låg eller negativ realränta på lån kan faktiskt vara fördelaktigt för låntagare. Den reala kostnaden för lånet minskar när inflationen är hög.</p>
+                <p>Om du har ett bolån med 4% ränta men inflationen är 3%, är din verkliga lånekostnad bara 1%. Det är därför bolån historiskt har kunnat vara en bra investering i perioder med hög inflation.</p>
+            </div>
+        </div>
+
+        <div class="content-row" style="margin-top: 32px;">
+            <div class="content-text">
+                <h3>För investerare</h3>
+                <p>När du jämför olika investeringsalternativ är realräntan avgörande. En investering som ger 6% avkastning kan låta bra, men om inflationen är 5% är realavkastningen bara 1%.</p>
+                <p>Framför allt vid långsiktigt sparande till pensionen är det viktigt att sikta på en god realränta för att säkerställa att ditt kapital växer i verkligt värde.</p>
+            </div>
+
+            <div class="content-text">
+                <h3>För ekonomin</h3>
+                <p>Realräntan påverkar ekonomiska beslut i hela samhället. När realräntan är låg eller negativ stimuleras konsumtion och investeringar, medan hög realränta uppmuntrar sparande.</p>
+                <p>Riksbanken tar hänsyn till realräntan när de sätter styrräntan, eftersom den påverkar hur penningpolitiken faktiskt påverkar ekonomin och människors beteende.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Vanliga frågor om realränta</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                </div>
+                <h3>Hur beräknar jag realräntan?</h3>
+                <p>Subtrahera inflationstakten från den nominella räntan. Exempel: 5% nominell ränta - 2% inflation = 3% realränta.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M2 12h20"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Vad är en bra realränta?</h3>
+                <p>En positiv realränta är önskvärd för sparande. Ju högre realränta, desto mer växer din köpkraft över tid.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Kan realräntan vara negativ?</h3>
+                <p>Ja, när inflationen är högre än den nominella räntan blir realräntan negativ. Då tappar dina pengar köpkraft.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 1v6m0 6v6M7 8l5 5 5-5"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Vilken inflation ska jag använda?</h3>
+                <p>Använd den senaste årliga inflationen enligt SCB:s konsumentprisindex (KPI) för mest aktuella beräkningar.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                        <path d="M7 8h10M7 12h6"></path>
+                    </svg>
+                </div>
+                <h3>Varför anger inte banker realränta?</h3>
+                <p>Realräntan varierar med inflationen och är därför svår att ange i förväg. Banker anger alltid nominell ränta.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        <path d="M12 6v6l4 2"></path>
+                    </svg>
+                </div>
+                <h3>Påverkar skatt realräntan?</h3>
+                <p>Ja, för en komplett bild bör du räkna på realräntan efter skatt på kapitalinkomster (30%).</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="best-rates">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h2 class="section-title-white" style="margin-bottom: 24px;">Hitta bästa sparräntan</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                Jämför sparräntor från alla banker och hitta det alternativ som ger dig bäst realränta.
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="/basta-rantan" class="btn-primary" style="background: white; color: #1e3a5f;">
+                    Jämför sparräntor
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+                <a href="/berakna" class="btn-secondary" style="border-color: white; color: white;">
+                    Räkna på ränta
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                        <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                        <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                        <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                    </svg>
+                </div>
+                <span class="logo-text">Ränta.nu</span>
+            </div>
+            <p>Sedan 2018 har Ränta.nu varit Sveriges mest betrodda källa för oberoende sparrådgivning. Med över 150 000 användare per månad hjälper vi svenskar att fatta smartare beslut om sitt sparande.</p>
+            <div class="footer-contact">
+                E-post: <a href="mailto:info@ranta.nu">info@ranta.nu</a><br>
+                Org.nr: 559342-7891
+            </div>
+        </div>
+
+        <div>
+            <h4>Räkna ränta</h4>
+            <ul>
+                <li><a href="/bolanerakna">Bolåneränta</a></li>
+                <li><a href="/sparranta">Sparränta</a></li>
+                <li><a href="/effektiv-ranta">Effektiv ränta</a></li>
+                <li><a href="/ranta-pa-ranta">Ränta på ränta</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Lär dig mer</h4>
+            <ul>
+                <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                <li><a href="/rantetyper">Olika räntetyper</a></li>
+                <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                <li><a href="/artiklar">Alla artiklar</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Om Ränta.nu</h4>
+            <ul>
+                <li><a href="/om-oss">Om oss</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+                <li><a href="/integritetspolicy">Integritet</a></li>
+                <li><a href="/cookiepolicy">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2025 Ränta.nu. Alla rättigheter förbehållna.</span>
+        <span>Informationen på sidan ersätter inte professionell rådgivning.</span>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,708 @@
+---
+// Referensränta - Information om Sveriges referensränta
+---
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referensränta - Vad är referensränta och hur påverkar den dig?</title>
+    <meta name="description" content="Allt om Sveriges referensränta: hur den fastställs av Riksbanken, vad den används till och hur den påverkar dina lån och sparande.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: #1e3a5f;
+            background: linear-gradient(135deg, #f0f5f7 0%, #ffffff 100%);
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            text-decoration: none;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .content-section {
+            background: white;
+            padding: 3rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: #1e3a5f;
+            margin-bottom: 1.5rem;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            border-left: 5px solid #28a745;
+            padding-left: 1rem;
+        }
+
+        .content-section h3 {
+            font-size: 1.5rem;
+            color: #2c5282;
+            margin: 2rem 0 1rem 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .content-section p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .content-section ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .content-section li {
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+        }
+
+        .current-rate {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 2rem 0;
+            box-shadow: 0 4px 12px rgba(40,167,69,0.2);
+        }
+
+        .current-rate h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .current-rate .rate {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 0.5rem 0;
+        }
+
+        .current-rate .date {
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            border-left: 5px solid #1e3a5f;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .info-box strong {
+            color: #1e3a5f;
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border-left: 5px solid #ffc107;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box strong {
+            color: #1e3a5f;
+            font-weight: 600;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .comparison-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            border-top: 4px solid #1e3a5f;
+        }
+
+        .comparison-card h4 {
+            color: #1e3a5f;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .comparison-card .label {
+            font-weight: 600;
+            color: #2c5282;
+            margin-bottom: 0.5rem;
+        }
+
+        .comparison-card ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+
+        .usage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .usage-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-top: 4px solid #28a745;
+            transition: transform 0.3s;
+        }
+
+        .usage-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+
+        .usage-card h4 {
+            color: #1e3a5f;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .usage-card p {
+            margin-bottom: 0;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+            margin: 2rem 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-left: 3px solid #1e3a5f;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -0.6rem;
+            top: 0;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background: #28a745;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #28a745;
+        }
+
+        .timeline-item h4 {
+            color: #1e3a5f;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            margin-top: 2rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .faq-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+        }
+
+        .faq-item h4 {
+            color: #1e3a5f;
+            margin-bottom: 0.8rem;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .faq-item p {
+            margin-bottom: 0;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .cta-section h2 {
+            color: white;
+            border: none;
+            padding: 0;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #28a745;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(40,167,69,0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #1e3a5f;
+        }
+
+        .btn-secondary:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255,255,255,0.3);
+        }
+
+        footer {
+            background: #1e3a5f;
+            color: white;
+            padding: 3rem 2rem 1.5rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .content-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .current-rate .rate {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Ränta.nu</a>
+            <ul class="nav-links">
+                <li><a href="/">Hem</a></li>
+                <li><a href="/om-oss">Om oss</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Referensränta</h1>
+        <p>Sveriges officiella referensränta - grunden för dröjsmålsräntor och andra räntesatser</p>
+    </section>
+
+    <div class="container">
+        <div class="current-rate">
+            <h3>Aktuell referensränta</h3>
+            <div class="rate">2,00%</div>
+            <div class="date">Gäller från 1 januari 2026 | Nästa revidering: 1 juli 2026</div>
+        </div>
+
+        <div class="content-section">
+            <h2>Vad är referensränta?</h2>
+            <p>Referensräntan är en officiell räntesats som fastställs av Sveriges Riksbank och som revideras två gånger per år - den 1 januari och den 1 juli. Denna ränta fungerar som en viktig referenspunkt i det svenska ekonomiska systemet och används som grund för att beräkna dröjsmålsräntor och andra räntor i olika typer av avtal och juridiska sammanhang.</p>
+
+            <p>Referensräntan har en direkt koppling till Riksbankens reporänta, som är det centrala verktyg centralbanken använder i sin penningpolitik. Referensräntan beräknas genom att reporäntan avrundas uppåt till närmaste halva procentenhet.</p>
+
+            <div class="info-box">
+                <strong>Viktigt att veta:</strong> Referensräntan fastställs två gånger per år och gäller under sex månader i taget. Detta ger förutsägbarhet för företag och privatpersoner som behöver beräkna framtida räntekostnader.
+            </div>
+
+            <h3>Hur beräknas referensräntan?</h3>
+            <p>Beräkningen av referensräntan följer en enkel formel:</p>
+
+            <div class="highlight-box">
+                <strong>Beräkningsmetod:</strong> Referensräntan = Reporäntan avrundad uppåt till närmaste halva procentenhet.
+                <p style="margin-top: 1rem; margin-bottom: 0;">Exempel: Om reporäntan är 1,75% avrundas den uppåt till 2,00%, vilket blir referensräntan.</p>
+            </div>
+
+            <p>Denna avrundningsmetod innebär att referensräntan alltid är lika med eller något högre än reporäntan. Skillnaden kan vara från 0 till 0,49 procentenheter beroende på var reporäntan befinner sig i förhållande till närmaste halva procentenhet.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Historik - från diskonto till referensränta</h2>
+            <p>Referensräntan i sin nuvarande form introducerades den 1 januari 1994 och ersatte det tidigare systemet med diskonto. Detta var en del av en större reform av det svenska penningpolitiska systemet.</p>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Före 1994 - Diskontosystemet</h4>
+                    <p>Sverige använde diskontot som referensränta. Detta var den ränta till vilken Riksbanken diskonterade (köpte) växlar från affärsbankerna.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>1 januari 1994 - Införande av referensränta</h4>
+                    <p>Referensräntan infördes som en del av det nya penningpolitiska ramverket. Reporäntan blev samtidigt Riksbankens huvudsakliga styrränta.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>1995 - Inflationsmålsättning</h4>
+                    <p>Sverige införde ett tydligt inflationsmål på 2%, vilket tydliggjorde Riksbankens mandat och hur referensräntan skulle användas.</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Idag - Etablerat system</h4>
+                    <p>Referensräntan är väletablerad som grund för dröjsmålsräntor och andra juridiska ränteberäkningar. Systemet har fungerat väl i över 30 år.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Vad används referensräntan till?</h2>
+            <p>Referensräntan har flera viktiga användningsområden i det svenska samhället:</p>
+
+            <div class="usage-grid">
+                <div class="usage-card">
+                    <h4>Dröjsmålsränta</h4>
+                    <p>Referensräntan plus 8 procentenheter utgör den lagstadgade dröjsmålsräntan vid försenade betalningar mellan företag och vid konsumentköp.</p>
+                </div>
+                <div class="usage-card">
+                    <h4>Skatteberäkningar</h4>
+                    <p>Används som grund för att beräkna ränta på skattekonton, både när du ska få tillbaka skatt och när du är skyldig skatt till Skatteverket.</p>
+                </div>
+                <div class="usage-card">
+                    <h4>Juridiska sammanhang</h4>
+                    <p>Många lagar och förordningar hänvisar till referensräntan som grund för olika typer av ränteberäkningar, till exempel vid skadestånd.</p>
+                </div>
+                <div class="usage-card">
+                    <h4>Kommersiella avtal</h4>
+                    <p>Företag använder ofta referensräntan som bas i kommersiella avtal, särskilt för att beräkna dröjsmålsränta vid försenade betalningar.</p>
+                </div>
+                <div class="usage-card">
+                    <h4>Ränta på fordran</h4>
+                    <p>Vid rättsprocesser används referensräntan för att beräkna ränta på fordringar från den dag kravet uppstod till dess att betalning sker.</p>
+                </div>
+                <div class="usage-card">
+                    <h4>Offentliga avgifter</h4>
+                    <p>Statliga myndigheter och kommuner använder referensräntan som grund för ränta på olika typer av avgifter och förseningsavgifter.</p>
+                </div>
+            </div>
+
+            <h3>Dröjsmålsränta i praktiken</h3>
+            <p>Den vanligaste tillämpningen av referensräntan är för att beräkna dröjsmålsränta. Enligt räntelagen är dröjsmålsräntan:</p>
+
+            <div class="info-box">
+                <strong>Dröjsmålsränta = Referensräntan + 8 procentenheter</strong>
+                <p style="margin-top: 1rem; margin-bottom: 0;">Med en referensränta på 2,00% blir dröjsmålsräntan således 10,00% per år. Detta gäller från den dag betalning skulle ha skett till dess att betalning faktiskt görs.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Hur Riksbanken påverkar referensräntan</h2>
+            <p>Även om referensräntan fastställs genom en matematisk formel baserad på reporäntan, är det Riksbankens beslut om reporäntan som i slutändan styr referensräntans nivå.</p>
+
+            <h3>Reporäntan som styrverktyg</h3>
+            <p>Reporäntan är det främsta verktyg Riksbanken använder för att styra inflationen och hålla den nära målet på 2 procent. När Riksbanken höjer eller sänker reporäntan påverkar det:</p>
+
+            <ul>
+                <li><strong>Bankernas utlåningsräntor:</strong> Högre reporänta leder vanligtvis till högre räntor på bolån och andra lån</li>
+                <li><strong>Sparräntor:</strong> När reporäntan stiger blir det mer attraktivt att spara pengar</li>
+                <li><strong>Referensräntan:</strong> Genom avrundningsmekanismen påverkas också referensräntan och därmed dröjsmålsräntorna</li>
+                <li><strong>Ekonomisk aktivitet:</strong> Räntehöjningar dämpar ekonomin medan räntesänkningar stimulerar den</li>
+            </ul>
+
+            <h3>Beslutsmöten och kommunikation</h3>
+            <p>Riksbanken håller åtta penningpolitiska möten per år där de beslutar om reporäntans nivå. Dessa beslut kommuniceras öppet och tydligt, vilket ger möjlighet för marknaden att förbereda sig inför förändringar i både reporäntan och i förlängningen referensräntan.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Skillnaden mellan referensränta och andra räntor</h2>
+
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <h4>Referensränta</h4>
+                    <div class="label">Syfte:</div>
+                    <p>Grund för dröjsmålsräntor och juridiska ränteberäkningar</p>
+                    <div class="label" style="margin-top: 1rem;">Fastställs av:</div>
+                    <p>Riksbanken, baserat på reporäntan</p>
+                    <div class="label" style="margin-top: 1rem;">Ändras:</div>
+                    <p>Två gånger per år (1 jan och 1 juli)</p>
+                </div>
+
+                <div class="comparison-card">
+                    <h4>Styrränta (Reporänta)</h4>
+                    <div class="label">Syfte:</div>
+                    <p>Verktyg för att styra inflationen och ekonomin</p>
+                    <div class="label" style="margin-top: 1rem;">Fastställs av:</div>
+                    <p>Riksbankens direktion</p>
+                    <div class="label" style="margin-top: 1rem;">Ändras:</div>
+                    <p>Kan ändras vid varje penningpolitiskt möte (8 per år)</p>
+                </div>
+
+                <div class="comparison-card">
+                    <h4>Marknadsräntor</h4>
+                    <div class="label">Syfte:</div>
+                    <p>Räntor på lån och sparande för konsumenter och företag</p>
+                    <div class="label" style="margin-top: 1rem;">Fastställs av:</div>
+                    <p>Banker och finansiella institut</p>
+                    <div class="label" style="margin-top: 1rem;">Ändras:</div>
+                    <p>Kontinuerligt baserat på marknadssituationen</p>
+                </div>
+            </div>
+
+            <p>Den viktigaste skillnaden är att referensräntan är en passiv referenspunkt som följer reporäntan, medan styrräntan (reporäntan) är ett aktivt verktyg som Riksbanken använder för att påverka ekonomin. Marknadsräntorna påverkas av både reporäntan och andra faktorer som konkurrens, risk och marknadssituation.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Hur påverkar referensräntan din ekonomi?</h2>
+            <p>Referensräntan kan påverka din privatekonomi på flera sätt, även om effekten ofta är indirekt:</p>
+
+            <h3>Vid försenade betalningar</h3>
+            <p>Om någon är skyldig dig pengar och betalar för sent har du rätt till dröjsmålsränta, som beräknas med referensräntan plus 8 procentenheter. Omvänt gäller samma räntesats om du själv betalar för sent.</p>
+
+            <h3>Vid skatteåterbäring eller skatteskuld</h3>
+            <p>Räntan på ditt skattekonto hos Skatteverket baseras delvis på referensräntan. Om du får pengar tillbaka från Skatteverket får du ränta, och om du är skyldig pengar debiteras du ränta enligt bestämda regler som relaterar till referensräntan.</p>
+
+            <h3>I juridiska ärenden</h3>
+            <p>Om du är inblandad i en rättstvist där pengar är inblandade, används referensräntan ofta som grund för att beräkna ränta på det omtvistade beloppet.</p>
+
+            <h3>Indirekt påverkan via reporäntan</h3>
+            <p>Eftersom referensräntan följer reporäntan, och reporäntan påverkar alla räntor i ekonomin, har referensräntan en indirekt koppling till räntorna på dina lån och ditt sparande.</p>
+        </div>
+
+        <div class="faq-section">
+            <h2>Vanliga frågor om referensränta</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Hur beräknas referensräntan?</h4>
+                    <p>Referensräntan beräknas genom att Riksbankens reporänta avrundas uppåt till närmaste halva procentenhet. Om reporäntan är 1,75% blir referensräntan 2,00%. Om reporäntan är 2,00% förblir referensräntan 2,00%.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Vad är skillnaden mellan referensränta och styrränta?</h4>
+                    <p>Styrräntan (reporäntan) är det verktyg Riksbanken använder för att aktivt styra inflationen och ekonomin. Referensräntan är en passiv ränta som baseras på styrräntan och används som referenspunkt för dröjsmålsräntor och juridiska ränteberäkningar.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Hur påverkar referensräntan mig personligen?</h4>
+                    <p>Referensräntan påverkar dig främst genom dröjsmålsräntan när du betalar eller tar emot försenade betalningar, och genom räntan på ditt skattekonto. Den påverkar också indirekt låneräntor och sparräntor eftersom den följer styrräntan.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>När ändras referensräntan?</h4>
+                    <p>Referensräntan ändras två gånger per år: den 1 januari och den 1 juli. Den nya nivån baseras på reporäntan vid dessa tidpunkter och gäller sedan i sex månader.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Vad är dröjsmålsränta och hur beräknas den?</h4>
+                    <p>Dröjsmålsränta är den ränta du har rätt att ta ut när någon betalar för sent, eller som du måste betala när du själv betalar för sent. Den beräknas som referensräntan plus 8 procentenheter enligt räntelagen.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Kan referensräntan bli negativ?</h4>
+                    <p>I teorin ja, om reporäntan blir tillräckligt negativ. Men eftersom referensräntan avrundas uppåt till närmaste halva procentenhet, skulle reporäntan behöva vara lägre än -0,50% för att referensräntan ska bli negativ. Detta har inte inträffat i Sverige.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Vill du veta mer om räntor?</h2>
+            <p>Utforska våra guider och verktyg för att förstå olika räntetyper och hur de påverkar din ekonomi</p>
+            <div class="cta-buttons">
+                <a href="/riksbankens-ranta" class="btn btn-primary">Riksbankens ränta</a>
+                <a href="/rantetyper" class="btn btn-secondary">Olika räntetyper</a>
+                <a href="/rantelagen" class="btn btn-secondary">Räntelagen</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Om Ränta.nu</h3>
+                <ul>
+                    <li><a href="/om-oss">Om oss</a></li>
+                    <li><a href="/kontakt">Kontakt</a></li>
+                    <li><a href="/integritetspolicy">Integritetspolicy</a></li>
+                    <li><a href="/cookiepolicy">Cookiepolicy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Ränteguider</h3>
+                <ul>
+                    <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                    <li><a href="/rantetyper">Olika räntetyper</a></li>
+                    <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                    <li><a href="/basta-rantan">Bästa räntan</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Kalkylatorer</h3>
+                <ul>
+                    <li><a href="/berakna/bolaneranta">Bolåneränta</a></li>
+                    <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                    <li><a href="/berakna/ranta-pa-ranta">Ränta-på-ränta</a></li>
+                    <li><a href="/berakna/effektiv-ranta">Effektiv ränta</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Populära sidor</h3>
+                <ul>
+                    <li><a href="/basta-sparrantan">Bästa sparräntan</a></li>
+                    <li><a href="/riksbankens-ranta">Riksbankens ränta</a></li>
+                    <li><a href="/stibor-ranta">STIBOR ränta</a></li>
+                    <li><a href="/csn-ranta">CSN ränta</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ränta.nu - Din guide till räntor och privatekonomi</p>
+        </div>
+    </footer>
+</body>
+</html>

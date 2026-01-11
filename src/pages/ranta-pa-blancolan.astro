@@ -1,0 +1,470 @@
+---
+// Frontmatter
+const pageTitle = "Ränta på blancolan - Så fungerar det och vad du bör tänka på | Ränta.nu";
+const pageDescription = "Läs om hur räntan på blancolan fungerar, vad som påverkar din ränta och hur du får lägsta möjliga räntekostnad på ditt privatlån.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Ränta på blancolan</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Ett blancolan är ett lån utan säkerhet där räntan bestäms av din kreditvärdighet. Lär dig hur räntan fungerar och hur du får bästa villkor.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Current Rates -->
+<section class="best-rates">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 900px; margin: 0 auto;">
+            <h2 class="section-title-white" style="margin-bottom: 32px;">Typiska räntor på blancolan 2025</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-top: 32px;">
+                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 32px;">
+                    <div style="font-size: 16px; color: rgba(255,255,255,0.9); margin-bottom: 12px;">Bästa kreditvärdighet</div>
+                    <div style="font-size: 48px; font-weight: 700; color: white; margin-bottom: 8px;">5-8%</div>
+                    <div style="font-size: 14px; color: rgba(255,255,255,0.8);">Effektiv ränta</div>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 32px;">
+                    <div style="font-size: 16px; color: rgba(255,255,255,0.9); margin-bottom: 12px;">Genomsnittlig kreditvärdighet</div>
+                    <div style="font-size: 48px; font-weight: 700; color: white; margin-bottom: 8px;">9-15%</div>
+                    <div style="font-size: 14px; color: rgba(255,255,255,0.8);">Effektiv ränta</div>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 32px;">
+                    <div style="font-size: 16px; color: rgba(255,255,255,0.9); margin-bottom: 12px;">Lägre kreditvärdighet</div>
+                    <div style="font-size: 48px; font-weight: 700; color: white; margin-bottom: 8px;">16-30%</div>
+                    <div style="font-size: 14px; color: rgba(255,255,255,0.8);">Effektiv ränta</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What is it -->
+<section class="content-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Vad är ett blancolan?</h2>
+
+        <div class="content-row">
+            <div class="content-text">
+                <h3>Lån utan säkerhet</h3>
+                <p>Ett blancolan är ett privatlån där du inte behöver ställa någon säkerhet, till skillnad från bolån där bostaden fungerar som säkerhet. Detta kallas också för blancolån eller privatlån.</p>
+                <p>Eftersom banken tar större risk när de lånar ut pengar utan säkerhet är räntan högre än för lån med säkerhet. Din kreditvärdighet blir därför extra viktig när banken bestämmer vilken ränta du erbjuds.</p>
+            </div>
+
+            <div class="content-text">
+                <h3>Vanliga användningsområden</h3>
+                <p>Blancolan används ofta för att:</p>
+                <ul style="line-height: 2; color: #555;">
+                    <li>Samla dyra krediter och lån</li>
+                    <li>Finansiera renovering eller bilköp</li>
+                    <li>Betala oväntade utgifter</li>
+                    <li>Köpa möbler eller elektronik</li>
+                    <li>Finansiera studier eller kurser</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What affects the rate -->
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Vad påverkar räntan på ditt blancolan?</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <h3>Din kreditvärdighet</h3>
+                <p>Din kreditupplysning från UC är den viktigaste faktorn. Betalningsanmärkningar eller hög skuldsättning ger högre ränta.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3>Din inkomst</h3>
+                <p>Högre och stabilare inkomst ger bättre ränta. Banken vill se att du har god betalningsförmåga.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                </div>
+                <h3>Lånebelopp och tid</h3>
+                <p>Större lån och längre återbetalningstid kan ge högre ränta på grund av ökad risk för banken.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <h3>Befintliga skulder</h3>
+                <p>Många lån och hög skuldsättning påverkar din kreditvärdighet negativt och ger högre ränta.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                </div>
+                <h3>Marknadsläget</h3>
+                <p>Riksbankens styrränta påverkar alla låneräntor. Höjd styrränta leder till högre blancoräntor.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                        <path d="M7 8h10M7 12h6"></path>
+                    </svg>
+                </div>
+                <h3>Val av långivare</h3>
+                <p>Olika banker och långivare har olika riskbedömningar och kan erbjuda olika räntor för samma person.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cost example -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Räkneexempel: Vad kostar blancolån?</h2>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                <h3 style="font-size: 24px; margin-bottom: 24px; color: #1e3a5f; text-align: center;">Lån på 100 000 kr i 5 år</h3>
+
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="background: #f8f9fa; border-bottom: 2px solid #e5e5e5;">
+                                <th style="padding: 16px; text-align: left; font-weight: 600; color: #1e3a5f;">Effektiv ränta</th>
+                                <th style="padding: 16px; text-align: right; font-weight: 600; color: #1e3a5f;">Månadskostnad</th>
+                                <th style="padding: 16px; text-align: right; font-weight: 600; color: #1e3a5f;">Total kostnad</th>
+                                <th style="padding: 16px; text-align: right; font-weight: 600; color: #1e3a5f;">Ränta totalt</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #f0f0f0;">
+                                <td style="padding: 16px; font-weight: 600; color: #28a745;">6%</td>
+                                <td style="padding: 16px; text-align: right;">1 933 kr</td>
+                                <td style="padding: 16px; text-align: right;">115 980 kr</td>
+                                <td style="padding: 16px; text-align: right; color: #28a745;">15 980 kr</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f0f0f0;">
+                                <td style="padding: 16px; font-weight: 600; color: #ffc107;">10%</td>
+                                <td style="padding: 16px; text-align: right;">2 125 kr</td>
+                                <td style="padding: 16px; text-align: right;">127 500 kr</td>
+                                <td style="padding: 16px; text-align: right; color: #ffc107;">27 500 kr</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #f0f0f0;">
+                                <td style="padding: 16px; font-weight: 600; color: #ff6b00;">15%</td>
+                                <td style="padding: 16px; text-align: right;">2 379 kr</td>
+                                <td style="padding: 16px; text-align: right;">142 740 kr</td>
+                                <td style="padding: 16px; text-align: right; color: #ff6b00;">42 740 kr</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 16px; font-weight: 600; color: #dc3545;">20%</td>
+                                <td style="padding: 16px; text-align: right;">2 650 kr</td>
+                                <td style="padding: 16px; text-align: right;">159 000 kr</td>
+                                <td style="padding: 16px; text-align: right; color: #dc3545;">59 000 kr</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top: 32px; padding: 24px; background: #e8f4f8; border-radius: 8px;">
+                    <p style="color: #555; line-height: 1.8; margin: 0;">
+                        <strong>Skillnaden mellan 6% och 20% ränta:</strong> På ett lån på 100 000 kr betalar du 43 020 kr mer i ränta med 20% jämfört med 6% över 5 år. Därför är det viktigt att jämföra och få bästa möjliga ränta.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How to get lower rate -->
+<section class="content-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Så får du lägre ränta på ditt blancolan</h2>
+
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="display: grid; gap: 24px;">
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">1. Förbättra din kreditvärdighet</h3>
+                    <p style="color: #555; line-height: 1.8;">Betala alla räkningar i tid, amortera på befintliga lån och undvik nya krediter innan du ansöker. En högre kreditvärdighet ger markant lägre ränta.</p>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">2. Jämför flera långivare</h3>
+                    <p style="color: #555; line-height: 1.8;">Olika banker och långivare bedömer risk olika och erbjuder olika räntor. Ansök hos flera samtidigt för att hitta bästa erbjudandet.</p>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">3. Låna rätt belopp</h3>
+                    <p style="color: #555; line-height: 1.8;">Låna inte mer än du behöver. Högre lånebelopp kan ge högre ränta, och du betalar ränta på alla pengar du lånar oavsett om du använder dem.</p>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">4. Välj kortare återbetalningstid</h3>
+                    <p style="color: #555; line-height: 1.8;">Kortare återbetalningstid kan ge lägre ränta och du betalar mindre i total räntekostnad, även om månadskostnaden blir högre.</p>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">5. Samla dina lån</h3>
+                    <p style="color: #555; line-height: 1.8;">Har du flera små lån med hög ränta kan du ofta samla dem i ett blancolån med lägre ränta och få bättre överblick över din ekonomi.</p>
+                </div>
+
+                <div style="background: #f0f5f7; padding: 32px; border-radius: 12px; border: 1px solid #e5e5e5;">
+                    <h3 style="font-size: 22px; margin-bottom: 16px; color: #1e3a5f;">6. Använd din banks relationserbjudande</h3>
+                    <p style="color: #555; line-height: 1.8;">Om du redan är kund hos en bank kan du få bättre villkor. Banken känner dig och kan erbjuda lägre ränta baserat på din relationshistorik.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Warning section -->
+<section class="content-section gray">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div style="background: #fff3cd; border: 2px solid #ffc107; border-radius: 12px; padding: 40px;">
+                <div style="display: flex; align-items: start; gap: 24px;">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ff6b00" stroke-width="2">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                    <div>
+                        <h3 style="font-size: 24px; margin-bottom: 16px; color: #1e3a5f;">Viktigt att tänka på</h3>
+                        <ul style="color: #555; line-height: 2; margin: 0;">
+                            <li>Låna aldrig mer än du kan betala tillbaka</li>
+                            <li>Kolla alltid den effektiva räntan, inte bara nominell ränta</li>
+                            <li>Undvik snabblån med extremt höga räntor över 30%</li>
+                            <li>Läs alla villkor noggrant innan du skriver på</li>
+                            <li>Var försiktig med lån som har höga förseningsavgifter</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Vanliga frågor om ränta på blancolan</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                </div>
+                <h3>Vad är skillnaden mellan nominell och effektiv ränta?</h3>
+                <p>Nominell ränta är bara räntekostnaden. Effektiv ränta inkluderar alla avgifter och visar lånets verkliga kostnad. Jämför alltid effektiv ränta.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2v20M2 12h20"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Varför är räntan högre än på bolån?</h3>
+                <p>Eftersom blancolån saknar säkerhet tar banken större risk. Detta kompenseras med högre ränta jämfört med lån där du ställer säkerhet.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Kan jag förhandla om räntan?</h3>
+                <p>Ja, särskilt om du har god kreditvärdighet eller är befintlig kund. Använd konkurrenters erbjudanden som argument.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 1v6m0 6v6M7 8l5 5 5-5"></path>
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                </div>
+                <h3>Påverkar flera låneansökningar min kreditvärdighet?</h3>
+                <p>Ja, varje ansökan registreras i din kreditupplysning. Gör därför ansökningar nära i tid så de ses som jämförelse, inte desperation.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
+                        <path d="M7 8h10M7 12h6"></path>
+                    </svg>
+                </div>
+                <h3>Är räntan fast eller rörlig?</h3>
+                <p>De flesta blancolån har fast ränta under hela lånetiden, vilket ger förutsägbara månadskostnader.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        <path d="M12 6v6l4 2"></path>
+                    </svg>
+                </div>
+                <h3>Kan jag betala av i förtid?</h3>
+                <p>Oftast ja, men vissa lån har avgifter för förtida återbetalning. Kontrollera villkoren innan du tecknar lånet.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="best-rates">
+    <div class="section-inner">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+            <h2 class="section-title-white" style="margin-bottom: 24px;">Beräkna din lånekostnad</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                Använd vår kalkylator för att räkna ut exakt vad ditt blancolån kommer kosta med olika räntor.
+            </p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="/berakna/effektiv-ranta" class="btn-primary" style="background: white; color: #1e3a5f;">
+                    Beräkna lånekostnad
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+                </a>
+                <a href="/basta-rantan" class="btn-secondary" style="border-color: white; color: white;">
+                    Jämför räntor
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                        <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                        <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                        <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                    </svg>
+                </div>
+                <span class="logo-text">Ränta.nu</span>
+            </div>
+            <p>Sedan 2018 har Ränta.nu varit Sveriges mest betrodda källa för oberoende sparrådgivning. Med över 150 000 användare per månad hjälper vi svenskar att fatta smartare beslut om sitt sparande.</p>
+            <div class="footer-contact">
+                E-post: <a href="mailto:info@ranta.nu">info@ranta.nu</a><br>
+                Org.nr: 559342-7891
+            </div>
+        </div>
+
+        <div>
+            <h4>Räkna ränta</h4>
+            <ul>
+                <li><a href="/bolanerakna">Bolåneränta</a></li>
+                <li><a href="/sparranta">Sparränta</a></li>
+                <li><a href="/effektiv-ranta">Effektiv ränta</a></li>
+                <li><a href="/ranta-pa-ranta">Ränta på ränta</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Lär dig mer</h4>
+            <ul>
+                <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                <li><a href="/rantetyper">Olika räntetyper</a></li>
+                <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                <li><a href="/artiklar">Alla artiklar</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Om Ränta.nu</h4>
+            <ul>
+                <li><a href="/om-oss">Om oss</a></li>
+                <li><a href="/kontakt">Kontakt</a></li>
+                <li><a href="/integritetspolicy">Integritet</a></li>
+                <li><a href="/cookiepolicy">Användarvillkor</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <span>© 2025 Ränta.nu. Alla rättigheter förbehållna.</span>
+        <span>Informationen på sidan ersätter inte professionell rådgivning.</span>
+    </div>
+</footer>
+
+</body>
+</html>
