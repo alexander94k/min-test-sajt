@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Footer from '../components/Footer.astro';
 // Frontmatter
 const pageTitle = "Olika räntetyper - Komplett guide till alla räntor | Ränta.nu";
 const pageDescription = "Lär dig om alla olika typer av räntor som finns - från sparränta och bolåneränta till styrränta och realränta. Förklaringar på vanlig svenska.";
@@ -360,63 +361,7 @@ const pageDescription = "Lär dig om alla olika typer av räntor som finns - fr�
 </section>
 
 <!-- Footer -->
-<footer class="footer">
-    <div class="footer-inner">
-        <div class="footer-brand">
-            <div class="footer-logo">
-                <div class="logo-icon">
-                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
-                        <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
-                        <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
-                        <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
-                    </svg>
-                </div>
-                <span class="logo-text">Ränta.nu</span>
-            </div>
-            <p>Sedan 2018 har Ränta.nu varit Sveriges mest betrodda källa för oberoende sparrådgivning. Med över 150 000 användare per månad hjälper vi svenskar att fatta smartare beslut om sitt sparande.</p>
-            <div class="footer-contact">
-                E-post: <a href="mailto:info@ranta.nu">info@ranta.nu</a><br>
-                Org.nr: 559342-7891
-            </div>
-        </div>
-
-        <div>
-            <h4>Räkna ränta</h4>
-            <ul>
-                <li><a href="/bolanerakna">Bolåneränta</a></li>
-                <li><a href="/sparranta">Sparränta</a></li>
-                <li><a href="/effektiv-ranta">Effektiv ränta</a></li>
-                <li><a href="/ranta-pa-ranta">Ränta på ränta</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <h4>Lär dig mer</h4>
-            <ul>
-                <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
-                <li><a href="/rantetyper">Olika räntetyper</a></li>
-                <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
-                <li><a href="/artiklar">Alla artiklar</a></li>
-            </ul>
-        </div>
-
-        <div>
-            <h4>Om Ränta.nu</h4>
-            <ul>
-                <li><a href="/om-oss">Om oss</a></li>
-                <li><a href="/kontakt">Kontakt</a></li>
-                <li><a href="/integritetspolicy">Integritet</a></li>
-                <li><a href="/cookiepolicy">Användarvillkor</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <span>© 2025 Ränta.nu. Alla rättigheter förbehållna.</span>
-        <span>Informationen på sidan ersätter inte professionell rådgivning.</span>
-    </div>
-</footer>
+<Footer />
 
 </body>
 </html>
