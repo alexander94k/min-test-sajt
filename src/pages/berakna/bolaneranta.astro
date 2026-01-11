@@ -1,0 +1,261 @@
+---
+// Frontmatter
+import '../../styles/global.css';
+
+const pageTitle = "Bolåneräntekalkylator - Beräkna bolånekostnader | Ränta.nu";
+const pageDescription = "Räkna ut vad räntan blir för ditt bolån vid olika räntesatser. Jämför månadskostnader och totala räntekostnader över tid.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/berakna" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Bolåneräntekalkylator</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Räkna ut vad räntan blir för ditt bolån vid olika räntesatser
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5; margin-bottom: 48px;">
+                <h2 style="text-align: center; margin-bottom: 32px;">Beräkna din bolånekostnad</h2>
+
+                <div style="display: grid; gap: 24px; max-width: 600px; margin: 0 auto;">
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Lånebelopp (kr)</label>
+                        <input type="number" id="lanebelopp" value="2000000" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Ränta (%)</label>
+                        <input type="number" id="ranta" value="4.5" step="0.1" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Amorteringstid (år)</label>
+                        <input type="number" id="amorteringstid" value="30" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <button onclick="berakna()" style="padding: 16px; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: 600; cursor: pointer;">
+                        Beräkna
+                    </button>
+                </div>
+
+                <div id="resultat" style="margin-top: 32px; padding: 24px; background: #e8f4f8; border-radius: 12px; display: none;">
+                    <h3 style="margin-bottom: 16px; color: #1e3a5f;">Resultat:</h3>
+                    <div style="display: grid; gap: 12px;">
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Månadskostnad (ränta):</span>
+                            <span id="manadskostnad" style="color: #1e3a5f; font-weight: 700;"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Total räntekostnad:</span>
+                            <span id="totalranta" style="color: #1e3a5f; font-weight: 700;"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Årlig räntekostnad:</span>
+                            <span id="arligranta" style="color: #1e3a5f; font-weight: 700;"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section gray">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Så fungerar bolåneräntan</h2>
+            <p>Bolåneräntan är den kostnad du betalar för att låna pengar till din bostad. Räntan utgör en betydande del av din totala lånekostnad, och även små skillnader i räntesats kan göra stor skillnad över tid.</p>
+
+            <p>När du betalar tillbaka ditt bolån går en del av din månadskostnad till ränta och en del till amortering (avbetalning av lånet). I början av lånetiden går en större del till ränta, medan mer går till amortering ju längre tid som går.</p>
+
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
+                <p style="margin: 0;"><strong>Tips:</strong> Genom att amortera mer än det obligatoriska beloppet kan du minska dina totala räntekostnader avsevärt. Varje extra krona du amorterar minskar det belopp som räntan beräknas på.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Faktorer som påverkar din bolåneränta</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3>Bindningstid</h3>
+                <p>Längre bindningstid ger ofta lägre ränta men mindre flexibilitet. Rörlig ränta ger flexibilitet men kan variera med marknaden.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <h3>Belåningsgrad</h3>
+                <p>Lägre belåningsgrad (under 75%) ger ofta bättre ränta. Ju mer eget kapital du har, desto lägre risk för banken.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                </div>
+                <h3>Kreditvärdighet</h3>
+                <p>Din ekonomiska situation påverkar vilken ränta du erbjuds. God ekonomi och stabil inkomst ger bättre villkor.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3>Marknadsläget</h3>
+                <p>Riksbankens styrränta och konkurrensen mellan banker påverkar bolåneräntorna. Jämför alltid flera banker.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 16px; color: white;">Fler kalkylatorer</h2>
+        <p style="text-align: center; color: rgba(255,255,255,0.9); margin-bottom: 32px; font-size: 18px;">
+            Utforska våra andra verktyg för att optimera din ekonomi
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="/berakna/ranteavdrag" style="padding: 14px 28px; background: white; color: #1e3a5f; border-radius: 8px; font-weight: 600; text-decoration: none;">Ränteavdrag</a>
+            <a href="/berakna/ranta-pa-ranta" style="padding: 14px 28px; background: rgba(255,255,255,0.2); color: white; border: 2px solid white; border-radius: 8px; font-weight: 600; text-decoration: none;">Ränta-på-ränta</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h3>Om Ränta.nu</h3>
+                <ul>
+                    <li><a href="/om-oss">Om oss</a></li>
+                    <li><a href="/kontakt">Kontakt</a></li>
+                    <li><a href="/integritetspolicy">Integritetspolicy</a></li>
+                    <li><a href="/cookiepolicy">Cookiepolicy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Ränteguider</h3>
+                <ul>
+                    <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                    <li><a href="/rantetyper">Olika räntetyper</a></li>
+                    <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                    <li><a href="/basta-rantan">Bästa räntan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Kalkylatorer</h3>
+                <ul>
+                    <li><a href="/berakna/bolaneranta">Bolåneränta</a></li>
+                    <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                    <li><a href="/berakna/ranta-pa-ranta">Ränta-på-ränta</a></li>
+                    <li><a href="/berakna/effektiv-ranta">Effektiv ränta</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Populära sidor</h3>
+                <ul>
+                    <li><a href="/basta-sparrantan">Bästa sparräntan</a></li>
+                    <li><a href="/riksbankens-ranta">Riksbankens ränta</a></li>
+                    <li><a href="/stibor-ranta">STIBOR ränta</a></li>
+                    <li><a href="/csn-ranta">CSN ränta</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ränta.nu - Din guide till räntor och privatekonomi</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+function berakna() {
+    const lanebelopp = parseFloat(document.getElementById('lanebelopp').value);
+    const ranta = parseFloat(document.getElementById('ranta').value) / 100;
+    const amorteringstid = parseFloat(document.getElementById('amorteringstid').value);
+
+    // Beräkna månadskostnad (endast ränta)
+    const manadskostnad = (lanebelopp * ranta) / 12;
+
+    // Beräkna årlig räntekostnad
+    const arligranta = lanebelopp * ranta;
+
+    // Beräkna total räntekostnad (förenklad beräkning)
+    // Antar linjär amortering för enkelhetens skull
+    const totalranta = (lanebelopp * ranta * amorteringstid) / 2;
+
+    // Visa resultat
+    document.getElementById('manadskostnad').textContent = Math.round(manadskostnad).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('arligranta').textContent = Math.round(arligranta).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('totalranta').textContent = Math.round(totalranta).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('resultat').style.display = 'block';
+}
+
+// Beräkna automatiskt vid sidladdning
+window.addEventListener('load', berakna);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+---
+// Frontmatter
+import '../../styles/global.css';
+
+const pageTitle = "Ränta-på-ränta kalkylator - Beräkna sammansatt ränta | Ränta.nu";
+const pageDescription = "Räkna ut vad ränta-på-ränta-effekten blir för olika typer av sparande. Se hur ditt kapital växer över tid med sammansatt ränta.";
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/berakna" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Ränta-på-ränta kalkylator</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Räkna ut vad ränta-på-ränta-effekten blir för olika typer av sparande
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5; margin-bottom: 48px;">
+                <h2 style="text-align: center; margin-bottom: 32px;">Beräkna sammansatt ränta</h2>
+
+                <div style="display: grid; gap: 24px; max-width: 600px; margin: 0 auto;">
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Startbelopp (kr)</label>
+                        <input type="number" id="startbelopp" value="100000" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Månadssparande (kr)</label>
+                        <input type="number" id="manadsparande" value="2000" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Ränta per år (%)</label>
+                        <input type="number" id="ranta" value="3.5" step="0.1" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #1e3a5f;">Spartid (år)</label>
+                        <input type="number" id="spartid" value="20" style="width: 100%; padding: 12px; border: 2px solid #e5e5e5; border-radius: 8px; font-size: 16px;">
+                    </div>
+
+                    <button onclick="berakna()" style="padding: 16px; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: 600; cursor: pointer;">
+                        Beräkna
+                    </button>
+                </div>
+
+                <div id="resultat" style="margin-top: 32px; padding: 24px; background: #e8f4f8; border-radius: 12px; display: none;">
+                    <h3 style="margin-bottom: 16px; color: #1e3a5f;">Resultat:</h3>
+                    <div style="display: grid; gap: 12px;">
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Totalt värde:</span>
+                            <span id="totaltvarde" style="color: #28a745; font-weight: 700; font-size: 20px;"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Insatt kapital:</span>
+                            <span id="insatt" style="color: #1e3a5f; font-weight: 700;"></span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; padding: 12px; background: white; border-radius: 8px;">
+                            <span style="font-weight: 600;">Räntevinst:</span>
+                            <span id="rantevinst" style="color: #28a745; font-weight: 700;"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section gray">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Så fungerar ränta-på-ränta</h2>
+            <p>Ränta-på-ränta, eller sammansatt ränta, innebär att du får ränta både på ditt ursprungliga kapital och på den ränta du tjänat tidigare. Detta skapar en exponentiell tillväxt av ditt sparande över tid.</p>
+
+            <p>Ju längre tid du sparar, desto kraftfullare blir ränta-på-ränta-effekten. Det är därför det är viktigt att börja spara tidigt - även små belopp kan växa till betydande summor över längre tidsperioder.</p>
+
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #28a745;">
+                <p style="margin: 0;"><strong>Exempel:</strong> Om du sparar 1 000 kr per månad i 30 år med 5% årlig ränta får du totalt 832 000 kr, varav 472 000 kr är räntevinst. Utan ränta-på-ränta-effekten skulle du bara få 450 000 kr totalt!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Faktorer som påverkar ränta-på-ränta</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h3>Tid</h3>
+                <p>Ju längre du sparar, desto mer tid har räntan på sig att växa. Tid är den viktigaste faktorn för ränta-på-ränta-effekten.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3>Räntesats</h3>
+                <p>Högre ränta ger snabbare tillväxt. Även små skillnader i räntesats kan ge stora skillnader över tid.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                </div>
+                <h3>Regelbundet sparande</h3>
+                <p>Månadssparande ökar effekten kraftigt jämfört med engångsinsättning. Konsekvent sparande lönar sig.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                </div>
+                <h3>Kompoundering</h3>
+                <p>Hur ofta räntan läggs till kapitalet påverkar. Daglig kompoundering ger mer än årlig.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Tips för att maximera ränta-på-ränta</h2>
+
+            <ul style="line-height: 2; color: #555; margin: 24px 0;">
+                <li><strong>Börja tidigt</strong> - Ju tidigare du börjar spara, desto längre tid har räntan på sig att växa</li>
+                <li><strong>Spara regelbundet</strong> - Månadssparande är ofta bättre än engångsinsättningar</li>
+                <li><strong>Låt kapitalet växa</strong> - Ta inte ut räntan utan låt den stanna kvar och växa</li>
+                <li><strong>Jämför räntor</strong> - Högre sparränta ger kraftigare tillväxt över tid</li>
+                <li><strong>Automatisera</strong> - Sätt upp automatiskt månadssparande så du inte glömmer bort</li>
+                <li><strong>Minimera avgifter</strong> - Avgifter minskar din avkastning och därmed ränta-på-ränta-effekten</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 16px; color: white;">Fler kalkylatorer</h2>
+        <p style="text-align: center; color: rgba(255,255,255,0.9); margin-bottom: 32px; font-size: 18px;">
+            Utforska våra andra verktyg för att optimera din ekonomi
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="/berakna/bolaneranta" style="padding: 14px 28px; background: white; color: #1e3a5f; border-radius: 8px; font-weight: 600; text-decoration: none;">Bolåneränta</a>
+            <a href="/basta-sparrantan" style="padding: 14px 28px; background: rgba(255,255,255,0.2); color: white; border: 2px solid white; border-radius: 8px; font-weight: 600; text-decoration: none;">Bästa sparräntan</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h3>Om Ränta.nu</h3>
+                <ul>
+                    <li><a href="/om-oss">Om oss</a></li>
+                    <li><a href="/kontakt">Kontakt</a></li>
+                    <li><a href="/integritetspolicy">Integritetspolicy</a></li>
+                    <li><a href="/cookiepolicy">Cookiepolicy</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Ränteguider</h3>
+                <ul>
+                    <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
+                    <li><a href="/rantetyper">Olika räntetyper</a></li>
+                    <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                    <li><a href="/basta-rantan">Bästa räntan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Kalkylatorer</h3>
+                <ul>
+                    <li><a href="/berakna/bolaneranta">Bolåneränta</a></li>
+                    <li><a href="/berakna/ranteavdrag">Ränteavdrag</a></li>
+                    <li><a href="/berakna/ranta-pa-ranta">Ränta-på-ränta</a></li>
+                    <li><a href="/berakna/effektiv-ranta">Effektiv ränta</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Populära sidor</h3>
+                <ul>
+                    <li><a href="/basta-sparrantan">Bästa sparräntan</a></li>
+                    <li><a href="/riksbankens-ranta">Riksbankens ränta</a></li>
+                    <li><a href="/stibor-ranta">STIBOR ränta</a></li>
+                    <li><a href="/csn-ranta">CSN ränta</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ränta.nu - Din guide till räntor och privatekonomi</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+function berakna() {
+    const startbelopp = parseFloat(document.getElementById('startbelopp').value);
+    const manadsparande = parseFloat(document.getElementById('manadsparande').value);
+    const arsranta = parseFloat(document.getElementById('ranta').value) / 100;
+    const spartid = parseFloat(document.getElementById('spartid').value);
+
+    // Månadsränta
+    const manadsranta = arsranta / 12;
+    const antalManader = spartid * 12;
+
+    // Beräkna slutvärde med sammansatt ränta
+    // Formel: FV = P(1+r)^n + PMT * [((1+r)^n - 1) / r]
+    let slutvarde = startbelopp * Math.pow(1 + manadsranta, antalManader);
+
+    if (manadsparande > 0) {
+        slutvarde += manadsparande * ((Math.pow(1 + manadsranta, antalManader) - 1) / manadsranta);
+    }
+
+    // Beräkna totalt insatt
+    const totaltInsatt = startbelopp + (manadsparande * antalManader);
+
+    // Beräkna räntevinst
+    const rantevinst = slutvarde - totaltInsatt;
+
+    // Visa resultat
+    document.getElementById('totaltvarde').textContent = Math.round(slutvarde).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('insatt').textContent = Math.round(totaltInsatt).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('rantevinst').textContent = Math.round(rantevinst).toLocaleString('sv-SE') + ' kr';
+    document.getElementById('resultat').style.display = 'block';
+}
+
+// Beräkna automatiskt vid sidladdning
+window.addEventListener('load', berakna);
+</script>
+
+</body>
+</html>
