@@ -1,689 +1,164 @@
 ---
-// Låna pengar med låg ränta - Guide till att hitta bästa lånevillkoren
+// Frontmatter
+import '../styles/global.css';
+
+const pageTitle = "Låna pengar med låg ränta - Guide 2026 | Ränta.nu";
+const pageDescription = "Vill du låna pengar med låg ränta? Här hittar du de bästa alternativen och tips för att få det mest fördelaktiga lånet.";
 ---
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Låna pengar med låg ränta - Guide till bästa lånevillkoren 2026</title>
-    <meta name="description" content="Lär dig hur du lånar pengar med låg ränta. Jämför olika lånealternativ, förhandla bättre villkor och hitta det billigaste lånet för dina behov.">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.7;
-            color: #1e3a5f;
-            background: linear-gradient(135deg, #f0f5f7 0%, #ffffff 100%);
-        }
-
-        header {
-            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
-            padding: 1.5rem 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: white;
-            text-decoration: none;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #ffd700;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            opacity: 0.95;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 2rem;
-        }
-
-        .content-section {
-            background: white;
-            padding: 3rem;
-            margin-bottom: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-
-        .content-section h2 {
-            font-size: 2rem;
-            color: #1e3a5f;
-            margin-bottom: 1.5rem;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            border-left: 5px solid #28a745;
-            padding-left: 1rem;
-        }
-
-        .content-section h3 {
-            font-size: 1.5rem;
-            color: #2c5282;
-            margin: 2rem 0 1rem 0;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-
-        .content-section p {
-            margin-bottom: 1.2rem;
-            font-size: 1.05rem;
-            line-height: 1.8;
-        }
-
-        .content-section ul, .content-section ol {
-            margin: 1.5rem 0;
-            padding-left: 2rem;
-        }
-
-        .content-section li {
-            margin-bottom: 0.8rem;
-            line-height: 1.7;
-        }
-
-        .info-box {
-            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-            border-left: 5px solid #1e3a5f;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-        }
-
-        .info-box strong {
-            color: #1e3a5f;
-            font-weight: 600;
-        }
-
-        .warning-box {
-            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
-            border-left: 5px solid #ffc107;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-        }
-
-        .warning-box strong {
-            color: #1e3a5f;
-            font-weight: 600;
-        }
-
-        .tip-box {
-            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
-            border-left: 5px solid #28a745;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-        }
-
-        .tip-box strong {
-            color: #1e3a5f;
-            font-weight: 600;
-        }
-
-        .loan-types-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .loan-type-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            border-top: 4px solid #1e3a5f;
-            transition: transform 0.3s;
-        }
-
-        .loan-type-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-        }
-
-        .loan-type-card h4 {
-            color: #1e3a5f;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
-
-        .loan-type-card .rate {
-            font-size: 2rem;
-            font-weight: 800;
-            color: #28a745;
-            margin: 0.5rem 0;
-        }
-
-        .loan-type-card p {
-            margin-bottom: 0;
-            font-size: 1rem;
-        }
-
-        .pros-cons-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .pros-box {
-            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            border-top: 4px solid #28a745;
-        }
-
-        .pros-box h4 {
-            color: #1e3a5f;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
-
-        .pros-box ul {
-            margin: 0;
-            padding-left: 1.5rem;
-        }
-
-        .cons-box {
-            background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            border-top: 4px solid #dc3545;
-        }
-
-        .cons-box h4 {
-            color: #1e3a5f;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
-
-        .cons-box ul {
-            margin: 0;
-            padding-left: 1.5rem;
-        }
-
-        .steps-list {
-            counter-reset: step-counter;
-            list-style: none;
-            padding-left: 0;
-            margin: 2rem 0;
-        }
-
-        .steps-list li {
-            counter-increment: step-counter;
-            position: relative;
-            padding-left: 4rem;
-            margin-bottom: 2rem;
-            background: #f8f9fa;
-            padding: 1.5rem 1.5rem 1.5rem 4rem;
-            border-radius: 8px;
-            border-left: 4px solid #28a745;
-        }
-
-        .steps-list li:before {
-            content: counter(step-counter);
-            position: absolute;
-            left: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
-            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-            color: white;
-            font-weight: 800;
-            font-size: 1.5rem;
-            width: 2.5rem;
-            height: 2.5rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2rem 0;
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .comparison-table thead {
-            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
-            color: white;
-        }
-
-        .comparison-table th {
-            padding: 1rem;
-            text-align: left;
-            font-weight: 600;
-            font-size: 1.05rem;
-        }
-
-        .comparison-table td {
-            padding: 1rem;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .comparison-table tbody tr:hover {
-            background-color: #f0f5f7;
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
-            color: white;
-            padding: 3rem;
-            border-radius: 12px;
-            text-align: center;
-            margin: 3rem 0;
-        }
-
-        .cta-section h2 {
-            color: white;
-            border: none;
-            padding: 0;
-            margin-bottom: 1rem;
-        }
-
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: #28a745;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #218838;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(40,167,69,0.3);
-        }
-
-        .btn-secondary {
-            background: white;
-            color: #1e3a5f;
-        }
-
-        .btn-secondary:hover {
-            background: #f8f9fa;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(255,255,255,0.3);
-        }
-
-        footer {
-            background: #1e3a5f;
-            color: white;
-            padding: 3rem 2rem 1.5rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-section a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.7);
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .content-section {
-                padding: 2rem 1.5rem;
-            }
-
-            .nav-links {
-                display: none;
-            }
-
-            .steps-list li {
-                padding-left: 3.5rem;
-            }
-        }
-    </style>
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" class="logo">Ränta.nu</a>
-            <ul class="nav-links">
-                <li><a href="/">Hem</a></li>
-                <li><a href="/om-oss">Om oss</a></li>
-                <li><a href="/kontakt">Kontakt</a></li>
-            </ul>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
         </nav>
-    </header>
 
-    <section class="hero">
-        <h1>Låna pengar med låg ränta</h1>
-        <p>Din kompletta guide till att hitta de bästa lånevillkoren och spara pengar på räntekostnader</p>
-    </section>
+        <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
 
-    <div class="container">
-        <div class="content-section">
-            <h2>Hur du lånar pengar med låg ränta</h2>
-            <p>Räntekostnader utgör ofta den största kostnaden när du lånar pengar, oavsett om det gäller bolån, privatlån eller andra lån. Att hitta ett lån med låg ränta kan spara dig tusentals kronor per år och göra det möjligt att betala av ditt lån snabbare.</p>
-
-            <p>För den som söker bolån finns det ofta gott om utrymme att förhandla om lägre ränta hos de stora bankerna. När du köper större föremål som elektronik eller fordon på avbetalning kan du också ofta hitta låga räntor, särskilt genom kampanjer och erbjudanden.</p>
-
-            <p>För blancolån och privatlån erbjuder nätbaserade låneinstitut ofta bättre räntor än traditionella banker. Detta beror på att de har lägre omkostnader utan fysiska bankkontor och kan därför erbjuda mer konkurrenskraftiga villkor till sina kunder.</p>
-
-            <div class="warning-box">
-                <strong>Viktigt att tänka på:</strong> Kontrollera alltid de totala kostnaderna för lånet, inklusive eventuella avgifter för uppläggning, aviavgifter och andra dolda kostnader. En låg ränta kan ibland uppvägas av höga administrativa avgifter.
-            </div>
-
-            <h3>Vad är bra med att låna pengar med låg ränta?</h3>
-            <p>Räntekostnaderna utgör den största utgiften för de flesta låntagare över lånets livstid. Genom att jämföra olika alternativ och hitta privatlån med låga räntor kan du:</p>
-
-            <ul>
-                <li><strong>Spara pengar:</strong> En lägre ränta innebär mindre räntekostnader över lånets hela löptid</li>
-                <li><strong>Betala av snabbare:</strong> Med lägre räntekostnader kan mer av dina månatliga betalningar gå till att amortera lånet</li>
-                <li><strong>Förbättra din ekonomi:</strong> Lägre månadskostnader ger dig mer pengar över till annat i din månadbudget</li>
-                <li><strong>Minska skuldbördan:</strong> Mindre ränta innebär att din totala skuld växer långsammare</li>
-                <li><strong>Öka din ekonomiska flexibilitet:</strong> Lägre lånekostnader ger dig större möjligheter att spara eller investera</li>
-            </ul>
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Låna pengar med låg ränta</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Komplett guide till att hitta de bästa lånen med låg ränta 2026
+            </p>
         </div>
+    </div>
+</section>
 
-        <div class="content-section">
-            <h2>Olika typer av lån med låg ränta</h2>
-            <p>Det finns flera olika typer av lån som kan erbjuda låga räntor beroende på din situation och behov:</p>
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Hur får man låg ränta på lån?</h2>
+            <p>Att få en låg ränta på ditt lån handlar främst om tre faktorer: din kreditvärdighet, typen av lån du söker, och hur bra du är på att jämföra olika långivare. En hög kreditvärdighet ger dig större möjlighet att förhandla om bättre villkor, medan olika låntyper har olika räntenivåer beroende på risk och säkerhet.</p>
 
-            <div class="loan-types-grid">
-                <div class="loan-type-card">
-                    <h4>Bolån</h4>
-                    <div class="rate">1,5-4%</div>
-                    <p>Vanligtvis de lägsta räntorna eftersom lånet är säkrat av din bostad. Räntorna varierar mellan fast och rörlig ränta samt beroende på bindningstid.</p>
-                </div>
-                <div class="loan-type-card">
-                    <h4>Privatlån</h4>
-                    <div class="rate">3-15%</div>
-                    <p>Blancolån utan säkerhet. Räntan beror på din kreditvärdighet, lånebelopp och återbetalningstid. Bäst ränta för den med god ekonomi.</p>
-                </div>
-                <div class="loan-type-card">
-                    <h4>Billån</h4>
-                    <div class="rate">2-8%</div>
-                    <p>Lån säkrade av fordonet. Ofta lägre räntor än privatlån eftersom bilen fungerar som säkerhet för lånet.</p>
-                </div>
-                <div class="loan-type-card">
-                    <h4>Studielån (CSN)</h4>
-                    <div class="rate">0,5-2%</div>
-                    <p>Statligt subventionerade lån med mycket låga räntor. Bästa alternativet för studier men med specifika villkor och begränsningar.</p>
-                </div>
-                <div class="loan-type-card">
-                    <h4>Avbetalning</h4>
-                    <div class="rate">0-20%</div>
-                    <p>Köp på avbetalning för varor. Kan ha 0% ränta under kampanjperioder, men vanligtvis högre ränta än andra lånealternativ.</p>
-                </div>
-                <div class="loan-type-card">
-                    <h4>Samlingslån</h4>
-                    <div class="rate">4-12%</div>
-                    <p>Samla flera lån till ett lån med en ränta. Kan ge lägre total ränta om du har dyra lån som kreditkortsskulder.</p>
-                </div>
-            </div>
-        </div>
+            <p>Det lönar sig alltid att jämföra räntor mellan olika banker och kreditinstitut. Skillnaderna kan vara betydande - ibland flera procentenheter - vilket på sikt kan innebära tiotusentals kronor i besparingar.</p>
 
-        <div class="content-section">
-            <h2>Så hittar du lån med låg ränta</h2>
-            <p>För att hitta det bästa lånet med lägst möjliga ränta behöver du vara strategisk i din sökning. Här är de viktigaste stegen:</p>
-
-            <ol class="steps-list">
-                <li>
-                    <strong>Kontrollera din kreditvärdighet</strong><br>
-                    Din UC-poäng och kreditupplysning påverkar vilken ränta du erbjuds. Se till att din kreditupplysning är korrekt och jobba på att förbättra din kreditvärdighet innan du ansöker.
-                </li>
-                <li>
-                    <strong>Jämför flera långivare</strong><br>
-                    Använd jämförelsetjänster online för att se räntor från olika banker och låneinstitut. Samma låntagare kan få helt olika räntor hos olika långivare.
-                </li>
-                <li>
-                    <strong>Förbered din ansökan</strong><br>
-                    Ha alla dokument redo: inkomstuppgifter, anställningsbevis, och information om dina tillgångar och skulder. En välförberedd ansökan visar att du är seriös.
-                </li>
-                <li>
-                    <strong>Förhandla om villkoren</strong><br>
-                    Särskilt vid bolån finns ofta utrymme att förhandla. Använd konkurrenternas erbjudanden som förhandlingskort hos din föredragna bank.
-                </li>
-                <li>
-                    <strong>Läs det finstilta</strong><br>
-                    Kontrollera alla avgifter: uppläggningsavgift, aviavgift, administrationsavgift och kostnader för förtidsbetalning. Beräkna den effektiva räntan för att se den verkliga kostnaden.
-                </li>
-                <li>
-                    <strong>Överväg säkerheter</strong><br>
-                    Lån med säkerhet (som bolån eller billån) har ofta mycket lägre ränta än blancolån. Om du har tillgångar att pantsätta kan det ge betydligt bättre villkor.
-                </li>
-                <li>
-                    <strong>Välj rätt lånetid</strong><br>
-                    Kortare lånetid ger ofta lägre ränta men högre månadskostnad. Hitta balansen mellan total kostnad och månadsbetalning som passar din ekonomi.
-                </li>
-            </ol>
-        </div>
-
-        <div class="content-section">
-            <h2>Fördelar och nackdelar med olika lånealternativ</h2>
-
-            <h3>Banklån vs nätbaserade låneinstitut</h3>
-            <div class="pros-cons-grid">
-                <div class="pros-box">
-                    <h4>Traditionella banker</h4>
-                    <ul>
-                        <li>Personlig service och rådgivning</li>
-                        <li>Lång historia och hög säkerhet</li>
-                        <li>Ofta bättre villkor för befintliga kunder</li>
-                        <li>Möjlighet till personliga möten</li>
-                        <li>Alla banktjänster på ett ställe</li>
-                    </ul>
-                </div>
-                <div class="cons-box">
-                    <h4>Traditionella banker</h4>
-                    <ul>
-                        <li>Ofta högre räntor på privatlån</li>
-                        <li>Mer tidskrävande ansökningsprocess</li>
-                        <li>Strängare kreditprövning</li>
-                        <li>Högre omkostnader som kan påverka räntan</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="pros-cons-grid">
-                <div class="pros-box">
-                    <h4>Nätbaserade låneinstitut</h4>
-                    <ul>
-                        <li>Ofta lägre räntor på privatlån</li>
-                        <li>Snabb ansökningsprocess online</li>
-                        <li>Enkel jämförelse mellan olika aktörer</li>
-                        <li>Lägre administrativa kostnader</li>
-                        <li>Flexibla villkor och snabba utbetalningar</li>
-                    </ul>
-                </div>
-                <div class="cons-box">
-                    <h4>Nätbaserade låneinstitut</h4>
-                    <ul>
-                        <li>Ingen personlig rådgivning</li>
-                        <li>Kan vara svårare att få överblick</li>
-                        <li>Vissa aktörer har högre avgifter</li>
-                        <li>Varierande kvalitet mellan olika aktörer</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="content-section">
-            <h2>Faktorer som påverkar din låneränta</h2>
-            <p>Flera faktorer spelar in när långivare bestämmer vilken ränta de kan erbjuda dig:</p>
-
-            <h3>Din kreditvärdighet</h3>
-            <p>Din UC-poäng och kredithistorik är avgörande. En god betalningshistorik utan betalningsanmärkningar ger betydligt bättre ränta. Högre inkomst och fast anställning förbättrar också dina villkor.</p>
-
-            <h3>Lånebelopp och återbetalningstid</h3>
-            <p>Större lån kan ibland ge bättre ränta, men längre återbetalningstid innebär högre total kostnad även om månadsbetalningen blir lägre. Kortare lånetid ger ofta lägre ränta men kräver högre månadsbetalning.</p>
-
-            <h3>Säkerheter</h3>
-            <p>Lån med säkerhet (bolån, billån) har mycket lägre ränta än blancolån eftersom risken för långivaren är mindre. Ju högre säkerhet, desto lägre ränta.</p>
-
-            <h3>Marknadsläget</h3>
-            <p>Riksbankens styrränta påverkar alla låneräntor. När styrräntan är låg är även låneräntorna lägre. Konkurrensen mellan långivare påverkar också - fler aktörer betyder ofta bättre räntor.</p>
-
-            <h3>Belåningsgrad</h3>
-            <p>För bolån påverkar belåningsgraden (hur stor del av bostadens värde du lånar) räntan. Lägre belåningsgrad ger bättre ränta. Under 75% belåningsgrad får du ofta de bästa villkoren.</p>
-
-            <div class="tip-box">
-                <strong>Tips för bättre ränta:</strong> Arbeta på att förbättra din kreditvärdighet innan du ansöker om lån. Betala av små skulder, undvik nya kreditupplysningar och se till att alltid betala räkningar i tid. Detta kan ge dig betydligt bättre ränta när du väl ansöker.
-            </div>
-        </div>
-
-        <div class="content-section">
-            <h2>Så förhandlar du om bättre lånevillkor</h2>
-            <p>Särskilt när det gäller bolån finns det ofta stort utrymme för förhandling. Här är strategier som fungerar:</p>
-
-            <h3>1. Ha konkurrenternas erbjudanden med dig</h3>
-            <p>Ta in erbjudanden från flera banker och visa dem för den bank du föredrar. Banker vill behålla och attrahera kunder och är ofta villiga att matcha eller slå konkurrenternas räntor.</p>
-
-            <h3>2. Bli en attraktiv kund</h3>
-            <p>Samla dina banktjänster hos samma bank - lönekonto, sparkonton och lån. Detta gör dig till en mer värdefull kund som banken vill behålla.</p>
-
-            <h3>3. Timing är viktigt</h3>
-            <p>Förhandla om räntan vid rätt tidpunkt - när du tar ett nytt lån, när din bindningstid går ut, eller när en konkurrent lanserar ett bra erbjudande.</p>
-
-            <h3>4. Var beredd att byta</h3>
-            <p>Om din nuvarande bank inte vill förbättra dina villkor, var beredd att faktiskt byta. Många får bättre villkor först när de börjat flytta sina lån.</p>
-
-            <h3>5. Fråga om rabatter</h3>
-            <p>Många banker erbjuder rabatter för studenter, unga vuxna, anställda inom vissa yrken eller medlemmar i vissa organisationer. Fråga alltid om det finns några rabatter du kan vara berättigad till.</p>
-        </div>
-
-        <div class="content-section">
-            <h2>Vanliga misstag att undvika</h2>
-            <p>När du söker lån med låg ränta är det viktigt att undvika dessa vanliga fallgropar:</p>
-
-            <ul>
-                <li><strong>Fokusera endast på räntan:</strong> Den effektiva räntan inkluderar alla avgifter och ger den verkliga kostnaden. En låg nominell ränta kan täcka höga avgifter.</li>
-                <li><strong>För många kreditupplysningar:</strong> Varje ansökan ger en kreditupplysning som kan sänka din kreditpoäng. Använd jämförelsetjänster som gör "mjuka" sökningar först.</li>
-                <li><strong>Ta för stort lån:</strong> Bara för att du blir godkänd för ett stort lån betyder inte att du ska ta det. Låna bara vad du verkligen behöver och har råd att betala tillbaka.</li>
-                <li><strong>Glömma bort flexibiliteten:</strong> Kontrollera villkoren för förtidsbetalning. Möjligheten att betala extra utan avgift kan spara dig mycket pengar.</li>
-                <li><strong>Välja för kort bindningstid:</strong> Vid bolån kan en för kort bindningstid innebära att du måste förhandla om räntan ofta, medan en för lång bindningstid kan innebära att du missar räntesänkningar.</li>
-                <li><strong>Inte läsa villkoren:</strong> Läs alltid hela låneavtalet innan du skriver under. Fråga om allt du inte förstår.</li>
-            </ul>
-        </div>
-
-        <div class="cta-section">
-            <h2>Redo att hitta ditt bästa lån?</h2>
-            <p>Använd våra verktyg för att beräkna lånekostnader och jämföra olika alternativ</p>
-            <div class="cta-buttons">
-                <a href="/berakna/effektiv-ranta" class="btn btn-primary">Beräkna effektiv ränta</a>
-                <a href="/basta-rantan" class="btn btn-secondary">Jämför räntor</a>
-                <a href="/rantetyper" class="btn btn-secondary">Läs om räntetyper</a>
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
+                <p style="margin: 0;"><strong>Viktigt att veta:</strong> Den lägsta räntan får du normalt på lån med säkerhet (som bolån eller billån), medan blancolån utan säkerhet har högre räntor på grund av den ökade risken för långivaren.</p>
             </div>
         </div>
     </div>
+</section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Typer av lån med låg ränta</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <h3>Bolån</h3>
+                <p>Lägst ränta av alla låntyper eftersom bostaden fungerar som säkerhet. Typisk ränta: 3-5% beroende på bindningstid.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="1" y="3" width="15" height="13"></rect>
+                        <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                        <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                        <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                    </svg>
+                </div>
+                <h3>Billån</h3>
+                <p>Låg ränta tack vare att bilen är pant för lånet. Normalt lägre än blancolån men högre än bolån.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                </div>
+                <h3>Privatlån med säkerhet</h3>
+                <p>Genom att pantsätta tillgångar kan du få betydligt lägre ränta än på vanliga blancolån.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <h3>Medlemslån</h3>
+                <p>Vissa fackförbund och organisationer erbjuder fördelaktiga lån till sina medlemmar med låga räntor.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Tips för att få lägre ränta</h2>
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                <ul style="line-height: 2; color: #555;">
+                    <li><strong>Förbättra din kreditvärdighet</strong> - Betala räkningar i tid och undvik betalningsanmärkningar</li>
+                    <li><strong>Jämför flera långivare</strong> - Använd jämförelsetjänster för att hitta bästa räntan</li>
+                    <li><strong>Förhandla</strong> - Be om bättre villkor, särskilt om du har god ekonomi</li>
+                    <li><strong>Välj längre bindningstid</strong> - För bolån kan längre bindning ge lägre ränta</li>
+                    <li><strong>Amortera mer</strong> - Lägre lånebelopp ger ofta bättre ränta</li>
+                    <li><strong>Överväg säkerhet</strong> - Lån med pant har alltid lägre ränta än blancolån</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 16px; color: white;">Redo att jämföra räntor?</h2>
+        <p style="text-align: center; color: rgba(255,255,255,0.9); margin-bottom: 32px; font-size: 18px;">
+            Använd våra verktyg för att hitta det bästa lånet för dig
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="/berakna/bolaneranta" style="padding: 14px 28px; background: white; color: #1e3a5f; border-radius: 8px; font-weight: 600; text-decoration: none;">Beräkna bolåneränta</a>
+            <a href="/basta-rantan" style="padding: 14px 28px; background: rgba(255,255,255,0.2); color: white; border: 2px solid white; border-radius: 8px; font-weight: 600; text-decoration: none;">Jämför räntor</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-grid">
+            <div class="footer-column">
                 <h3>Om Ränta.nu</h3>
                 <ul>
                     <li><a href="/om-oss">Om oss</a></li>
@@ -692,7 +167,7 @@
                     <li><a href="/cookiepolicy">Cookiepolicy</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <div class="footer-column">
                 <h3>Ränteguider</h3>
                 <ul>
                     <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
@@ -701,7 +176,7 @@
                     <li><a href="/basta-rantan">Bästa räntan</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <div class="footer-column">
                 <h3>Kalkylatorer</h3>
                 <ul>
                     <li><a href="/berakna/bolaneranta">Bolåneränta</a></li>
@@ -710,7 +185,7 @@
                     <li><a href="/berakna/effektiv-ranta">Effektiv ränta</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <div class="footer-column">
                 <h3>Populära sidor</h3>
                 <ul>
                     <li><a href="/basta-sparrantan">Bästa sparräntan</a></li>
@@ -723,6 +198,8 @@
         <div class="footer-bottom">
             <p>&copy; 2026 Ränta.nu - Din guide till räntor och privatekonomi</p>
         </div>
-    </footer>
+    </div>
+</footer>
+
 </body>
 </html>

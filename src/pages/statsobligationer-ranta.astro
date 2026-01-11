@@ -1,698 +1,178 @@
 ---
-// Statsobligationer ränta - Information om statsobligationer och ränteutveckling
+// Frontmatter
+import '../styles/global.css';
+
+const pageTitle = "Statsobligationer ränta - Hur fungerar räntan? | Ränta.nu";
+const pageDescription = "Lär dig hur räntan på statsobligationer fungerar, vad som påverkar den och varför statsobligationer är en populär investering för säkerhetsmedvetna sparare.";
 ---
+
 <!DOCTYPE html>
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Statsobligationer ränta - Hur fungerar räntan på statsobligationer?</title>
-    <meta name="description" content="Lär dig hur räntan på statsobligationer fungerar, vad som påverkar den och varför statsobligationer är en populär investering för säkerhetsmedvetna sparare.">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.7;
-            color: #1e3a5f;
-            background: linear-gradient(135deg, #f0f5f7 0%, #ffffff 100%);
-        }
-
-        header {
-            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
-            padding: 1.5rem 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: white;
-            text-decoration: none;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #ffd700;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            opacity: 0.95;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 2rem;
-        }
-
-        .content-section {
-            background: white;
-            padding: 3rem;
-            margin-bottom: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-
-        .content-section h2 {
-            font-size: 2rem;
-            color: #1e3a5f;
-            margin-bottom: 1.5rem;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            border-left: 5px solid #28a745;
-            padding-left: 1rem;
-        }
-
-        .content-section h3 {
-            font-size: 1.5rem;
-            color: #2c5282;
-            margin: 2rem 0 1rem 0;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-
-        .content-section p {
-            margin-bottom: 1.2rem;
-            font-size: 1.05rem;
-            line-height: 1.8;
-        }
-
-        .content-section ul {
-            margin: 1.5rem 0;
-            padding-left: 2rem;
-        }
-
-        .content-section li {
-            margin-bottom: 0.8rem;
-            line-height: 1.7;
-        }
-
-        .info-box {
-            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-            border-left: 5px solid #1e3a5f;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-        }
-
-        .info-box strong {
-            color: #1e3a5f;
-            font-weight: 600;
-        }
-
-        .highlight-box {
-            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
-            border-left: 5px solid #28a745;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 8px;
-        }
-
-        .highlight-box strong {
-            color: #1e3a5f;
-            font-weight: 600;
-        }
-
-        .factors-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .factor-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 1.5rem;
-            border-radius: 12px;
-            border-top: 4px solid #1e3a5f;
-            transition: transform 0.3s;
-        }
-
-        .factor-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-        }
-
-        .factor-card h4 {
-            color: #1e3a5f;
-            margin-bottom: 0.8rem;
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-
-        .factor-card p {
-            margin-bottom: 0;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-
-        .benefit-card {
-            background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            border-top: 4px solid #28a745;
-            text-align: center;
-        }
-
-        .benefit-card .icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .benefit-card h4 {
-            color: #1e3a5f;
-            margin-bottom: 0.8rem;
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-
-        .benefit-card p {
-            margin-bottom: 0;
-        }
-
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2rem 0;
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .comparison-table thead {
-            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
-            color: white;
-        }
-
-        .comparison-table th {
-            padding: 1rem;
-            text-align: left;
-            font-weight: 600;
-            font-size: 1.05rem;
-        }
-
-        .comparison-table td {
-            padding: 1rem;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .comparison-table tbody tr:hover {
-            background-color: #f0f5f7;
-        }
-
-        .relationship-diagram {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-            text-align: center;
-        }
-
-        .relationship-diagram .arrow {
-            font-size: 2rem;
-            color: #1e3a5f;
-            margin: 1rem 0;
-        }
-
-        .relationship-diagram .box {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 2px solid #1e3a5f;
-            margin: 1rem auto;
-            max-width: 400px;
-        }
-
-        .relationship-diagram .box strong {
-            color: #1e3a5f;
-            font-size: 1.1rem;
-        }
-
-        .faq-section {
-            background: white;
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            margin-top: 2rem;
-        }
-
-        .faq-grid {
-            display: grid;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .faq-item {
-            background: #f8f9fa;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #28a745;
-        }
-
-        .faq-item h4 {
-            color: #1e3a5f;
-            margin-bottom: 0.8rem;
-            font-size: 1.15rem;
-            font-weight: 600;
-        }
-
-        .faq-item p {
-            margin-bottom: 0;
-        }
-
-        .cta-section {
-            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
-            color: white;
-            padding: 3rem;
-            border-radius: 12px;
-            text-align: center;
-            margin: 3rem 0;
-        }
-
-        .cta-section h2 {
-            color: white;
-            border: none;
-            padding: 0;
-            margin-bottom: 1rem;
-        }
-
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: #28a745;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #218838;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(40,167,69,0.3);
-        }
-
-        .btn-secondary {
-            background: white;
-            color: #1e3a5f;
-        }
-
-        .btn-secondary:hover {
-            background: #f8f9fa;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(255,255,255,0.3);
-        }
-
-        footer {
-            background: #1e3a5f;
-            color: white;
-            padding: 3rem 2rem 1.5rem 2rem;
-            margin-top: 4rem;
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-section a:hover {
-            color: white;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.7);
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .content-section {
-                padding: 2rem 1.5rem;
-            }
-
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription}>
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="/" class="logo">Ränta.nu</a>
-            <ul class="nav-links">
-                <li><a href="/">Hem</a></li>
-                <li><a href="/om-oss">Om oss</a></li>
-                <li><a href="/kontakt">Kontakt</a></li>
-            </ul>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
         </nav>
-    </header>
 
-    <section class="hero">
-        <h1>Statsobligationer ränta</h1>
-        <p>Hur fungerar räntan på statsobligationer och vad påverkar dess utveckling?</p>
-    </section>
+        <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
 
-    <div class="container">
-        <div class="content-section">
-            <h2>Vad är statsobligationer?</h2>
-            <p>När staten behöver låna pengar ger den ut olika värdepapper genom Riksgälden, varav statsobligationer är det mest kända. Statsobligationer är långfristiga skuldinstrument som den svenska staten använder för att finansiera sina kapitalbehov. När du köper en statsobligation lånar du i praktiken ut pengar till staten i utbyte mot att få tillbaka pengarna med ränta.</p>
-
-            <p>Statsobligationer anses vara en av de säkraste investeringarna som finns, eftersom de backas upp av svenska statens betalningsförmåga. Risken att Sverige skulle gå i konkurs och inte kunna betala tillbaka sina skulder är extremt liten, vilket gör statsobligationer till ett populärt val för säkerhetsmedvetna investerare.</p>
-
-            <div class="info-box">
-                <strong>Viktigt att veta:</strong> Statsobligationer har vanligtvis längre löptider än andra statspapper, ofta mellan 2 och 30 år. Under denna tid får investeraren regelbundna räntebetalningar, så kallade kuponger, och vid förfallodagen betalas hela lånebeloppet (nominellt värde) tillbaka.
-            </div>
-
-            <h3>Hur fungerar räntan på statsobligationer?</h3>
-            <p>Räntan på statsobligationer kan vara av två typer:</p>
-
-            <ul>
-                <li><strong>Fast ränta:</strong> Räntan är konstant under hela obligationens löptid. Du vet exakt hur mycket ränta du kommer att få varje år fram till förfallodagen.</li>
-                <li><strong>Rörlig ränta:</strong> Räntan justeras med jämna mellanrum baserat på en referensränta, till exempel STIBOR eller statslåneräntan. Detta innebär att räntebetalningarna kan variera över tid.</li>
-            </ul>
-
-            <p>De periodiska räntebetalningarna från statsobligationer kallas "kuponger" - ett namn som kommer från tiden då obligationer var fysiska papper med kuponglappar som man rev av och löste in för att få sina räntebetalningar.</p>
+<section class="hero" style="padding: 80px 0 60px;">
+    <div class="hero-inner" style="grid-template-columns: 1fr;">
+        <div class="hero-content" style="text-align: center;">
+            <h1 style="font-size: 52px; margin-bottom: 24px;">Statsobligationer ränta</h1>
+            <p style="font-size: 20px; color: #555; max-width: 700px; margin: 0 auto;">
+                Allt om hur räntan på statsobligationer fungerar och vad den betyder för din ekonomi
+            </p>
         </div>
+    </div>
+</section>
 
-        <div class="content-section">
-            <h2>Vad påverkar räntan på statsobligationer?</h2>
-            <p>Flera faktorer samverkar för att bestämma vilken ränta statsobligationer ger. Här är de viktigaste:</p>
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Vad är statsobligationer?</h2>
+            <p>Statsobligationer är värdepapper som den svenska staten ger ut för att låna pengar. När du köper en statsobligation lånar du i praktiken pengar till staten, som i gengäld betalar dig ränta och återbetalar lånet när obligationen förfaller. Statsobligationer anses vara bland de säkraste investeringarna eftersom de backas upp av svenska statens kreditvärdighet.</p>
 
-            <div class="factors-grid">
-                <div class="factor-card">
-                    <h4>Riksbankens penningpolitik</h4>
-                    <p>Riksbankens styrränta är den viktigaste faktorn. När Riksbanken höjer styrräntan stiger vanligtvis även räntan på statsobligationer, och vice versa.</p>
-                </div>
-                <div class="factor-card">
-                    <h4>Inflation och inflationsförväntningar</h4>
-                    <p>Högre inflation eller förväntningar om stigande inflation leder till högre räntor, eftersom investerare kräver kompensation för minskad köpkraft.</p>
-                </div>
-                <div class="factor-card">
-                    <h4>Ekonomisk tillväxt</h4>
-                    <p>Stark ekonomisk tillväxt tenderar att pressa upp räntorna, medan svag tillväxt eller recession ofta leder till lägre räntor.</p>
-                </div>
-                <div class="factor-card">
-                    <h4>Efterfrågan och utbud</h4>
-                    <p>Högre efterfrågan på statsobligationer pressar upp priset och sänker räntan. Lägre efterfrågan har motsatt effekt.</p>
-                </div>
-                <div class="factor-card">
-                    <h4>Internationella räntor</h4>
-                    <p>Ränteutvecklingen i andra länder, särskilt euroområdet och USA, påverkar även svenska statsobligationsräntor.</p>
-                </div>
-                <div class="factor-card">
-                    <h4>Statens kreditvärdighet</h4>
-                    <p>Sverige har högsta kreditbetyg, vilket ger låga räntor. Länder med sämre kreditvärdighet måste betala högre räntor.</p>
-                </div>
-            </div>
+            <p>Räntan på statsobligationer påverkas av många faktorer, inklusive Riksbankens styrränta, inflation, ekonomisk tillväxt och efterfrågan på säkra placeringar. Den används också som referensränta i många sammanhang, till exempel för statslåneräntan.</p>
 
-            <div class="highlight-box">
-                <strong>Samband mellan pris och ränta:</strong> Det finns ett omvänt förhållande mellan priset på en statsobligation och dess ränta (avkastning). När priset stiger sjunker avkastningen, och när priset faller ökar avkastningen. Detta är viktigt att förstå om du handlar med obligationer på andrahandsmarknaden.
-            </div>
-        </div>
-
-        <div class="content-section">
-            <h2>Statsobligationers räntan och dess utveckling</h2>
-            <p>Räntan på statsobligationer har varierat kraftigt genom historien beroende på ekonomiska förhållanden:</p>
-
-            <h3>Historisk utveckling i Sverige</h3>
-            <table class="comparison-table">
-                <thead>
-                    <tr>
-                        <th>Period</th>
-                        <th>Typisk räntenivå</th>
-                        <th>Drivande faktorer</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1980-talet</td>
-                        <td>10-15%</td>
-                        <td>Hög inflation och ekonomisk instabilitet</td>
-                    </tr>
-                    <tr>
-                        <td>1990-1995</td>
-                        <td>8-12%</td>
-                        <td>Finanskris och övergång till inflationsmål</td>
-                    </tr>
-                    <tr>
-                        <td>1996-2007</td>
-                        <td>4-6%</td>
-                        <td>Stabil ekonomi och låg inflation</td>
-                    </tr>
-                    <tr>
-                        <td>2008-2015</td>
-                        <td>2-4%</td>
-                        <td>Finanskris och efterföljande låg räntemiljö</td>
-                    </tr>
-                    <tr>
-                        <td>2016-2021</td>
-                        <td>0-1%</td>
-                        <td>Extremt låga räntor, ibland negativa, för att stimulera ekonomin</td>
-                    </tr>
-                    <tr>
-                        <td>2022-2024</td>
-                        <td>1-3%</td>
-                        <td>Höjda räntor för att bekämpa inflation</td>
-                    </tr>
-                    <tr>
-                        <td>2025-2026</td>
-                        <td>2,5-3,5%</td>
-                        <td>Normalisering när inflationen mattas av</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <h3>Sambandet med Riksbankens styrränta</h3>
-            <div class="relationship-diagram">
-                <div class="box">
-                    <strong>Riksbanken höjer styrräntan</strong>
-                    <p>För att bekämpa inflation</p>
-                </div>
-                <div class="arrow">↓</div>
-                <div class="box">
-                    <strong>Marknadsräntorna stiger</strong>
-                    <p>Inklusive räntan på nya statsobligationer</p>
-                </div>
-                <div class="arrow">↓</div>
-                <div class="box">
-                    <strong>Priset på befintliga obligationer sjunker</strong>
-                    <p>För att deras avkastning ska matcha nya obligationer</p>
-                </div>
-            </div>
-
-            <p>Detta samband innebär att om du äger en statsobligation och räntorna stiger, kommer värdet på din obligation att sjunka på andrahandsmarknaden. Men om du håller obligationen till förfall får du fortfarande tillbaka hela det nominella beloppet plus de avtalade kupongbetalningarna.</p>
-        </div>
-
-        <div class="content-section">
-            <h2>Varför köper man statsobligationer?</h2>
-            <p>Det finns flera goda skäl till varför investerare väljer att köpa statsobligationer:</p>
-
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="icon">🛡️</div>
-                    <h4>Säkerhet</h4>
-                    <p>Statsobligationer backas upp av svenska staten och anses vara en av de säkraste investeringarna. Risken för förlust är minimal.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="icon">💰</div>
-                    <h4>Stabil avkastning</h4>
-                    <p>Regelbundna räntebetalningar ger en förutsägbar inkomstström, perfekt för de som vill ha stabila kassaflöden.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="icon">📊</div>
-                    <h4>Diversifiering</h4>
-                    <p>Statsobligationer hjälper till att sprida risk i din portfölj och balansera mer riskfyllda investeringar som aktier.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="icon">💧</div>
-                    <h4>Likviditet</h4>
-                    <p>Svenska statsobligationer är lätta att köpa och sälja på andrahandsmarknaden, vilket ger flexibilitet.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="icon">⚖️</div>
-                    <h4>Portföljbalans</h4>
-                    <p>Fungerar som en motvikt till aktier - när aktier faller i värde behåller obligationer ofta sitt värde eller till och med stiger.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="icon">📈</div>
-                    <h4>Kapitalvinst-potential</h4>
-                    <p>Om räntorna faller efter att du köpt obligationen ökar dess värde, vilket ger möjlighet till kapitalvinst vid försäljning.</p>
-                </div>
-            </div>
-
-            <div class="info-box">
-                <strong>För vem passar statsobligationer?</strong> Statsobligationer passar särskilt bra för:
-                <ul style="margin-top: 1rem; margin-bottom: 0;">
-                    <li>Pensionssparare som vill ha säkra placeringar</li>
-                    <li>Investerare som söker förutsägbar inkomst</li>
-                    <li>De som vill balansera riskfyllda portföljer</li>
-                    <li>Institutioner och fonder som behöver säkra placeringar</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="content-section">
-            <h2>Marknad för statsobligationer</h2>
-            <p>Statsobligationer handlas både på primärmarknaden (där nya obligationer ges ut) och andrahandsmarknaden (där befintliga obligationer köps och säljs).</p>
-
-            <h3>Primärmarknaden</h3>
-            <p>På primärmarknaden ger Riksgälden ut nya statsobligationer genom auktioner. Här kan både privatpersoner (ofta genom banker) och institutioner köpa obligationer direkt från staten. Räntan (kupongen) på dessa obligationer sätts utifrån rådande marknadsförhållanden.</p>
-
-            <h3>Andrahandsmarknaden</h3>
-            <p>Efter att obligationerna getts ut kan de köpas och säljas på andrahandsmarknaden, främst Nasdaq Stockholm. Här bestäms priset av utbud och efterfrågan. Eftersom räntan (kupongen) är fast på obligationen, justeras istället priset så att den effektiva avkastningen matchar rådande ränteläge.</p>
-
-            <h3>Prisbildning och räntor</h3>
-            <p>Sambandet mellan pris och ränta på andrahandsmarknaden kan illustreras med ett exempel:</p>
-
-            <div class="highlight-box">
-                <strong>Exempel på prisbildning:</strong><br><br>
-                Antag att du köper en statsobligation för 1000 kr med 3% årlig kupong (30 kr per år). Om marknadsräntorna sedan stiger till 4% kommer ingen att vilja betala 1000 kr för din obligation eftersom de kan köpa nya obligationer med 4% ränta. Därför måste priset på din obligation sjunka till cirka 750-850 kr så att avkastningen (30 kr på ett lägre pris) motsvarar den nya marknadsräntan på 4%.
-            </div>
-
-            <p>Riksbanken påverkar marknaden för statsobligationer genom sin penningpolitik. Genom att kontrollera reporäntan påverkar centralbanken alla räntor i ekonomin, inklusive svenska statsobligationsräntor. När Riksbanken höjer räntan blir nya statsobligationer mer attraktiva med högre räntor, och priserna på befintliga obligationer med lägre kuponger sjunker.</p>
-        </div>
-
-        <div class="faq-section">
-            <h2>Vanliga frågor om statsobligationer och ränta</h2>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h4>Hur beskattas ränta från statsobligationer?</h4>
-                    <p>Ränteinkomster från statsobligationer beskattas som kapitalinkomst med 30% skatt i Sverige. Detta gäller både för kupongbetalningar och eventuella kapitalvinster vid försäljning.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Vad är skillnaden mellan statsobligationer och aktier?</h4>
-                    <p>Statsobligationer är lån till staten med fast ränta och återbetalningsdatum, medan aktier representerar ägarandelar i företag. Obligationer ger lägre risk och mer stabil avkastning, medan aktier har högre avkastningspotential men också högre risk.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Hur jämför man olika statsobligationer?</h4>
-                    <p>Viktiga faktorer att jämföra är: avkastning till förfall (yield to maturity), löptid, kupongränta, och likviditet. Längre löptider ger vanligtvis högre ränta men också större prisrisk om räntorna ändras.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Kan man förlora pengar på statsobligationer?</h4>
-                    <p>Om du håller obligationen till förfall får du tillbaka hela det nominella beloppet plus alla kupongbetalningar. Men om du säljer innan förfall kan du göra förlust om räntorna har stigit sedan du köpte. Det finns också inflationsrisk - om inflationen är högre än räntan förlorar du köpkraft.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Vad händer om räntorna sjunker efter att jag köpt en obligation?</h4>
-                    <p>Om räntorna sjunker efter ditt köp ökar värdet på din obligation på andrahandsmarknaden. Du kan då antingen sälja med vinst eller fortsätta att hålla obligationen och få de ursprungliga kupongbetalningarna som nu är högre än marknadsräntan.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Hur köper man statsobligationer?</h4>
-                    <p>Du kan köpa statsobligationer genom din bank eller en nätmäklare. Vissa banker erbjuder också direktköp från Riksgälden vid nyemissioner. För privatpersoner kan det enklaste vara att investera genom obligationsfonder som köper statsobligationer.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="cta-section">
-            <h2>Vill du lära dig mer om räntor och investeringar?</h2>
-            <p>Utforska våra guider om olika räntetyper och investeringsmöjligheter</p>
-            <div class="cta-buttons">
-                <a href="/riskfri-ranta" class="btn btn-primary">Riskfri ränta</a>
-                <a href="/riksbankens-ranta" class="btn btn-secondary">Riksbankens ränta</a>
-                <a href="/basta-sparrantan" class="btn btn-secondary">Bästa sparräntan</a>
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
+                <p style="margin: 0;"><strong>Viktigt att veta:</strong> Svenska statsobligationer anses vara mycket säkra tack vare Sveriges starka ekonomi och AAA-kreditbetyg. Risken att staten inte skulle kunna betala tillbaka är extremt låg.</p>
             </div>
         </div>
     </div>
+</section>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
+<section class="features-section">
+    <div class="section-inner">
+        <h2 class="features-title">Fördelar med statsobligationer</h2>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>Hög säkerhet</h3>
+                <p>Backas upp av svenska staten och har AAA-kreditbetyg. En av de säkraste investeringsformerna som finns.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                </div>
+                <h3>Förutsägbar avkastning</h3>
+                <p>Du vet i förväg vilken ränta du får och när obligationen förfaller. Ger trygghet i din ekonomiska planering.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                </div>
+                <h3>Likviditet</h3>
+                <p>Kan köpas och säljas på andrahandsmarknaden innan förfallodagen om du behöver pengarna tidigare.</p>
+            </div>
+
+            <div class="feature-item">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                </div>
+                <h3>Diversifiering</h3>
+                <p>Fungerar som en stabil grund i en investeringsportfölj och balanserar mer riskfyllda placeringar som aktier.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section gray">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 48px;">Vad påverkar räntan på statsobligationer?</h2>
+        <div style="max-width: 900px; margin: 0 auto;">
+            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
+                <ul style="line-height: 2; color: #555;">
+                    <li><strong>Riksbankens styrränta</strong> - Höjningar och sänkningar påverkar direkta obligationsräntor</li>
+                    <li><strong>Inflation</strong> - Högre inflation leder till högre räntor för att kompensera köpkraftsförlust</li>
+                    <li><strong>Ekonomisk tillväxt</strong> - Stark tillväxt kan leda till högre räntor</li>
+                    <li><strong>Utbud och efterfrågan</strong> - Ökat köptryck sänker räntan, minskat köptryck höjer den</li>
+                    <li><strong>Internationella räntor</strong> - Räntorna i andra länder påverkar svenska räntor</li>
+                    <li><strong>Löptid</strong> - Längre löptid ger normalt högre ränta (räntekurvan)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="section-inner">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 32px;">Hur köper man statsobligationer?</h2>
+            <p>Privatpersoner kan köpa svenska statsobligationer på två huvudsakliga sätt: antingen direkt via Riksgälden när nya obligationer ges ut, eller på andrahandsmarknaden genom banker och värdepappersföretag.</p>
+
+            <p>De vanligaste löptiderna är 2, 5 och 10 år, men det finns också kortare statsskuldväxlar och längre obligationer. Räntan sätts vid emissionstillfället och påverkas av det aktuella marknadsläget.</p>
+
+            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
+                <p style="margin: 0;"><strong>Tänk på:</strong> När du köper en statsobligation på andrahandsmarknaden kan priset vara högre eller lägre än det nominella värdet beroende på hur marknadsräntorna har utvecklats sedan obligationen gavs ut.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="section-inner">
+        <h2 style="text-align: center; margin-bottom: 16px; color: white;">Intresserad av säkert sparande?</h2>
+        <p style="text-align: center; color: rgba(255,255,255,0.9); margin-bottom: 32px; font-size: 18px;">
+            Utforska olika sparalternativ och jämför räntor
+        </p>
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <a href="/basta-sparrantan" style="padding: 14px 28px; background: white; color: #1e3a5f; border-radius: 8px; font-weight: 600; text-decoration: none;">Bästa sparräntan</a>
+            <a href="/riskfri-ranta" style="padding: 14px 28px; background: rgba(255,255,255,0.2); color: white; border: 2px solid white; border-radius: 8px; font-weight: 600; text-decoration: none;">Riskfri ränta</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-grid">
+            <div class="footer-column">
                 <h3>Om Ränta.nu</h3>
                 <ul>
                     <li><a href="/om-oss">Om oss</a></li>
@@ -701,7 +181,7 @@
                     <li><a href="/cookiepolicy">Cookiepolicy</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <div class="footer-column">
                 <h3>Ränteguider</h3>
                 <ul>
                     <li><a href="/vad-ar-ranta">Vad är ränta?</a></li>
@@ -710,7 +190,7 @@
                     <li><a href="/basta-rantan">Bästa räntan</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <div class="footer-column">
                 <h3>Kalkylatorer</h3>
                 <ul>
                     <li><a href="/berakna/bolaneranta">Bolåneränta</a></li>
@@ -719,7 +199,7 @@
                     <li><a href="/berakna/effektiv-ranta">Effektiv ränta</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <div class="footer-column">
                 <h3>Populära sidor</h3>
                 <ul>
                     <li><a href="/basta-sparrantan">Bästa sparräntan</a></li>
@@ -732,6 +212,8 @@
         <div class="footer-bottom">
             <p>&copy; 2026 Ränta.nu - Din guide till räntor och privatekonomi</p>
         </div>
-    </footer>
+    </div>
+</footer>
+
 </body>
 </html>
