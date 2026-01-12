@@ -132,7 +132,7 @@
     /* Hero - full width */
     .hero {
         background: linear-gradient(135deg, #f0f5f7 0%, #ffffff 100%);
-        padding: 100px 0 120px;
+        padding: 80px 0 100px;
     }
 
     .hero-inner {
@@ -1949,7 +1949,10 @@
 
     @media (max-width: 900px) {
         .header-nav { display: none; }
+        .hero { padding: 60px 0 80px; }
         .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+        .hero-content h1 { font-size: 38px; }
+        .hero-content > p { font-size: 16px; }
         .content-row { grid-template-columns: 1fr; gap: 30px; }
         .content-row.reverse { direction: ltr; }
         .features-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1971,7 +1974,12 @@
     }
 
     @media (max-width: 600px) {
-        .hero-content h1 { font-size: 30px; }
+        .header-inner, .hero-inner, .section-inner, .cta-inner, .footer-inner {
+            padding: 0 20px;
+        }
+        .hero { padding: 40px 0 60px; }
+        .hero-content h1 { font-size: 32px; margin-bottom: 20px; line-height: 1.2; }
+        .hero-content > p { font-size: 16px; line-height: 1.6; margin-bottom: 12px; }
         .features-grid { grid-template-columns: 1fr; }
         .contact-form { grid-template-columns: 1fr; }
         .company-grid { grid-template-columns: 1fr; }
@@ -1980,4 +1988,9 @@
         .products-grid { grid-template-columns: 1fr; }
         .apps-grid { grid-template-columns: 1fr; }
         .riksbanken-stats { grid-template-columns: 1fr; }
+        .btn-primary, .btn-secondary {
+            width: 100%;
+            justify-content: center;
+            padding: 14px 24px;
+        }
     }
