@@ -12,29 +12,6 @@ Ränta är i praktiken kostnaden av att låna pengar, en avgift du betalar till 
 
 Det handlar om att skilja på räntan som står i kontraktet och den faktiska kostnaden inklusive avgifter, samt att förstå hur amorteringen påverkar skulden över tid.
 
-## Innehållsförteckning
-
-[Hur räknar man ut ränta på lån?](#hur-raknar-man-ut-ranta-pa-lan)
-- [Grundformeln för att beräkna årlig räntekostnad](#grundformeln-for-att-berakna-arlig-rantekostnad)
-- [Metod för att räkna ut månadskostnad](#metod-for-att-rakna-ut-manadskostnad)
-
-[Vad är skillnaden mellan nominell och effektiv ränta?](#vad-ar-skillnaden-mellan-nominell-och-effektiv-ranta)
-- [Nominell ränta avser enbart kostnaden för lånet](#nominell-ranta-avser-enbart-kostnaden-for-lanet)
-- [Effektiv ränta inkluderar avgifter och visar jämförpriset](#effektiv-ranta-inkluderar-avgifter-och-visar-jamforpriset)
-- [Räkneexempel på hur avgifter höjer den effektiva räntan](#rakneexempel-pa-hur-avgifter-hojer-den-effektiva-rantan)
-
-[Hur påverkar amorteringsmodellen den totala räntekostnaden?](#hur-paverkar-amorteringsmodellen-den-totala-rantekostnaden)
-- [Rak amortering ger en sjunkande räntekostnad över tid](#rak-amortering-ger-en-sjunkande-rantekostnad-over-tid)
-- [Annuitetslån ger högre total räntekostnad men förutsägbara belopp](#annuitetslan-ger-hogre-total-rantekostnad-men-forutsagbara-belopp)
-
-- [Ta hjälp av en lånekalkylator](#ta-hjalp-av-en-lanekalkylator)
-[Hur räknar man ut kostnaden efter ränteavdraget?](#hur-raknar-man-ut-kostnaden-efter-ranteavdraget)
-- [Skatteregler för avdrag på 30 procent av räntekostnaden](#skatteregler-for-avdrag-pa-30-procent-av-rantekostnaden)
-
-[Vad avgör vilken ränta man får av banken?](#vad-avgor-vilken-ranta-man-far-av-banken)
-- [Kreditvärdighet och inkomst styr den individuella räntan](#kreditvardighet-och-inkomst-styr-den-individuella-rantan)
-- [Medsökande kan sänka risken och därmed räntekostnaden](#medsokande-kan-sanka-risken-och-darmed-rantekostnaden)
-
 ## **Hur räknar man ut ränta på lån?**
 
 Att beräkna räntekostnaden handlar i grunden om tre variabler: lånets storlek (kapitalskulden), räntesatsen och tiden. Det är viktigt att förstå att räntan alltid beräknas på den aktuella skulden. Det innebär att räntekostnaden i kronor sjunker i takt med att du betalar av på lånet, förutsatt att räntesatsen är densamma.

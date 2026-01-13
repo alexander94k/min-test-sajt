@@ -8,13 +8,6 @@ featuredImage: /images/articles/hur-hog-ar-rantan-pa-en-kontokredit-aktuella-vil
 
 Kontokredit är ett flexibelt lånealternativ där du får tillgång till extra pengar direkt via ditt konto – utan att ta ett nytt lån varje gång. Men hur bestäms räntan, varför är den rörlig, och hur skiljer sig kontokredit från exempelvis kreditkort eller privatlån? I den här guiden får du en tydlig förklaring av vad som påverkar räntan på kontokredit, hur du räknar ut den effektiva räntan och vad som skiljer olika kreditformer åt.
 
-## Innehållsförteckning
-
-- [Vad påverkar räntan på en kontokredit?](#vad-paverkar-rantan-pa-en-kontokredit)
-- [Rörlig eller fast ränta – vad gäller för kontokredit?](#rorlig-eller-fast-ranta-vad-galler-for-kontokredit)
-- [Hur räknar man ut den effektiva räntan på kontokredit?](#hur-raknar-man-ut-den-effektiva-rantan-pa-kontokredit)
-- [Hur skiljer sig kontokredit från kreditkort eller privatlån?](#hur-skiljer-sig-kontokredit-fran-kreditkort-eller-privatlan)
-
 ## Vad påverkar räntan på en kontokredit?
 
 Din kreditvärdighet är den viktigaste faktorn som påverkar räntan. Långivare gör en kreditprövning för att bedöma din betalningsförmåga.

@@ -10,15 +10,6 @@ Att använda kreditkort kan vara praktiskt, men det blir snabbt dyrt utan koll p
 
 Höga räntekostnader gör det svårare att spara, ökar belastningen på hushållsbudgeten och kan på sikt försämra din kreditvärdighet. Genom att förstå hur räntan fungerar, när den börjar gälla och vad som skiljer låg från hög ränta, går det att fatta bättre beslut för en mer hållbar privatekonomi.
 
-## Innehållsförteckning
-
-[Vad är ränta på kreditkort och hur fungerar den?](#vad-ar-ranta-pa-kreditkort-och-hur-fungerar-den)
-- [Hur räntan beräknas](#hur-rantan-beraknas)
-
-- [Kreditkort med låg ränta](#kreditkort-med-lag-ranta)
-- [Hur påverkar en hög ränta din ekonomi på lång sikt?](#hur-paverkar-en-hog-ranta-din-ekonomi-pa-lang-sikt)
-- [När börjar ränta på kreditkort gälla?](#nar-borjar-ranta-pa-kreditkort-galla)
-
 ## **Vad är ränta på kreditkort och hur fungerar den?**
 
 Ränta på kreditkort är kostnaden för att låna pengar från din bank eller kortutgivare. Du betalar endast ränta på det belopp du använder och inte betalar tillbaka under den räntefria perioden.

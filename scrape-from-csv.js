@@ -122,6 +122,13 @@ function htmlToMarkdown(html, imagesDir, articleSlug, wpImages) {
   md = md.replace(/&#8211;/g, '–');
   md = md.replace(/&#8212;/g, '—');
 
+  // Remove table of contents sections
+  md = md.replace(/##\s*Innehållsförteckning[\s\S]*?(?=##|$)/gi, '');
+  md = md.replace(/##\s*Table of Contents[\s\S]*?(?=##|$)/gi, '');
+
+  // Remove list items that look like TOC links
+  md = md.replace(/- \[.*?\]\(#.*?\)\n?/gi, '');
+
   // Clean up multiple newlines
   md = md.replace(/\n{3,}/g, '\n\n');
   md = md.trim();

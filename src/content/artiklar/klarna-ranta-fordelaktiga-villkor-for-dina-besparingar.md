@@ -8,11 +8,6 @@ featuredImage: /images/articles/klarna-ranta-fordelaktiga-villkor-for-dina-bespa
 
 Att spara pengar är en viktig del av en sund ekonomi, och att hitta ett sparkonto med konkurrenskraftig ränta är nyckeln till att maximera dina besparingar. Klarna, som är mest känt för sina betalningslösningar, erbjuder också sparkonton med ränta. I den här artikeln går vi igenom vilka räntor du kan förvänta dig från Klarna.
 
-## Innehållsförteckning
-
-- [Ränta på klarnas sparkonton](#ranta-pa-klarnas-sparkonton)
-- [Investera i klarna](#investera-i-klarna)
-
 ## Ränta på klarnas sparkonton
 
 Klarna erbjuder två huvudsakliga typer av sparkonton: flexkonton och fasta konton.

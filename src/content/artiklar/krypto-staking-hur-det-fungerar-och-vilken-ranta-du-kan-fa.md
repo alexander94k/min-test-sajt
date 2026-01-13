@@ -10,17 +10,6 @@ Krypto staking är ett sätt att få löpande avkastning genom att låsa kryptov
 
 Här går vi igenom hur staking fungerar, vilka räntor som är realistiskt att förvänta sig, samt hur staking skiljer sig från traditionella sparformer som sparkonto och räntefonder.
 
-## Innehållsförteckning
-
-- [Vad är krypto staking?](#vad-ar-krypto-staking)
-- [Vilken ränta kan du få när du stakear krypto?](#vilken-ranta-kan-du-fa-nar-du-stakear-krypto)
-- [Exempel på “räntor” för staking av olika kryptovalutor](#exempel-pa-rantor-for-staking-av-olika-kryptovalutor)
-- [Vad påverkar räntan när du stakear krypto?](#vad-paverkar-rantan-nar-du-stakear-krypto)
-- [Krypto staking jämfört med traditionella sparformer](#krypto-staking-jamfort-med-traditionella-sparformer)
-- [Risker och nackdelar – när staking kan bli en dålig affär](#risker-och-nackdelar-nar-staking-kan-bli-en-dalig-affar)
-- [Så kommer du igång med staking på ett tryggt och säkert sätt](#sa-kommer-du-igang-med-staking-pa-ett-tryggt-och-sakert-satt)
-- [Vanliga frågor om staking och ränta på krypto](#vanliga-fragor-om-staking-och-ranta-pa-krypto)
-
 ## Vad är krypto staking?
 
 Krypto staking är i grunden ett sätt att få “ränta på krypto” genom att låsa dina kryptovalutor i ett nätverk som använder proof‑of‑stake (PoS).

@@ -12,12 +12,6 @@ Frågan är inte vad som händer om en specifik byggnad vid Brunkebergstorg utry
 
 Den omedelbara analysen är trivial: kaos, finansiell panik och frysta tillgångar. Det är första ordningens tänkande. Men i jakten på en ny ekonomisk jämvikt skulle en rad konsekvenser blossa upp som är mindre förutsägbara för lekmannen.
 
-## Innehållsförteckning
-
-- [Konsekvens 1: Systemets nervsystem kollapsar och återuppstår](#konsekvens-1-systemets-nervsystem-kollapsar-och-ateruppstar)
-- [Konsekvens 2: Det sanna priset på risk](#konsekvens-2-det-sanna-priset-pa-risk)
-- [Den framtvingade annekteringen](#den-framtvingade-annekteringen)
-
 ## **Konsekvens 1: Systemets nervsystem kollapsar och återuppstår**
 
 Den mest akuta konsekvensen är inte monetär, den är mekanisk. Riksbanken driver RIX-systemet, det finansiella systemets centrala nervsystem. Det är hit alla banker kopplar sig för att i realtid kvitta miljardbetalningar mot varandra.

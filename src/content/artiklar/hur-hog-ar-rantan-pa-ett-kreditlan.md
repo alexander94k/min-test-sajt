@@ -10,13 +10,6 @@ Räntan på ett kreditlån varierar mycket beroende på vilken typ av lån du v�
 
 Din personliga ekonomi spelar stor roll för vilken ränta du erbjuds. Långivare bedömer din kreditvärdighet och bestämmer sedan om du får låna pengar och till vilken kostnad. Låneförmedlare kan hjälpa dig jämföra erbjudanden från olika långivare för att hitta bästa räntan.
 
-## Innehållsförteckning
-
-- [Vad är ett kreditlån och hur fungerar det?](#vad-ar-ett-kreditlan-och-hur-fungerar-det)
-- [Vad påverkar räntan på ett kreditlån?](#vad-paverkar-rantan-pa-ett-kreditlan)
-- [Hur skiljer sig räntan mellan lätt och tung kreditrisk?](#hur-skiljer-sig-rantan-mellan-latt-och-tung-kreditrisk)
-- [Fast eller rörlig ränta – vad är bäst för kreditlån?](#fast-eller-rorlig-ranta-vad-ar-bast-for-kreditlan)
-
 ## Vad är ett kreditlån och hur fungerar det?
 
 Ett kreditlån är en typ av kredit där en bank eller långivare ger dig tillgång till pengar upp till en bestämd gräns. Du som låntagare kan använda pengarna när du behöver dem, istället för att få hela summan på en gång.
