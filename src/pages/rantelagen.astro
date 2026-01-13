@@ -232,6 +232,17 @@ const pageDescription = "Allt om räntelagen: vad den reglerar, hur dröjsmålsr
     .dark-bg p {
       color: rgba(255, 255, 255, 0.9);
     }
+  
+    /* Mobile - Force ALL text left aligned */
+    @media (max-width: 767px) {
+      section h1,
+      section p,
+      .cta-section,
+      .cta-section h2,
+      .cta-section p {
+        text-align: left !important;
+      }
+    }
   </style>
 </head>
 <body>

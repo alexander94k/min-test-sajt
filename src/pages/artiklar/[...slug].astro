@@ -143,6 +143,15 @@ const relateradeArtiklar = allArtiklar
       color: #555;
     }
 
+    /* Mobile - Force ALL text left aligned */
+    @media (max-width: 767px) {
+      section h1,
+      section p,
+      div[style*="text-align: center"] {
+        text-align: left !important;
+      }
+    }
+
     .article-content code {
       background: #f4f4f4;
       padding: 3px 8px;
