@@ -41,20 +41,31 @@ function htmlToMarkdown(html, imagesDir, articleSlug) {
   // Track images to download
   const imagesToDownload = [];
 
-  // Convert images first
-  md = md.replace(/<img[^>]*src="([^"]*)"[^>]*alt="([^"]*)"[^>]*>/gi, (match, src, alt) => {
-    const filename = `${articleSlug}-${path.basename(src)}`;
-    const localPath = `/images/articles/${filename}`;
-    imagesToDownload.push({ url: src, filename, localPath: path.join(imagesDir, filename) });
-    return `\n\n![${alt || 'Image'}](${localPath})\n\n`;
-  });
+  // Find all img tags (more flexible regex)
+  const imgRegex = /<img[^>]+>/gi;
+  const imgMatches = html.match(imgRegex) || [];
 
-  // Handle images without alt text
-  md = md.replace(/<img[^>]*src="([^"]*)"[^>]*>/gi, (match, src) => {
+  imgMatches.forEach(imgTag => {
+    // Extract src
+    const srcMatch = imgTag.match(/src=["']([^"']+)["']/i);
+    if (!srcMatch) return;
+
+    const src = srcMatch[1];
+
+    // Extract alt (optional)
+    const altMatch = imgTag.match(/alt=["']([^"']*)["']/i);
+    const alt = altMatch ? altMatch[1] : '';
+
+    // Create filename and path
     const filename = `${articleSlug}-${path.basename(src)}`;
     const localPath = `/images/articles/${filename}`;
-    imagesToDownload.push({ url: src, filename, localPath: path.join(imagesDir, filename) });
-    return `\n\n![Image](${localPath})\n\n`;
+    const fullLocalPath = path.join(imagesDir, filename);
+
+    // Add to download list
+    imagesToDownload.push({ url: src, filename, localPath: fullLocalPath });
+
+    // Replace in markdown
+    md = md.replace(imgTag, `\n\n![${alt || 'Image'}](${localPath})\n\n`);
   });
 
   // Headers
@@ -173,9 +184,15 @@ async function convertWordPress() {
       }
     }
 
-    // Create frontmatter
-    const featuredImageLine = imagesToDownload.length > 0
-      ? `featuredImage: ${imagesToDownload[0].localPath.replace('/Users/alexander/Desktop/min-test-sajt/public', '')}\n`
+    // Create frontmatter with first image as featured image
+    let featuredImagePath = '';
+    if (imagesToDownload.length > 0) {
+      // Get the web path (not the file system path)
+      featuredImagePath = `/images/articles/${imagesToDownload[0].filename}`;
+    }
+
+    const featuredImageLine = featuredImagePath
+      ? `featuredImage: ${featuredImagePath}\n`
       : '';
 
     const frontmatter = `---
