@@ -256,20 +256,30 @@ const pageDescription = "Lär dig om riskfri ränta, hur den används i värderi
         padding: 40px 0 !important;
       }
 
-      /* Feature icons - keep SVG centered but text left */
+      /* Feature icons - left align everything including SVG */
       .feature-icon {
-        text-align: center !important;
+        text-align: left !important;
         display: flex;
         justify-content: flex-start;
+        margin-bottom: 16px;
       }
 
       .feature-icon svg {
         margin: 0 !important;
       }
 
-      /* Other SVG icons left aligned */
-      .section-inner > div:not(.feature-icon):not(.features-grid) svg,
-      .dark-bg > div:not(.feature-icon) svg {
+      .feature-item {
+        text-align: left !important;
+      }
+
+      .feature-item h3,
+      .feature-item p {
+        text-align: left !important;
+      }
+
+      /* All SVG icons left aligned on mobile */
+      svg[viewBox="0 0 24 24"] {
+        display: block;
         margin-left: 0 !important;
         margin-right: auto !important;
       }
