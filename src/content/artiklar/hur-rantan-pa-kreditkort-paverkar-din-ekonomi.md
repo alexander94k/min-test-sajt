@@ -1,8 +1,9 @@
 ---
 title: "Hur räntan på kreditkort påverkar din ekonomi"
-description: "Att använda kreditkort kan vara praktiskt, men det blir snabbt dyrt utan koll på räntan. Räntan är kostnaden för att låna pengar, och när den ligger på 20–25 %"
+description: "Att använda kreditkort kan vara praktiskt, men det blir snabbt dyrt utan koll på räntan. Räntan är kostnaden för att låna pengar, och när den ligger på 20–25 % "
 publishDate: 2025-11-27
-author: "Erik"
+author: "Ränta.nu"
+featuredImage: /images/articles/hur-rantan-pa-kreditkort-paverkar-din-ekonomi-featured.png
 ---
 
 Att använda kreditkort kan vara praktiskt, men det blir snabbt dyrt utan koll på räntan. Räntan är kostnaden för att låna pengar, och när den ligger på 20–25 % per år kan småköp snabbt växa till stora skulder.

@@ -2,7 +2,8 @@
 title: "Krypto staking: Hur det fungerar och vilken ränta du kan få"
 description: "Krypto staking är ett sätt att få löpande avkastning genom att låsa kryptovalutor under en förutbestämd tid. Belöningen betalas ut i form av nya coins och kan j"
 publishDate: 2025-12-02
-author: "Erik"
+author: "Ränta.nu"
+featuredImage: /images/articles/krypto-staking-hur-det-fungerar-och-vilken-ranta-du-kan-fa-featured.png
 ---
 
 Krypto staking är ett sätt att få löpande avkastning genom att låsa kryptovalutor under en förutbestämd tid. Belöningen betalas ut i form av nya coins och kan jämföras med sparränta på ett traditionellt sparkonto. Hur hög avkastning du får varierar mellan olika nätverk, men ligger vanligtvis mellan 3-10 % per år. 
@@ -16,7 +17,7 @@ Här går vi igenom hur staking fungerar, vilka räntor som är realistiskt att 
 - [Exempel på “räntor” för staking av olika kryptovalutor](#exempel-pa-rantor-for-staking-av-olika-kryptovalutor)
 - [Vad påverkar räntan när du stakear krypto?](#vad-paverkar-rantan-nar-du-stakear-krypto)
 - [Krypto staking jämfört med traditionella sparformer](#krypto-staking-jamfort-med-traditionella-sparformer)
-- [Risker och nackdelar - när staking kan bli en dålig affär](#risker-och-nackdelar-nar-staking-kan-bli-en-dalig-affar)
+- [Risker och nackdelar – när staking kan bli en dålig affär](#risker-och-nackdelar-nar-staking-kan-bli-en-dalig-affar)
 - [Så kommer du igång med staking på ett tryggt och säkert sätt](#sa-kommer-du-igang-med-staking-pa-ett-tryggt-och-sakert-satt)
 - [Vanliga frågor om staking och ränta på krypto](#vanliga-fragor-om-staking-och-ranta-pa-krypto)
 
@@ -98,7 +99,7 @@ Sparkonto är stabilt, enkelt och skyddat av den statliga insättningsgarantin. 
 
 - Förväntad värdeutveckling är jämnare och mindre volatil än aktier och krypto
 
-## Risker och nackdelar - när staking kan bli en dålig affär
+## Risker och nackdelar – när staking kan bli en dålig affär
 
 Krypto staking kan se ut som enkel möjlighet att få “ränta på krypto”, men i fel läge kan det bli en väldigt dålig affär.
 

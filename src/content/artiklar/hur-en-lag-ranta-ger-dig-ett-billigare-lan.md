@@ -2,7 +2,8 @@
 title: "Hur en låg ränta ger dig ett billigare lån"
 description: "En låg ränta kan ge dig ett billigare lån. Räntan påverkar hur mycket du betalar för ditt lån och kan vara fast eller variabel. En lägre ränta minskar dina måna"
 publishDate: 2024-07-25
-author: "Andrew"
+author: "Ränta.nu"
+featuredImage: /images/articles/hur-en-lag-ranta-ger-dig-ett-billigare-lan-featured.jpg
 ---
 
 En låg ränta kan ge dig ett billigare lån. Räntan påverkar hur mycket du betalar för ditt lån och kan vara fast eller variabel. En lägre ränta minskar dina månadskostnader och den totala kostnaden för lånet. Lär dig hur du kan få ett lån med låg ränta och spara pengar.

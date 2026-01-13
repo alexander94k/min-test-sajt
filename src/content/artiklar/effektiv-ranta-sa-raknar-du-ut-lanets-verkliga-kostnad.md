@@ -1,8 +1,9 @@
 ---
 title: "Effektiv ränta: Så räknar du ut lånets verkliga kostnad"
-description: "Effektiv ränta är lånets totala kostnad uttryckt som årsränta, där både nominell ränta inklusive övriga avgifter som uppläggnings- och avi-avgifter inkluderas."
+description: "Effektiv ränta är lånets totala kostnad uttryckt som årsränta, där både nominell ränta inklusive övriga avgifter som uppläggnings- och avi-avgifter inkluderas. "
 publishDate: 2025-12-29
-author: "Erik"
+author: "Ränta.nu"
+featuredImage: /images/articles/effektiv-ranta-sa-raknar-du-ut-lanets-verkliga-kostnad-featured.png
 ---
 
 Effektiv ränta är lånets totala kostnad uttryckt som årsränta, där både nominell ränta inklusive övriga avgifter som uppläggnings- och avi-avgifter inkluderas.

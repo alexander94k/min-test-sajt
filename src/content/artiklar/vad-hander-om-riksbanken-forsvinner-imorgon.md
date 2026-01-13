@@ -1,8 +1,9 @@
 ---
 title: "Vad händer om Riksbanken försvinner imorgon?"
-description: "Genom att ställa frågan synliggör vi den finansiella infrastruktur vi dagligen tar för given."
+description: "Genom att ställa frågan synliggör vi den finansiella infrastruktur vi dagligen tar för given. Frågan är inte vad som händer om en specifik byggnad vid Brunkeber"
 publishDate: 2025-12-06
-author: "Erik"
+author: "Ränta.nu"
+featuredImage: /images/articles/vad-hander-om-riksbanken-forsvinner-imorgon-featured.png
 ---
 
 Genom att ställa frågan synliggör vi den finansiella infrastruktur vi dagligen tar för given.

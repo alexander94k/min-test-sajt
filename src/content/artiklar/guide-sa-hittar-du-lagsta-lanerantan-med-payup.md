@@ -1,11 +1,14 @@
 ---
 title: "Guide: Så hittar du lägsta låneräntan med PayUp"
-description: "PayUp är en jämförelsesajt för lån och sparande som uppdaterar räntorna varje timme från alla banker på den svenska marknaden. Till skillnad från traditionella"
+description: "PayUp är en jämförelsesajt för lån och sparande som uppdaterar räntorna varje timme från alla banker på den svenska marknaden. Till skillnad från traditionella "
 publishDate: 2025-11-09
-author: "Erik"
+author: "Ränta.nu"
+featuredImage: /images/articles/guide-sa-hittar-du-lagsta-lanerantan-med-payup-featured.png
 ---
 
 PayUp är en jämförelsesajt för lån och sparande som uppdaterar räntorna varje timme från alla banker på den svenska marknaden. Till skillnad från traditionella låneförmedlare behöver du inte lämna några personuppgifter eller ta en kreditupplysning för att se vad olika lån kostar – du kan jämföra direkt och anonymt.
+
+## Table of Contents
 
 [Så fungerar PayUps unika kostnadsjämförelse](#sa-fungerar-pay-ups-unika-kostnadsjamforelse)
 [Här är det som är unikt med PayUp:](#har-ar-det-som-ar-unikt-med-pay-up)

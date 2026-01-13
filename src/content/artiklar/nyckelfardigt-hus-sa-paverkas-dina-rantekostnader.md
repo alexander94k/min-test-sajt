@@ -2,7 +2,8 @@
 title: "Nyckelfärdigt hus – så påverkas dina räntekostnader"
 description: "Räntekostnaden för ett nybyggt hus kan bli lägre än för ett renoveringsobjekt. Men skillnaden handlar inte bara om räntesatsen utan om hur lång tid lånet ligger"
 publishDate: 2025-10-28
-author: "RoyEdwards"
+author: "Ränta.nu"
+featuredImage: /images/articles/nyckelfardigt-hus-sa-paverkas-dina-rantekostnader-featured.png
 ---
 
 Räntekostnaden för ett nybyggt hus kan bli lägre än för ett renoveringsobjekt. Men skillnaden handlar inte bara om räntesatsen utan om hur lång tid lånet ligger ute, hur mycket du lånar och vilka risker banken bedömer. I den här artikeln går vi igenom hur nyckelfärdiga hus påverkar din ekonomi jämfört med att köpa och rusta upp ett äldre hus.
