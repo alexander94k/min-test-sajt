@@ -56,8 +56,22 @@ function fixMobileAlignment() {
       section p,
       .cta-section,
       .cta-section h2,
-      .cta-section p {
+      .cta-section p,
+      div[style*="text-align: center"],
+      .section-inner div,
+      .section-inner h2,
+      .section-inner p,
+      .dark-bg div,
+      .dark-bg h2,
+      .dark-bg p,
+      .section-title-white {
         text-align: left !important;
+      }
+
+      /* SVG icons left aligned */
+      svg {
+        margin-left: 0 !important;
+        margin-right: auto !important;
       }
     }
 `;
@@ -68,6 +82,12 @@ function fixMobileAlignment() {
         content = content.replace(
           /(\.dark-bg p \{[\s\S]*?\}[\s\S]*?)<\/style>/,
           `$1${mobileLeftAlignCSS}  </style>`
+        );
+      } else {
+        // Update existing mobile CSS with new selectors
+        content = content.replace(
+          /\/\* Mobile - Force ALL text left aligned \*\/[\s\S]*?@media \(max-width: 767px\) \{[\s\S]*?\n    \}/,
+          mobileLeftAlignCSS.trim()
         );
       }
 

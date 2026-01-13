@@ -239,8 +239,22 @@ const pageDescription = "Nominell ränta är årsräntan du betalar på ett lån
       section p,
       .cta-section,
       .cta-section h2,
-      .cta-section p {
+      .cta-section p,
+      div[style*="text-align: center"],
+      .section-inner div,
+      .section-inner h2,
+      .section-inner p,
+      .dark-bg div,
+      .dark-bg h2,
+      .dark-bg p,
+      .section-title-white {
         text-align: left !important;
+      }
+
+      /* SVG icons left aligned */
+      svg {
+        margin-left: 0 !important;
+        margin-right: auto !important;
       }
     }
   </style>
