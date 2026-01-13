@@ -45,9 +45,9 @@ const relateradeArtiklar = allArtiklar
       font-family: 'Inter', sans-serif;
     }
 
-    /* Headings with LARGE spacing */
+    /* Headings with LARGE spacing - Desktop (1200px+) */
     .article-content h2 {
-      font-size: 28px;
+      font-size: 36px;
       font-weight: 700;
       color: #1f3a5e;
       margin-top: 64px;
@@ -56,7 +56,7 @@ const relateradeArtiklar = allArtiklar
     }
 
     .article-content h3 {
-      font-size: 22px;
+      font-size: 26px;
       font-weight: 600;
       color: #1f3a5e;
       margin-top: 52px;
@@ -65,7 +65,7 @@ const relateradeArtiklar = allArtiklar
     }
 
     .article-content h4 {
-      font-size: 19px;
+      font-size: 20px;
       font-weight: 600;
       color: #1f3a5e;
       margin-top: 40px;
@@ -80,18 +80,18 @@ const relateradeArtiklar = allArtiklar
       margin-top: 0;
     }
 
-    /* Paragraphs with LOTS of spacing */
+    /* Paragraphs with LOTS of spacing - Desktop (1200px+) */
     .article-content p {
-      font-size: 17px;
+      font-size: 18px;
       line-height: 1.8;
       color: #444;
       margin-bottom: 32px;
     }
 
-    /* Lists with spacing */
+    /* Lists with spacing - Desktop (1200px+) */
     .article-content ul,
     .article-content ol {
-      font-size: 17px;
+      font-size: 18px;
       line-height: 1.8;
       color: #444;
       margin-bottom: 32px;
@@ -164,16 +164,17 @@ const relateradeArtiklar = allArtiklar
       padding: 0;
     }
 
-    @media (max-width: 768px) {
+    /* Tablet (768-1199px) */
+    @media (max-width: 1199px) and (min-width: 768px) {
       .article-content h2 {
-        font-size: 24px;
-        margin-top: 48px;
+        font-size: 29px;
+        margin-top: 52px;
         margin-bottom: 24px;
       }
 
       .article-content h3 {
-        font-size: 20px;
-        margin-top: 40px;
+        font-size: 22px;
+        margin-top: 44px;
         margin-bottom: 20px;
       }
 
@@ -183,9 +184,43 @@ const relateradeArtiklar = allArtiklar
         font-size: 16px;
         margin-bottom: 28px;
       }
+    }
+
+    /* Mobile (< 768px) */
+    @media (max-width: 767px) {
+      .article-content {
+        text-align: left;
+      }
+
+      .article-content h2 {
+        font-size: 25px;
+        margin-top: 48px;
+        margin-bottom: 20px;
+        text-align: left;
+      }
+
+      .article-content h3 {
+        font-size: 20px;
+        margin-top: 36px;
+        margin-bottom: 16px;
+        text-align: left;
+      }
+
+      .article-content h4 {
+        font-size: 18px;
+        text-align: left;
+      }
+
+      .article-content p,
+      .article-content ul,
+      .article-content ol {
+        font-size: 16px;
+        margin-bottom: 24px;
+        text-align: left;
+      }
 
       .article-content img {
-        margin: 40px 0;
+        margin: 32px 0;
       }
     }
   </style>
