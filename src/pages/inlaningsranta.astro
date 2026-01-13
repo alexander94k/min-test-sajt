@@ -241,18 +241,35 @@ const pageDescription = "Inlåningsränta är den ränta du får när du sparar 
       .cta-section h2,
       .cta-section p,
       div[style*="text-align: center"],
-      .section-inner div,
+      .section-inner > div,
       .section-inner h2,
       .section-inner p,
-      .dark-bg div,
+      .dark-bg > div,
       .dark-bg h2,
       .dark-bg p,
       .section-title-white {
         text-align: left !important;
       }
 
-      /* SVG icons left aligned */
-      svg {
+      /* Section padding reduced to 40px on mobile */
+      section {
+        padding: 40px 0 !important;
+      }
+
+      /* Feature icons - keep SVG centered but text left */
+      .feature-icon {
+        text-align: center !important;
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .feature-icon svg {
+        margin: 0 !important;
+      }
+
+      /* Other SVG icons left aligned */
+      .section-inner > div:not(.feature-icon):not(.features-grid) svg,
+      .dark-bg > div:not(.feature-icon) svg {
         margin-left: 0 !important;
         margin-right: auto !important;
       }
