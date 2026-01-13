@@ -256,11 +256,27 @@ const pageDescription = "Marginalränta var Sveriges styrränta 1985-1994. Lär 
         padding: 40px 0 !important;
       }
 
-      /* Remove auto margins that center content */
-      div[style*="margin: 0 auto"],
-      div[style*="margin:0 auto"] {
+      /* Remove auto margins that center content - target all divs */
+      .section-inner div,
+      .dark-bg div,
+      section div {
         margin-left: 0 !important;
         margin-right: 0 !important;
+      }
+
+      /* Ensure no element is centered */
+      * {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      /* Restore normal padding for specific elements that need it */
+      .section-inner,
+      article,
+      section {
+        margin: 0 !important;
+        padding-left: 24px !important;
+        padding-right: 24px !important;
       }
 
       /* Feature icons - left align everything including SVG */
