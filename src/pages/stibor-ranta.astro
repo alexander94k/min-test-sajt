@@ -256,6 +256,13 @@ const pageDescription = "Allt om STIBOR-räntan: vad den är, hur den fungerar o
         padding: 40px 0 !important;
       }
 
+      /* Remove auto margins that center content */
+      div[style*="margin: 0 auto"],
+      div[style*="margin:0 auto"] {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
       /* Feature icons - left align everything including SVG */
       .feature-icon {
         text-align: left !important;
