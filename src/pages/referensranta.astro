@@ -221,6 +221,17 @@ const pageDescription = "Allt om Sveriges referensränta: hur den fastställs av
         padding: 12px;
       }
     }
+  
+    /* White headings on dark backgrounds */
+    .dark-bg h2,
+    .dark-bg h3,
+    .section-title-white {
+      color: white !important;
+    }
+
+    .dark-bg p {
+      color: rgba(255, 255, 255, 0.9);
+    }
   </style>
 </head>
 <body>
@@ -264,7 +275,7 @@ const pageDescription = "Allt om Sveriges referensränta: hur den fastställs av
 <!-- Hero Section -->
 <section style="padding: 80px 0 40px; background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);">
   <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
-    <div style="display: inline-block; background: #1e3a5f; color: white; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; margin-bottom: 28px; letter-spacing: 0.5px;">
+    <div class="dark-bg" style="display: inline-block; background: #1e3a5f; color: white; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; margin-bottom: 28px; letter-spacing: 0.5px;">
       Guide
     </div>
     <h1 style="font-size: 48px; font-weight: 700; color: #0c1935; line-height: 1.2; margin-bottom: 24px; max-width: 900px;">
