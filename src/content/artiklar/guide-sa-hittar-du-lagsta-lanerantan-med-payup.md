@@ -1,21 +1,20 @@
 ---
 title: "Guide: Så hittar du lägsta låneräntan med PayUp"
-description: "PayUp är en jämförelsesajt för lån och sparande som uppdaterar räntorna varje timme från alla banker på den svenska marknaden. Till skillnad från traditionel..."
+description: "PayUp är en jämförelsesajt för lån och sparande som uppdaterar räntorna varje timme från alla banker på den svenska marknaden. Till skillnad från traditionella"
 publishDate: 2025-11-09
 author: "Erik"
 ---
 
 PayUp är en jämförelsesajt för lån och sparande som uppdaterar räntorna varje timme från alla banker på den svenska marknaden. Till skillnad från traditionella låneförmedlare behöver du inte lämna några personuppgifter eller ta en kreditupplysning för att se vad olika lån kostar – du kan jämföra direkt och anonymt.
 
-- [Så fungerar PayUps unika kostnadsjämförelse](#sa-fungerar-pay-ups-unika-kostnadsjamforelse)
+[Så fungerar PayUps unika kostnadsjämförelse](#sa-fungerar-pay-ups-unika-kostnadsjamforelse)
 [Här är det som är unikt med PayUp:](#har-ar-det-som-ar-unikt-med-pay-up)
-[1. Snitträntemetoden – mer ärlig än "från-räntor"](#1-snittrantemetoden-mer-arlig-an-fran-rantor)
+- [1. Snitträntemetoden – mer ärlig än "från-räntor"](#1-snittrantemetoden-mer-arlig-an-fran-rantor)
 - [2. Visar ALLA banker – inte bara samarbetspartners](#2-visar-alla-banker-inte-bara-samarbetspartners)
 - [3. Uppdatering varje timme](#3-uppdatering-varje-timme)
 
-
-- [Steg-för-steg: Hitta ditt billigaste lån](#steg-for-steg-hitta-ditt-billigaste-lan)
-[Steg 1: Ange belopp och löptid](#steg-1-ange-belopp-och-loptid)
+[Steg-för-steg: Hitta ditt billigaste lån](#steg-for-steg-hitta-ditt-billigaste-lan)
+- [Steg 1: Ange belopp och löptid](#steg-1-ange-belopp-och-loptid)
 - [Gå in på PayUps lånejämförelse och fyll i lånebelopp genom reglaget (1 000 – 800 000 kr) och välj löptid (1 månad till 20 år). PayUp räknar direkt ut vad lånet skulle kosta hos alla långivare.](#ga-in-pa-pay-ups-lanejamforelse-och-fyll-i-lanebelopp-genom-reglaget-1-000-800-000-kr-och-valj-loptid-1-manad-till-20-ar-pay-up-raknar-direkt-ut-vad-lanet-skulle-kosta-hos-alla-langivare)
 - [Steg 2: Filtrera efter dina behov](#steg-2-filtrera-efter-dina-behov)
 - [Steg 3: Välj sortering](#steg-3-valj-sortering)
@@ -23,8 +22,8 @@ PayUp är en jämförelsesajt för lån och sparande som uppdaterar räntorna va
 - [Steg 5: Ansökan där du får bäst villkor](#steg-5-ansokan-dar-du-far-bast-villkor)
 
 - [Aktuella lägsta räntor (oktober 2025)](#aktuella-lagsta-rantor-oktober-2025)
-- [Smartare tips från PayUps verktyg](#smartare-tips-fran-pay-ups-verktyg)
-[Förstå effektiv vs nominell ränta](#forsta-effektiv-vs-nominell-ranta)
+[Smartare tips från PayUps verktyg](#smartare-tips-fran-pay-ups-verktyg)
+- [Förstå effektiv vs nominell ränta](#forsta-effektiv-vs-nominell-ranta)
 - [Använd låneförmedlare strategiskt](#anvand-laneformedlare-strategiskt)
 - [Optimera löptiden](#optimera-loptiden)
 

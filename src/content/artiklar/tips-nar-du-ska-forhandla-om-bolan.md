@@ -1,31 +1,29 @@
 ---
 title: "Tips när du ska förhandla om bolån"
-description: "När du ska omförhandla ditt bolån, ska du definitivt pruta för få en så låg ränta som möjligt. Detta resulterar i sin tur i en lägre månadskostnad. När det är dags att ansöka om bolån, så bestäms din ränta utifrån bankens snittränta. Denna är bara en startpunkt. Som låntagare ska du försöka pruta mer bolåneräntan, ... <a title=\"Tips när du ska förhandla om bolån\" class=\"read-more\" href=\"https://xn--rnta-loa.nu/tips-n%c3%a4r-du-ska-f%c3%b6rhandla-om-bol%c3%a5n/\" aria-label=\"Läs mer om Tips när du ska förhandla om bolån\">Läs mer</a>"
+description: "När du ska omförhandla ditt bolån, ska du definitivt pruta för få en så låg ränta som möjligt. Detta resulterar i sin tur i en lägre månadskostnad. När det är d"
 publishDate: 2023-02-23
-author: "Redaktionen"
+author: "petter"
 ---
 
-När du ska omförhandla ditt bolån, ska du definitivt pruta för få en så låg ränta som möjligt. Detta resulterar i sin tur i en lägre månadskostnad. När det är dags att ansöka om bolån, så bestäms din ränta utifrån bankens snittränta. Denna är bara en startpunkt. Som låntagare ska du försöka pruta mer bolåneräntan, genom att förklara för banken varför du är en mycket värdefull kund. Samtidigt som du gör detta ska du givetvis höra med andra långivare för att undersöka om de kan ge en lägre ränta. 
-
-[![Tips när du ska förhandla om bolån](https://xn--rnta-loa.nu/wp-content/uploads/2024/05/Tips-nar-du-ska-forhandla-om-bolan.jpg)](https://xn--rnta-loa.nu/wp-content/uploads/2024/05/Tips-nar-du-ska-forhandla-om-bolan.jpg)
+När du ska omförhandla ditt bolån, ska du definitivt pruta för få en så låg ränta som möjligt. Detta resulterar i sin tur i en lägre månadskostnad. När det är dags att ansöka om bolån, så bestäms din ränta utifrån bankens snittränta. Denna är bara en startpunkt. Som låntagare ska du försöka pruta mer bolåneräntan, genom att förklara för banken varför du är en mycket värdefull kund. Samtidigt som du gör detta ska du givetvis höra med andra långivare för att undersöka om de kan ge en lägre ränta. 
 
 ## **Ta hjälp när du ska omförhandla bolånet**
 
-Ibland har man inte tid, ork eller lust för att pruta på räntan för ditt bolån. Det finns idag företag som gör detta kostnadsfritt för dig. De sammanställer erbjudanden från olika banker och kan då erbjuda dig den lägsta bolåneränta. Glöm inte att varje procentandel räknas,  ynka procent andelarna kan i det långa loppet vara värt  flera tusen kronor.
+Ibland har man inte tid, ork eller lust för att pruta på räntan för ditt bolån. Det finns idag företag som gör detta kostnadsfritt för dig. De sammanställer erbjudanden från olika banker och kan då erbjuda dig den lägsta bolåneränta. Glöm inte att varje procentandel räknas,  ynka procent andelarna kan i det långa loppet vara värt  flera tusen kronor.
 
 ## **Byt bank**
 
-Ger banken dig inte den räntan som du anser dig förtjäna, hör med andra banker och byt till en som erbjuder dig lägre ränta. Bolånekunder är en av de viktigaste kunderna som banken har.  Gå till en konkurrent om de erbjuder dig ett bättre förslag. 
+Ger banken dig inte den räntan som du anser dig förtjäna, hör med andra banker och byt till en som erbjuder dig lägre ränta. Bolånekunder är en av de viktigaste kunderna som banken har.  Gå till en konkurrent om de erbjuder dig ett bättre förslag. 
 
 ## **Förhandla ofta**
 
 Acceptera aldrig en dålig ränta. Har din ränta försämrats ska du omedelbart förhandla med din bank. Utnyttja bankens tjänster så mycket du kan.
 
-Tips – vill du läsa mer om vad du bör tänka på när det kommer till bolån samt tips på privat sparande, besök [börsnoteringar.se](https://www.xn--brsnoteringar-imb.se/) som skriver om detta ämne på sin blogg!
+Tips - vill du läsa mer om vad du bör tänka på när det kommer till bolån samt tips på privat sparande, besök [börsnoteringar.se](https://www.xn--brsnoteringar-imb.se/) som skriver om detta ämne på sin blogg!
 
 ## **Bli helkund**
 
-Oftast vill banken ha helkunder, d.v.s att du har allt hos dom. Med allt menar man t.ex sparande, bolån, lönekonto och pensionssparande etc. Detta kan du även använda dig av när du förhandlar. Påpeka att du har allt hos dom och att du egentligen inte vill byta. Tänk även på att ju fler tjänster du har hos banken desto mer tjänar de på dig. 
+Oftast vill banken ha helkunder, d.v.s att du har allt hos dom. Med allt menar man t.ex sparande, bolån, lönekonto och pensionssparande etc. Detta kan du även använda dig av när du förhandlar. Påpeka att du har allt hos dom och att du egentligen inte vill byta. Tänk även på att ju fler tjänster du har hos banken desto mer tjänar de på dig. 
 
 Det finns idag människor som byter bank varje år, för att utnyttja bankens tjänster så mycket som möjligt. Har man som sagt inte intresset, tiden eller orken, så kan det vara riktigt svårt att göra detta.
 

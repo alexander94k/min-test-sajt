@@ -1,6 +1,6 @@
 ---
 title: "Nyckelfärdigt hus – så påverkas dina räntekostnader"
-description: "Räntekostnaden för ett nybyggt hus kan bli lägre än för ett renoveringsobjekt. Men skillnaden handlar inte bara om räntesatsen utan om hur lång tid lånet lig..."
+description: "Räntekostnaden för ett nybyggt hus kan bli lägre än för ett renoveringsobjekt. Men skillnaden handlar inte bara om räntesatsen utan om hur lång tid lånet ligger"
 publishDate: 2025-10-28
 author: "RoyEdwards"
 ---
@@ -84,32 +84,32 @@ Du amorterar ofta först när huset är klart och slutvärderat. Det gör att r�
 Ja, du får inte låna mer än åttio procent av husets värde. Men eftersom värdet vid inflytt är känt i förväg blir kalkylen tydligare än vid renovering.
 
 {
- "@context": "https://schema.org",
- "@type": "FAQPage",
- "mainEntity": [
- {
- "@type": "Question",
- "name": "Blir det alltid billigare att bygga nytt jämfört med att renovera?",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "Nej, men räntekostnaden är ofta mer förutsägbar vid nyproduktion. Totalekonomin beror på läget, omfattning och skick på renoveringsobjektet."
- }
- },
- {
- "@type": "Question",
- "name": "Hur påverkar amortering räntekostnaden vid nyproduktion?",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "Du amorterar ofta först när huset är klart och slutvärderat. Det gör att räntekostnaden blir lägre under byggtiden, vilket kan spara pengar."
- }
- },
- {
- "@type": "Question",
- "name": "Gäller bolånetaket även för nyproduktion?",
- "acceptedAnswer": {
- "@type": "Answer",
- "text": "Ja, du får inte låna mer än åttio procent av husets värde. Men eftersom värdet vid inflytt är känt i förväg blir kalkylen tydligare än vid renovering."
- }
- }
- ]
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Blir det alltid billigare att bygga nytt jämfört med att renovera?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nej, men räntekostnaden är ofta mer förutsägbar vid nyproduktion. Totalekonomin beror på läget, omfattning och skick på renoveringsobjektet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hur påverkar amortering räntekostnaden vid nyproduktion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Du amorterar ofta först när huset är klart och slutvärderat. Det gör att räntekostnaden blir lägre under byggtiden, vilket kan spara pengar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gäller bolånetaket även för nyproduktion?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, du får inte låna mer än åttio procent av husets värde. Men eftersom värdet vid inflytt är känt i förväg blir kalkylen tydligare än vid renovering."
+      }
+    }
+  ]
 }

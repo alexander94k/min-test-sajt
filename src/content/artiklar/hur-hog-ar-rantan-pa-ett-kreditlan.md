@@ -1,6 +1,6 @@
 ---
 title: "Hur hög är räntan på ett kreditlån?"
-description: "Räntan på ett kreditlån varierar mycket beroende på vilken typ av lån du väljer. För vanliga privatlån från banker ligger räntan ofta mellan 5-15 procent, me..."
+description: "Räntan på ett kreditlån varierar mycket beroende på vilken typ av lån du väljer. För vanliga privatlån från banker ligger räntan ofta mellan 5-15 procent, medan"
 publishDate: 2025-12-04
 author: "Erik"
 ---

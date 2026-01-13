@@ -1,6 +1,6 @@
 ---
 title: "Hur Hög Är Räntan På En Kontokredit? Aktuella Villkor Och Kostnader 2025"
-description: "Kontokredit är ett flexibelt lånealternativ där du får tillgång till extra pengar direkt via ditt konto – utan att ta ett nytt lån varje gång. Men hur bestäm..."
+description: "Kontokredit är ett flexibelt lånealternativ där du får tillgång till extra pengar direkt via ditt konto – utan att ta ett nytt lån varje gång. Men hur bestäms r"
 publishDate: 2025-11-18
 author: "Erik"
 ---

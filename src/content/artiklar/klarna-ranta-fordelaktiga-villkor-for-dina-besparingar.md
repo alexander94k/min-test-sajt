@@ -1,6 +1,6 @@
 ---
 title: "Klarna ränta: fördelaktiga villkor för dina besparingar"
-description: "Att spara pengar är en viktig del av en sund ekonomi, och att hitta ett sparkonto med konkurrenskraftig ränta är nyckeln till att maximera dina besparingar. ..."
+description: "Att spara pengar är en viktig del av en sund ekonomi, och att hitta ett sparkonto med konkurrenskraftig ränta är nyckeln till att maximera dina besparingar. Kla"
 publishDate: 2024-08-13
 author: "RoyEdwards"
 ---

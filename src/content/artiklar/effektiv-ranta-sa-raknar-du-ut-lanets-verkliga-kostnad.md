@@ -7,31 +7,31 @@ author: "Erik"
 
 Effektiv ränta är lånets totala kostnad uttryckt som årsränta, där både nominell ränta inklusive övriga avgifter som uppläggnings- och avi-avgifter inkluderas.
 
-Ränta är i praktiken kostnaden av att låna pengar, en avgift du betalar till banken för att få använda ett lånat kapital under en viss tid. För att kunna göra en korrekt budget och undvika dyra fällor behöver du veta exakt hur banken räknar. 
+Ränta är i praktiken kostnaden av att låna pengar, en avgift du betalar till banken för att få använda ett lånat kapital under en viss tid. För att kunna göra en korrekt budget och undvika dyra fällor behöver du veta exakt hur banken räknar. 
 
 Det handlar om att skilja på räntan som står i kontraktet och den faktiska kostnaden inklusive avgifter, samt att förstå hur amorteringen påverkar skulden över tid.
 
 ## Innehållsförteckning
 
-- [Hur räknar man ut ränta på lån?](#hur-raknar-man-ut-ranta-pa-lan)
-[Grundformeln för att beräkna årlig räntekostnad](#grundformeln-for-att-berakna-arlig-rantekostnad)
+[Hur räknar man ut ränta på lån?](#hur-raknar-man-ut-ranta-pa-lan)
+- [Grundformeln för att beräkna årlig räntekostnad](#grundformeln-for-att-berakna-arlig-rantekostnad)
 - [Metod för att räkna ut månadskostnad](#metod-for-att-rakna-ut-manadskostnad)
 
-- [Vad är skillnaden mellan nominell och effektiv ränta?](#vad-ar-skillnaden-mellan-nominell-och-effektiv-ranta)
-[Nominell ränta avser enbart kostnaden för lånet](#nominell-ranta-avser-enbart-kostnaden-for-lanet)
+[Vad är skillnaden mellan nominell och effektiv ränta?](#vad-ar-skillnaden-mellan-nominell-och-effektiv-ranta)
+- [Nominell ränta avser enbart kostnaden för lånet](#nominell-ranta-avser-enbart-kostnaden-for-lanet)
 - [Effektiv ränta inkluderar avgifter och visar jämförpriset](#effektiv-ranta-inkluderar-avgifter-och-visar-jamforpriset)
 - [Räkneexempel på hur avgifter höjer den effektiva räntan](#rakneexempel-pa-hur-avgifter-hojer-den-effektiva-rantan)
 
-- [Hur påverkar amorteringsmodellen den totala räntekostnaden?](#hur-paverkar-amorteringsmodellen-den-totala-rantekostnaden)
-[Rak amortering ger en sjunkande räntekostnad över tid](#rak-amortering-ger-en-sjunkande-rantekostnad-over-tid)
+[Hur påverkar amorteringsmodellen den totala räntekostnaden?](#hur-paverkar-amorteringsmodellen-den-totala-rantekostnaden)
+- [Rak amortering ger en sjunkande räntekostnad över tid](#rak-amortering-ger-en-sjunkande-rantekostnad-over-tid)
 - [Annuitetslån ger högre total räntekostnad men förutsägbara belopp](#annuitetslan-ger-hogre-total-rantekostnad-men-forutsagbara-belopp)
 
 - [Ta hjälp av en lånekalkylator](#ta-hjalp-av-en-lanekalkylator)
-- [Hur räknar man ut kostnaden efter ränteavdraget?](#hur-raknar-man-ut-kostnaden-efter-ranteavdraget)
-[Skatteregler för avdrag på 30 procent av räntekostnaden](#skatteregler-for-avdrag-pa-30-procent-av-rantekostnaden)
+[Hur räknar man ut kostnaden efter ränteavdraget?](#hur-raknar-man-ut-kostnaden-efter-ranteavdraget)
+- [Skatteregler för avdrag på 30 procent av räntekostnaden](#skatteregler-for-avdrag-pa-30-procent-av-rantekostnaden)
 
-- [Vad avgör vilken ränta man får av banken?](#vad-avgor-vilken-ranta-man-far-av-banken)
-[Kreditvärdighet och inkomst styr den individuella räntan](#kreditvardighet-och-inkomst-styr-den-individuella-rantan)
+[Vad avgör vilken ränta man får av banken?](#vad-avgor-vilken-ranta-man-far-av-banken)
+- [Kreditvärdighet och inkomst styr den individuella räntan](#kreditvardighet-och-inkomst-styr-den-individuella-rantan)
 - [Medsökande kan sänka risken och därmed räntekostnaden](#medsokande-kan-sanka-risken-och-darmed-rantekostnaden)
 
 ## **Hur räknar man ut ränta på lån?**
@@ -112,7 +112,7 @@ Nackdelen är att skulden minskar långsammare i början jämfört med rak amort
 
 Att manuellt sitta med papper och penna för att se hur en förändrad löptid eller räntesats påverkar kostnaden kan vara komplicerat, särskilt vid annuitetslån där formeln är avancerad. Det är lätt att missa dolda avgifter eller effekten av ränta-på-ränta.
 
-Det smartaste sättet att få en bra överblick är att jämföra olika scenarion. Genom att använda en lånekalkylator kan man enkelt[ räkna ut kostnaden för lånet](https://xn--privatlnutanuc-rib.se/lanekalkyl) baserat på olika löptider och räntesatser. 
+Det smartaste sättet att få en bra överblick är att jämföra olika scenarion. Genom att använda en lånekalkylator kan man enkelt[ räkna ut kostnaden för lånet](https://xn--privatlnutanuc-rib.se/lanekalkyl) baserat på olika löptider och räntesatser. 
 
 Detta ger dig svart på vitt vad totalbeloppet blir när lånet väl är återbetalt.
 

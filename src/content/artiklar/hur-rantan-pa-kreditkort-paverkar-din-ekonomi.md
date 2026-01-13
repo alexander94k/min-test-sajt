@@ -1,6 +1,6 @@
 ---
 title: "Hur räntan på kreditkort påverkar din ekonomi"
-description: "Att använda kreditkort kan vara praktiskt, men det blir snabbt dyrt utan koll på räntan. Räntan är kostnaden för att låna pengar, och när den ligger på 20–25..."
+description: "Att använda kreditkort kan vara praktiskt, men det blir snabbt dyrt utan koll på räntan. Räntan är kostnaden för att låna pengar, och när den ligger på 20–25 %"
 publishDate: 2025-11-27
 author: "Erik"
 ---
@@ -11,8 +11,8 @@ Höga räntekostnader gör det svårare att spara, ökar belastningen på hushå
 
 ## Innehållsförteckning
 
-- [Vad är ränta på kreditkort och hur fungerar den?](#vad-ar-ranta-pa-kreditkort-och-hur-fungerar-den)
-[Hur räntan beräknas](#hur-rantan-beraknas)
+[Vad är ränta på kreditkort och hur fungerar den?](#vad-ar-ranta-pa-kreditkort-och-hur-fungerar-den)
+- [Hur räntan beräknas](#hur-rantan-beraknas)
 
 - [Kreditkort med låg ränta](#kreditkort-med-lag-ranta)
 - [Hur påverkar en hög ränta din ekonomi på lång sikt?](#hur-paverkar-en-hog-ranta-din-ekonomi-pa-lang-sikt)
@@ -106,6 +106,6 @@ Om du gör en betalning som inte täcker hela beloppet, börjar räntan gälla p
 
 Du köper något för 5 000 kr den 1. Fakturan kommer den 15 med förfallodag den 10 nästa månad. Betalar du minst 5 000 kr före den 10 slipper du ränta helt.
 
-Gör du bara en **delbetalning** på 2 000 kr börjar räntan löpa på de kvarvarande 3 000 kr från den 11. 
+Gör du bara en **delbetalning** på 2 000 kr börjar räntan löpa på de kvarvarande 3 000 kr från den 11. 
 
 När det gäller [konsumentkreditlagen](https://www.konsumentverket.se/lagar/konsumentkreditlagen-konsument/) är också tvingande till din förmån, så att känna till den ger dig en god uppfattning och dina rättigheter och skyldigheter när du använder krediten på ditt kreditkort.

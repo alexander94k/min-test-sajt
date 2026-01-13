@@ -29,7 +29,7 @@ Inom loppet av några veckor skulle frågan inte längre vara *om* ekonomin ska 
 
 ## **Konsekvens 2: Det sanna priset på risk**
 
-Den andra centrala funktionen som Riksbanken har är att sätta styrräntan och agera *lender of last resort*. 
+Den andra centrala funktionen som Riksbanken har är att sätta styrräntan och agera *lender of last resort*. 
 
 Detta är en engelsk branschterm som bäst översätts till *långivare i sista hand*. I praktiken innebär det att Riksbanken utgör det yttersta skyddsnätet mot en total finansiell härdsmälta. När ingen annan vill eller vågar låna ut pengar och hela banksystemet riskerar att frysa är Riksbanken den enda aktör som har mandat att kliva in och tillhandahålla i princip obegränsad likviditet, det vill säga nya pengar, för att förhindra en systemkollaps.
 
@@ -41,11 +41,11 @@ Den oavsiktliga, långsiktiga konsekvensen är en oerhört smärtsam men oundvik
 
 Det omedelbara resultatet? Interbankräntorna (den ränta bankerna lånar till av varandra till) skulle skjuta i höjden. Företagsobligationer, särskilt inom den högt belånade kommersiella fastighetssektorn, skulle i princip bli omöjliga att sälja.
 
-Bankerna, utan en garant i sista hand, skulle tvingas till radikal solvens. Det betyder att de omedelbart skulle behöva bygga upp enorma egna kapitalbuffertar och hålla en mycket högre andel likvida medel, kontanter, eftersom de inte längre har ett skyddsnät från Riksbanken att falla tillbaka på. 
- 
+Bankerna, utan en garant i sista hand, skulle tvingas till radikal solvens. Det betyder att de omedelbart skulle behöva bygga upp enorma egna kapitalbuffertar och hålla en mycket högre andel likvida medel, kontanter, eftersom de inte längre har ett skyddsnät från Riksbanken att falla tillbaka på.  
+  
 De skulle omedelbart sluta låna ut till annat än de absolut säkraste motparterna. Detta skulle slå med full kraft mot både hushåll och företag. Att ens försöka [jämföra ränta på privatlån](https://www.zmarta.se/lana-pengar), en tjänst som svenska hushåll idag tar för given för allt från renoveringar till bilköp, skulle bli en meningslös övning. Bankerna skulle frysa kreditkortslinjer och endast fokusera på sin egen överlevnad.
 
-Samtidigt skulle ”zombieföretag” som överlevt enbart på grund av decennier av billiga krediter omedelbart likvideras. Detta är den kapitalförstörelse som centralbankssystemet är designat för att förhindra. En konkursvåg som får 90-talskrisen att blekna skulle följa, och arbetslösheten skulle explodera. 
+Samtidigt skulle ”zombieföretag” som överlevt enbart på grund av decennier av billiga krediter omedelbart likvideras. Detta är den kapitalförstörelse som centralbankssystemet är designat för att förhindra. En konkursvåg som får 90-talskrisen att blekna skulle följa, och arbetslösheten skulle explodera.  
 
 ## **Den framtvingade annekteringen**
 
