@@ -4,6 +4,7 @@ description: "Krypto staking är ett sätt att få löpande avkastning genom att
 publishDate: 2025-12-02
 author: "Ränta.nu"
 featuredImage: /images/articles/krypto-staking-hur-det-fungerar-och-vilken-ranta-du-kan-fa-featured.png
+slug: "krypto-staking-avkastning"
 ---
 
 Krypto staking är ett sätt att få löpande avkastning genom att låsa kryptovalutor under en förutbestämd tid. Belöningen betalas ut i form av nya coins och kan jämföras med sparränta på ett traditionellt sparkonto. Hur hög avkastning du får varierar mellan olika nätverk, men ligger vanligtvis mellan 3-10 % per år. 

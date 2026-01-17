@@ -1,0 +1,345 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/räntekonto/",
+      "destination": "/rantekonto/",
+      "permanent": true
+    },
+    {
+      "source": "/räntekonto",
+      "destination": "/rantekonto/",
+      "permanent": true
+    },
+    {
+      "source": "/bästa-räntan/",
+      "destination": "/basta-rantan/",
+      "permanent": true
+    },
+    {
+      "source": "/bästa-räntan",
+      "destination": "/basta-rantan/",
+      "permanent": true
+    },
+    {
+      "source": "/bästa-sparräntan/",
+      "destination": "/basta-sparrantan/",
+      "permanent": true
+    },
+    {
+      "source": "/bästa-sparräntan",
+      "destination": "/basta-sparrantan/",
+      "permanent": true
+    },
+    {
+      "source": "/styrränta/",
+      "destination": "/styrranta/",
+      "permanent": true
+    },
+    {
+      "source": "/styrränta",
+      "destination": "/styrranta/",
+      "permanent": true
+    },
+    {
+      "source": "/marginalränta/",
+      "destination": "/marginalranta/",
+      "permanent": true
+    },
+    {
+      "source": "/marginalränta",
+      "destination": "/marginalranta/",
+      "permanent": true
+    },
+    {
+      "source": "/reporänta/",
+      "destination": "/reporanta/",
+      "permanent": true
+    },
+    {
+      "source": "/reporänta",
+      "destination": "/reporanta/",
+      "permanent": true
+    },
+    {
+      "source": "/riksbankens-ränta/",
+      "destination": "/riksbankens-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/riksbankens-ränta",
+      "destination": "/riksbankens-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/rörlig-ränta/",
+      "destination": "/rorlig-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/rörlig-ränta",
+      "destination": "/rorlig-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/statslåneräntan/",
+      "destination": "/statslaneranta/",
+      "permanent": true
+    },
+    {
+      "source": "/statslåneräntan",
+      "destination": "/statslaneranta/",
+      "permanent": true
+    },
+    {
+      "source": "/bunden-fast-ränta/",
+      "destination": "/bunden-fast-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/bunden-fast-ränta",
+      "destination": "/bunden-fast-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/dröjsmålsränta/",
+      "destination": "/drojsmalsranta/",
+      "permanent": true
+    },
+    {
+      "source": "/dröjsmålsränta",
+      "destination": "/drojsmalsranta/",
+      "permanent": true
+    },
+    {
+      "source": "/förhandla-ränta-på-bolån/",
+      "destination": "/forhandla-ranta-pa-bolan/",
+      "permanent": true
+    },
+    {
+      "source": "/förhandla-ränta-på-bolån",
+      "destination": "/forhandla-ranta-pa-bolan/",
+      "permanent": true
+    },
+    {
+      "source": "/låna-pengar-med-låg-ränta/",
+      "destination": "/lana-pengar-med-lag-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/låna-pengar-med-låg-ränta",
+      "destination": "/lana-pengar-med-lag-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/låna-pengar-utan-ränta/",
+      "destination": "/lana-pengar-utan-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/låna-pengar-utan-ränta",
+      "destination": "/lana-pengar-utan-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/marknadsränta/",
+      "destination": "/marknadsranta/",
+      "permanent": true
+    },
+    {
+      "source": "/marknadsränta",
+      "destination": "/marknadsranta/",
+      "permanent": true
+    },
+    {
+      "source": "/riksgäldens-ränta/",
+      "destination": "/riksgaldens-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/riksgäldens-ränta",
+      "destination": "/riksgaldens-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/stibor-ränta/",
+      "destination": "/stibor-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/stibor-ränta",
+      "destination": "/stibor-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/statsobligationer-ränta/",
+      "destination": "/statsobligationer-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/statsobligationer-ränta",
+      "destination": "/statsobligationer-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/riskfri-ränta/",
+      "destination": "/riskfri-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/riskfri-ränta",
+      "destination": "/riskfri-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/referensränta/",
+      "destination": "/referensranta/",
+      "permanent": true
+    },
+    {
+      "source": "/referensränta",
+      "destination": "/referensranta/",
+      "permanent": true
+    },
+    {
+      "source": "/realränta/",
+      "destination": "/realranta/",
+      "permanent": true
+    },
+    {
+      "source": "/realränta",
+      "destination": "/realranta/",
+      "permanent": true
+    },
+    {
+      "source": "/ockerränta/",
+      "destination": "/ockerranta/",
+      "permanent": true
+    },
+    {
+      "source": "/ockerränta",
+      "destination": "/ockerranta/",
+      "permanent": true
+    },
+    {
+      "source": "/nominell-ränta/",
+      "destination": "/nominell-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/nominell-ränta",
+      "destination": "/nominell-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/räntelagen/",
+      "destination": "/rantelagen/",
+      "permanent": true
+    },
+    {
+      "source": "/räntelagen",
+      "destination": "/rantelagen/",
+      "permanent": true
+    },
+    {
+      "source": "/ränta-på-blancolån/",
+      "destination": "/ranta-pa-blancolan/",
+      "permanent": true
+    },
+    {
+      "source": "/ränta-på-blancolån",
+      "destination": "/ranta-pa-blancolan/",
+      "permanent": true
+    },
+    {
+      "source": "/csn-ränta/",
+      "destination": "/csn-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/csn-ränta",
+      "destination": "/csn-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/berakna/ränteavdrag/",
+      "destination": "/berakna/ranteavdrag/",
+      "permanent": true
+    },
+    {
+      "source": "/berakna/ränteavdrag",
+      "destination": "/berakna/ranteavdrag/",
+      "permanent": true
+    },
+    {
+      "source": "/berakna/leva-på-ränta/",
+      "destination": "/berakna/leva-pa-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/berakna/leva-på-ränta",
+      "destination": "/berakna/leva-pa-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/berakna/bolåneränta/",
+      "destination": "/berakna/bolaneranta/",
+      "permanent": true
+    },
+    {
+      "source": "/berakna/bolåneränta",
+      "destination": "/berakna/bolaneranta/",
+      "permanent": true
+    },
+    {
+      "source": "/berakna/ränta-på-ränta/",
+      "destination": "/berakna/ranta-pa-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/berakna/ränta-på-ränta",
+      "destination": "/berakna/ranta-pa-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/berakna/skatt-på-ränta/",
+      "destination": "/berakna/skatt-pa-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/berakna/skatt-på-ränta",
+      "destination": "/berakna/skatt-pa-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/berakna/effektiv-ränta/",
+      "destination": "/berakna/effektiv-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/berakna/effektiv-ränta",
+      "destination": "/berakna/effektiv-ranta/",
+      "permanent": true
+    },
+    {
+      "source": "/tips-när-du-ska-förhandla-om-bolån/",
+      "destination": "/tips-nar-du-ska-forhandla-om-bolan/",
+      "permanent": true
+    },
+    {
+      "source": "/tips-när-du-ska-förhandla-om-bolån",
+      "destination": "/tips-nar-du-ska-forhandla-om-bolan/",
+      "permanent": true
+    },
+    {
+      "source": "/uppköring/",
+      "destination": "/uppkoring/",
+      "permanent": true
+    },
+    {
+      "source": "/uppköring",
+      "destination": "/uppkoring/",
+      "permanent": true
+    }
+  ]
+}

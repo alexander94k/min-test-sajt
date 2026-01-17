@@ -4,6 +4,7 @@ description: "Räntan på ett kreditlån varierar mycket beroende på vilken typ
 publishDate: 2025-12-04
 author: "Ränta.nu"
 featuredImage: /images/articles/hur-hog-ar-rantan-pa-ett-kreditlan-featured.png
+slug: "ranta-kreditlan-kostnad-faktorer"
 ---
 
 Räntan på ett kreditlån varierar mycket beroende på vilken typ av lån du väljer. För vanliga privatlån från banker ligger räntan ofta mellan 5-15 procent, medan snabblån och sms-lån kan ha betydligt högre räntor upp mot maxgränsen.

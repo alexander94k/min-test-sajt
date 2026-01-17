@@ -1,32 +1,264 @@
 ---
 import { getCollection } from 'astro:content';
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+import BaseHead from '../components/BaseHead.astro';
 
 export async function getStaticPaths() {
+  // Hämta båda collections
   const sidor = await getCollection('sidor');
-  return sidor.map(sida => ({
-    params: { slug: sida.slug },
-    props: { sida }
+  const artiklar = await getCollection('artiklar');
+
+  // Sidor-routes
+  const sidorRoutes = sidor.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry, type: 'sida' },
   }));
+
+  // Artiklar-routes (Astro använder slug från frontmatter som entry.slug)
+  const artiklarRoutes = artiklar.map(artikel => ({
+    params: { slug: artikel.slug },
+    props: { entry: artikel, type: 'artikel' },
+  }));
+
+  return [...sidorRoutes, ...artiklarRoutes];
 }
 
-const { sida } = Astro.props;
-const { Content } = await sida.render();
+const { entry, type } = Astro.props;
+const { Content } = await entry.render();
+
+// Hämta relaterade artiklar om det är en artikel
+const allArtiklar = type === 'artikel' ? await getCollection('artiklar') : [];
+const relateradeArtiklar = type === 'artikel'
+  ? allArtiklar.filter(a => a.slug !== entry.slug).slice(0, 2)
+  : [];
 ---
 
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{sida.data.title}</title>
-  {sida.data.description && <meta name="description" content={sida.data.description} />}
+    <BaseHead
+      title={entry.data.title}
+      description={entry.data.description || `${entry.data.title} - Information och guider på Ränta.nu`}
+      type="article"
+    />
+    <style is:global>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .page-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 100px;
+    }
+    .text-container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      color: #0c1935;
+      line-height: 1.2;
+      margin: 0 0 24px 0;
+    }
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #1f3a5e;
+      line-height: 1.3;
+      margin: 48px 0 24px 0;
+    }
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #1f3a5e;
+      line-height: 1.3;
+      margin: 32px 0 16px 0;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #444;
+      margin: 0 0 20px 0;
+    }
+    section {
+      padding: 80px 0;
+    }
+    article {
+      padding: 80px 0;
+    }
+    article h1, article h2, article h3, article p, article ul, article ol {
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 48px;
+      color: #666;
+      font-size: 15px;
+    }
+    .article-meta svg {
+      margin-right: 8px;
+    }
+    .featured-image {
+      width: 100%;
+      max-width: 1200px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin: 0 auto 48px;
+      display: block;
+    }
+    .related-articles {
+      background: #f8f9fa;
+      padding: 80px 0;
+      margin-top: 80px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .related-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid #e5e5e5;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .related-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+    .related-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .related-card-content {
+      padding: 24px;
+    }
+    .related-card h3 {
+      margin: 0 0 12px;
+      font-size: 20px;
+    }
+    @media (max-width: 768px) {
+      .page-container {
+        padding: 0 16px;
+      }
+      section, article {
+        padding: 48px 0;
+      }
+      h1 {
+        font-size: 32px;
+      }
+      h2 {
+        font-size: 24px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .featured-image {
+        height: 250px;
+      }
+    }
+    </style>
 </head>
 <body>
-  <article>
-    <header>
-      <h1>{sida.data.title}</h1>
-    </header>
-    <Content />
-  </article>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar" class={type === 'artikel' ? 'active' : ''}>Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+        <a href="/berakna" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+{type === 'artikel' && entry.data.featuredImage && (
+  <img
+    src={entry.data.featuredImage}
+    alt={entry.data.title}
+    class="featured-image"
+    style="margin-top: 40px;"
+  />
+)}
+
+<article class="page-container">
+    <div class="text-container">
+        <h1>{entry.data.title}</h1>
+
+        {type === 'artikel' && entry.data.publishDate && (
+          <div class="article-meta">
+            <span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle;">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              {new Date(entry.data.publishDate).toLocaleDateString('sv-SE', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+              })}
+            </span>
+            <span>5 min läsning</span>
+          </div>
+        )}
+
+        <Content />
+    </div>
+</article>
+
+{type === 'artikel' && relateradeArtiklar.length > 0 && (
+  <section class="related-articles">
+    <h2 style="text-align: center; margin-bottom: 40px;">Relaterade artiklar</h2>
+    <div class="related-grid">
+      {relateradeArtiklar.map((related) => (
+        <a href={`/${related.slug}/`} class="related-card">
+          {related.data.featuredImage && (
+            <img src={related.data.featuredImage} alt={related.data.title} />
+          )}
+          <div class="related-card-content">
+            <h3>{related.data.title}</h3>
+            {related.data.description && (
+              <p style="font-size: 14px; color: #666; margin: 0;">
+                {related.data.description.substring(0, 100)}...
+              </p>
+            )}
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+)}
+
+<Footer />
 </body>
 </html>

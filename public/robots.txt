@@ -1,0 +1,12 @@
+# Robots.txt for Ränta.nu
+# Generated: 2025-01-16
+
+User-agent: *
+Allow: /
+
+# Disallow build artifacts and internal paths
+Disallow: /_astro/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://ranta.nu/sitemap.xml

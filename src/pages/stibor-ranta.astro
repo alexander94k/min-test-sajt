@@ -1,487 +1,185 @@
 ---
 import '../styles/global.css';
 import Footer from '../components/Footer.astro';
-
-const pageTitle = "STIBOR ränta - Stockholm Interbank Offered Rate | Ränta.nu";
-const pageDescription = "Allt om STIBOR-räntan: vad den är, hur den fungerar och varför den är viktig för ditt bolån och svenska räntemarknaden.";
+import BaseHead from '../components/BaseHead.astro';
 ---
 
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{pageTitle}</title>
-  <meta name="description" content={pageDescription}>
-  <link rel="preconnect" href="https://fonts.googleapis.com/">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
-  <style is:global>
-    /* Reset default margins */
-    .content-page * {
-      box-sizing: border-box;
+    <BaseHead />
+    <style is:global>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
     }
-
-    .content-page {
+    .page-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 24px;
-      font-family: 'Inter', sans-serif;
+      padding: 0 100px;
     }
-
-    /* Content styling with proper spacing */
-    .content-page h1 {
+    .text-container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    h1 {
       font-size: 48px;
       font-weight: 700;
       color: #0c1935;
-      line-height: 1.25;
-      margin-bottom: 28px;
+      line-height: 1.2;
+      margin: 0 0 24px 0;
     }
-
-    .content-page h2 {
-      font-size: 36px;
+    h2 {
+      font-size: 32px;
       font-weight: 700;
       color: #1f3a5e;
-      margin-top: 64px;
-      margin-bottom: 28px;
       line-height: 1.3;
+      margin: 48px 0 24px 0;
     }
-
-    .content-page h2:first-of-type {
-      margin-top: 48px;
-    }
-
-    .content-page h3 {
-      font-size: 26px;
+    h3 {
+      font-size: 24px;
       font-weight: 600;
       color: #1f3a5e;
-      margin-top: 52px;
-      margin-bottom: 24px;
       line-height: 1.3;
+      margin: 32px 0 16px 0;
     }
-
-    .content-page p {
+    p {
       font-size: 18px;
-      line-height: 1.8;
+      line-height: 1.7;
       color: #444;
-      margin-bottom: 32px;
+      margin: 0 0 20px 0;
     }
-
-    .content-page ul,
-    .content-page ol {
-      font-size: 18px;
-      line-height: 1.8;
-      color: #444;
-      margin-bottom: 32px;
-      margin-top: 24px;
-      padding-left: 32px;
+    section {
+      padding: 80px 0;
     }
-
-    .content-page li {
-      margin-bottom: 16px;
-    }
-
-    .content-page a {
-      color: #1e3a5f;
-      text-decoration: underline;
-      transition: color 0.2s;
-    }
-
-    .content-page a:hover {
-      color: #2d5a8f;
-    }
-
-    .content-page table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 40px 0;
-      background: white;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-
-    .content-page thead {
-      background: #f8f9fa;
-      border-bottom: 2px solid #e5e5e5;
-    }
-
-    .content-page th {
-      padding: 16px;
-      text-align: left;
-      font-weight: 600;
-      color: #1e3a5f;
-    }
-
-    .content-page td {
-      padding: 20px;
-      border-bottom: 1px solid #f0f0f0;
-      color: #555;
-    }
-
-    .content-page tbody tr:last-child td {
-      border-bottom: none;
-    }
-
-    /* Info boxes */
     .info-box {
       background: #f0f5f7;
       border-left: 4px solid #1e3a5f;
-      padding: 28px 32px;
-      margin: 48px 0;
+      padding: 32px;
       border-radius: 8px;
+      margin: 32px 0;
     }
-
-    .info-box h3 {
-      margin-top: 0;
-      color: #1e3a5f;
+    .rate-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 16px;
+      margin: 32px 0;
     }
-
-    /* CTA Section */
-    .cta-section {
-      background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8f 100%);
-      padding: 60px 40px;
-      border-radius: 16px;
-      text-align: center;
-      margin: 80px 0;
-      color: white;
-    }
-
-    .cta-section h2 {
-      color: white;
-      margin-top: 0;
-      margin-bottom: 20px;
-      font-size: 36px;
-    }
-
-    .cta-section p {
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 18px;
-      margin-bottom: 32px;
-    }
-
-    .btn-cta {
-      display: inline-block;
+    .rate-card {
       background: white;
-      color: #1e3a5f;
-      padding: 16px 40px;
+      border: 1px solid #e5e5e5;
       border-radius: 12px;
-      font-weight: 600;
-      font-size: 17px;
-      text-decoration: none;
-      transition: all 0.3s;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      padding: 24px;
+      text-align: center;
     }
-
-    .btn-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    .rate-card .period {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 8px;
     }
-
-    /* Responsive */
+    .rate-card .rate {
+      font-size: 28px;
+      font-weight: 700;
+      color: #1e3a5f;
+    }
     @media (max-width: 768px) {
-      .content-page h1 {
+      .page-container {
+        padding: 0 16px;
+      }
+      section {
+        padding: 48px 0;
+      }
+      h1 {
         font-size: 32px;
-        margin-bottom: 20px;
       }
-
-      .content-page h2 {
-        font-size: 26px;
-        margin-top: 48px;
-        margin-bottom: 24px;
+      h2 {
+        font-size: 24px;
       }
-
-      .content-page h3 {
-        font-size: 20px;
-        margin-top: 40px;
-        margin-bottom: 20px;
-      }
-
-      .content-page p,
-      .content-page ul,
-      .content-page ol {
+      p {
         font-size: 16px;
-        margin-bottom: 28px;
-      }
-
-      .cta-section {
-        padding: 40px 24px;
-      }
-
-      .cta-section h2 {
-        font-size: 28px;
-      }
-
-      .content-page table {
-        font-size: 14px;
-      }
-
-      .content-page th,
-      .content-page td {
-        padding: 12px;
       }
     }
-  
-    /* White headings on dark backgrounds */
-    .dark-bg h2,
-    .dark-bg h3,
-    .section-title-white {
-      color: white !important;
-    }
-
-    .dark-bg p {
-      color: rgba(255, 255, 255, 0.9);
-    }
-  
-    /* Mobile - Force ALL text left aligned */
-    @media (max-width: 767px) {
-      section h1,
-      section p,
-      .cta-section,
-      .cta-section h2,
-      .cta-section p,
-      div[style*="text-align: center"],
-      .section-inner > div,
-      .section-inner h2,
-      .section-inner p,
-      .dark-bg > div,
-      .dark-bg h2,
-      .dark-bg p,
-      .section-title-white {
-        text-align: left !important;
-      }
-
-      /* Section padding reduced to 40px on mobile */
-      section {
-        padding: 40px 0 !important;
-      }
-
-      /* Remove auto margins that center content - target all divs */
-      .section-inner div,
-      .dark-bg div,
-      section div {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-      }
-
-      /* Ensure no element is centered */
-      * {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-      }
-
-      /* Restore normal padding for specific elements that need it */
-      .section-inner,
-      article,
-      section {
-        margin: 0 !important;
-        padding-left: 24px !important;
-        padding-right: 24px !important;
-      }
-
-      /* Feature icons - left align everything including SVG */
-      .feature-icon {
-        text-align: left !important;
-        display: flex;
-        justify-content: flex-start;
-        margin-bottom: 16px;
-      }
-
-      .feature-icon svg {
-        margin: 0 !important;
-      }
-
-      .feature-item {
-        text-align: left !important;
-      }
-
-      .feature-item h3,
-      .feature-item p {
-        text-align: left !important;
-      }
-
-      /* All SVG icons left aligned on mobile */
-      svg[viewBox="0 0 24 24"] {
-        display: block;
-        margin-left: 0 !important;
-        margin-right: auto !important;
-      }
-    }
-  </style>
+    </style>
 </head>
 <body>
 <header class="header">
-  <div class="header-inner">
-    <a href="/" class="logo">
-      <div class="logo-icon">
-        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-          <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
-          <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
-          <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
-          <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
-        </svg>
-      </div>
-      <span class="logo-text">Ränta.nu</span>
-    </a>
-
-    <nav class="header-nav">
-      <a href="/">Hem</a>
-      <a href="/basta-rantan">Bästa räntan</a>
-      <a href="/berakna">Beräkna ränta</a>
-      <a href="/artiklar">Artiklar</a>
-      <a href="/kontakt">Kontakt</a>
-    </nav>
-
-    <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
-  </div>
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+    </div>
 </header>
 
-<!-- Hero Section -->
-<section style="padding: 80px 0 40px; background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);">
-  <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
-    <div class="dark-bg" style="display: inline-block; background: #1e3a5f; color: white; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; margin-bottom: 28px; letter-spacing: 0.5px;">
-      Guide
-    </div>
-    <h1 style="font-size: 48px; font-weight: 700; color: #0c1935; line-height: 1.2; margin-bottom: 24px; max-width: 900px;">
-      {pageTitle.replace(' | Ränta.nu', '')}
-    </h1>
-    <p style="font-size: 20px; color: #555; line-height: 1.6; max-width: 800px;">
-      {pageDescription}
-    </p>
-  </div>
-</section>
+<section>
+    <div class="page-container">
+        <div class="text-container">
+            <h1>STIBOR ränta - Interbankränta förklarad</h1>
 
-<!-- Main Content -->
-<article class="content-page" style="padding: 60px 24px 80px;">
-<section class="content-section">
-    <div class="section-inner">
-        <div style="max-width: 800px; margin: 0 auto;">
-            <h2 style="margin-bottom: 32px;">Vad är STIBOR?</h2>
-            <p>STIBOR står för Stockholm Interbank Offered Rate och är den ränta till vilken svenska banker är beredda att låna ut pengar till varandra på den svenska interbankmarknaden. STIBOR är en av de viktigaste referensräntorna i Sverige och används som bas för prissättning av många finansiella produkter, särskilt bolån med rörlig ränta.</p>
+            <p>STIBOR (Stockholm Interbank Offered Rate) är den ränta som svenska banker tar av varandra för lån utan säkerhet. Det är en viktig referensränta som påverkar många bolån och företagslån i Sverige.</p>
 
-            <p>STIBOR publiceras dagligen av Nasdaq Stockholm för olika löptider - vanligtvis 1, 3 och 6 månader. Räntan beräknas som ett genomsnitt av de räntesatser som ett antal banker anger att de är villiga att låna ut till varandra på den osäkrade interbankmarknaden.</p>
+            <h2>Aktuella STIBOR-räntor</h2>
 
-            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
-                <p style="margin: 0;"><strong>Viktigt att veta:</strong> STIBOR 3-månader är den mest använda referensräntan för bolån i Sverige. När din bank erbjuder "STIBOR + 1,5%" innebär det att din bolåneränta är STIBOR-räntan plus bankens påslag på 1,5 procentenheter.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="features-section">
-    <div class="section-inner">
-        <h2 class="features-title">Så fungerar STIBOR</h2>
-
-        <div class="features-grid">
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                    </svg>
+            <div class="rate-grid">
+                <div class="rate-card">
+                    <div class="period">1 vecka</div>
+                    <div class="rate">3,52%</div>
                 </div>
-                <h3>Daglig fastställelse</h3>
-                <p>STIBOR fastställs varje bankdag klockan 11:00 baserat på ränteangivelser från ett antal svenska banker. Räntan publiceras för olika löptider.</p>
-            </div>
-
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="2" y="7" width="20" height="14" rx="2"></rect>
-                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                    </svg>
+                <div class="rate-card">
+                    <div class="period">1 månad</div>
+                    <div class="rate">3,56%</div>
                 </div>
-                <h3>Interbankutlåning</h3>
-                <p>Speglar kostnaden för banker att låna av varandra. Högre STIBOR innebär att det är dyrare för banker att finansiera sin utlåning.</p>
-            </div>
-
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                    </svg>
+                <div class="rate-card">
+                    <div class="period">3 månader</div>
+                    <div class="rate">3,42%</div>
                 </div>
-                <h3>Bolånereferens</h3>
-                <p>De flesta rörliga bolåneräntor baseras på STIBOR 3-månader plus ett påslag. När STIBOR ändras påverkas därför miljontals bolånetagare.</p>
-            </div>
-
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
-                    </svg>
+                <div class="rate-card">
+                    <div class="period">6 månader</div>
+                    <div class="rate">3,28%</div>
                 </div>
-                <h3>Marknadssignal</h3>
-                <p>STIBOR-räntan är en viktig indikator på marknadsförväntningar om framtida räntor och ekonomisk utveckling i Sverige.</p>
             </div>
+
+            <p style="font-size: 14px; color: #666;">Uppdaterat januari 2025. STIBOR sätts dagligen av Financial Benchmarks Sweden.</p>
+
+            <div class="info-box">
+                <h3 style="margin-top: 0;">Hur påverkar STIBOR mig?</h3>
+                <p style="margin-bottom: 0;">Om du har ett bolån med rörlig ränta är det ofta kopplat till 3-månaders STIBOR plus bankens marginal. När STIBOR stiger ökar din bolåneränta, och vice versa.</p>
+            </div>
+
+            <h2>Hur fungerar STIBOR?</h2>
+
+            <p>STIBOR fastställs dagligen baserat på vad banker rapporterar att de skulle vara villiga att låna ut till andra banker. Det är alltså en teoretisk ränta snarare än faktiska transaktioner.</p>
+
+            <p>Räntan sätts för olika löptider: overnight (över natten), 1 vecka, 1 månad, 2 månader, 3 månader och 6 månader. Den mest använda är 3-månaders STIBOR.</p>
+
+            <h2>STIBOR och Riksbankens styrränta</h2>
+
+            <p>STIBOR följer i stort sett Riksbankens styrränta men ligger vanligtvis något högre. När Riksbanken höjer eller sänker styrräntan påverkas STIBOR inom några dagar.</p>
+
+            <h2>Ditt bolån och STIBOR</h2>
+
+            <p>Många rörliga bolån i Sverige är kopplade till 3-månaders STIBOR. Din totala ränta blir då STIBOR plus bankens marginal (påslag). Marginalen varierar mellan banker och kunder.</p>
+
+            <p>Exempel: Om 3-månaders STIBOR är 3,42% och bankens marginal är 1,5% blir din totala ränta 4,92%.</p>
         </div>
     </div>
 </section>
 
-<section class="content-section gray">
-    <div class="section-inner">
-        <h2 style="margin-bottom: 48px;">Vad påverkar STIBOR?</h2>
-        <div style="max-width: 900px; margin: 0 auto;">
-            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5;">
-                <ul style="line-height: 2; color: #555;">
-                    <li><strong>Riksbankens styrränta</strong> - Den viktigaste faktorn. STIBOR följer vanligtvis styrräntan men ligger något högre.</li>
-                    <li><strong>Likviditet i banksystemet</strong> - Om banker har svårt att få tag på pengar stiger STIBOR.</li>
-                    <li><strong>Kreditrisk mellan banker</strong> - Vid oro för bankernas ekonomi kan STIBOR stiga även om styrräntan är oförändrad.</li>
-                    <li><strong>Marknadsförväntningar</strong> - Om marknaden förväntar sig räntehöjningar stiger längre STIBOR-räntor.</li>
-                    <li><strong>Internationella räntor</strong> - Räntor i euroområdet och USA påverkar indirekt svenska marknadsräntor.</li>
-                    <li><strong>Ekonomisk utveckling</strong> - Stark ekonomi med hög inflation leder vanligtvis till högre STIBOR.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="content-section">
-    <div class="section-inner">
-        <div style="max-width: 800px; margin: 0 auto;">
-            <h2 style="margin-bottom: 32px;">STIBOR och ditt bolån</h2>
-            <p>Om du har eller planerar att ta ett bolån med rörlig ränta är det viktigt att förstå hur STIBOR fungerar. Din bolåneränta består av STIBOR plus bankens påslag (marginal). Medan STIBOR varierar dagligen och följer marknadsräntorna, är påslaget fast under avtalstiden.</p>
-
-            <p>När Riksbanken höjer styrräntan stiger normalt STIBOR inom några dagar, vilket gör att din bolånekostnad ökar vid nästa räntejustering (vanligtvis var tredje månad). Omvänt får du lägre ränta när Riksbanken sänker styrräntan.</p>
-
-            <div style="background: white; padding: 40px; border-radius: 16px; border: 1px solid #e5e5e5; margin-top: 32px;">
-                <h3 style="margin-bottom: 16px;">Exempel på bolåneränta:</h3>
-                <p style="margin-bottom: 16px;">Om STIBOR 3-månader är 3,5% och din banks påslag är 1,2%, blir din totala bolåneränta:</p>
-                <p style="font-size: clamp(16px, 3vw, 20px); font-weight: 600; color: #1e3a5f; margin-bottom: 16px;">3,5% + 1,2% = 4,7%</p>
-                <p style="margin: 0; color: #666;">Vid nästa räntejustering om tre månader kommer din ränta att justeras baserat på det nya STIBOR-värdet, medan påslaget förblir 1,2%.</p>
-            </div>
-
-            <div style="background: #e8f4f8; padding: 32px; border-radius: 12px; margin: 32px 0; border-left: 4px solid #1e3a5f;">
-                <p style="margin: 0;"><strong>Tips:</strong> Jämför inte bara STIBOR-påslag mellan banker - kolla också vad de faktiskt tar ut i andra avgifter och om du kan förhandla om påslaget. Ett lägre påslag sparar pengar oavsett hur STIBOR utvecklas.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="content-section gray">
-    <div class="section-inner">
-        <div style="max-width: 800px; margin: 0 auto;">
-            <h2 style="margin-bottom: 32px;">STIBOR vs andra referensräntor</h2>
-            <p>STIBOR är den svenska motsvarigheten till LIBOR (London) och EURIBOR (euroområdet). På senare år har det internationellt pågått en övergång från interbankräntor som LIBOR till alternativa referensräntor baserade på faktiska transaktioner istället för bankers angivelser.</p>
-
-            <p>I Sverige har Riksbanken introducerat SWESTR (Swedish Krona Short-Term Rate) som ett alternativ till STIBOR. SWESTR baseras på faktiska transaktioner på den svenska penningmarknaden och bedöms som mer robust. På sikt kan fler bolån komma att knytas till SWESTR istället för STIBOR.</p>
-        </div>
-    </div>
-</section>
-</article>
-
-<!-- CTA Section -->
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
-  <div class="cta-section">
-    <h2>Redo att hitta den bästa räntan?</h2>
-    <p>Jämför räntor från över 50 svenska banker och hitta det bästa sparalternativet för dig.</p>
-    <a href="/basta-rantan" class="btn-cta">Jämför räntor nu</a>
-  </div>
-</div>
-
-<!-- Footer -->
 <Footer />
-
 </body>
 </html>

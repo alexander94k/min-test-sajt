@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Ränta.nu</name>
+    <description>Jämför sparräntor och låneräntor från Sveriges banker</description>
+
+    <Style id="defaultStyle">
+      <IconStyle>
+        <Icon>
+          <href>https://ranta.nu/favicon.svg</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+
+    <Placemark>
+      <name>Ränta.nu</name>
+      <description>Sveriges ledande jämförelsetjänst för räntor</description>
+      <styleUrl>#defaultStyle</styleUrl>
+      <Point>
+        <coordinates>18.0686,59.3293,0</coordinates>
+      </Point>
+    </Placemark>
+
+  </Document>
+</kml>

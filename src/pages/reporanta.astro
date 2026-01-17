@@ -1,140 +1,146 @@
 ---
 import '../styles/global.css';
 import Footer from '../components/Footer.astro';
+import BaseHead from '../components/BaseHead.astro';
 
-const pageTitle = "Reporänta - Det tidigare namnet på styrräntan | Ränta.nu";
-const pageDescription = "Reporänta var namnet på Sveriges styrränta fram till 2022. Lär dig om reporäntan, dess historia och hur den påverkade den svenska ekonomin.";
 ---
 
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{pageTitle}</title>
-  <meta name="description" content={pageDescription}>
-  <link rel="preconnect" href="https://fonts.googleapis.com/">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <BaseHead />
   <style is:global>
-    /* Reset default margins */
-    .content-page * {
-      box-sizing: border-box;
+    /* ========================================
+       BASE STYLES & CONTAINER STRUCTURE
+       ======================================== */
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
     }
 
-    .content-page {
+    /* Main container - max 1200px, centrerad */
+    .page-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 24px;
-      font-family: 'Inter', sans-serif;
+      padding: 0 100px;
     }
 
-    /* Content styling with proper spacing */
-    .content-page h1 {
+    /* Text content container - max 720px för läsbarhet */
+    .text-container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* ========================================
+       TYPOGRAPHY - DESKTOP (>768px)
+       ======================================== */
+
+    h1 {
       font-size: 48px;
       font-weight: 700;
       color: #0c1935;
-      line-height: 1.25;
-      margin-bottom: 28px;
+      line-height: 1.2;
+      margin: 0 0 24px 0;
+      text-align: center;
     }
 
-    .content-page h2 {
-      font-size: 36px;
+    h2 {
+      font-size: 32px;
       font-weight: 700;
       color: #1f3a5e;
-      margin-top: 64px;
-      margin-bottom: 28px;
       line-height: 1.3;
+      margin: 0 0 24px 0;
+      text-align: center;
     }
 
-    .content-page h2:first-of-type {
-      margin-top: 48px;
-    }
-
-    .content-page h3 {
-      font-size: 26px;
+    h3 {
+      font-size: 24px;
       font-weight: 600;
       color: #1f3a5e;
-      margin-top: 52px;
-      margin-bottom: 24px;
       line-height: 1.3;
+      margin: 0 0 16px 0;
     }
 
-    .content-page p {
-      font-size: 18px;
-      line-height: 1.8;
+    p {
+      font-size: 16px;
+      line-height: 1.5;
       color: #444;
-      margin-bottom: 32px;
+      margin: 0 0 20px 0;
     }
 
-    .content-page ul,
-    .content-page ol {
-      font-size: 18px;
-      line-height: 1.8;
-      color: #444;
-      margin-bottom: 32px;
-      margin-top: 24px;
-      padding-left: 32px;
+    /* ========================================
+       SECTIONS - DESKTOP
+       ======================================== */
+
+    section {
+      padding: 80px 0;
     }
 
-    .content-page li {
-      margin-bottom: 16px;
-    }
-
-    .content-page a {
-      color: #1e3a5f;
-      text-decoration: underline;
-      transition: color 0.2s;
-    }
-
-    .content-page a:hover {
-      color: #2d5a8f;
-    }
-
-    .content-page table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 40px 0;
+    /* Card/Box styling */
+    .card {
       background: white;
       border-radius: 16px;
-      overflow: hidden;
+      padding: 32px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
 
-    .content-page thead {
-      background: #f8f9fa;
-      border-bottom: 2px solid #e5e5e5;
-    }
-
-    .content-page th {
-      padding: 16px;
-      text-align: left;
-      font-weight: 600;
-      color: #1e3a5f;
-    }
-
-    .content-page td {
-      padding: 20px;
-      border-bottom: 1px solid #f0f0f0;
-      color: #555;
-    }
-
-    .content-page tbody tr:last-child td {
-      border-bottom: none;
-    }
-
-    /* Info boxes */
     .info-box {
       background: #f0f5f7;
       border-left: 4px solid #1e3a5f;
-      padding: 28px 32px;
-      margin: 48px 0;
+      padding: 32px;
       border-radius: 8px;
     }
 
-    .info-box h3 {
-      margin-top: 0;
+    /* Dark background boxes */
+    .dark-box {
+      background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+      border-radius: 20px;
+      padding: 60px 40px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .dark-box h2 {
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .dark-box p {
+      color: rgba(255,255,255,0.9);
+    }
+
+    .dark-box .big-number {
+      font-size: 64px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    /* Features grid - 2 kolumner x 2 rader */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      margin-top: 48px;
+    }
+
+    .feature-item {
+      text-align: center;
+    }
+
+    .feature-icon {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 20px;
       color: #1e3a5f;
+    }
+
+    .feature-icon svg {
+      width: 100%;
+      height: 100%;
     }
 
     /* CTA Section */
@@ -143,20 +149,16 @@ const pageDescription = "Reporänta var namnet på Sveriges styrränta fram till
       padding: 60px 40px;
       border-radius: 16px;
       text-align: center;
-      margin: 80px 0;
       color: white;
     }
 
     .cta-section h2 {
       color: white;
-      margin-top: 0;
       margin-bottom: 20px;
-      font-size: 36px;
     }
 
     .cta-section p {
       color: rgba(255, 255, 255, 0.9);
-      font-size: 18px;
       margin-bottom: 32px;
     }
 
@@ -165,6 +167,7 @@ const pageDescription = "Reporänta var namnet på Sveriges styrränta fram till
       background: white;
       color: #1e3a5f;
       padding: 16px 40px;
+      min-height: 44px;
       border-radius: 12px;
       font-weight: 600;
       font-size: 17px;
@@ -178,134 +181,114 @@ const pageDescription = "Reporänta var namnet på Sveriges styrränta fram till
       box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     }
 
-    /* Responsive */
+    /* ========================================
+       MOBILE STYLES (<768px)
+       ======================================== */
+
     @media (max-width: 768px) {
-      .content-page h1 {
+      /* Container padding */
+      .page-container {
+        padding: 0 16px;
+      }
+
+      /* Section padding */
+      section {
+        padding: 48px 0;
+      }
+
+      /* Typography - mobile */
+      h1 {
         font-size: 32px;
-        margin-bottom: 20px;
+        text-align: left;
       }
 
-      .content-page h2 {
-        font-size: 26px;
-        margin-top: 48px;
-        margin-bottom: 24px;
+      h2 {
+        font-size: 24px;
+        text-align: left;
       }
 
-      .content-page h3 {
+      h3 {
         font-size: 20px;
-        margin-top: 40px;
-        margin-bottom: 20px;
+        text-align: left;
       }
 
-      .content-page p,
-      .content-page ul,
-      .content-page ol {
+      p {
         font-size: 16px;
-        margin-bottom: 28px;
+        text-align: left;
       }
 
-      .cta-section {
-        padding: 40px 24px;
+      /* Cards and boxes - mobile */
+      .card {
+        padding: 20px;
       }
 
-      .cta-section h2 {
-        font-size: 28px;
+      .info-box {
+        padding: 20px;
       }
 
-      .content-page table {
-        font-size: 14px;
+      .dark-box {
+        padding: 32px 20px;
+        text-align: left;
       }
 
-      .content-page th,
-      .content-page td {
-        padding: 12px;
-      }
-    }
-  
-    /* White headings on dark backgrounds */
-    .dark-bg h2,
-    .dark-bg h3,
-    .section-title-white {
-      color: white !important;
-    }
-
-    .dark-bg p {
-      color: rgba(255, 255, 255, 0.9);
-    }
-  
-    /* Mobile - Force ALL text left aligned */
-    @media (max-width: 767px) {
-      section h1,
-      section p,
-      .cta-section,
-      .cta-section h2,
-      .cta-section p,
-      div[style*="text-align: center"],
-      .section-inner > div,
-      .section-inner h2,
-      .section-inner p,
-      .dark-bg > div,
-      .dark-bg h2,
-      .dark-bg p,
-      .section-title-white {
-        text-align: left !important;
+      .dark-box h2 {
+        text-align: left;
       }
 
-      /* Section padding reduced to 40px on mobile */
-      section {
-        padding: 40px 0 !important;
+      .dark-box p {
+        text-align: left;
       }
 
-      /* Remove auto margins that center content - target all divs */
-      .section-inner div,
-      .dark-bg div,
-      section div {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+      .dark-box .big-number {
+        font-size: 48px;
+        text-align: left;
       }
 
-      /* Ensure no element is centered */
-      * {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-      }
-
-      /* Restore normal padding for specific elements that need it */
-      .section-inner,
-      article,
-      section {
-        margin: 0 !important;
-        padding-left: 24px !important;
-        padding-right: 24px !important;
-      }
-
-      /* Feature icons - left align everything including SVG */
-      .feature-icon {
-        text-align: left !important;
-        display: flex;
-        justify-content: flex-start;
-        margin-bottom: 16px;
-      }
-
-      .feature-icon svg {
-        margin: 0 !important;
+      /* Features - mobile */
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
       }
 
       .feature-item {
-        text-align: left !important;
+        text-align: left;
       }
 
-      .feature-item h3,
-      .feature-item p {
-        text-align: left !important;
+      .feature-icon {
+        margin: 0 0 16px 0;
       }
 
-      /* All SVG icons left aligned on mobile */
-      svg[viewBox="0 0 24 24"] {
+      /* CTA - mobile */
+      .cta-section {
+        padding: 40px 20px;
+      }
+
+      .btn-cta {
+        width: 100%;
+        min-height: 44px;
         display: block;
-        margin-left: 0 !important;
-        margin-right: auto !important;
+        text-align: center;
       }
+    }
+
+    /* ========================================
+       UTILITY CLASSES
+       ======================================== */
+
+    .text-center {
+      text-align: center;
+    }
+
+    .mt-48 {
+      margin-top: 48px;
+    }
+
+    .mb-48 {
+      margin-bottom: 48px;
+    }
+
+    .gray-bg {
+      background: #f8f9fa;
     }
   </style>
 </head>
@@ -332,7 +315,7 @@ const pageDescription = "Reporänta var namnet på Sveriges styrränta fram till
       <a href="/kontakt">Kontakt</a>
     </nav>
 
-    <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
+    <a href="/berakna" class="btn-login">Kalkylatorer</a>
   </div>
 </header>
 
@@ -343,10 +326,10 @@ const pageDescription = "Reporänta var namnet på Sveriges styrränta fram till
       Guide
     </div>
     <h1 style="font-size: 48px; font-weight: 700; color: #0c1935; line-height: 1.2; margin-bottom: 24px; max-width: 900px;">
-      {pageTitle.replace(' | Ränta.nu', '')}
+      Reporänta - Riksbankens styrränta förklarad
     </h1>
     <p style="font-size: 20px; color: #555; line-height: 1.6; max-width: 800px;">
-      {pageDescription}
+      Allt om reporäntan och hur Riksbankens beslut påverkar din ekonomi.
     </p>
   </div>
 </section>

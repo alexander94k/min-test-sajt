@@ -1,538 +1,146 @@
 ---
 import '../styles/global.css';
 import Footer from '../components/Footer.astro';
-
-const pageTitle = "Nominell ränta - Vad är det och hur fungerar det?";
-const pageDescription = "Nominell ränta är årsräntan du betalar på ett lån eller får på sparande, utan tillkommande avgifter inräknade. Lär dig skillnaden mot effektiv ränta och hur den beräknas.";
+import BaseHead from '../components/BaseHead.astro';
 ---
 
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{pageTitle}</title>
-  <meta name="description" content={pageDescription}>
-  <link rel="preconnect" href="https://fonts.googleapis.com/">
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
-  <style is:global>
-    /* Reset default margins */
-    .content-page * {
-      box-sizing: border-box;
+    <BaseHead />
+    <style is:global>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
     }
-
-    .content-page {
+    .page-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 24px;
-      font-family: 'Inter', sans-serif;
+      padding: 0 100px;
     }
-
-    /* Content styling with proper spacing */
-    .content-page h1 {
+    .text-container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    h1 {
       font-size: 48px;
       font-weight: 700;
       color: #0c1935;
-      line-height: 1.25;
-      margin-bottom: 28px;
+      line-height: 1.2;
+      margin: 0 0 24px 0;
     }
-
-    .content-page h2 {
-      font-size: 36px;
+    h2 {
+      font-size: 32px;
       font-weight: 700;
       color: #1f3a5e;
-      margin-top: 64px;
-      margin-bottom: 28px;
       line-height: 1.3;
+      margin: 48px 0 24px 0;
     }
-
-    .content-page h2:first-of-type {
-      margin-top: 48px;
-    }
-
-    .content-page h3 {
-      font-size: 26px;
+    h3 {
+      font-size: 24px;
       font-weight: 600;
       color: #1f3a5e;
-      margin-top: 52px;
-      margin-bottom: 24px;
       line-height: 1.3;
+      margin: 32px 0 16px 0;
     }
-
-    .content-page p {
+    p {
       font-size: 18px;
-      line-height: 1.8;
+      line-height: 1.7;
       color: #444;
-      margin-bottom: 32px;
+      margin: 0 0 20px 0;
     }
-
-    .content-page ul,
-    .content-page ol {
-      font-size: 18px;
-      line-height: 1.8;
-      color: #444;
-      margin-bottom: 32px;
-      margin-top: 24px;
-      padding-left: 32px;
+    section {
+      padding: 80px 0;
     }
-
-    .content-page li {
-      margin-bottom: 16px;
-    }
-
-    .content-page a {
-      color: #1e3a5f;
-      text-decoration: underline;
-      transition: color 0.2s;
-    }
-
-    .content-page a:hover {
-      color: #2d5a8f;
-    }
-
-    .content-page table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 40px 0;
-      background: white;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-
-    .content-page thead {
-      background: #f8f9fa;
-      border-bottom: 2px solid #e5e5e5;
-    }
-
-    .content-page th {
-      padding: 16px;
-      text-align: left;
-      font-weight: 600;
-      color: #1e3a5f;
-    }
-
-    .content-page td {
-      padding: 20px;
-      border-bottom: 1px solid #f0f0f0;
-      color: #555;
-    }
-
-    .content-page tbody tr:last-child td {
-      border-bottom: none;
-    }
-
-    /* Info boxes */
     .info-box {
       background: #f0f5f7;
       border-left: 4px solid #1e3a5f;
-      padding: 28px 32px;
-      margin: 48px 0;
+      padding: 32px;
       border-radius: 8px;
+      margin: 32px 0;
     }
-
-    .info-box h3 {
-      margin-top: 0;
-      color: #1e3a5f;
-    }
-
-    /* CTA Section */
-    .cta-section {
-      background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8f 100%);
-      padding: 60px 40px;
-      border-radius: 16px;
-      text-align: center;
-      margin: 80px 0;
-      color: white;
-    }
-
-    .cta-section h2 {
-      color: white;
-      margin-top: 0;
-      margin-bottom: 20px;
-      font-size: 36px;
-    }
-
-    .cta-section p {
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 18px;
-      margin-bottom: 32px;
-    }
-
-    .btn-cta {
-      display: inline-block;
-      background: white;
-      color: #1e3a5f;
-      padding: 16px 40px;
-      border-radius: 12px;
-      font-weight: 600;
-      font-size: 17px;
-      text-decoration: none;
-      transition: all 0.3s;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
-    .btn-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-    }
-
-    /* Responsive */
     @media (max-width: 768px) {
-      .content-page h1 {
+      .page-container {
+        padding: 0 16px;
+      }
+      section {
+        padding: 48px 0;
+      }
+      h1 {
         font-size: 32px;
-        margin-bottom: 20px;
       }
-
-      .content-page h2 {
-        font-size: 26px;
-        margin-top: 48px;
-        margin-bottom: 24px;
+      h2 {
+        font-size: 24px;
       }
-
-      .content-page h3 {
-        font-size: 20px;
-        margin-top: 40px;
-        margin-bottom: 20px;
-      }
-
-      .content-page p,
-      .content-page ul,
-      .content-page ol {
+      p {
         font-size: 16px;
-        margin-bottom: 28px;
-      }
-
-      .cta-section {
-        padding: 40px 24px;
-      }
-
-      .cta-section h2 {
-        font-size: 28px;
-      }
-
-      .content-page table {
-        font-size: 14px;
-      }
-
-      .content-page th,
-      .content-page td {
-        padding: 12px;
       }
     }
-  
-    /* White headings on dark backgrounds */
-    .dark-bg h2,
-    .dark-bg h3,
-    .section-title-white {
-      color: white !important;
-    }
-
-    .dark-bg p {
-      color: rgba(255, 255, 255, 0.9);
-    }
-  
-    /* Mobile - Force ALL text left aligned */
-    @media (max-width: 767px) {
-      section h1,
-      section p,
-      .cta-section,
-      .cta-section h2,
-      .cta-section p,
-      div[style*="text-align: center"],
-      .section-inner > div,
-      .section-inner h2,
-      .section-inner p,
-      .dark-bg > div,
-      .dark-bg h2,
-      .dark-bg p,
-      .section-title-white {
-        text-align: left !important;
-      }
-
-      /* Section padding reduced to 40px on mobile */
-      section {
-        padding: 40px 0 !important;
-      }
-
-      /* Remove auto margins that center content - target all divs */
-      .section-inner div,
-      .dark-bg div,
-      section div {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-      }
-
-      /* Ensure no element is centered */
-      * {
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-      }
-
-      /* Restore normal padding for specific elements that need it */
-      .section-inner,
-      article,
-      section {
-        margin: 0 !important;
-        padding-left: 24px !important;
-        padding-right: 24px !important;
-      }
-
-      /* Feature icons - left align everything including SVG */
-      .feature-icon {
-        text-align: left !important;
-        display: flex;
-        justify-content: flex-start;
-        margin-bottom: 16px;
-      }
-
-      .feature-icon svg {
-        margin: 0 !important;
-      }
-
-      .feature-item {
-        text-align: left !important;
-      }
-
-      .feature-item h3,
-      .feature-item p {
-        text-align: left !important;
-      }
-
-      /* All SVG icons left aligned on mobile */
-      svg[viewBox="0 0 24 24"] {
-        display: block;
-        margin-left: 0 !important;
-        margin-right: auto !important;
-      }
-    }
-  </style>
+    </style>
 </head>
 <body>
 <header class="header">
-  <div class="header-inner">
-    <a href="/" class="logo">
-      <div class="logo-icon">
-        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-          <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
-          <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
-          <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
-          <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
-        </svg>
-      </div>
-      <span class="logo-text">Ränta.nu</span>
-    </a>
-
-    <nav class="header-nav">
-      <a href="/">Hem</a>
-      <a href="/basta-rantan">Bästa räntan</a>
-      <a href="/berakna">Beräkna ränta</a>
-      <a href="/artiklar">Artiklar</a>
-      <a href="/kontakt">Kontakt</a>
-    </nav>
-
-    <a href="/kalkylatorer" class="btn-login">Kalkylatorer</a>
-  </div>
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+    </div>
 </header>
 
-<!-- Hero Section -->
-<section style="padding: 80px 0 40px; background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);">
-  <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
-    <div class="dark-bg" style="display: inline-block; background: #1e3a5f; color: white; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; margin-bottom: 28px; letter-spacing: 0.5px;">
-      Guide
-    </div>
-    <h1 style="font-size: 48px; font-weight: 700; color: #0c1935; line-height: 1.2; margin-bottom: 24px; max-width: 900px;">
-      {pageTitle.replace(' | Ränta.nu', '')}
-    </h1>
-    <p style="font-size: 20px; color: #555; line-height: 1.6; max-width: 800px;">
-      {pageDescription}
-    </p>
-  </div>
-</section>
+<section>
+    <div class="page-container">
+        <div class="text-container">
+            <h1>Nominell ränta - Definition och beräkning</h1>
 
-<!-- Main Content -->
-<article class="content-page" style="padding: 60px 24px 80px;">
-<section class="content-section">
-    <div class="section-inner">
-        <div class="content-row">
-            <div class="content-text">
-                <h2>Vad är nominell ränta?</h2>
-                <p>Nominell ränta utgör den grundläggande räntesatsen för lån eller sparande under ett år. Den presenteras utan extra kostnader som uppläggnings- eller aviseringsavgifter inräknade.</p>
-                <p>När du jämför olika låneerbjudanden från banker är det viktigt att förstå att den nominella räntan endast visar själva räntekostnaden - inte den totala kostnaden för lånet. För att få en fullständig bild behöver du även titta på den effektiva räntan.</p>
+            <p>Nominell ränta är den grundläggande räntesats som anges för ett lån eller sparande, utan hänsyn till avgifter, inflation eller ränta-på-ränta-effekten. Det är den ränta som oftast kommuniceras av banker och långivare.</p>
+
+            <div class="info-box">
+                <h3 style="margin-top: 0;">Kort sammanfattning</h3>
+                <p style="margin-bottom: 0;">Nominell ränta visar den årliga räntesatsen utan avgifter. För att se den verkliga kostnaden, titta på den effektiva räntan som inkluderar alla avgifter och ränta-på-ränta.</p>
             </div>
 
-            <div class="content-text">
-                <h2>Nominell ränta vs. Effektiv ränta</h2>
-                <p>Den stora skillnaden mellan nominell och effektiv ränta ligger i vilka kostnader som inkluderas:</p>
-                <ul style="margin: 20px 0; padding-left: 20px;">
-                    <li style="margin-bottom: 12px;"><strong>Nominell ränta:</strong> Endast basräntan utan avgifter</li>
-                    <li style="margin-bottom: 12px;"><strong>Effektiv ränta:</strong> Basräntan plus alla tillkommande kostnader som uppläggningsavgifter, aviavgifter och andra administrativa kostnader</li>
-                </ul>
-                <p>Effektiv ränta ger därför en mer komplett bild av den verkliga låne- eller sparandekostnaden och är det viktigaste nyckeltalet när du jämför olika låneerbjudanden.</p>
-            </div>
-        </div>
-    </div>
-</section>
+            <h2>Vad är skillnaden mellan nominell och effektiv ränta?</h2>
 
-<section class="features-section gray">
-    <div class="section-inner">
-        <h2 class="features-title">Så beräknas nominell ränta</h2>
+            <p>Den nominella räntan visar bara själva räntesatsen, medan den effektiva räntan inkluderar alla kostnader kopplade till lånet eller sparandet. Det gör att den effektiva räntan alltid är högre än den nominella för lån.</p>
 
-        <div class="features-grid">
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
-                        <path d="M7 8h10M7 12h10M7 16h6"></path>
-                    </svg>
-                </div>
-                <h3>Enkel beräkning</h3>
-                <p>För att räkna ut årlig räntekostnad multiplicerar du lånebeloppet med den nominella årsräntan. Ett lån på 50 000 kr med 6% nominell ränta kostar 3 000 kr per år i ränta.</p>
-            </div>
+            <p>Exempel: Ett lån med 5% nominell ränta och 500 kr i uppläggningsavgift kan ha en effektiv ränta på 5,8% när alla kostnader räknas in.</p>
 
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M12 2v20M2 12h20"></path>
-                        <circle cx="12" cy="12" r="10"></circle>
-                    </svg>
-                </div>
-                <h3>Påverkande faktorer</h3>
-                <p>Marknadsläget, inflation, ekonomisk efterfrågan och din kreditvärdighet påverkar vilken nominell ränta du erbjuds. God ekonomi ger ofta bättre villkor.</p>
-            </div>
+            <h2>Hur beräknas nominell ränta?</h2>
 
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                    </svg>
-                </div>
-                <h3>Riksbankens roll</h3>
-                <p>Riksbanken påverkar den nominella räntan genom reporäntan, vilket förändrar bankernas låne- och utlåningskostnader. Målet är ekonomisk stabilitet och inflationskontroll.</p>
-            </div>
+            <p>Den nominella räntan uttrycks som en årlig procentsats. Om du har ett lån på 100 000 kr med 5% nominell ränta betalar du 5 000 kr i ränta per år (100 000 × 0,05 = 5 000).</p>
 
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <line x1="12" y1="1" x2="12" y2="23"></line>
-                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                    </svg>
-                </div>
-                <h3>Inflation och realränta</h3>
-                <p>Nominell ränta tar inte hänsyn till prisstegringar. Realräntan beräknas som nominell ränta minus inflation och visar den verkliga avkastningen eller kostnaden.</p>
+            <h3>Formel för nominell ränta</h3>
+
+            <p>Nominell årsränta = (Räntebelopp / Lånebelopp) × 100</p>
+
+            <h2>När ska du titta på nominell ränta?</h2>
+
+            <p>Nominell ränta är användbar för att jämföra grundräntorna mellan olika lån eller sparkonton. Men för att få en rättvis bild av den totala kostnaden bör du alltid jämföra den effektiva räntan.</p>
+
+            <div class="info-box">
+                <h3 style="margin-top: 0;">Tips</h3>
+                <p style="margin-bottom: 0;">Enligt lag måste långivare alltid redovisa både nominell och effektiv ränta. Använd alltid den effektiva räntan när du jämför lån mellan olika banker.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="content-section">
-    <div class="section-inner">
-        <div style="max-width: 800px; margin: 0 auto; background: #f0f5f7; padding: 48px; border-radius: 16px; border: 2px solid #e5e5e5;">
-            <h2 style="margin-bottom: 32px;">Exempel på beräkning</h2>
-            <div style="background: white; padding: 32px; border-radius: 12px; margin-bottom: 24px;">
-                <h3 style="font-size: 20px; margin-bottom: 16px; color: #1e3a5f;">Scenario</h3>
-                <p style="font-size: 18px; margin-bottom: 12px;">Du lånar <strong>50 000 kr</strong> med en nominell årsränta på <strong>6%</strong></p>
-            </div>
-            <div style="background: white; padding: 32px; border-radius: 12px;">
-                <h3 style="font-size: 20px; margin-bottom: 16px; color: #1e3a5f;">Beräkning</h3>
-                <p style="font-size: 16px; margin-bottom: 12px;">Räntekostnad = Lånebelopp × Årsränta</p>
-                <p style="font-size: 16px; margin-bottom: 12px;">Räntekostnad = 50 000 × 0,06</p>
-                <p style="font-size: 24px; font-weight: 700; color: #1e3a5f; margin-top: 24px;">= 3 000 kr per år</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="features-section">
-    <div class="section-inner">
-        <h2 class="features-title">Vanliga frågor om nominell ränta</h2>
-
-        <div class="features-grid">
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                    </svg>
-                </div>
-                <h3>Vad är skillnaden mellan nominell och realränta?</h3>
-                <p>Nominell ränta inkluderar förväntad inflation, medan realräntan är nominell ränta minus faktisk inflation. Om du har 5% nominell ränta och inflationen är 3%, är realräntan 2%.</p>
-            </div>
-
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="3" y="4" width="18" height="16" rx="2"></rect>
-                        <path d="M7 8h10M7 12h6"></path>
-                    </svg>
-                </div>
-                <h3>Hur beräknar jag min räntekostnad?</h3>
-                <p>Multiplicera ditt lånebelopp med den nominella årsräntan. Ett lån på 100 000 kr med 5% ränta ger en årlig räntekostnad på 5 000 kr (100 000 × 0,05).</p>
-            </div>
-
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                    </svg>
-                </div>
-                <h3>Kan nominell ränta vara rörlig?</h3>
-                <p>Ja, nominell ränta kan vara både rörlig och fast. Rörlig nominell ränta ändras enligt marknadsförhållanden och avtalsvillkor, ofta i takt med Riksbankens reporänta.</p>
-            </div>
-
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <line x1="12" y1="1" x2="12" y2="23"></line>
-                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                    </svg>
-                </div>
-                <h3>Varför skiljer sig nominell och effektiv ränta?</h3>
-                <p>Effektiv ränta inkluderar alla kostnader för lånet (avgifter, amorteringar), medan nominell ränta endast visar själva räntekostnaden. Detta gör effektiv ränta mer användbar vid jämförelser.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section style="padding: 80px 0; background: #fff;">
-    <div class="section-inner">
-        <div class="dark-bg" style="max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); border-radius: 20px; padding: 60px 40px; box-shadow: 0 10px 40px rgba(30, 58, 95, 0.15);">
-<div style="max-width: 700px; margin: 0 auto;">
-            <h2 class="section-title-white" style="margin-bottom: 24px;">Beräkna din räntekostnad</h2>
-            <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
-                Använd våra kalkylatorer för att räkna ut både nominell och effektiv ränta på ditt lån eller sparande.
-            </p>
-            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-                <a href="/berakna" class="btn-primary" style="background: white; color: #1e3a5f;">
-                    Räkna ut ränta
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
-                </a>
-                <a href="/effektiv-ranta" class="btn-secondary" style="border-color: white; color: white;">
-                    Läs om effektiv ränta
-                </a>
-            </div>
-        </div>
-        </div>
-    </div>
-</section>
-</article>
-
-<!-- CTA Section -->
-<div style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
-  <div class="cta-section">
-    <h2>Redo att hitta den bästa räntan?</h2>
-    <p>Jämför räntor från över 50 svenska banker och hitta det bästa sparalternativet för dig.</p>
-    <a href="/basta-rantan" class="btn-cta">Jämför räntor nu</a>
-  </div>
-</div>
-
-<!-- Footer -->
 <Footer />
-
 </body>
 </html>

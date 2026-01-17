@@ -1,0 +1,248 @@
+---
+/**
+ * SEO Component for Ränta.nu
+ * Provides meta tags, canonical URLs, and JSON-LD schema markup
+ */
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  type?: 'website' | 'article' | 'webapp' | 'faq' | 'howto' | 'about' | 'contact';
+  image?: string;
+  publishDate?: string;
+  modifiedDate?: string;
+  author?: string;
+  faqItems?: Array<{ question: string; answer: string }>;
+  howToSteps?: Array<{ name: string; text: string }>;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  type = 'website',
+  image = '/images/og-default.png',
+  publishDate,
+  modifiedDate,
+  author = 'Ränta.nu',
+  faqItems = [],
+  howToSteps = [],
+  noindex = false,
+} = Astro.props;
+
+const siteUrl = 'https://ranta.nu';
+const currentPath = Astro.url.pathname;
+const canonicalUrl = canonical || `${siteUrl}${currentPath}`;
+const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`;
+
+// Generate JSON-LD based on page type
+function generateSchema() {
+  const baseOrg = {
+    "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
+    "name": "Ränta.nu",
+    "url": siteUrl,
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/images/logo.png`
+    },
+    "sameAs": []
+  };
+
+  const baseWebsite = {
+    "@type": "WebSite",
+    "@id": `${siteUrl}/#website`,
+    "url": siteUrl,
+    "name": "Ränta.nu",
+    "description": "Sveriges guide till räntor - jämför sparräntor och lån",
+    "publisher": { "@id": `${siteUrl}/#organization` },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": `${siteUrl}/sok?q={search_term_string}`,
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  switch (type) {
+    case 'website':
+      return {
+        "@context": "https://schema.org",
+        "@graph": [baseOrg, baseWebsite, {
+          "@type": "WebPage",
+          "@id": canonicalUrl,
+          "url": canonicalUrl,
+          "name": title,
+          "description": description,
+          "isPartOf": { "@id": `${siteUrl}/#website` },
+          "about": { "@id": `${siteUrl}/#organization` }
+        }]
+      };
+
+    case 'article':
+      return {
+        "@context": "https://schema.org",
+        "@graph": [baseOrg, baseWebsite, {
+          "@type": "Article",
+          "@id": canonicalUrl,
+          "headline": title,
+          "description": description,
+          "image": fullImageUrl,
+          "author": {
+            "@type": "Organization",
+            "name": author
+          },
+          "publisher": { "@id": `${siteUrl}/#organization` },
+          "datePublished": publishDate || new Date().toISOString(),
+          "dateModified": modifiedDate || publishDate || new Date().toISOString(),
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": canonicalUrl
+          },
+          "isPartOf": { "@id": `${siteUrl}/#website` }
+        }]
+      };
+
+    case 'webapp':
+      return {
+        "@context": "https://schema.org",
+        "@graph": [baseOrg, baseWebsite, {
+          "@type": "WebApplication",
+          "@id": canonicalUrl,
+          "name": title,
+          "description": description,
+          "url": canonicalUrl,
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "Any",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "SEK"
+          },
+          "provider": { "@id": `${siteUrl}/#organization` }
+        }]
+      };
+
+    case 'faq':
+      return {
+        "@context": "https://schema.org",
+        "@graph": [baseOrg, baseWebsite, {
+          "@type": "FAQPage",
+          "@id": canonicalUrl,
+          "name": title,
+          "description": description,
+          "mainEntity": faqItems.map(item => ({
+            "@type": "Question",
+            "name": item.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": item.answer
+            }
+          })),
+          "isPartOf": { "@id": `${siteUrl}/#website` }
+        }]
+      };
+
+    case 'howto':
+      return {
+        "@context": "https://schema.org",
+        "@graph": [baseOrg, baseWebsite, {
+          "@type": "HowTo",
+          "@id": canonicalUrl,
+          "name": title,
+          "description": description,
+          "step": howToSteps.map((step, index) => ({
+            "@type": "HowToStep",
+            "position": index + 1,
+            "name": step.name,
+            "text": step.text
+          })),
+          "isPartOf": { "@id": `${siteUrl}/#website` }
+        }]
+      };
+
+    case 'about':
+      return {
+        "@context": "https://schema.org",
+        "@graph": [baseOrg, baseWebsite, {
+          "@type": "AboutPage",
+          "@id": canonicalUrl,
+          "name": title,
+          "description": description,
+          "mainEntity": { "@id": `${siteUrl}/#organization` },
+          "isPartOf": { "@id": `${siteUrl}/#website` }
+        }]
+      };
+
+    case 'contact':
+      return {
+        "@context": "https://schema.org",
+        "@graph": [baseOrg, baseWebsite, {
+          "@type": "ContactPage",
+          "@id": canonicalUrl,
+          "name": title,
+          "description": description,
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "Ränta.nu",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "customer service",
+              "availableLanguage": "Swedish"
+            }
+          },
+          "isPartOf": { "@id": `${siteUrl}/#website` }
+        }]
+      };
+
+    default:
+      return {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": title,
+        "description": description,
+        "url": canonicalUrl
+      };
+  }
+}
+
+const schema = generateSchema();
+---
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalUrl} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type === 'article' ? 'article' : 'website'} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={fullImageUrl} />
+<meta property="og:site_name" content="Ränta.nu" />
+<meta property="og:locale" content="sv_SE" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalUrl} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={fullImageUrl} />
+
+<!-- Article specific meta -->
+{type === 'article' && publishDate && (
+  <>
+    <meta property="article:published_time" content={publishDate} />
+    {modifiedDate && <meta property="article:modified_time" content={modifiedDate} />}
+    <meta property="article:author" content={author} />
+  </>
+)}
+
+<!-- JSON-LD Schema -->
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

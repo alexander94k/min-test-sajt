@@ -1,0 +1,57 @@
+---
+/**
+ * BaseHead Component for Ränta.nu
+ * Includes all standard head elements + SEO
+ */
+import SEO from './SEO.astro';
+import { getSEOData } from '../data/seo-config';
+
+interface Props {
+  title?: string;
+  description?: string;
+  type?: 'website' | 'article' | 'webapp' | 'faq' | 'howto' | 'about' | 'contact';
+  image?: string;
+  publishDate?: string;
+  modifiedDate?: string;
+  author?: string;
+  noindex?: boolean;
+}
+
+const currentPath = Astro.url.pathname;
+const seoData = getSEOData(currentPath);
+
+const {
+  title = seoData.title,
+  description = seoData.description,
+  type = seoData.type,
+  image,
+  publishDate,
+  modifiedDate,
+  author,
+  noindex = false,
+} = Astro.props;
+
+// Get FAQ items and HowTo steps from config if available
+const faqItems = seoData.faqItems || [];
+const howToSteps = seoData.howToSteps || [];
+---
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<SEO
+  title={title}
+  description={description}
+  type={type}
+  image={image}
+  publishDate={publishDate}
+  modifiedDate={modifiedDate}
+  author={author}
+  faqItems={faqItems}
+  howToSteps={howToSteps}
+  noindex={noindex}
+/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">

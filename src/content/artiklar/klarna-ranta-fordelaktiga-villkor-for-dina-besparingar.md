@@ -4,6 +4,7 @@ description: "Att spara pengar är en viktig del av en sund ekonomi, och att hit
 publishDate: 2024-08-13
 author: "Ränta.nu"
 featuredImage: /images/articles/klarna-ranta-fordelaktiga-villkor-for-dina-besparingar-featured.png
+slug: "klarna-ranta"
 ---
 
 Att spara pengar är en viktig del av en sund ekonomi, och att hitta ett sparkonto med konkurrenskraftig ränta är nyckeln till att maximera dina besparingar. Klarna, som är mest känt för sina betalningslösningar, erbjuder också sparkonton med ränta. I den här artikeln går vi igenom vilka räntor du kan förvänta dig från Klarna.

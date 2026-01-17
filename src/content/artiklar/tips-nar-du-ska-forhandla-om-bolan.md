@@ -3,6 +3,7 @@ title: "Tips när du ska förhandla om bolån"
 description: "När du ska omförhandla ditt bolån, ska du definitivt pruta för få en så låg ränta som möjligt. Detta resulterar i sin tur i en lägre månadskostnad. När det är d"
 publishDate: 2023-02-23
 author: "Ränta.nu"
+slug: "tips-nar-du-ska-forhandla-om-bolan"
 ---
 
 När du ska omförhandla ditt bolån, ska du definitivt pruta för få en så låg ränta som möjligt. Detta resulterar i sin tur i en lägre månadskostnad. När det är dags att ansöka om bolån, så bestäms din ränta utifrån bankens snittränta. Denna är bara en startpunkt. Som låntagare ska du försöka pruta mer bolåneräntan, genom att förklara för banken varför du är en mycket värdefull kund. Samtidigt som du gör detta ska du givetvis höra med andra långivare för att undersöka om de kan ge en lägre ränta. 

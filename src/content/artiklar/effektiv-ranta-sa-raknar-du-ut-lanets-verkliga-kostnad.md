@@ -4,6 +4,7 @@ description: "Effektiv ränta är lånets totala kostnad uttryckt som årsränta
 publishDate: 2025-12-29
 author: "Ränta.nu"
 featuredImage: /images/articles/effektiv-ranta-sa-raknar-du-ut-lanets-verkliga-kostnad-featured.png
+slug: "effektiv-ranta-lanekostnad"
 ---
 
 Effektiv ränta är lånets totala kostnad uttryckt som årsränta, där både nominell ränta inklusive övriga avgifter som uppläggnings- och avi-avgifter inkluderas.

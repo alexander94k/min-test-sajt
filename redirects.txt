@@ -1,0 +1,78 @@
+# URL Redirects - Ränta.nu
+# Format: gamla-url -> nya-url
+# Genererad: 2025-01-16
+# Källa: sitemap.csv (Google-indexerade URLs)
+
+# ============================================
+# SVENSKA TECKEN → CLEAN URLs
+# Dessa redirects krävs för att behålla SEO-värde
+# från redan indexerade URLs i Google
+# ============================================
+
+# Informationssidor (å, ä, ö → a, a, o)
+/räntekonto/ -> /rantekonto/
+/bästa-räntan/ -> /basta-rantan/
+/bästa-sparräntan/ -> /basta-sparrantan/
+/styrränta/ -> /styrranta/
+/marginalränta/ -> /marginalranta/
+/reporänta/ -> /reporanta/
+/riksbankens-ränta/ -> /riksbankens-ranta/
+/rörlig-ränta/ -> /rorlig-ranta/
+/statslåneräntan/ -> /statslaneranta/
+/bunden-fast-ränta/ -> /bunden-fast-ranta/
+/dröjsmålsränta/ -> /drojsmalsranta/
+/förhandla-ränta-på-bolån/ -> /forhandla-ranta-pa-bolan/
+/låna-pengar-med-låg-ränta/ -> /lana-pengar-med-lag-ranta/
+/låna-pengar-utan-ränta/ -> /lana-pengar-utan-ranta/
+/marknadsränta/ -> /marknadsranta/
+/riksgäldens-ränta/ -> /riksgaldens-ranta/
+/stibor-ränta/ -> /stibor-ranta/
+/statsobligationer-ränta/ -> /statsobligationer-ranta/
+/riskfri-ränta/ -> /riskfri-ranta/
+/referensränta/ -> /referensranta/
+/realränta/ -> /realranta/
+/ockerränta/ -> /ockerranta/
+/nominell-ränta/ -> /nominell-ranta/
+/räntelagen/ -> /rantelagen/
+/ränta-på-blancolån/ -> /ranta-pa-blancolan/
+/csn-ränta/ -> /csn-ranta/
+
+# Kalkylatorer under /berakna/
+/berakna/ränteavdrag/ -> /berakna/ranteavdrag/
+/berakna/leva-på-ränta/ -> /berakna/leva-pa-ranta/
+/berakna/bolåneränta/ -> /berakna/bolaneranta/
+/berakna/ränta-på-ränta/ -> /berakna/ranta-pa-ranta/
+/berakna/skatt-på-ränta/ -> /berakna/skatt-pa-ranta/
+/berakna/effektiv-ränta/ -> /berakna/effektiv-ranta/
+
+# Artiklar (tips-artikel med svenska tecken)
+/tips-när-du-ska-förhandla-om-bolån/ -> /tips-nar-du-ska-forhandla-om-bolan/
+
+# ============================================
+# FILNAMNSÄNDRINGAR (redan genomförda)
+# ============================================
+/uppköring -> /uppkoring
+/uppköring/ -> /uppkoring/
+# ränta deploy.png -> ranta-deploy.png
+
+# ============================================
+# ARTIKLAR: Root → /artiklar/ (om du väljer Alt B)
+# Avkommentera dessa om artiklar ska ligga under /artiklar/
+# ============================================
+# /effektiv-ranta-lanekostnad/ -> /artiklar/effektiv-ranta-sa-raknar-du-ut-lanets-verkliga-kostnad/
+# /riksbanken-forsvinner-konsekvenser/ -> /artiklar/vad-hander-om-riksbanken-forsvinner-imorgon/
+# /ranta-kreditlan-kostnad-faktorer/ -> /artiklar/hur-hog-ar-rantan-pa-ett-kreditlan/
+# /krypto-staking-avkastning/ -> /artiklar/krypto-staking-hur-det-fungerar-och-vilken-ranta-du-kan-fa/
+# /kontokredit-ranta-effektiv-kostnad/ -> /artiklar/hur-hog-ar-rantan-pa-en-kontokredit-aktuella-villkor-och-kostnader-2025/
+# /nyckelfardigt-hus-rantekostnader-renovering/ -> /artiklar/nyckelfardigt-hus-sa-paverkas-dina-rantekostnader/
+# /klarna-ranta/ -> /artiklar/klarna-ranta-fordelaktiga-villkor-for-dina-besparingar/
+# /lag-ranta-ger-dig-ett-billigare-lan/ -> /artiklar/hur-en-lag-ranta-ger-dig-ett-billigare-lan/
+# /tips-nar-du-ska-forhandla-om-bolan/ -> /artiklar/tips-nar-du-ska-forhandla-om-bolan/
+
+# ============================================
+# SAKNADE SIDOR (måste skapas eller tas bort)
+# ============================================
+# /ranta-kreditkort/ -> [SAKNAS - måste skapas]
+# /hitta-lagsta-laneranta-payup/ -> [SAKNAS - måste skapas]
+# /basta-billan-ranta-2025/ -> [SAKNAS - måste skapas]
+# /locations.kml -> [SAKNAS - Google Maps KML]

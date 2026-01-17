@@ -4,6 +4,7 @@ description: "Genom att ställa frågan synliggör vi den finansiella infrastruk
 publishDate: 2025-12-06
 author: "Ränta.nu"
 featuredImage: /images/articles/vad-hander-om-riksbanken-forsvinner-imorgon-featured.png
+slug: "riksbanken-forsvinner-konsekvenser"
 ---
 
 Genom att ställa frågan synliggör vi den finansiella infrastruktur vi dagligen tar för given.

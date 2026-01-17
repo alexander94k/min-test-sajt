@@ -1,0 +1,221 @@
+---
+import '../styles/global.css';
+import Footer from '../components/Footer.astro';
+import BaseHead from '../components/BaseHead.astro';
+
+---
+
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <BaseHead />
+  <style is:global>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .page-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 100px;
+    }
+
+    .text-container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      color: #0c1935;
+      line-height: 1.2;
+      margin: 0 0 24px 0;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      color: #1f3a5e;
+      line-height: 1.3;
+      margin: 0 0 24px 0;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      color: #1f3a5e;
+      line-height: 1.3;
+      margin: 0 0 16px 0;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #444;
+      margin: 0 0 20px 0;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .info-box {
+      background: #f0f5f7;
+      border-left: 4px solid #1e3a5f;
+      padding: 32px;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .page-container {
+        padding: 0 16px;
+      }
+
+      section {
+        padding: 48px 0;
+      }
+
+      h1 {
+        font-size: 32px;
+        text-align: left;
+      }
+
+      h2 {
+        font-size: 24px;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+<header class="header">
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="512" height="512" rx="110" fill="#1e3a5f"></rect>
+                    <circle cx="200" cy="180" r="45" fill="#FFFFFF"></circle>
+                    <circle cx="312" cy="332" r="45" fill="#FFFFFF"></circle>
+                    <rect x="225" y="195" width="70" height="120" rx="8" transform="rotate(35 260 255)" fill="#FFFFFF"></rect>
+                </svg>
+            </div>
+            <span class="logo-text">Ränta.nu</span>
+        </a>
+
+        <nav class="header-nav">
+            <a href="/">Hem</a>
+            <a href="/basta-rantan">Bästa räntan</a>
+            <a href="/berakna">Beräkna ränta</a>
+            <a href="/artiklar">Artiklar</a>
+            <a href="/kontakt">Kontakt</a>
+        </nav>
+
+        <a href="/berakna" class="btn-login">Kalkylatorer</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" style="padding: 80px 0 60px; background: linear-gradient(180deg, #f8fbfd 0%, #fff 100%);">
+    <div class="page-container">
+        <div class="text-container" style="text-align: center;">
+            <h1>Hitta lägsta låneräntan</h1>
+            <p style="font-size: 20px; color: #555;">
+                Lär dig hur du hittar den bästa räntan för ditt lån genom att jämföra olika långivare
+                och förstå vad som påverkar din personliga räntesats.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Content Section -->
+<section style="padding: 60px 0;">
+    <div class="page-container">
+        <div class="text-container">
+            <h2>Så hittar du den lägsta låneräntan</h2>
+            <p>
+                Att hitta den lägsta låneräntan handlar inte bara om att jämföra siffror – det handlar
+                om att förstå hela bilden. Din personliga situation, kreditvärdighet och lånebelopp
+                spelar alla stor roll för vilken ränta du faktiskt får.
+            </p>
+
+            <div class="info-box" style="margin: 32px 0;">
+                <h3>Faktorer som påverkar din ränta</h3>
+                <ul style="margin: 16px 0; padding-left: 20px;">
+                    <li><strong>Kreditvärdighet:</strong> Högre score = lägre ränta</li>
+                    <li><strong>Inkomst:</strong> Stabil inkomst ger bättre villkor</li>
+                    <li><strong>Lånebelopp:</strong> Större lån kan ge lägre ränta</li>
+                    <li><strong>Säkerhet:</strong> Lån med säkerhet har lägre ränta</li>
+                    <li><strong>Löptid:</strong> Kortare löptid kan ge bättre ränta</li>
+                </ul>
+            </div>
+
+            <h2>Steg för att hitta bästa räntan</h2>
+
+            <h3>1. Jämför flera långivare</h3>
+            <p>
+                Ansök aldrig om lån hos bara en bank. Genom att jämföra minst 3-5 olika långivare
+                får du en bättre bild av marknaden och kan förhandla om bättre villkor.
+            </p>
+
+            <h3>2. Förbättra din kreditvärdighet</h3>
+            <p>
+                Innan du ansöker om lån kan det vara värt att vänta några månader om du kan
+                förbättra din kreditvärdighet. Betala av befintliga skulder och undvik nya
+                kreditförfrågningar.
+            </p>
+
+            <h3>3. Förhandla med banken</h3>
+            <p>
+                Räntorna som annonseras är ofta inte slutgiltiga. Var inte rädd för att förhandla,
+                särskilt om du är en befintlig kund med god historik.
+            </p>
+
+            <h3>4. Tänk på totalkostnaden</h3>
+            <p>
+                En lägre ränta är inte alltid det bästa valet. Se till att jämföra den effektiva
+                räntan som inkluderar alla avgifter, och tänk på lånet som helhet.
+            </p>
+
+            <h2>Vanliga misstag att undvika</h2>
+            <ul style="margin: 16px 0; padding-left: 20px;">
+                <li>Att bara titta på nominell ränta istället för effektiv ränta</li>
+                <li>Att inte förhandla om villkoren</li>
+                <li>Att ta det första erbjudandet</li>
+                <li>Att glömma avgifter och uppläggningskostnader</li>
+                <li>Att inte läsa det finstilta i avtalet</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section style="padding: 80px 0; background: #f8f9fa;">
+    <div class="page-container">
+        <div style="max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%); border-radius: 20px; padding: 60px 40px; text-align: center;">
+            <h2 style="color: white; margin-bottom: 16px;">Beräkna din lånekostnad</h2>
+            <p style="color: rgba(255,255,255,0.9); font-size: 18px; margin-bottom: 32px;">
+                Använd vår räntekalkylator för att se vad ditt lån faktiskt kostar.
+            </p>
+            <a href="/berakna" style="display: inline-block; background: white; color: #1e3a5f; padding: 16px 32px; border-radius: 12px; font-weight: 600; text-decoration: none;">
+                Beräkna ränta →
+            </a>
+        </div>
+    </div>
+</section>
+
+<Footer />
+
+</body>
+</html>
